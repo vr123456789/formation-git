@@ -1,8 +1,8 @@
 # Utilisation quotidienne de Git à la place de SVN à l’Insee
 
-:arrow_forward: [Diaporama](https://romain-warnan.github.io/git-au-quotidien/)
+:arrow_forward: [Diaporama](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien)
 
-:bookmark_tabs: [Imprimer](https://romain-warnan.github.io/git-au-quotidien/?print-pdf#/) (avec Chrome)
+:bookmark_tabs: [Imprimer](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien/?print-pdf#/) (avec Chrome)
 
 Le système de gestion de version Git remplace progressivement SVN à l’Insee.
 Plus rapide et plus complet que son prédécesseur, le système utilise un vocabulaire un peu différent et offre de nouvelles fonctionnalités.
