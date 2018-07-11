@@ -43,11 +43,11 @@ public class ChargementClientsController {
     public String chargementPost(MultipartFile file, RedirectAttributes redirectAttributes) {
 	long n = clientService.chargement(file);
 	redirectAttributes.addFlashAttribute("message", String.format(
-		"%d clients ont Ã©tÃ© ajoutÃ©s avec succÃ¨s Ã  partir du fichier %s", n, file.getOriginalFilename()));
+			"%d clients ont été ajouté avec succès partir du fichier %s", n, file.getOriginalFilename()));
 	return "redirect:/clients";
     }
 
-    @GetMapping(value = "/telechargement", params = "!type")
+	@GetMapping(value = "/telechargement", params = { "!type", "type=txt" })
     public ResponseEntity<FileSystemResource> telechargement() {
 	File file = clientService.fichier();
 	return ResponseEntity.ok().contentLength(file.length()).contentType(MediaType.APPLICATION_OCTET_STREAM)
