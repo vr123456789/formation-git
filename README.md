@@ -1,4 +1,4 @@
-# Introduction à l'utilisation de Git à l'Insee
+# Introduction à l’utilisation de Git à l’Insee
 
 :arrow_forward: [Diaporama](http://wehdrc.pages.innovation.insee.eu/formation-git)
 
