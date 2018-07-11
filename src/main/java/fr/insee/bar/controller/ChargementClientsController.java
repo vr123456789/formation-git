@@ -43,7 +43,7 @@ public class ChargementClientsController {
     public String chargementPost(MultipartFile file, RedirectAttributes redirectAttributes) {
 	long n = clientService.chargement(file);
 	redirectAttributes.addFlashAttribute("message", String.format(
-			"%d clients ont été ajouté avec succès partir du fichier %s", n, file.getOriginalFilename()));
+			"%d clients ont Ã©tÃ© ajoutÃ©s avec succÃ¨s partir du fichier %s", n, file.getOriginalFilename()));
 	return "redirect:/clients";
     }
 

@@ -1,7 +1,5 @@
 package fr.insee.bar.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,15 +8,12 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.google.common.collect.ImmutableMap;
 
 import fr.insee.bar.model.Employe;
-import fr.insee.bar.model.Role;
 
 @Repository
 public class EmployeDao {
@@ -61,22 +56,5 @@ public class EmployeDao {
 
 	public List<Employe> findAll() {
 		return template.query(SQL_FIND_ALL, rowMapper);
-	}
-
-	@Component
-	public class EmployeRowMapper implements RowMapper<Employe> {
-
-		@Override
-		public Employe mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Role role = new Role();
-			role.setId(rs.getShort("rid"));
-			role.setLibelle(rs.getString("libelle"));
-			Employe salarie = new Employe();
-			salarie.setId(rs.getShort("eid"));
-			salarie.setNom(rs.getString("nom"));
-			salarie.setRole(role);
-			return salarie;
-		}
-
 	}
 }

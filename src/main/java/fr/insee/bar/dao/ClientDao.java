@@ -1,7 +1,5 @@
 package fr.insee.bar.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,15 +8,12 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.google.common.collect.ImmutableMap;
 
 import fr.insee.bar.model.Client;
-import fr.insee.bar.model.Client.Titre;
 
 @Repository
 public class ClientDao {
@@ -85,21 +80,5 @@ public class ClientDao {
 			"titre", client.getTitre().getCode(),
 			"id", client.getId()));
 		return client;
-	}
-
-	@Component
-	public class ClientRowMapper implements RowMapper<Client> {
-
-		@Override
-		public Client mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Client client = new Client();
-			client.setId(rs.getShort("id"));
-			client.setNom(rs.getString("nom"));
-			client.setEmail(rs.getString("email"));
-			client.setDateNaissance(rs.getDate("date_naissance"));
-			client.setTitre(Titre.of(rs.getShort("titre")));
-			return client;
-		}
-
 	}
 }

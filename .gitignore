@@ -1,24 +1,25 @@
-target/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-.settings/
-.idea/
-
-*.iml
-*.log
-
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.git-credentials
-.*-credentials
+.settings
+.springBeans
+.sts4-cache
 
-node_modules/
-docs/test/
-docs/*.yml
-docs/bower.json
-docs/CONTRIBUTING.md
-docs/demo.html
-docs/Gruntfile.js
-docs/LICENSE
-docs/package.json
-docs/README.md
-*.tmp
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
