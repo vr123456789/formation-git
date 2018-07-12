@@ -1,4 +1,4 @@
-package fr.insee.bar.dao;
+package fr.insee.bar.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +19,7 @@ import fr.insee.bar.model.Cocktail;
 import fr.insee.bar.search.Search;
 
 @Repository
-public class CocktailDao {
+public class CocktailRepository {
 
 	@Autowired
 	private DataSource dataSource;

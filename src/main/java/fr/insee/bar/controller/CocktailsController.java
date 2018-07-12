@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import fr.insee.bar.dao.CocktailDao;
 import fr.insee.bar.exception.BarCommandeException;
 import fr.insee.bar.model.Cocktail;
+import fr.insee.bar.repository.CocktailRepository;
 import fr.insee.bar.service.CocktailService;
 
 @Controller
@@ -21,7 +21,7 @@ import fr.insee.bar.service.CocktailService;
 public class CocktailsController {
 
 	@Autowired
-	private CocktailDao cocktailDao;
+	private CocktailRepository cocktailRepository;
 
 	@Autowired
 	private CocktailService cocktailService;
@@ -29,7 +29,7 @@ public class CocktailsController {
 	@GetMapping("/recherche")
 	@ResponseBody
 	public List<Cocktail> recherche(@RequestParam("q") String q) {
-		return cocktailDao.search(q);
+		return cocktailRepository.search(q);
 	}
 
 	@PostMapping("/commande")
@@ -37,7 +37,7 @@ public class CocktailsController {
 	public Double commande(@RequestBody List<Cocktail> cocktails) throws BarCommandeException {
 		cocktailService.verifierCommandeValide(cocktails);
 		double prix = cocktails.stream()
-			.map(cocktailDao::fill)
+			.map(cocktailRepository::fill)
 			.mapToDouble(Cocktail::getPrix)
 			.sum();
 		return prix;

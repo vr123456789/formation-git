@@ -1,4 +1,4 @@
-package fr.insee.bar.dao;
+package fr.insee.bar.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +16,7 @@ import com.google.common.collect.ImmutableMap;
 import fr.insee.bar.model.Employe;
 
 @Repository
-public class EmployeDao {
+public class EmployeRepository {
 
 	@Autowired
 	private DataSource dataSource;

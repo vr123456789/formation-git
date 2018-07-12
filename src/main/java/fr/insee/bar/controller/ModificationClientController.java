@@ -1,9 +1,9 @@
 package fr.insee.bar.controller;
 
-import fr.insee.bar.dao.ClientDao;
 import fr.insee.bar.exception.BarDroitException;
 import fr.insee.bar.model.Client;
 import fr.insee.bar.model.Employe;
+import fr.insee.bar.repository.ClientRepository;
 import fr.insee.bar.service.EmployeService;
 import fr.insee.bar.validator.ClientValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import javax.validation.Valid;
 public class ModificationClientController {
 
 	@Autowired
-	private ClientDao clientDao;
+	private ClientRepository clientRepository;
 
 	@Autowired
 	private ClientValidator clientValidator;
@@ -44,7 +44,7 @@ public class ModificationClientController {
 		if (result.hasErrors()) {
 			return "modification-client";
 		}
-		clientDao.update(client);
+		clientRepository.update(client);
 		attributes.addFlashAttribute("modification", true);
 		attributes.addAttribute("id", client.getId());
 		return "redirect:/client/{id}";

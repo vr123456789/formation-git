@@ -1,4 +1,4 @@
-package fr.insee.bar.dao;
+package fr.insee.bar.repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
