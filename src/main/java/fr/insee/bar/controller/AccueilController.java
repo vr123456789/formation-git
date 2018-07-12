@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Controller
 public class AccueilController {
 
-	@Value("${name}")
+	@Value("${application.name}")
 	private String name;
 
 	@GetMapping("/")
