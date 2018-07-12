@@ -6,18 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-import fr.insee.bar.dao.ClientDao;
 import fr.insee.bar.model.Client;
+import fr.insee.bar.repository.ClientRepository;
 
 @Component
 public class ClientConverter implements Converter<String, Client> {
 
 	@Autowired
-	private ClientDao clientDao;
+	private ClientRepository clientRepository;
 
 	@Override
 	public Client convert(String id) {
-		Optional<Client> client = clientDao.find(Short.valueOf(id));
+		Optional<Client> client = clientRepository.findById(Short.valueOf(id));
 		return client.orElse(Client.EMPTY);
 	}
 }

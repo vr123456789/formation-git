@@ -1,11 +1,27 @@
 package fr.insee.bar.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
+@Entity
+@Table(name = "roles")
+@DynamicUpdate
+@DynamicInsert
 public class Role {
 
+	@Id
+	@Column(name = "id")
 	private Short id;
+
+	@Column(name = "libelle")
 	private String libelle;
 
 	public Short getId() {

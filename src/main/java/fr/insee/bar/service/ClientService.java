@@ -1,16 +1,5 @@
 package fr.insee.bar.service;
 
-import com.google.common.base.Objects;
-import fr.insee.bar.dao.ClientDao;
-import fr.insee.bar.exception.BarClientException;
-import fr.insee.bar.model.Client;
-import fr.insee.bar.model.Client.Titre;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Instant;
@@ -23,14 +12,27 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.google.common.base.Objects;
+
+import fr.insee.bar.exception.BarClientException;
+import fr.insee.bar.model.Client;
+import fr.insee.bar.model.Client.Titre;
+import fr.insee.bar.repository.ClientRepository;
+
 @Service
 public class ClientService {
 
 	@Autowired
-	private ClientDao clientDao;
+	private ClientRepository clientRepository;
 
 	public boolean emailDejaUtilise(Client client) {
-		Optional<Client> optional = clientDao.findByEmail(client.getEmail());
+		Optional<Client> optional = clientRepository.findByEmail(client.getEmail());
 		if (optional.isPresent()) {
 			Client autre = optional.get();
 			return !Objects.equal(autre.getId(), client.getId());
@@ -39,7 +41,7 @@ public class ClientService {
 	}
 
 	private boolean emailDejaUtiliseFast(String email) {
-		Optional<Client> optional = clientDao.findByEmail(email);
+		Optional<Client> optional = clientRepository.findByEmail(email);
 		return optional.isPresent();
 	}
 
@@ -53,7 +55,7 @@ public class ClientService {
 				.map(this::client)
 				.filter(Optional::isPresent)
 				.map(Optional::get)
-				.map(clientDao::insert)
+				.map(clientRepository::save)
 				.count();
 		}
 		catch (IOException e) {
@@ -65,7 +67,7 @@ public class ClientService {
 	public File fichier() {
 		File file = new File("clients.txt");
 		try {
-			FileUtils.writeLines(file, "UTF-8", clientDao
+			FileUtils.writeLines(file, "UTF-8", clientRepository
 				.findAll()
 				.stream()
 				.map(this::string)
@@ -137,7 +139,7 @@ public class ClientService {
 	}
 
 	public List<Client> clients() {
-		return clientDao.findAll();
+		return clientRepository.findAll();
 	}
 
 	private Optional<Client> clientException(String ligne) throws BarClientException {
