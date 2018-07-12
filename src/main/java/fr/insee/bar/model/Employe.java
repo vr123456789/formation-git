@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -29,7 +30,7 @@ public class Employe {
 	@Column(name = "nom")
 	private String nom;
 
-	@Column(name = "idrole")
+	@JoinColumn(name = "idrole")
 	@OneToOne(optional = false)
 	private Role role;
 
