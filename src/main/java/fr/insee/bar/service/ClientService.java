@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,8 +27,11 @@ import fr.insee.bar.model.Client;
 import fr.insee.bar.model.Client.Titre;
 import fr.insee.bar.repository.ClientRepository;
 
+
 @Service
 public class ClientService {
+
+	private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
 	@Autowired
 	private ClientRepository clientRepository;
@@ -59,7 +64,7 @@ public class ClientService {
 				.count();
 		}
 		catch (IOException e) {
-			System.err.println(e.getMessage());
+			logger.error(e.getMessage());
 		}
 		return 0;
 	}
@@ -74,7 +79,7 @@ public class ClientService {
 				.collect(Collectors.toList()));
 		}
 		catch (IOException e) {
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
 		}
 		return file;
 	}
@@ -108,7 +113,7 @@ public class ClientService {
 			return this.clientException(ligne);
 		}
 		catch (BarClientException e) {
-			System.err.println(e.getMessage());
+			logger.error(e.getMessage());
 		}
 		return Optional.empty();
 	}
