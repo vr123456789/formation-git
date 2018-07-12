@@ -14,7 +14,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "cocktails")
 @DynamicUpdate
 @DynamicInsert
 public class Cocktail {

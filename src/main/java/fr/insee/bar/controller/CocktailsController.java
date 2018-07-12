@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import fr.insee.bar.exception.BarCommandeException;
 import fr.insee.bar.model.Cocktail;
 import fr.insee.bar.repository.CocktailRepository;
+import fr.insee.bar.repository.CocktailSpec;
 import fr.insee.bar.service.CocktailService;
 
 @Controller
@@ -29,7 +30,7 @@ public class CocktailsController {
 	@GetMapping("/recherche")
 	@ResponseBody
 	public List<Cocktail> recherche(@RequestParam("q") String q) {
-		return cocktailRepository.search(q);
+		return cocktailRepository.findAll(CocktailSpec.search(q));
 	}
 
 	@PostMapping("/commande")
