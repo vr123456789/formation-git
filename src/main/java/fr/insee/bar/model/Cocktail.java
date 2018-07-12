@@ -1,14 +1,37 @@
 package fr.insee.bar.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
+@Entity
+@Table(name = "clients")
+@DynamicUpdate
+@DynamicInsert
 public class Cocktail {
 
+	@Id
+	@GeneratedValue(generator = "barGenerator")
+	@SequenceGenerator(name = "barGenerator", sequenceName = "seq", allocationSize = 1, initialValue = 100)
+	@Column(name = "id")
 	private Short id;
 
+	@Column(name = "nom")
 	private String nom;
 
+	@Column(name = "norm")
+	private String nomNorm;
+
+	@Column(name = "prix")
 	private Double prix;
 
 	public Short getId() {
@@ -33,6 +56,14 @@ public class Cocktail {
 
 	public void setPrix(Double prix) {
 		this.prix = prix;
+	}
+
+	public String getNomNorm() {
+		return nomNorm;
+	}
+
+	public void setNomNorm(String nomNorm) {
+		this.nomNorm = nomNorm;
 	}
 
 	@Override
