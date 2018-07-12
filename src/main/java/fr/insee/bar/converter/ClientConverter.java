@@ -17,7 +17,7 @@ public class ClientConverter implements Converter<String, Client> {
 
 	@Override
 	public Client convert(String id) {
-		Optional<Client> client = clientRepository.find(Short.valueOf(id));
+		Optional<Client> client = clientRepository.findById(Short.valueOf(id));
 		return client.orElse(Client.EMPTY);
 	}
 }

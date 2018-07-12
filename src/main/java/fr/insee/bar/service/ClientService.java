@@ -1,18 +1,5 @@
 package fr.insee.bar.service;
 
-import com.google.common.base.Objects;
-
-import fr.insee.bar.exception.BarClientException;
-import fr.insee.bar.model.Client;
-import fr.insee.bar.model.Client.Titre;
-import fr.insee.bar.repository.ClientRepository;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Instant;
@@ -24,6 +11,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.google.common.base.Objects;
+
+import fr.insee.bar.exception.BarClientException;
+import fr.insee.bar.model.Client;
+import fr.insee.bar.model.Client.Titre;
+import fr.insee.bar.repository.ClientRepository;
 
 @Service
 public class ClientService {
@@ -55,7 +55,7 @@ public class ClientService {
 				.map(this::client)
 				.filter(Optional::isPresent)
 				.map(Optional::get)
-				.map(clientRepository::insert)
+				.map(clientRepository::save)
 				.count();
 		}
 		catch (IOException e) {

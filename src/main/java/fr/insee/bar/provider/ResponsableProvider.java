@@ -16,7 +16,7 @@ public class ResponsableProvider implements EmployeProvider {
 
 	@Override
 	public Employe provide() {
-		return employeRepository.find(Short.valueOf("3")).get();
+		return employeRepository.findById(Short.valueOf("3")).get();
 	}
 
 }

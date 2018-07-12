@@ -16,7 +16,7 @@ public class ServeurProvider implements EmployeProvider {
 
 	@Override
 	public Employe provide() {
-		return employeRepository.find(Short.valueOf("2")).get();
+		return employeRepository.findById(Short.valueOf("2")).get();
 	}
 
 }
