@@ -53,10 +53,26 @@
 					<h3>Subversion et Git depuis 2004</h3>
 					<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1480_RC02/embed_loader.js"></script>
 					<script type="text/javascript">
-						trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[
-							{"keyword":"/m/012ct9","geo":"","time":"2004-01-01 2018-07-13"},
-							{"keyword":"/m/05vqwg","geo":"","time":"2004-01-01 2018-07-13"}
-						],"category":0,"property":""}, 	{"exploreQuery":"date=all&q=%2Fm%2F012ct9,%2Fm%2F05vqwg","guestPath":"https://trends.google.com:443/trends/embed/"});
+						// Chargement asynchrone du graphique Google Trends
+						
+						function renderExploreWidget() {
+							trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[
+								{"keyword":"/m/012ct9","geo":"","time":"2004-01-01 2018-07-13"},
+								{"keyword":"/m/05vqwg","geo":"","time":"2004-01-01 2018-07-13"}
+							],"category":0,"property":""}, 	{"exploreQuery":"date=all&q=%2Fm%2F012ct9,%2Fm%2F05vqwg","guestPath":"https://trends.google.com:443/trends/embed/"});
+						}
+						
+						function drawTrendGraph() {
+							return new Promise(() => {
+								renderExploreWidget();
+							});
+						}
+						
+						async function asyncDrawTrendGraph() {
+							await drawTrendGraph();
+						}
+
+						asyncDrawTrendGraph();
 					</script>
 				</section>
 
