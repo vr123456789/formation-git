@@ -124,3 +124,7 @@ body {
 .reveal .center .boxed-img {
 	max-height: 500px;
 }
+
+.reveal .slide table tr td {
+    text-align: center;
+}

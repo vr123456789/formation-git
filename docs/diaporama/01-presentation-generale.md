@@ -30,4 +30,20 @@ Surtout utile pour les fichiers textes
 <!-- .slide: data-background-image="images/eclipse-logo.png" data-background-size="700px" class="slide" -->
 ### Bref historique
 
-
+<table>
+	<tr>
+		<td>Local (LVCS)</td>
+		<td>Cenralisé (CVCS)</td>
+		<td>Décentralisé (DVCS)</td>
+	</tr>
+	<tr>
+		<td><img src="images/local.png" width="300px" /></td>
+		<td><img src="images/centralized.png" width="300px" /></td>
+		<td><img src="images/distributed.png" width="300px" /></td>
+	</tr>
+	<tr>
+		<td>RCS</td>
+		<td>CVS, __Subversion__, Perforce</td>
+		<td>__Git__, Mercurial, Bazaar, Darcs</td>
+	</tr>
+</table>
