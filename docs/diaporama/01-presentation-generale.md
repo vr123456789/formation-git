@@ -27,14 +27,14 @@ Surtout utile pour les fichiers textes
 %%%
 
 
-<!-- .slide: data-background-image="images/eclipse-logo.png" data-background-size="700px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Bref historique
 
 <table>
 	<tr>
 		<td>Local (LVCS)</td>
 		<td>Cenralisé (CVCS)</td>
-		<td>Décentralisé (DVCS)</td>
+		<td>Distribué (DVCS)</td>
 	</tr>
 	<tr>
 		<td><img src="images/local.png" width="300px" /></td>
@@ -47,3 +47,24 @@ Surtout utile pour les fichiers textes
 		<td>__Git__, Mercurial, Bazaar, Darcs</td>
 	</tr>
 </table>
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Les avantages de la gestion distribuée
+
+Gestion de version centralisée :
+
+ - (+) chacun peut savoir qui fait quoi
+ - (+) on peut partager son travail et récupérer celui des autres
+ - (&ndash;) point unique de panne
+  - coupure du serveur : plus personne ne peut collaborer
+  - corruption du disque: données définitivement perdue
+ 
+Gestion de version distribuée :
+
+ - (+) sécurité grâce à la redondance des dépôts</li>
+ - (+) permet l’organisation de « groupes de travail »</li>
+ - (+) rapidité</li>
