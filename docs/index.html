@@ -48,17 +48,18 @@
 
                 <section data-markdown="diaporama/01-presentation-generale.md" data-separator="^---+$" data-separator-vertical="^%%%+$" data-separator-vertical="^%%%+$">
                 </section>
-
+ 
 				<section class="slide">
 					<h3>Subversion et Git depuis 2004</h3>
 					<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1480_RC02/embed_loader.js"></script>
 					<script type="text/javascript">
 						// Chargement asynchrone du graphique Google Trends
-						
+						let date = new Date().toISOString().split('T')[0];
+						let dateRange = "2004-01-01 " + date;
 						function renderExploreWidget() {
 							trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[
-								{"keyword":"/m/012ct9","geo":"","time":"2004-01-01 2018-07-13"},
-								{"keyword":"/m/05vqwg","geo":"","time":"2004-01-01 2018-07-13"}
+								{"keyword":"/m/012ct9","geo":"","time":dateRange},
+								{"keyword":"/m/05vqwg","geo":"","time":dateRange}
 							],"category":0,"property":""}, 	{"exploreQuery":"date=all&q=%2Fm%2F012ct9,%2Fm%2F05vqwg","guestPath":"https://trends.google.com:443/trends/embed/"});
 						}
 						
