@@ -65,6 +65,24 @@ Gestion de version centralisée :
  
 Gestion de version distribuée :
 
- - (+) sécurité grâce à la redondance des dépôts</li>
- - (+) permet l’organisation de « groupes de travail »</li>
- - (+) rapidité</li>
+ - (+) sécurité grâce à la redondance des dépôts
+ - (+) permet l’organisation de « groupes de travail »
+ - (+) rapidité
+ 
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Genèse de Git
+
+1991 &ndash; 2002 : Noyau Linux géré via des patchs et des archives
+
+2002 &ndash; 2005 : Utilisation du DCVS Bitkeeper
+
+2005 : Bitkeeper devient payant
+
+À partir de 2005 : Linus Torvalds développe un successeur, objectifs :
+ - vitesse
+ - simplicité
+ - développements non-linéaires (branches)
+ - compacité des données
