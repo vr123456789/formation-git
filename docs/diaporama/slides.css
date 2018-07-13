@@ -2,6 +2,10 @@
     /* Empty */
 }
 
+.reveal .main-title table tr td {
+    border: none;
+}
+
 .reveal .chapter {
     /* Empty */
 }
