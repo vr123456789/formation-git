@@ -28,7 +28,7 @@ Surtout utile pour les fichiers textes
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Bref historique
+### Évolution des systèmes de gestion de versions
 
 <table>
 	<tr>
