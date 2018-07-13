@@ -3,7 +3,7 @@
 ### Présentation générale de Git
 
 
----
+%%%
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
@@ -23,14 +23,11 @@ En plus, on peut en général :
 Surtout utile pour les fichiers textes
  - comme le code source !
 
+
 %%%
 
 
 <!-- .slide: data-background-image="images/eclipse-logo.png" data-background-size="700px" class="slide" -->
 ### Bref historique
 
-FusionForge, onglet « Code source » : copier l’url `git+ssh…`
 
-<div class="center">
-    <img src="egit/clone-0.0.png" class="boxed-img" />
-</div>
