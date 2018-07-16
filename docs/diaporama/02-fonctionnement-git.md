@@ -56,4 +56,22 @@ Exemples
  - récupérer une ancienne version
  - générer un _patch_ entre deux versions d'un fichier
 
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Intégrité des données
+
+Tout est vérifié par une somme de contrôle (_checksum_)
+ - algorithme SHA-1
+  - `[0-9a-f]{40}`
+  - exemple : `0dbfc1be5cb26d6325978929debf753681af7b69`
  
+Les objets sont identifiés par la somme de contrôle de leur contenu
+ - il est impossible de modifier le contenu d'un fichier ou d'un dossier sans que Git ne le détecte
+ - il ne peut pas y avoir de corruption de donnée sur le réseau
+
+Sauf exception, Git ne fait qu'ajouter de nouvelles données
+ - il est presque impossible de perdre son travail
+ - on court peu de risque de faire une grosse bêtise
