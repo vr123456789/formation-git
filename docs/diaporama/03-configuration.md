@@ -39,6 +39,7 @@ branch.master.remote=origin
 
 %%%
 
+
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Configuration de base
 
@@ -53,20 +54,38 @@ Configuration bien utile :
 git config --global core.editor vim
 git config --global merge.conflictstyle diff3
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
-git config --global alias.co=commit 
+git config --global alias.co=commit
+git config --global alias.lg = log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 ```
 
-Résultat dans les fichiers de configuration :
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Consulter la configuration
+Résultat dans les fichiers de configuration, par exemple `~/.gitconfig` :
+
 ```ini
 [user]
-        name = Romain Warnan
-        email = romain.warnan@insee.fr
+	name = Romain Warnan
+	email = romain.warnan@insee.fr
 [merge]
-		conflictstyle = diff3
+	conflictstyle = diff3
 [core]
-        editor = vim
+	editor = vim
 [http]
-        proxy = http://proxy-rie.http.insee.fr:8080
+	proxy = http://proxy-rie.http.insee.fr:8080
 [alias]
-		co = commit
+	co = commit
+```
+
+Voir la valeur d'une propriété :
+```bash
+git config user.name
+```
+
+Lister toute la configuration avec le nom du fichier
+```bash
+git config --list --show-origin
 ```
