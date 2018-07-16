@@ -46,3 +46,13 @@ Configuration obligatoire pour commiter :
 git config --global user.name "Prénom Nom"
 git config --global user.email "prenom.nom@insee.fr"
 ```
+
+Configuration bien utile :
+```bash`
+git config --global core.editor vim
+git config --global merge.conflictstyle diff3
+git config --global http.proxy http://proxy-rie.http.insee.fr:8080
+git config --global https.proxy http://proxy-rie.http.insee.fr:8080
+git config --global alias.lg=log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+git config --global alias.co=commit --message 
+```
