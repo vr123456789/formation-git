@@ -9,7 +9,7 @@
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Mode de stockage
 
-Stockage sous forme d'instantanés (_snapshot_)
+Stockage sous forme d’instantanés (_snapshot_)
  - et non différences (_deltas_)
 
 Système de références (_cf._ lien symbolique)
@@ -55,18 +55,18 @@ Le dépôt Git local est situé dans le répertoire `.git/` du projet :
 ### Travailler en local
 
 La plupart des opérations se déroulent localement
- - car tout l'historique est stocké localement
+ - car tout l’historique est stocké localement
  - donc pas de latence réseau
  - donc très rapide
  - et possibilité de travailler hors connexion
   - dans les transports (avion, train)
-  - hors du réseau de l'Insee
+  - hors du réseau de l’Insee
   - quand GForge est tombé
  
 Exemples
- - afficher l'historique
+ - afficher l’historique
  - récupérer une ancienne version
- - générer un _patch_ entre deux versions d'un fichier
+ - générer un _patch_ entre deux versions d’un fichier
 
 
 
@@ -83,10 +83,10 @@ Tout est vérifié par une somme de contrôle (_checksum_)
   - exemple : `0dbfc1be5cb26d6325978929debf753681af7b69`
  
 Les objets sont identifiés par la somme de contrôle de leur contenu
- - il est impossible de modifier le contenu d'un fichier ou d'un dossier sans que Git ne le détecte
+ - il est impossible de modifier le contenu d’un fichier ou d’un dossier sans que Git ne le détecte
  - il ne peut pas y avoir de corruption de donnée sur le réseau
 
-Sauf exception, Git ne fait qu'ajouter de nouvelles données
+Sauf exception, Git ne fait qu’ajouter de nouvelles données
  - il est presque impossible de perdre son travail
  - on court peu de risque de faire une grosse bêtise
  
@@ -95,7 +95,7 @@ Sauf exception, Git ne fait qu'ajouter de nouvelles données
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Les trois états d'un fichier
+### Les trois états d’un fichier
 
 <div class="center">
 	<img src="images/three-states.png" />

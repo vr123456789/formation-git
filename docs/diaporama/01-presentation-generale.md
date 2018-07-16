@@ -14,7 +14,7 @@ Un VCS (_Version Control System_)
 
 Cela permet de :
  - revenir à une version spécifique
- - revenir à une version antérieure d'un fichier spécifique
+ - revenir à une version antérieure d’un fichier spécifique
  - retrouver la dernière modification qui a pu introduire un problème
 
 En plus, on peut en général :
