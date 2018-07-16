@@ -35,6 +35,17 @@ Instantanés (Git)
 	<img src="images/snapshots.png" width="550px" />
 </div>
 
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Aperçu de la structure du dépôt Git
+
+Le dépôt Git local est situé dans le répertoire `.git/` du projet :
+<div class="center">
+	<img src="images/content-git.png" width="400px" />
+</div>
+
 
 %%%
 
@@ -57,6 +68,8 @@ Exemples
  - générer un _patch_ entre deux versions d'un fichier
 
 
+
+
 %%%
 
 
@@ -64,7 +77,7 @@ Exemples
 ### Intégrité des données
 
 Tout est vérifié par une somme de contrôle (_checksum_)
- - algorithme SHA-1
+ - algorithme `SHA-1`
   - `[0-9a-f]{40}`
   - exemple : `0dbfc1be5cb26d6325978929debf753681af7b69`
  
