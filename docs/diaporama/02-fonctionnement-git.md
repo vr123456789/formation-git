@@ -22,7 +22,7 @@ On peut voir Git comme une sorte de mini système de fichiers
 %%%
 
 
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" data-background-color="#7580ba" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" -->
 ### Schéma du mode de stockage
 
 Différences (Subversion)
@@ -39,7 +39,7 @@ Instantanés (Git)
 %%%
 
 
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+<!-- .slide: class="slide" -->
 ### Aperçu de la structure du dépôt Git
 
 Le dépôt Git local est situé dans le répertoire `.git/` du projet :
@@ -94,7 +94,7 @@ Sauf exception, Git ne fait qu’ajouter de nouvelles données
 %%%
 
 
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+<!-- .slide: class="slide" -->
 ### Les trois états d’un fichier
 
 <div class="center">
