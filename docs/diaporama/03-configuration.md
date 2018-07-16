@@ -7,7 +7,7 @@
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Configuration de base
+### Le système de configuration
 
 Système de surcharge à trois niveaux
 
@@ -39,8 +39,9 @@ branch.master.remote=origin
 
 %%%
 
-
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Configuration de base
+
 Configuration obligatoire pour commiter :
 ```bash
 git config --global user.name "Prénom Nom"
@@ -52,7 +53,20 @@ Configuration bien utile :
 git config --global core.editor vim
 git config --global merge.conflictstyle diff3
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
-git config --global https.proxy http://proxy-rie.http.insee.fr:8080
-git config --global alias.lg=log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-git config --global alias.co=commit --message 
+git config --global alias.co=commit 
+```
+
+Résultat dans les fichiers de configuration :
+```ini
+[user]
+        name = Romain Warnan
+        email = romain.warnan@insee.fr
+[merge]
+		conflictstyle = diff3
+[core]
+        editor = vim
+[http]
+        proxy = http://proxy-rie.http.insee.fr:8080
+[alias]
+		co = commit
 ```
