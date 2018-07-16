@@ -35,6 +35,7 @@ Instantanés (Git)
 	<img src="images/snapshots.png" width="550px" />
 </div>
 
+
 %%%
 
 
@@ -88,3 +89,14 @@ Les objets sont identifiés par la somme de contrôle de leur contenu
 Sauf exception, Git ne fait qu'ajouter de nouvelles données
  - il est presque impossible de perdre son travail
  - on court peu de risque de faire une grosse bêtise
+ 
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Les trois états d'un fichier
+
+<div class="center">
+	<img src="images/three-states.png" />
+</div>
