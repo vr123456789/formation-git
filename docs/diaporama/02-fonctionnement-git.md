@@ -22,7 +22,7 @@ On peut voir Git comme une sorte de mini système de fichiers
 %%%
 
 
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" data-background-color="#7580ba" -->
 ### Schéma du mode de stockage
 
 Différences (Subversion)
