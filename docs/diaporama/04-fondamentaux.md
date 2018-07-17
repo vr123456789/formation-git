@@ -117,10 +117,10 @@ git add .
 
 Désindexer : `git reset`
 ```bash
-git reset src/main/java/fr/insee/bar/controller/AccueilController.java
-git reset src
-git reset "*.java"
-git reset .
+git reset src/main/java/fr/insee/bar/controller/AccueilController.java # un seul fichier
+git reset src # tous les fichiers d'un répertoire
+git reset "*.java" # tous les fichiers se terminant par « .java »
+git reset . # tous les fichiers du répertoire courant
 ```
 
 
