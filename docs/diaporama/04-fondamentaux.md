@@ -64,8 +64,7 @@ Untracked files:
 		docs/images/lifecycle.png
 ```
 Version courte : `git status --short`
- - colonne de gauche = copie de travail
- - colonne de droite = index
+ - colonne de gauche = copie de travail ; colonne de droite = index
 
 ```bash
 > git status -s
@@ -73,4 +72,28 @@ Version courte : `git status --short`
 M	docs/diaporama/slides.css
 MM	docs/index.html
 ??	docs/images/lifecycle.png
+```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Indexer des fichiers : `git add`
+Indexer un fichier en particulier :
+```bash
+git add src/main/java/fr/insee/bar/controller/AccueilController.java
+```
+
+Indexer plusieurs fichiers d'un coup :
+```bash
+# Tous les fichiers du répertoire src/ et de ses sous-répertoires
+git add src
+# Tous les fichiers se terminant par .java
+git add "*.java"
+```
+
+Indexer tous les fichiers modifiés du répertoire courant :
+```bash
+git add .
 ```
