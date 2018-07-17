@@ -146,7 +146,7 @@ git add .
 Désindexer : `git reset`
 ```bash
 git reset src/main/java/fr/insee/bar/controller/AccueilController.java # un seul fichier
-git reset src # tous les fichiers d'un répertoire
+git reset src # tous les fichiers d’un répertoire
 git reset "*.java" # tous les fichiers se terminant par « .java »
 git reset . # tous les fichiers du répertoire courant
 ```
@@ -180,11 +180,11 @@ L’interface graphique est ici clairement un atout :
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Valider des fichiers : `git commit`
 
-Enregistrer le contenu de l'index dans l'historique local :
+Enregistrer le contenu de l’index dans l’historique local :
 ```bash
 git commit
 ```
- - l'éditeur de texte configuré s'ouvre
+ - l’éditeur de texte configuré s’ouvre
  - il est __obligatoire__ de saisir un message de _commit_
 
 Saisir le message tout de suite : `git commit --message` :
@@ -192,8 +192,8 @@ Saisir le message tout de suite : `git commit --message` :
 git commit -m "Message de validation"
 ```
 
-Valider tous les fichiers à l'état modifié : `git commit --all`
- - sans passer par l'index (`git add`)
+Valider tous les fichiers à l’état modifié : `git commit --all`
+ - sans passer par l’index (`git add`)
  - ne comprend pas les fichiers non suivis (_untracked_)
 
 ```bash
@@ -210,10 +210,10 @@ git commit -am "Message de validation"
 
 Le message de validation st très important
  - décrit brièvement les modifications contenues dans le _commit_
- - importance de l'homogénéité des modifications contenues dans le _commit_
- - à l'intention des autres développeurs
+ - importance de l’homogénéité des modifications contenues dans le _commit_
+ - à l’attention des autres développeurs
 
-Forme d'un message plus détaillé :
+Forme d’un message plus détaillé :
  
 ```bash
 Résumé des modifications
