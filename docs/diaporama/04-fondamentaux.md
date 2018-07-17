@@ -106,3 +106,23 @@ git reset src
 git reset "*.java"
 git reset .
 ```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Indexer avec EGit dans Eclipse
+
+Résultat de la commande `git status -s` :
+```bash
+ M	docs/diaporama/04-fondamentaux.md
+M	docs/diaporama/slides.css
+MM	docs/index.html
+??	docs/images/lifecycle.png
+```
+
+L'interface graphique est ici clairement un atout :
+<div class="center">
+	<img src="images/egit-add.png" /> 
+</div>
