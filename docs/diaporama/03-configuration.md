@@ -102,3 +102,23 @@ Lister toute la configuration avec le nom du fichier
 ```bash
 git config --list --show-origin
 ```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Accéder à la documentation
+
+Documentation complète dans le terminal :
+```bash
+git help <verb>
+```
+
+Autant aller voir sur internet en français :
+ - [Git Book (fr)](https://git-scm.com/book/fr/v1/)
+
+Pour un aide-mémoire rapide :
+```bash
+git <verb> -h
+```
