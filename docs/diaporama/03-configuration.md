@@ -50,11 +50,24 @@ git config --global user.email "prenom.nom@insee.fr"
 ```
 
 Configuration bien utile :
-```bash`
+```bash
+# Éditeur de texte pour les messages de commit, etc.
 git config --global core.editor vim
+
+# Pour utiliser notepad++
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+# Afficher l'ancêtre commun dans les conflits
 git config --global merge.conflictstyle diff3
+
+# Paraméter le proxy de l'Insee
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
+git config --global https.proxy http://proxy-rie.http.insee.fr:8080
+
+# Alias pour commit : git co
 git config --global alias.co=commit
+
+# Alias pour afficher une belle log : git lg
 git config --global alias.lg = log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 ```
 
