@@ -19,7 +19,7 @@ core.symlinks=false
 core.autocrlf=true
 ```
 
-`--global` : pour tous les dépôts de l'utilisateur
+`--global` : pour tous les dépôts de l’utilisateur
  - `~/.gitconfig`
 
 ```ini
@@ -57,10 +57,10 @@ git config --global core.editor vim
 # Pour utiliser notepad++
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
 
-# Afficher l'ancêtre commun dans les conflits
+# Afficher l’ancêtre commun dans les conflits
 git config --global merge.conflictstyle diff3
 
-# Paraméter le proxy de l'Insee
+# Paraméter le proxy de l’Insee
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
 git config --global https.proxy http://proxy-rie.http.insee.fr:8080
 
@@ -93,7 +93,7 @@ Résultat dans les fichiers de configuration, par exemple `~/.gitconfig` :
 	co = commit
 ```
 
-Voir la valeur d'une propriété :
+Voir la valeur d’une propriété :
 ```bash
 git config user.name
 ```
