@@ -179,21 +179,17 @@ L’interface graphique est ici clairement un atout :
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Valider des fichiers : `git commit`
+
 Enregistrer le contenu de l'index dans l'historique local :
 ```bash
 git commit
 ```
  - l'éditeur de texte configuré s'ouvre
- - il faut saisir un message de _commit_
-  - message vide &rarr;  _commit_ annulé
-  - les lignes qui commencent par `#` ne comptent pas
- - rappel pour quitter `vi` :
-  - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
-  - quitter sans sauvegarder : `Esc` puis `:q!`
+ - il est __obligatoire__ de saisir un message de _commit_
 
 Saisir le message tout de suite : `git commit --message` :
 ```bash
-git commit -m "Message de validation explicite"
+git commit -m "Message de validation"
 ```
 
 Valider tous les fichiers à l'état modifié : `git commit --all`
@@ -201,5 +197,34 @@ Valider tous les fichiers à l'état modifié : `git commit --all`
  - ne comprend pas les fichiers non suivis (_untracked_)
 
 ```bash
-git commit -am "Message de validation explicite"
+git commit -am "Message de validation"
 ```
+
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Remarques sur le message de validation
+
+Le message de validation st très important
+ - décrit brièvement les modifications contenues dans le _commit_
+ - importance de l'homogénéité des modifications contenues dans le _commit_
+ - à l'intention des autres développeurs
+
+Forme d'un message plus détaillé :
+ 
+```bash
+Résumé des modifications
+
+Texte détaillé.
+Éventuellement sur plusieurs lignes
+```
+
+Message vide &rarr;  _commit_ annulé
+ - les lignes qui commencent par `#` ne comptent pas
+
+Rappel pour quitter `vi` :
+ - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
+ - quitter sans sauvegarder : `Esc` puis `:q!`
