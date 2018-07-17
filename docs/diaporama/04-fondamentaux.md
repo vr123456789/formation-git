@@ -126,3 +126,35 @@ L’interface graphique est ici clairement un atout :
 <div class="center">
 	<img src="images/egit-add.png" /> 
 </div>
+
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Valider des fichiers : `git commit`
+Enregistrer le contenu de l'index dans l'historique local :
+```bash
+git commit
+```
+ - l'éditeur de texte configuré s'ouvre
+ - il faut saisir un message de _commit_
+  - message vide &rarr;  _commit_ annulé
+  - les lignes qui commencent par `#` ne comptent pas
+ - rappel pour quitter `vi` :
+  - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
+  - quitter sans sauvegarder : `Esc` puis `:q!`
+
+Saisir le message tout de suite : `git commit --message` :
+```bash
+git commit -m "Message de validation explicite"
+```
+
+Valider tous les fichiers à l'état modifié : `git commit --all`
+ - sans passer par l'index (`git add`)
+ - ne comprend pas les fichiers non suivis (_untracked_)
+
+```bash
+git commit -am "Message de validation explicite"
+```
