@@ -28,3 +28,49 @@ Clôner un dépôt Git distant
 [remote "origin"]
 	url = ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
 ```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Le cycle de vie du statut des fichiers
+<div class="center">
+	<img src="images/lifecycle.png" /> 
+</div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Connaitre l'état des fichiers du dépôt : `git status`
+```bash
+> git status
+On branch master
+Changes to be committed:
+	(use "git reset HEAD <file>..." to unstage)
+		modified:		docs/diaporama/slides.css
+		modified:		docs/index.html
+
+Changes not staged for commit:
+	(use "git add <file>..." to update what will be committed)
+	(use "git checkout -- <file>..." to discard changes in working directory)
+		modified:		docs/diaporama/04-fondamentaux.md
+		modified:		docs/index.html
+
+Untracked files:
+	(use "git add <file>..." to include in what will be committed)
+		docs/images/lifecycle.png
+```
+Version courte : `git status --short`
+ - colonne de gauche = copie de travail
+ - colonne de droite = index
+
+```bash
+> git status -s
+ M	docs/diaporama/04-fondamentaux.md
+M	docs/diaporama/slides.css
+MM	docs/index.html
+??	docs/images/lifecycle.png
+```
