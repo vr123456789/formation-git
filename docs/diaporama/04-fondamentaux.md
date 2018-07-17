@@ -208,9 +208,9 @@ git commit -am "Message de validation"
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur le message de validation
 
-Le message de validation st très important
+Le message de validation est très important
  - décrit brièvement les modifications contenues dans le _commit_
- - importance de l’homogénéité des modifications contenues dans le _commit_
+ - importance de l’homogénéité des modifications contenues un _commit_
  - à l’attention des autres développeurs
 
 Forme d’un message plus détaillé :
@@ -219,7 +219,7 @@ Forme d’un message plus détaillé :
 Résumé des modifications
 
 Texte détaillé.
-Éventuellement sur plusieurs lignes
+Éventuellement sur plusieurs lignes.
 ```
 
 Message vide &rarr;  _commit_ annulé
