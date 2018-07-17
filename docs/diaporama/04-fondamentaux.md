@@ -85,15 +85,24 @@ Indexer un fichier en particulier :
 git add src/main/java/fr/insee/bar/controller/AccueilController.java
 ```
 
-Indexer plusieurs fichiers d'un coup :
+Indexer plusieurs fichiers à la fois :
 ```bash
 # Tous les fichiers du répertoire src/ et de ses sous-répertoires
 git add src
-# Tous les fichiers se terminant par .java
+
+# Tous les fichiers se terminant par « .java »
 git add "*.java"
 ```
 
 Indexer tous les fichiers modifiés du répertoire courant :
 ```bash
 git add .
+```
+
+Désindexer : `git reset`
+```bash
+git reset src/main/java/fr/insee/bar/controller/AccueilController.java
+git reset src
+git reset "*.java"
+git reset .
 ```
