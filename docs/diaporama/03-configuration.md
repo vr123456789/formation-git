@@ -116,7 +116,10 @@ git help <verb>
 ```
 
 Autant aller voir sur internet en français :
- - [Git Book (fr)](https://git-scm.com/book/fr/v1/)
+ - [Git Book (fr)](https://git-scm.com/book/fr/v2)
+
+Ou en anglais
+ - [Git Book (en)](https://git-scm.com/book/en/v2)
 
 Pour un aide-mémoire rapide :
 ```bash

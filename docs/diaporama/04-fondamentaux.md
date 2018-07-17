@@ -48,30 +48,46 @@ Clôner un dépôt Git distant
 ```bash
 > git status
 On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+	(use "git push" to publish your local commits)
 Changes to be committed:
 	(use "git reset HEAD <file>..." to unstage)
+
 		modified:		docs/diaporama/slides.css
+		new file:		docs/images/basic-rebase-1.png
 		modified:		docs/index.html
 
 Changes not staged for commit:
 	(use "git add <file>..." to update what will be committed)
 	(use "git checkout -- <file>..." to discard changes in working directory)
-		modified:		docs/diaporama/04-fondamentaux.md
-		modified:		docs/index.html
+
+		modified:		docs/diaporama/03-configuration.md
+		modified:		docs/diaporama/slides.css
+		modified:		docs/images/egit-add.png
 
 Untracked files:
 	(use "git add <file>..." to include in what will be committed)
-		docs/images/lifecycle.png
+
+	docs/images/basic-rebase-2.png
 ```
-Version courte : `git status --short`
- - colonne de gauche = copie de travail ; colonne de droite = index
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Version courte : `git status --short`
+ 
+ - colonne de gauche = copie de travail
+ - colonne de droite = index
 
 ```bash
 > git status -s
- M	docs/diaporama/04-fondamentaux.md
-M	docs/diaporama/slides.css
-MM	docs/index.html
-??	docs/images/lifecycle.png
+ M	docs/diaporama/03-configuration.md
+MM	docs/diaporama/slides.css
+A	docs/images/basic-rebase-1.png
+M	docs/index.html
+??	docs/images/basic-rebase-2.png
 ```
 
 
@@ -116,10 +132,11 @@ git reset .
 
 Résultat de la commande `git status -s` :
 ```bash
- M	docs/diaporama/04-fondamentaux.md
-M	docs/diaporama/slides.css
-MM	docs/index.html
-??	docs/images/lifecycle.png
+ M	docs/diaporama/03-configuration.md
+MM	docs/diaporama/slides.css
+A	docs/images/basic-rebase-1.png
+M	docs/index.html
+??	docs/images/basic-rebase-2.png
 ```
 
 L’interface graphique est ici clairement un atout :
