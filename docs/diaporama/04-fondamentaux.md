@@ -77,9 +77,6 @@ Untracked files:
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Version courte : `git status --short`
- 
- - colonne de gauche = copie de travail
- - colonne de droite = index
 
 ```bash
 > git status -s
@@ -90,7 +87,38 @@ M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
+Deux colonnes 
+ - colonne de gauche = index
+ - colonne de droite = copie de travail
 
+Signification :
+<table>
+	<tr>
+		<td>`_M`</td>
+		<td>_modified_</td>
+		<td>modifié mais pas indexé</td>
+	</tr>
+	<tr>
+		<td>`M_`</td>
+		<td>_staged_</td>
+		<td>indexé</td>
+	</tr>
+	<tr>
+		<td>`MM`</td>
+		<td>_modified_, _staged_</td>
+		<td>indexé mais à nouveau modifié après coup</td>
+	</tr>
+	<tr>
+		<td>`A_`</td>
+		<td>_added_</td>
+		<td>nouveau fichier indexé</td>
+	</tr>
+	<tr>
+		<td>`??`</td>
+		<td>_untracked_</td>
+		<td>nouveau fichier non indexé</td>
+	</tr>
+</table>
 %%%
 
 
