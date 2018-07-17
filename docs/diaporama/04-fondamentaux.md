@@ -85,8 +85,8 @@ Untracked files:
 > git status -s
  M	docs/diaporama/03-configuration.md
 MM	docs/diaporama/slides.css
-A	docs/images/basic-rebase-1.png
-M	docs/index.html
+A	 docs/images/basic-rebase-1.png
+M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
@@ -134,8 +134,8 @@ Résultat de la commande `git status -s` :
 ```bash
  M	docs/diaporama/03-configuration.md
 MM	docs/diaporama/slides.css
-A	docs/images/basic-rebase-1.png
-M	docs/index.html
+A	 docs/images/basic-rebase-1.png
+M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
