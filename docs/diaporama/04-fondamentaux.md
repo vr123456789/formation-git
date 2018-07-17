@@ -17,7 +17,7 @@ Transformer un dossier en dépôt Git
  
 Clôner un dépôt Git distant
  - `git clone <url>`
- - Le dépôt complet est copié à partir de l'url dans un dossier `.git/` local
+ - Le dépôt complet est copié à partir de l’url dans un dossier `.git/` local
   - `git clone ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git`
   - &rarr; `formation-git/.git/`
  - La dernière version de la branche `master` est extraite
@@ -44,7 +44,7 @@ Clôner un dépôt Git distant
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Connaitre l'état des fichiers du dépôt : `git status`
+### Connaitre l’état des fichiers du dépôt : `git status`
 ```bash
 > git status
 On branch master
@@ -122,7 +122,7 @@ MM	docs/index.html
 ??	docs/images/lifecycle.png
 ```
 
-L'interface graphique est ici clairement un atout :
+L’interface graphique est ici clairement un atout :
 <div class="center">
 	<img src="images/egit-add.png" /> 
 </div>
