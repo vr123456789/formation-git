@@ -68,7 +68,7 @@ Changes not staged for commit:
 Untracked files:
 	(use "git add <file>..." to include in what will be committed)
 
-	docs/images/basic-rebase-2.png
+		docs/images/basic-rebase-2.png
 ```
 
 
