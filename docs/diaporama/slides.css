@@ -39,6 +39,10 @@ body {
     font-size: 5em;
 }
 
+.reveal .tp h2 a {
+    color: #f05033;
+}
+
 .reveal .exercice h2 {
     font-size: 5em;
 }

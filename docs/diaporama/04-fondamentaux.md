@@ -228,3 +228,10 @@ Message vide &rarr;  _commit_ annulé
 Rappel pour quitter `vi` :
  - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
  - quitter sans sauvegarder : `Esc` puis `:q!`
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/keyboard.png" data-background-size="1200px" class="tp" -->
+## [TP1](https://git.stable.innovation.insee.eu/wehdrc/formation-git#1-configuration-et-fondamentaux)
