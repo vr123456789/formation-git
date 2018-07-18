@@ -58,6 +58,14 @@ body {
     height: auto;
 }
 
+.reveal .slides img.blur {
+    filter: opacity(50%);
+}
+
+.reveal .slides img.blur:hover {
+    filter: opacity(70%);
+}
+
 .reveal .slides {
     font-size: 30px;
 }
