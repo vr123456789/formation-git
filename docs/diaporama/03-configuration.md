@@ -43,7 +43,7 @@ branch.master.remote=origin
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Configuration de base
 
-Configuration obligatoire pour commiter :
+Configuration obligatoire pour valider :
 ```bash
 git config --global user.name "Prénom Nom"
 git config --global user.email "prenom.nom@insee.fr"
