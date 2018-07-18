@@ -233,5 +233,8 @@ Rappel pour quitter `vi` :
 %%%
 
 
-<!-- .slide: data-background-image="images/keyboard.png" data-background-size="1200px" class="tp" -->
+<!-- .slide: class="tp" data-background-color="#000" -->
 ## [TP1](https://git.stable.innovation.insee.eu/wehdrc/formation-git#1-configuration-et-fondamentaux)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" />
+</div>
