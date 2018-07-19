@@ -46,12 +46,12 @@ git config --global merge.conflictstyle diff3
 	<summary>Quelle est la valeur de la propriété `help.format` ?</summary>
 	<code>git config help.format</code>
 </details>
-
+<br />
 <details>
 	<summary>Dans quel fichier cette propriété est-elle enregistrée ?</summary>
 	<code>git config --list --show-origin | grep "help.format"</code>
 </details>
-
+<br />
 <details>
 	<summary>Combien y-a-til de propriétés système dans ce fichier ?</summary>
 	<code>cat /c/ProgramData/Git/config | wc -l</code>
