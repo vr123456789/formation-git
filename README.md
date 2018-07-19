@@ -43,7 +43,7 @@ git config --global merge.conflictstyle diff3
 ```
 
 <details>
-	<summary>Quelle est la valeur de la propriété `help.format` ?</summary>
+	<summary>Quelle est la valeur de la propriété <code>help.format</code> ?</summary>
 	<code>git config help.format</code>
 </details>
 <br />
