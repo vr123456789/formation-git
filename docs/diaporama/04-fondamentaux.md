@@ -173,6 +173,65 @@ L’interface graphique est ici clairement un atout :
 </div>
 
 
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Ignorer des fichiers
+
+Certains fichiers ne doivent pas être partagés avec les autres développeurs :
+
+ - fichiers compilés ou packagés
+  - `.class`,
+  - `.jar`,
+  - ...
+ - fichiers automatiquement générés
+  - `.min.js`,
+  - `.min.css`,
+  - ...
+ - fichiers temporaires
+  - `.tmp`,
+  - `.swp`,
+  - `.lock`,
+  - ...
+ - fichiers de log ou rapports d’erreurs
+  - `.log`, ...
+ - fichiers de configuration de l’IDE : Eclipse, Atom, IntelliJ, vim, ...
+  - `.project`,
+  - `.settings/`,
+  - `.classpath`
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Ignorer des fichiers : `.gitignore`
+
+Fichier `.gitignore` à la racine du projet
+
+```bash
+# Un fichier en particulier
+package-lock.json
+.classpath
+
+# Le contenu d’un répertoire
+target/
+node_modules/
+
+# Un type de fichier
+*.jar
+*.class
+
+# Un type de fichier à l’exeption d’un fichier en particulier
+*.log
+!install.log
+
+# Dans n’importe quel sous répertoire
+docs/**/*.scss
+```
+
+Le `.gitignore` doit être validé
 
 %%%
 
