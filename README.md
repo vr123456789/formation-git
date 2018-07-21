@@ -16,6 +16,8 @@
 
 ### 1. Configuration et fondamentaux
 
+#### Configuration
+
 Paramétrer son nom et son email :
 ```bash
 git config --global user.name "Prénom Nom"
