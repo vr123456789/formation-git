@@ -124,7 +124,7 @@ git status
 
 :warning: Git ne détecte aucun changement car les répertoires sont vides.
 
-Pour que ces dossier soient quand même présents dans l’historique bien qu’ils soient vides, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et a le valider :
+Pour que ces dossier vides soient quand même présents dans l’historique, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et a le valider :
 
 ```bash
 touch src/main/resources/.git-empty src/test/resources/.git-empty
