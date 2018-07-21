@@ -119,6 +119,7 @@ git commit -m "Exclusion du répertoire 'target/'"
 Créer les dossiers `src/main/resources` et `src/test/resources`,  inspecter la copie de travail :
 ```bash
 mkdir -p src/main/resources src/test/resources
+git status
 ```
 
 :warning: Git ne détecte aucun changement car les répertoires sont vides.
