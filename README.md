@@ -101,7 +101,7 @@ java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App
 git status
 ```
 
-Créer le fichier `.gitignore` pour exclure le répertoire `target/` et le valider :
+Créer le fichier `.gitignore` pour exclure le répertoire `target/` et l’indexer :
 ```bash
 vim .gitignore
 git add .
