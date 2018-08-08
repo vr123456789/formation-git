@@ -151,6 +151,32 @@ git reset "*.java" # tous les fichiers se terminant par « .java »
 git reset . # tous les fichiers du répertoire courant
 ```
 
+%%%
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Inspecter les modifications : `git diff`
+
+Modifications non indexées : `git diff`
+ - affiche les différences entre la copie de travail et le dernier *commit*
+
+Modifications indexées : `git diff --staged`
+ - affiche les modifications que le prochain *commit* va contenir
+
+```patch
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+index 3034cd5..e398133 100644
+--- a/src/main/resources/application.properties
++++ b/src/main/resources/application.properties
+@@ -1,6 +1,6 @@
+ application.name=Spring MVC
+
+-spring.profiles.active=responsable
++spring.profiles.active=serveur
+
+ spring.mvc.view.prefix=/WEB-INF/views/
+ spring.mvc.view.suffix=.jsp
+```
+
 
 %%%
 
@@ -232,6 +258,7 @@ docs/**/*.scss
 ```
 
 Le `.gitignore` doit être validé
+
 
 %%%
 
