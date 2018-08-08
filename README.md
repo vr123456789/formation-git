@@ -102,7 +102,7 @@ git status
 Créer le fichier `.gitignore` pour exclure le répertoire `target/` et le valider :
 ```bash
 vim .gitignore
-git add .
+git add .gitignore
 git status
 ```
 

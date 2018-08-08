@@ -10,7 +10,7 @@
 ### Mode de stockage
 
 Stockage sous forme d’instantanés (_snapshot_)
- - et non différences (_deltas_)
+ - et non de différences (_deltas_)
 
 Système de références (_cf._ lien symbolique)
  - pour éviter de stocker plusieurs fois un fichier non-modifié
@@ -88,7 +88,7 @@ Les objets sont identifiés par la somme de contrôle de leur contenu
 
 Sauf exception, Git ne fait qu’ajouter de nouvelles données
  - il est presque impossible de perdre son travail
- - on court peu de risque de faire une grosse bêtise
+ - on court peu de risques de faire une grosse bêtise
  
 
 %%%

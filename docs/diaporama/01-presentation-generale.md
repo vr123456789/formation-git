@@ -61,7 +61,7 @@ Gestion de version centralisée :
  - (+) on peut partager son travail et récupérer celui des autres
  - (&ndash;) point unique de panne
   - coupure du serveur : plus personne ne peut collaborer
-  - corruption du disque: données définitivement perdue
+  - corruption du disque : données définitivement perdues
  
 Gestion de version distribuée :
 
