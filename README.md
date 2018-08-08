@@ -159,7 +159,27 @@ Indexer le fichier `README.txt`.
 
 Valider les deux modifications dans deux *commits* séparés :
 ```bash
-git commit -m "Création d'un fichier README.txt"
+git commit -m "Création d’un fichier README.txt"
 git commit -am "Possibilité de passer un paramètre à la méthode 'main'"
 ```
 
+Renommer le fichier `README.txt` en `README.md` puis examiner l'état de la copie de travail :
+```bash
+mv README.txt README.md
+git status
+git add .
+git status
+```
+
+Réinitialiser la copie de travail dans l'état du dernier *commit*
+```bash
+git reset --hard
+```
+
+Puis renommer le fichier avec Git :
+```bash
+git mv README.txt README.md
+git status
+```
+
+Le résultat est le même : Git parvient à repérer les fichiers par la somme de contrôle de leur contenu.
