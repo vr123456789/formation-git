@@ -129,3 +129,37 @@ git status
 git add .
 git commit -m "Création des répertoires 'src/main/resources/' et 'src/test/resources/'"
 ```
+
+Créer un fichier <code>README.txt</code> contenant un court texte.</summary>
+
+Modifier le programme `fr.insee.git.App.java` pour qu’il puisse prendre un paramètre :
+ - si le paramètre est renseigné, le programme affiche `"Hello _param_ !"`,
+ - sinon le programme affiche `"Hello World !"`
+
+Compiler puis exécuter le programme en passant en paramètre votre prénom :
+
+```bash
+mvn package
+java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App "Prénom"
+```
+
+Indexer le fichier `README.txt`.
+
+<details>
+	<summary>Afficher les modifications qui seront validées dans le prochains <i>commit</i> :</summary>
+	<code>git diff --staged</code>
+</details>
+<br />
+
+<details>
+	<summaryAfficher les modifications de la copie de travail par rapport à l’index :</summary>
+	<code>git diff</code>
+</details>
+<br />
+
+Valider les deux modifications dans deux *commits* séparés :
+```bash
+git commit -m "Création d'un fichier README.txt"
+git commit -am "Possibilité de passer un paramètre à la méthode 'main'"
+```
+
