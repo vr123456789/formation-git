@@ -133,7 +133,7 @@ git commit -m "Création des répertoires 'src/main/resources/' et 'src/test/res
 Créer un fichier <code>README.txt</code> contenant un court texte.</summary>
 
 Modifier le programme `fr.insee.git.App.java` pour qu’il puisse prendre un paramètre :
- - si le paramètre est renseigné, le programme affiche `"Hello _param_ !"`,
+ - si le paramètre est renseigné, le programme affiche `"Hello {param} !"`,
  - sinon le programme affiche `"Hello World !"`
 
 Compiler puis exécuter le programme en passant en paramètre votre prénom :
@@ -146,11 +146,10 @@ java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App "Prénom"
 Indexer le fichier `README.txt`.
 
 <details>
-	<summary>Afficher les modifications qui seront validées dans le prochains <i>commit</i> :</summary>
+	<summary>Afficher les modifications qui seront validées dans le prochain <i>commit</i> :</summary>
 	<code>git diff --staged</code>
 </details>
 <br />
-
 <details>
 	<summaryAfficher les modifications de la copie de travail par rapport à l’index :</summary>
 	<code>git diff</code>
@@ -163,7 +162,7 @@ git commit -m "Création d’un fichier README.txt"
 git commit -am "Possibilité de passer un paramètre à la méthode 'main'"
 ```
 
-Renommer le fichier `README.txt` en `README.md` puis examiner l'état de la copie de travail :
+Renommer le fichier `README.txt` en `README.md` puis examiner l’état de la copie de travail :
 ```bash
 mv README.txt README.md
 git status
@@ -171,7 +170,7 @@ git add .
 git status
 ```
 
-Réinitialiser la copie de travail dans l'état du dernier *commit*
+Réinitialiser la copie de travail dans l’état du dernier *commit*
 ```bash
 git reset --hard
 ```
@@ -183,3 +182,5 @@ git status
 ```
 
 Le résultat est le même : Git parvient à repérer les fichiers par la somme de contrôle de leur contenu.
+
+:warning: Si en plus, le contenu du fichier est modifié, cela ne fonctionne plus.
