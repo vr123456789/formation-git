@@ -25,7 +25,6 @@ core.autocrlf=true
 ```ini
 user.name=Prénom Nom
 user.email=prenom.nom@insee.fr
-alias.lg=log --oneline
 ```
 
 `--local` : uniquement pour un dépot
