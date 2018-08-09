@@ -184,3 +184,6 @@ git status
 Le résultat est le même : Git parvient à repérer les fichiers par la somme de contrôle de leur contenu.
 
 :warning: Si en plus, le contenu du fichier est modifié, cela ne fonctionne plus.
+
+### 2. Historique
+
