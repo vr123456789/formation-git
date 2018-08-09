@@ -236,7 +236,7 @@ Certains fichiers ne doivent pas être partagés avec les autres développeurs :
 
 Fichier `.gitignore` à la racine du projet
 
-```bash
+```ini
 # Un fichier en particulier
 package-lock.json
 .classpath
