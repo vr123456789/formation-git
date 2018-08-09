@@ -16,7 +16,7 @@ Lister en ordre chronologique inversé les validations réalisées :
 	<img src="images/log.png" width="800px" />
 </div>
 
- - Utiliser les flèches « &uarr; » et « &darr; » pour naviguer dans l'historique
+ - Utiliser les flèches « &uarr; » et « &darr; » pour naviguer dans l’historique
  - Taper « q » pour quitter
 
 
@@ -24,7 +24,7 @@ Lister en ordre chronologique inversé les validations réalisées :
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Afficher plus d'informations dans l'historique
+### Afficher plus d’informations dans l’historique
 
 *Patch* de chaque *commit* :
  - `git log --patch` ou `git log -p`
@@ -42,7 +42,7 @@ Liste des fichiers modifiés par chaque *commit* :
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Affichage compact de l'historique
+### Affichage compact de l’historique
 
 `git log --oneline`
  - une ligne par *commit*
@@ -58,7 +58,7 @@ Liste des fichiers modifiés par chaque *commit* :
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Visualisation des branches dans l'historique
+### Visualisation des branches dans l’historique
 `git log --graph [--oneline]`
 
 <div class="center">
@@ -70,7 +70,7 @@ Liste des fichiers modifiés par chaque *commit* :
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Personnaliser l'affichage de l'historique
+### Personnaliser l’affichage de l’historique
 
 `git log --pretty=format:"%h - %an, %ar : %s"`
  - [liste des options &rarr;](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Visualiser-l%E2%80%99historique-des-validations#pretty_format)
@@ -90,7 +90,7 @@ log --color --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Filtrer l'historique sur les métadonnées
+### Filtrer l’historique sur les métadonnées
 
 Le nombre : `-(n)`
 ```bash
@@ -100,12 +100,12 @@ git log -5 # Les cinq derniers
 La date : `--since` et `--until`
 ```bash
 git log --since="2018-04-21" # Depuis le 21 avril 2018
-git log --since=1.month # Depuis moins d'un mois
+git log --since=1.month # Depuis moins d’un mois
 git log --until=2.days # Depuis plus de 2 jours
 ```
 
-L'auteur : `--author`
- - le nom de l'auteur ou son *email* contient la chaîne de caractères
+L’auteur : `--author`
+ - le nom de l’auteur ou son *email* contient la chaîne de caractères
 
 ```bash
 git log --author="Jean-Pierre"
@@ -124,7 +124,7 @@ git log --grep="correc" --grep="ortho" --all-match
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Filtrer l'historique sur les modifications 
+### Filtrer l’historique sur les modifications 
 
 Dans ces deux cas, Git filtre sur le *patch*:
 
@@ -136,19 +136,19 @@ git log -S"public static void main"
 ```
 
 Avec une expression régulière : `-G"pattern"`
- - les ajouts ou retraits correspondent au motif de l'expression régulière
+ - les ajouts ou retraits correspondent au motif de l’expression régulière
 
 ```bash
 git log -G"public Cocktail .*\("
 ```
 
-Il est souvent judicieux de combiner ces option avec l'options `--patch`
+Il est souvent judicieux de combiner ces option avec l’options `--patch`
 
 %%%
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Restreindre l'historique à certains fichiers 
+### Restreindre l’historique à certains fichiers 
 
 ```bash
 git log -- src/main/java/fr/insee/bar/dao/CocktailDao.java
