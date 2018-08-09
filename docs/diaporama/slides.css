@@ -97,6 +97,7 @@ body {
 .reveal code {
     font-size: 90%;
     line-height: 22px;
+    font-weight: bold;
 }
 
 .reveal pre code {
