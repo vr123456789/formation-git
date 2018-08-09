@@ -2,6 +2,10 @@ body {
 	background-color: #f1efe9;
 }
 
+.reveal {
+	color: #515151;
+}
+
 .reveal .main-title {
     /* Empty */
 }

@@ -71,6 +71,7 @@ Liste des fichiers modifiés par chaque *commit* :
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Personnaliser l'affichage de l'historique
+
 `git log --pretty=format:"%h - %an, %ar : %s"`
  - [liste des options &rarr;](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Visualiser-l%E2%80%99historique-des-validations#pretty_format)
  - [liste des couleurs &rarr;](https://stackoverflow.com/questions/15458237/git-pretty-format-colors/15458378#15458378)
@@ -83,3 +84,40 @@ log --color --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -
 <div class="center">
 	<img src="images/log-pretty.png" width="900px" />
 </div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Filtrer l'historique
+
+Par date : `--since` et `--until`
+
+```bash
+git log --since="2018-04-21" # Depuis le 21 avril 2018
+git log --since=1.month # Depuis moins d'un mois
+git log --until=2.days # Depuis plus de 2 jours
+```
+
+Par auteur : `--author`
+ - le nom de l'auteur ou son *email* contient la chaîne de caractères
+
+```bash
+git log --author="Jean-Pierre"
+```
+
+Par message : `--grep`
+ - le message de *commit* contient la chaîne de caractères
+
+```bash
+git log --grep="refacto"
+git log --grep="correc" --grep="ortho" --all-match
+```
+
+Par patch : `-S`
+ - les ajouts ou retraits contient la chaîne de caractères
+
+```bash
+git log -S"public static void main"
+```
