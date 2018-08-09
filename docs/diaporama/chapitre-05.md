@@ -26,7 +26,7 @@ Lister en ordre chronologique inversé les validations réalisées :
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Afficher plus d'informations dans l'historique
 
-Patch de chaque *commit* :
+*Patch* de chaque *commit* :
  - `git log --patch` ou `git log -p`
  - permet de connaître toutes les modifications apportées par un *commit*
  - assez verbeux
@@ -90,24 +90,28 @@ log --color --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Filtrer l'historique
+### Filtrer l'historique sur les métadonnées
 
-Par date : `--since` et `--until`
+Le nombre : `-(n)`
+```bash
+git log -5 # Les cinq derniers
+```
 
+La date : `--since` et `--until`
 ```bash
 git log --since="2018-04-21" # Depuis le 21 avril 2018
 git log --since=1.month # Depuis moins d'un mois
 git log --until=2.days # Depuis plus de 2 jours
 ```
 
-Par auteur : `--author`
+L'auteur : `--author`
  - le nom de l'auteur ou son *email* contient la chaîne de caractères
 
 ```bash
 git log --author="Jean-Pierre"
 ```
 
-Par message : `--grep`
+Le message : `--grep`
  - le message de *commit* contient la chaîne de caractères
 
 ```bash
@@ -115,9 +119,50 @@ git log --grep="refacto"
 git log --grep="correc" --grep="ortho" --all-match
 ```
 
-Par patch : `-S`
- - les ajouts ou retraits contient la chaîne de caractères
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Filtrer l'historique sur les modifications 
+
+Dans ces deux cas, Git filtre sur le *patch*:
+
+Exactement : `-S"string"`
+ - les ajouts ou retraits contiennent la chaîne de caractères
 
 ```bash
 git log -S"public static void main"
 ```
+
+Avec une expression régulière : `-G"pattern"`
+ - les ajouts ou retraits correspondent au motif de l'expression régulière
+
+```bash
+git log -G"public Cocktail .*\("
+```
+
+Il est souvent judicieux de combiner ces option avec l'options `--patch`
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Restreindre l'historique à certains fichiers 
+
+```bash
+git log -- src/main/java/fr/insee/bar/dao/CocktailDao.java
+git log -- src/main/java/fr/insee/bar/dao/
+git log --oneline --name-only -- src/main/java/fr/insee/bar/controller
+```
+ - seuls les *commits* qui contiennent des modifications de ces fichiers sont listés
+
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP2](https://git.stable.innovation.insee.eu/wehdrc/formation-git#2-historique)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" class="blur" />
+</div>
