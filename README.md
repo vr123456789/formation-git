@@ -238,6 +238,12 @@ Afficher l’historique sous la forme suivante
 </details>
 <br />
 
+<details>
+	<summary>Modifier la commande précédente pour que le <i>hash</i> soit couleur cyan</summary>
+	<code>git log --graph --date=short --pretty="format:%C(cyan)%h%Creset %ad | %s%dq [%an]"</code>
+</details>
+<br />
+
 Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un historique coloré :
 
 ```bash
@@ -245,9 +251,15 @@ git config --global alias.ll "log --graph --abbrev-commit --pretty=format:'%C(bo
 git config --global alias.lg 'log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"'
 ```
 
-Tester ces affichages, les modifier si vous le souhaitez :
+Tester ces affichages :
 
-```bash
-git ll
-git lg
-```
+<details>
+	<summary><code>git ll</code></summary>
+	<img src="images/log-ll.png" />
+</details>
+<br />
+<details>
+	<summary><code>git lg</code></summary>
+	<img src="images/log-lg.png" />
+</details>
+<br />
