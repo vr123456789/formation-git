@@ -55,3 +55,27 @@ origin	git@github.com/romain/react.git (push)
 upstream	https://github.com/facebook/react.git (fetch)
 upstream	https://github.com/facebook/react.git (push)
 ```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Récupérer et tirer depuis un dépôt distant
+
+Mettre à jour sa copie de travail avec les modifications du dépôt distant
+
+`git fetch`
+  - équivalent à `git fetch origin`
+  	- équivalent à `git fetch origin master`
+
+Les modifications sont récupérées localement dans une branche spéciale
+  - `origin/master`
+  - la copie de travail n'est pas modifiée
+
+Pour intégrer les modifications distantes dans la copie de travail : `git merge`
+  - équivalent à `git merge origin/master`
+
+`git pull` <!-- .element: class="icon idea" -->
+ - équivalent à `git fetch origin master` puis `git merge origin/master`
+ 
