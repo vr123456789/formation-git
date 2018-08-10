@@ -145,3 +145,59 @@ body {
 .reveal .slide table tr td {
     text-align: center;
 }
+
+/* Icones : color */
+.reveal .icon:before {
+	vertical-align: sub;
+	padding-right: 15px;
+}
+
+.reveal .icon-color .icon.idea:before {
+	content: url('icons/color/idea.png');
+}
+
+.reveal .icon-color .icon.warn:before {
+	content: url('icons/color/warn.png')
+}
+
+.reveal .icon-color .icon.info:before {
+	content: url('icons/color/info.png')
+}
+
+.reveal .icon-color .icon.time:before {
+	content: url('icons/color/time.png')
+}
+
+/* Icones : ultraviolet */
+.reveal .icon-ultraviolet .icon.idea:before {
+	content: url('icons/ultraviolet/idea.png');
+}
+
+.reveal .icon-ultraviolet .icon.warn:before {
+	content: url('icons/ultraviolet/warn.png');
+}
+
+.reveal .icon-ultraviolet .icon.info:before {
+	content: url('icons/ultraviolet/info.png');
+}
+
+.reveal .icon-ultraviolet .icon.time:before {
+	content: url('icons/ultraviolet/time.png');
+}
+
+/* Icones : dusk */
+.reveal .icon-dusk .icon.idea:before {
+	content: url('icons/dusk/idea.png')
+}
+
+.reveal .icon-dusk .icon.warn:before {
+	content: url('icons/dusk/warn.png')
+}
+
+.reveal .icon-dusk .icon.info:before {
+	content: url('icons/dusk/info.png')
+}
+
+.reveal .icon-dusk .icon.time:before {
+	content: url('icons/dusk/time.png')
+}
