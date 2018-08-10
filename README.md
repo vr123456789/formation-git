@@ -1,8 +1,8 @@
 # Introduction à l’utilisation de Git à l’Insee
 
-:arrow_forward: [Diaporama](http://wehdrc.pages.innovation.insee.eu/formation-git)
+:arrow_forward: [Diaporama](https://romain-warnan.github.io/formation-git)
 
-:bookmark_tabs: [Imprimer](http://wehdrc.pages.innovation.insee.eu/formation/?print-pdf#/) (avec Chrome)
+:bookmark_tabs: [Imprimer](https://romain-warnan.github.io/formation-git/?print-pdf#/) (avec Chrome)
 
 ## Plan
 
@@ -15,6 +15,8 @@
 ## Travaux pratiques
 
 ### 1. Configuration et fondamentaux
+
+#### Configuration
 
 Paramétrer son nom et son email :
 ```bash
@@ -99,7 +101,7 @@ java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App
 git status
 ```
 
-Créer le fichier `.gitignore` pour exclure le répertoire `target/` et le valider :
+Créer le fichier `.gitignore` pour exclure le répertoire `target/` et l’indexer :
 ```bash
 vim .gitignore
 git add .gitignore
@@ -117,11 +119,12 @@ git commit -m "Exclusion du répertoire 'target/'"
 Créer les dossiers `src/main/resources` et `src/test/resources`,  inspecter la copie de travail :
 ```bash
 mkdir -p src/main/resources src/test/resources
+git status
 ```
 
 :warning: Git ne détecte aucun changement car les répertoires sont vides.
 
-Pour que ces dossier soient quand même présents dans l’historique bien qu’ils soient vides, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et a le valider :
+Pour que ces dossier vides soient quand même présents dans l’historique, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et a le valider :
 
 ```bash
 touch src/main/resources/.git-empty src/test/resources/.git-empty
