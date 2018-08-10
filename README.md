@@ -187,3 +187,38 @@ Le résultat est le même : Git parvient à repérer les fichiers par la somme d
 
 ### 2. Historique
 
+On va désormais travailler sur un dépôt existant.
+
+Clôner ce dépôt dans votre _workspace_ :
+```bash
+cd /d/*idep*/Mes\ Documents\eclipse_workspace
+git clone https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
+cd formation-git
+```
+
+Afficher l'historique de ce dépôt :
+
+```bash
+git log
+```
+
+<details>
+	<summary>Combien de <i>commits</i> datés d'avant le 31 juillet 2018 ce dépôt contient-il ?</summary>
+	<code>518</code>
+</details>
+<br />
+<details>
+	<summary>Combien de <i>commits</i> datés d'avant le 31 juillet 2018 concernent les services ?</summary>
+	<code>30</code>
+</details>
+<br />
+<details>
+	<summary>Dans quel <i>commits</i> a t-on mis en place un système de <i>logging</i> autre que <code>System.out</code> ?</summary>
+	<code>df1c990</code>
+</details>
+<br />
+<details>
+	<summary>À quel heure de quel jour a été validé le premier test unitaire du projet ?</summary>
+	<code>2016-09-01 16:53:26</code>
+</details>
+<br />
