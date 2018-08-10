@@ -191,7 +191,7 @@ On va désormais travailler sur un dépôt existant.
 
 Clôner ce dépôt dans votre _workspace_ :
 ```bash
-cd /d/*idep*/Mes\ Documents\eclipse_workspace
+cd /d/*idep*/Mes\ Documents/eclipse_workspace
 git clone https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
 cd formation-git
 ```
@@ -222,11 +222,6 @@ git log
 	<code>2016-09-01 16:53:26</code>
 </details>
 <br />
-<details>
-	<summary>À quel heure de quel jour a été validé le premier test unitaire du projet ?</summary>
-	<code>2016-09-01 16:53:26</code>
-</details>
-<br />
 
 Afficher l’historique sous la forme suivante 
 
@@ -247,7 +242,7 @@ Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un histor
 
 ```bash
 git config --global alias.ll "log --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"
-git config --global alias.lg log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"
+git config --global alias.lg 'log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"'
 ```
 
 Tester ces affichages, les modifier si vous le souhaitez :
