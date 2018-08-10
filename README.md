@@ -255,11 +255,11 @@ Tester ces affichages :
 
 <details>
 	<summary><code>git ll</code></summary>
-	<img src="images/log-ll.png" />
+	<img src="docs/images/log-ll.png" />
 </details>
 <br />
 <details>
 	<summary><code>git lg</code></summary>
-	<img src="images/log-lg.png" />
+	<img src="docs/images/log-lg.png" />
 </details>
 <br />
