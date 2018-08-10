@@ -144,12 +144,6 @@ git log -G"public Cocktail .*\("
 
 Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon idea" --> `--patch`
 
-Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon time" --> `--patch`
-
-Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon info" --> `--patch`
-
-Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon warn" --> `--patch`
-
 %%%
 
 
