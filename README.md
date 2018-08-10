@@ -222,3 +222,37 @@ git log
 	<code>2016-09-01 16:53:26</code>
 </details>
 <br />
+<details>
+	<summary>À quel heure de quel jour a été validé le premier test unitaire du projet ?</summary>
+	<code>2016-09-01 16:53:26</code>
+</details>
+<br />
+
+Afficher l'historique sous la forme suivante 
+
+```bash
+* 8d0576c 2018-08-10 | Début du TP2 sur les logs (HEAD -> master) [Romain Warnan]
+* 97909af 2018-08-10 | Simplification d'écriture de la lambda [Romain Warnan]
+* dbf14df 2018-08-10 | Ajout d'icones dans le diaporama (origin/master, origin/HEAD) [Romain Warnan]
+* 042c58b 2018-08-10 | Suppression de lignes en trop [Romain Warnan]
+```
+
+<details>
+	<summary>Indice : <code>git log --graph --date=short --pretty="format:???"</code></summary>
+	<code>git log --graph --date=short --pretty="format:%h %ad | %s%dq [%an]"</code>
+</details>
+<br />
+
+Créer les deux alias `git ll` et `git lg` qui permettent d'afficher un historique coloré :
+
+```bash
+git config --global alias.ll "log --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"
+git config --global alias.lg log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"
+```
+
+Tester ces affichages, les modifier si vous le souhaitez :
+
+```bash
+git ll
+git lg
+```
