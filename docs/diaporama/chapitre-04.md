@@ -312,8 +312,8 @@ Message vide &rarr;  _commit_ annulé
  - les lignes qui commencent par `#` ne comptent pas
 
 Rappel pour quitter <!-- .element: class="icon idea" --> `vi` :
- - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
- - quitter sans sauvegarder : `Esc` puis `:q!`
+ - sauvegarder et quitter : `Esc` puis `:wq[Enter]` ou `ZZ` 
+ - quitter sans sauvegarder : `Esc` puis `:q![Enter]`
 
 
 %%%
