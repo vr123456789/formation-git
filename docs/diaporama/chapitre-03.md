@@ -42,13 +42,13 @@ branch.master.remote=origin
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Configuration de base
 
-Configuration obligatoire pour valider :
+Configuration obligatoire pour valider : <!-- .element: class="icon warn" -->
 ```bash
 git config --global user.name "Prénom Nom"
 git config --global user.email "prenom.nom@insee.fr"
 ```
 
-Configuration bien utile :
+Configuration bien utile : <!-- .element: class="icon idea" -->
 ```bash
 # Éditeur de texte pour les messages de commit, etc.
 git config --global core.editor vim
@@ -94,7 +94,7 @@ Voir la valeur d’une propriété :
 git config user.name
 ```
 
-Lister toute la configuration avec le nom du fichier
+Lister toute la configuration avec le nom du fichier <!-- .element: class="icon info" -->
 ```bash
 git config --list --show-origin
 ```
@@ -117,7 +117,7 @@ Autant aller voir sur internet en français :
 Ou en anglais
  - [Git Book (en)](https://git-scm.com/book/en/v2)
 
-Pour un aide-mémoire rapide :
+Pour un aide-mémoire rapide : <!-- .element: class="icon info" -->
 ```bash
 git <verb> -h
 ```

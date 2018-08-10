@@ -16,6 +16,7 @@ Lister en ordre chronologique inversé les validations réalisées :
 	<img src="images/log.png" width="800px" />
 </div>
 
+L’historique est affiché avec <!-- .element: class="icon idea" --> `less`
  - Utiliser les flèches « &uarr; » et « &darr; » pour naviguer dans l’historique
  - Taper « q » pour quitter
 

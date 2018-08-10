@@ -13,7 +13,7 @@ Transformer un dossier en dépôt Git
  - `git init`
  - Le répertoire `.git/` est créé dans le dossier
  - Il ne contient aucun commit
- - Les fichiers déjà présents sont considérés comme non suivis par Git (_untracked_) 
+ - Les fichiers déjà présents sont considérés comme non suivis par Git (_untracked_)
  
 Clôner un dépôt Git distant
  - `git clone <url>`
@@ -193,7 +193,7 @@ M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
-L’interface graphique est ici clairement un atout :
+L’interface graphique est ici clairement un atout : <!-- .element: class="icon idea" -->
 <div class="center">
 	<img src="images/egit-add.png" /> 
 </div>
@@ -257,7 +257,7 @@ node_modules/
 docs/**/*.scss
 ```
 
-Le `.gitignore` doit être validé
+Le fichier <!-- .element: class="icon warn" --> `.gitignore` doit être validé
 
 
 %%%
@@ -294,7 +294,7 @@ git commit -am "Message de validation"
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur le message de validation
 
-Le message de validation est très important
+Le message de validation est très important <!-- .element: class="icon info" -->
  - décrit brièvement les modifications contenues dans le _commit_
  - importance de l’homogénéité des modifications contenues un _commit_
  - à l’attention des autres développeurs
@@ -311,7 +311,7 @@ Texte détaillé.
 Message vide &rarr;  _commit_ annulé
  - les lignes qui commencent par `#` ne comptent pas
 
-Rappel pour quitter `vi` :
+Rappel pour quitter <!-- .element: class="icon idea" --> `vi` :
  - sauvegarder et quitter : `Esc` puis `:wq` ou `ZZ` 
  - quitter sans sauvegarder : `Esc` puis `:q!`
 
