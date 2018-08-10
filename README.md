@@ -196,19 +196,19 @@ git clone https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
 cd formation-git
 ```
 
-Afficher l'historique de ce dépôt :
+Afficher l’historique de ce dépôt :
 
 ```bash
 git log
 ```
 
 <details>
-	<summary>Combien de <i>commits</i> datés d'avant le 31 juillet 2018 ce dépôt contient-il ?</summary>
+	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 ce dépôt contient-il ?</summary>
 	<code>518</code>
 </details>
 <br />
 <details>
-	<summary>Combien de <i>commits</i> datés d'avant le 31 juillet 2018 concernent les services ?</summary>
+	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 concernent les services ?</summary>
 	<code>30</code>
 </details>
 <br />
@@ -228,12 +228,12 @@ git log
 </details>
 <br />
 
-Afficher l'historique sous la forme suivante 
+Afficher l’historique sous la forme suivante 
 
 ```bash
 * 8d0576c 2018-08-10 | Début du TP2 sur les logs (HEAD -> master) [Romain Warnan]
-* 97909af 2018-08-10 | Simplification d'écriture de la lambda [Romain Warnan]
-* dbf14df 2018-08-10 | Ajout d'icones dans le diaporama (origin/master, origin/HEAD) [Romain Warnan]
+* 97909af 2018-08-10 | Simplification d’écriture de la lambda [Romain Warnan]
+* dbf14df 2018-08-10 | Ajout d’icones dans le diaporama (origin/master, origin/HEAD) [Romain Warnan]
 * 042c58b 2018-08-10 | Suppression de lignes en trop [Romain Warnan]
 ```
 
@@ -243,7 +243,7 @@ Afficher l'historique sous la forme suivante
 </details>
 <br />
 
-Créer les deux alias `git ll` et `git lg` qui permettent d'afficher un historique coloré :
+Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un historique coloré :
 
 ```bash
 git config --global alias.ll "log --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"
