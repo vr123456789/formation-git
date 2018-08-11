@@ -15,7 +15,7 @@ Collaborer au même projet
   - « pousser » ses modifications
  - récupérer le travail des autres développeurs
   - `git fetch` ou `git pull`
-  - « tirer » les modifications des autres
+  - « récupérer » ou « tirer » les modifications des autres
 
 Il peut exister plusieurs dépôts distants
  - droits en lecture seule ou en lecture / écriture
@@ -28,12 +28,12 @@ Il peut exister plusieurs dépôts distants
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Connexion à un dépôt distant
 
-Soit automatique lors q'un `git clone`
+Soit automatique lors d’un `git clone`
  - après le clonage, le dépôt local est automatiquement relié au dépôt distant
  - alias du dépôt distant : `origin`
 
 Soit manuellement
- - exemple 1 : suite à `git init`, aucun dépôt distant n'est configuré
+ - exemple 1 : suite à `git init`, aucun dépôt distant n’est configuré
 
 ```bash
 git remote add origin https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
@@ -71,7 +71,7 @@ Mettre à jour sa copie de travail avec les modifications du dépôt distant
 
 Les modifications sont récupérées localement dans une branche spéciale
   - `origin/master`
-  - la copie de travail n'est pas modifiée
+  - la copie de travail n’est pas modifiée
 
 Pour intégrer les modifications distantes dans la copie de travail : `git merge`
   - équivalent à `git merge origin/master`
