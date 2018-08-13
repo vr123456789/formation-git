@@ -269,17 +269,54 @@ Tester ces affichages :
 
 ### 3. Dépôts distants
 
-Vérifiez que vous ête bien connecté à Gitlab (en haut à droite)
+En haut à droite de l'interface de Giltab, vérifier que vous ête bien connecté à Gitlab.
 
+En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovation.insee.eu/wehdrc/formation-git/forks/new) », puis choisir votre dépôt personnel.
 
+> :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s'appelle un _fork_.
+> 
+> Vous avez les droits
+>  - en lecture et en écriture sur cette copie,
+>  - en lecture seule sur le dépôt d'origine.
 
-<a class="btn btn-default " href="/wehdrc/formation-git/forks/new"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="5 0 30 40"><path fill="#7E7E7E" fill-rule="evenodd" d="M22 29.535V22.72c4.19-1.21 7.4-5.917 7.4-5.917.34-.446.6-1.247.6-1.795v-4.543C31.196 9.773 32 8.48 32 7c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.48.804 2.773 2 3.465v4.243c0 .17-.094.39-.21.502 0 0-1.253 1.203-1.84 1.742C22.5 18.277 21.12 19 20.09 19c-1.042 0-2.473-.74-3.977-2.086-.61-.546-1.746-1.574-1.746-1.574-.2-.182-.367-.555-.367-.83v-4.045C15.196 9.773 16 8.48 16 7c0-2.21-1.79-4-4-4S8 4.79 8 7c0 1.48.804 2.773 2 3.465v4.543c0 .537.274 1.345.61 1.78 0 0 3.25 4.59 7.39 5.88v6.867c-1.196.692-2 1.984-2 3.465 0 2.21 1.79 4 4 4s4-1.79 4-4c0-1.48-.804-2.773-2-3.465zM14 7c0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2 2-.895 2-2zm16 0c0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2 2-.895 2-2zm-8 26c0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2 2-.895 2-2z"></path></svg>
+Clôner ce dépôt dans votre _workspace_ :
+```bash
+cd /d/*idep*/Mes\ Documents/eclipse_workspace
+git clone [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git
+cd formation-git
+```
 
-<span>Fork</span>
-</a>
-<div class="count-with-arrow">
-<span class="arrow"></span>
-<a title="Forks" class="count" href="/wehdrc/formation-git/forks">0</a></div>
+:warning: Pour tout problème SSH, appeler l'intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab)
 
+Dans votre copie locale, effectuer la modification suivante :
 
-En haut de cette page, cliquer sur bouton « Fork »
+<details>
+	<summary>Dans le dossier <code>students/</code>, créer un fichier <code>*idep*.txt</code> contenant votre <code>*Prénom Nom*</code>.</summary>
+	<code>echo '*Prénom Nom*' > students/*idep*.txt</code>
+</details>
+
+Indexer ce nouveau fichier, valider la modification et envoyer vers le serveur dépôt distant :
+```bash
+git add students/
+git commit -m "Ajout d'un fichier idep.txt"
+git push
+```
+
+Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu'il est absent du [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students).
+
+Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d'origine :
+```bash
+git remote add upstream https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
+```
+
+Mettre votre copie locale à jour à partir de ce nouveau dépôt :
+```bash
+git pull upstream
+```
+
+Puis partager les éventuelles modifications dans votre dépôt :
+ ```bash
+git push origin
+```
+
+Merge request...
