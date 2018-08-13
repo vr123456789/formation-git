@@ -78,4 +78,50 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 
 `git pull` <!-- .element: class="icon idea" -->
  - équivalent à `git fetch origin master` puis `git merge origin/master`
- 
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Inspecter un dépôt distant `git remote show`
+
+<div class="center">
+	<img src="images/remote-show.png" width="700px" />
+</div>
+
+<table>
+<tr>
+	<td></td>
+	<td>branche locale</td>
+	<td>branche distante</td>
+</tr>
+<tr>
+	<td>__traked__</td>
+	<td>✔</td>
+	<td>✔</td>
+</tr>
+<tr>
+	<td>__new__</td>
+	<td>✘</td>
+	<td>✔</td>
+</tr>
+<tr>
+	<td>__stale__</td>
+	<td>✔</td>
+	<td>✘</td>
+</tr>
+</table>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Inspecter un dépôt distant avec Gitlab
+
+Onglets « Branches » : [Gitlab](https://git.stable.innovation.insee.eu/wehdrc/formation-git/branches) | [Github](https://github.com/romain-warnan/formation-git/branches)
+
+<div class="center">
+	<img src="images/remote-show-gitlab.png" width="700px" />
+</div>
