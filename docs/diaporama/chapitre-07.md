@@ -57,18 +57,27 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 <!-- .slide: class="slide" data-background-color="#7580ba" -->
 ### Branche : schéma
 <div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git checkout master</code></pre>
+	<img src="images/branches/branch-and-history.png" width="700px" />
+</div>
+<div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git branch testing</code></pre>
 	<img src="images/branches/head-to-master.png" width="700px" />
 </div>
 <div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git checkout testing</code></pre>
 	<img src="images/branches/head-to-testing.png" width="700px" />
 </div>
 <div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'testing'"</code></pre>
 	<img src="images/branches/advance-testing.png" width="700px" />
 </div>
 <div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git checkout master</code></pre>
 	<img src="images/branches/checkout-master.png" width="700px" />
 </div>
 <div class="center fragment fade-in-then-out">
+	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'master'"</code></pre>
 	<img src="images/branches/advance-master.png" width="700px" />
 </div>
 
@@ -77,7 +86,7 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Détail
+### Détails
 
  - une branche est un _hash_ de 40 caractères
   - dans un fichier du dossier `.git/refs/heads/`
