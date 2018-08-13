@@ -1,5 +1,5 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="chapter" -->
-## 6
+## 5
 ### Dépôts distants
 
 
