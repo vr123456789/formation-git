@@ -163,7 +163,7 @@ git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-
 
 
 <!-- .slide: class="tp" -->
-## [TP3](https://git.stable.innovation.insee.eu/wehdrc/formation-git#3-historique)
+## [TP2](https://git.stable.innovation.insee.eu/wehdrc/formation-git#2-depots-distants)
 <div class="center">
 	<img src="images/keyboard.png" width="600px" class="blur" />
 </div>
