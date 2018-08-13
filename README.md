@@ -190,15 +190,15 @@ Le résultat est le même : Git parvient à repérer les fichiers par la somme d
 
 ### 2. Dépôts distants
 
-En haut à droite de l'interface de Giltab, vérifier que vous ête bien connecté à Gitlab.
+En haut à droite de l’interface de Giltab, vérifier que vous ête bien connecté à Gitlab.
 
-En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovation.insee.eu/wehdrc/formation-git/forks/new) », puis choisir votre dépôt personnel.
+En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovation.insee.eu/wehdrc/formation-git/forks/new) », puis choisir votre espace personnel.
 
-> :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s'appelle un _fork_.
+> :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s’appelle un _fork_.
 > 
 > Vous avez les droits
 >  - en lecture et en écriture sur cette copie,
->  - en lecture seule sur le dépôt d'origine.
+>  - en lecture seule sur le dépôt d’origine.
 
 Clôner ce dépôt dans votre _workspace_ :
 ```bash
@@ -207,7 +207,7 @@ git clone [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git
 cd formation-git
 ```
 
-:warning: Pour tout problème SSH, appeler l'intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
+:warning: Pour tout problème SSH, appeler l’intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
 
 Dans votre copie locale, effectuer la modification suivante :
 
@@ -219,13 +219,13 @@ Dans votre copie locale, effectuer la modification suivante :
 Indexer ce nouveau fichier, valider la modification et envoyer vers le serveur dépôt distant :
 ```bash
 git add students/
-git commit -m "Ajout d'un fichier idep.txt"
+git commit -m "Ajout d’un fichier idep.txt"
 git push
 ```
 
-Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu'il est absent du [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students).
+Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu’il est absent du [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students).
 
-Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d'origine :
+Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
 git remote add upstream [git@git.stable.innovation.insee.eu:22222]:wehdrc/formation-git.git
 ```
@@ -240,13 +240,13 @@ Puis partager les éventuelles modifications dans votre dépôt :
 git push origin
 ```
 
-Dans le _fork_ Gitlab, onglet « Branches », créer une nouvelle branche `tp2` à partir de master.
+Dans votre _fork_ Gitlab, onglet « Branches », créer une nouvelle branche `tp2` à partir de master.
 Puis cliquer sur le bouton « Create merge request » qui est apparu.
 Finalement, cliquer sur « Submit merge request ».
 
-:vertical_traffic_light: Attendre que l'intervevnant est accepté toutes les _merge requests_.
+:vertical_traffic_light: Attendre que l’intervevnant est accepté toutes les _merge requests_.
 
-Mettre à jour votre copie locale à partir du dépôt d'origine :
+Mettre à jour votre copie locale à partir du dépôt d’origine :
 ```bash
 git pull upstream master
 ```
