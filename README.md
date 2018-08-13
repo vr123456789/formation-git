@@ -207,7 +207,7 @@ git clone [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git
 cd formation-git
 ```
 
-:warning: Pour tout problème SSH, appeler l'intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab)
+:warning: Pour tout problème SSH, appeler l'intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
 
 Dans votre copie locale, effectuer la modification suivante :
 
@@ -227,12 +227,12 @@ Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt 
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d'origine :
 ```bash
-git remote add upstream https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
+git remote add upstream [git@git.stable.innovation.insee.eu:22222]:wehdrc/formation-git.git
 ```
 
 Mettre votre copie locale à jour à partir de ce nouveau dépôt :
 ```bash
-git pull upstream
+git pull upstream master
 ```
 
 Puis partager les éventuelles modifications dans votre dépôt :
@@ -240,7 +240,23 @@ Puis partager les éventuelles modifications dans votre dépôt :
 git push origin
 ```
 
-Merge request...
+Dans le _fork_ Gitlab, onglet « Branches », créer une nouvelle branche `tp2` à partir de master.
+Puis cliquer sur le bouton « Create merge request » qui est apparu.
+Finalement, cliquer sur « Submit merge request ».
+
+:vertical_traffic_light: Attendre que l'intervevnant est accepté toutes les _merge requests_.
+
+Mettre à jour votre copie locale à partir du dépôt d'origine :
+```bash
+git pull upstream master
+```
+
+Lister le répertoire `students/` et constater que vous avez récupérer les fichiers des autres élèves.
+```bash
+ls -l students/
+```
+
+Dans Gitlab, dans le [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students), constater la présence de votre fichier parmi celui des autres.
 
 ### 3. Historique
 
