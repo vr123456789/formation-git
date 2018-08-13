@@ -125,3 +125,34 @@ Onglets « Branches » : [Gitlab](https://git.stable.innovation.insee.eu/wehdrc/
 <div class="center">
 	<img src="images/remote-show-gitlab.png" width="700px" />
 </div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Modifier un dépôt
+
+Renommer :
+```bash
+git remote rename gh github
+```
+
+Supprimer :
+```bash
+git remote rm github
+```
+
+Modifier l’url
+```bash
+git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
+```
+
+
+L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url pour partager (_push_)
+ - exemple du mirroir vers GForge
+ - on peut modifier séparemment la partie _push_  :
+
+```bash
+git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-git.git
+```
