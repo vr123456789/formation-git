@@ -150,7 +150,7 @@ git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
 
 
 L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url pour partager (_push_)
- - exemple du mirroir vers GForge
+ - exemple du miroir vers GForge
  - on peut modifier séparemment la partie _push_  :
 
 ```bash
