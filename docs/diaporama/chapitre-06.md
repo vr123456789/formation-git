@@ -156,3 +156,13 @@ L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url p
 ```bash
 git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-git.git
 ```
+
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP3](https://git.stable.innovation.insee.eu/wehdrc/formation-git#3-depots-distants)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" class="blur" />
+</div>
