@@ -154,7 +154,7 @@ Indexer le fichier `README.txt`.
 </details>
 <br />
 <details>
-	<summaryAfficher les modifications de la copie de travail par rapport à l’index :</summary>
+	<summary>Afficher les modifications de la copie de travail par rapport à l’index :</summary>
 	<code>git diff</code>
 </details>
 <br />
