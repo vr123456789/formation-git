@@ -1,129 +1,41 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="chapter" -->
-## 6
-### Dépôts distants
+## 5
+### Historique des validations
 
 
 %%%
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Travailler avec des dépôts distants
+### Lister l’historique des validations : `git log`
 
-Collaborer au même projet
- - partager son travail
-  - `git push`
-  - « pousser » ses modifications
- - récupérer le travail des autres développeurs
-  - `git fetch` ou `git pull`
-  - « récupérer » ou « tirer » les modifications des autres
-
-Il peut exister plusieurs dépôts distants
- - droits en lecture seule ou en lecture / écriture
- - exemple de la contribution à un projet libre
-
-
-%%%
-
-
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Connexion à un dépôt distant
-
-Soit automatique lors d’un `git clone`
- - après le clonage, le dépôt local est automatiquement relié au dépôt distant
- - alias du dépôt distant : `origin`
-
-Soit manuellement
- - exemple 1 : suite à `git init`, aucun dépôt distant n’est configuré
-
-```bash
-git remote add origin https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
-```
-
- - exemple 2 : si on contribue à un projet libre
-
-```bash
-git clone git@github.com:romain/react.git # lecture / écriture (fork)
-git remote add upstream https://github.com/facebook/react.git # lecture seule
-```
-
-On peut lister les dépôts distants avec leurs adresses :
-
-```bash
-$ git remote -v
-origin	git@github.com/romain/react.git (fetch)
-origin	git@github.com/romain/react.git (push)
-upstream	https://github.com/facebook/react.git (fetch)
-upstream	https://github.com/facebook/react.git (push)
-```
-
-
-%%%
-
-
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Récupérer et tirer depuis un dépôt distant
-
-Mettre à jour sa copie de travail avec les modifications du dépôt distant
-
-`git fetch`
-  - équivalent à `git fetch origin`
-  	- équivalent à `git fetch origin master`
-
-Les modifications sont récupérées localement dans une branche spéciale
-  - `origin/master`
-  - la copie de travail n’est pas modifiée
-
-Pour intégrer les modifications distantes dans la copie de travail : `git merge`
-  - équivalent à `git merge origin/master`
-
-`git pull` <!-- .element: class="icon idea" -->
- - équivalent à `git fetch origin master` puis `git merge origin/master`
-
-
-%%%
-
-
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Inspecter un dépôt distant `git remote show`
+Lister en ordre chronologique inversé les validations réalisées :
+ - `git log`
 
 <div class="center">
-	<img src="images/remote-show.png" width="700px" />
+	<img src="images/log.png" width="800px" />
 </div>
 
-<table>
-<tr>
-	<td></td>
-	<td>branche locale</td>
-	<td>branche distante</td>
-</tr>
-<tr>
-	<td>__traked__</td>
-	<td>✔</td>
-	<td>✔</td>
-</tr>
-<tr>
-	<td>__new__</td>
-	<td>✘</td>
-	<td>✔</td>
-</tr>
-<tr>
-	<td>__stale__</td>
-	<td>✔</td>
-	<td>✘</td>
-</tr>
-</table>
+L’historique est affiché avec <!-- .element: class="icon idea" --> `less`
+ - Utiliser les flèches « &uarr; » et « &darr; » pour naviguer dans l’historique
+ - Taper « q » pour quitter
 
 
 %%%
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Inspecter un dépôt distant avec Gitlab
+### Afficher plus d’informations dans l’historique
 
-Onglets « Branches » : [Gitlab](https://git.stable.innovation.insee.eu/wehdrc/formation-git/branches) | [Github](https://github.com/romain-warnan/formation-git/branches)
+*Patch* de chaque *commit* :
+ - `git log --patch` ou `git log -p`
+ - permet de connaître toutes les modifications apportées par un *commit*
+ - assez verbeux
 
+Liste des fichiers modifiés par chaque *commit* :
+ - `git log --name-only`
 <div class="center">
-	<img src="images/remote-show-gitlab.png" width="700px" />
+	<img src="images/log-name-only.png" width="800px" />
 </div>
 
 
@@ -131,28 +43,127 @@ Onglets « Branches » : [Gitlab](https://git.stable.innovation.insee.eu/wehdrc/
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Modifier un dépôt
+### Affichage compact de l’historique
 
-Renommer :
-```bash
-git remote rename gh github
+`git log --oneline`
+ - une ligne par *commit*
+ - *hash* abrégé sur 7 caractères
+ - équivalent à `git log --pretty=oneline --abbrev-commit`
+
+<div class="center">
+	<img src="images/log-oneline.png" width="800px" />
+</div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Visualisation des branches dans l’historique
+`git log --graph [--oneline]`
+
+<div class="center">
+	<img src="images/log-graph.png" width="800px" />
+</div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Personnaliser l’affichage de l’historique
+
+`git log --pretty=format:"%h - %an, %ar : %s"`
+ - [liste des options &rarr;](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Visualiser-l%E2%80%99historique-des-validations#pretty_format)
+ - [liste des couleurs &rarr;](https://stackoverflow.com/questions/15458237/git-pretty-format-colors/15458378#15458378)
+
+Exemple :
+```
+log --color --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(cyan)<%an>%Creset'
 ```
 
-Supprimer :
+<div class="center">
+	<img src="images/log-pretty.png" width="900px" />
+</div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Filtrer l’historique sur les métadonnées
+
+Le nombre : `-(n)`
 ```bash
-git remote rm github
+git log -5 # Les cinq derniers
 ```
 
-Modifier l’url
+La date : `--since` et `--until`
 ```bash
-git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
+git log --since="2018-04-21" # Depuis le 21 avril 2018
+git log --since=1.month # Depuis moins d’un mois
+git log --until=2.days # Depuis plus de 2 jours
+```
+
+L’auteur : `--author`
+ - le nom de l’auteur ou son *email* contient la chaîne de caractères
+
+```bash
+git log --author="Jean-Pierre"
+```
+
+Le message : `--grep`
+ - le message de *commit* contient la chaîne de caractères
+
+```bash
+git log --grep="refacto"
+git log --grep="correc" --grep="ortho" --all-match
 ```
 
 
-L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url pour partager (_push_)
- - exemple du mirroir vers GForge
- - on peut modifier séparemment la partie _push_  :
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Filtrer l’historique sur les modifications 
+
+Dans ces deux cas, Git filtre sur le *patch*:
+
+Exactement : `-S"string"`
+ - les ajouts ou retraits contiennent la chaîne de caractères
 
 ```bash
-git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-git.git
+git log -S"public static void main"
 ```
+
+Avec une expression régulière : `-G"pattern"`
+ - les ajouts ou retraits correspondent au motif de l’expression régulière
+
+```bash
+git log -G"public Cocktail .*\("
+```
+
+Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon idea" --> `--patch`
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Restreindre l’historique à certains fichiers 
+
+```bash
+git log -- src/main/java/fr/insee/bar/dao/CocktailDao.java
+git log -- src/main/java/fr/insee/bar/dao/
+git log --oneline --name-only -- src/main/java/fr/insee/bar/controller
+```
+ - seuls les *commits* qui contiennent des modifications de ces fichiers sont listés
+
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP2](https://git.stable.innovation.insee.eu/wehdrc/formation-git#2-depots-distants)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" class="blur" />
+</div>
