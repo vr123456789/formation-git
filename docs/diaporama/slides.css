@@ -201,3 +201,10 @@ body {
 .reveal .icon-dusk .icon.time:before {
 	content: url('icons/dusk/time.png')
 }
+
+.fragment.visible:not(.current-fragment) {
+    display: none;
+    height:0px;
+    line-height: 0px;
+    font-size: 0px;
+}

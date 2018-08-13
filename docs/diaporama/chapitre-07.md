@@ -54,27 +54,30 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 %%%
 
 
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" data-transition="none-in concave-out" -->
-### Animation
+<!-- .slide: class="slide" data-background-color="#7580ba" -->
+### Branche : schéma
+<div class="center fragment fade-in-then-out">
+	<img src="images/branches/head-to-master.png" width="700px" />
+</div>
+<div class="center fragment fade-in-then-out">
+	<img src="images/branches/head-to-testing.png" width="700px" />
+</div>
+<div class="center fragment fade-in-then-out">
+	<img src="images/branches/advance-testing.png" width="700px" />
+</div>
+<div class="center fragment fade-in-then-out">
+	<img src="images/branches/checkout-master.png" width="700px" />
+</div>
+<div class="center fragment fade-in-then-out">
+	<img src="images/branches/advance-master.png" width="700px" />
+</div>
 
-<div class="center fragment fade-int">
-	<div class="center fragment fade-out">
-		<img src="images/head-to-master.png" />
-	</div>
-</div>
-</p>
-<div class="center fragment fade-in-then-out">
-	<img src="images/head-to-testing.png" />
-</div>
-<div class="center fragment fade-in-then-out">
-	<img src="images/advance-testing.png" />
-</div>
+
+%%%
+
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Détail
-
-
-
 
  - une branche est un _hash_ de 40 caractères
   - dans un fichier du dossier `.git/refs/heads/`
