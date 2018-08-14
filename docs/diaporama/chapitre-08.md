@@ -6,25 +6,7 @@
 %%%
 
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
-### Quelques précisions : *merge*, *rebase* et *pull*
-
-Les fusions se produisent dans trois cas :
- - intégration d’une branche
-  - `git merge <branche_name>`
- - récupération de modifications « extérieures »
-  - `pull`, `cherry-pick`, `patch`
- - réécriture de l’historique local
-  - `git rebase master`
-
-Les techniques présentées ici sont valables dans les trois cas
- - Rappel : `git pull` =
-  - `git fetch`
-  - `git merge origin/master` 
-
-%%%
-
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Généralités
 
 La fusion est toujours locale
@@ -32,47 +14,18 @@ La fusion est toujours locale
 
 On peut toujours annuler l’opération
  - `git merge --abort`
- - `git rebase --abort`
 
-Il est toujours préférable d’avoir une copie de travail propre
+Il est toujours préférable d’avoir une copie de travail propre <!-- .element: class="icon idea" -->
  - valider : `git commit`
  - ou remiser : `git stash`
 
-%%%
+Une fusion survient quand la <!-- .element: class="icon warn" --> __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
-### Conflits de fusion
-
-La __même ligne__ du __même fichier__ a été modifée différemment  
-
- - Sans conflit
-
-```bash
-# git tag ici
-git diff ex1a..ex1b
-git diff ex1a..bex1
-git reset --hard ex1b
-git merge bex1
-# git reset --hard ici
-# git tag -d ici
-```
-
- - Avec conflit
-  - Résolution d’un conflit simple en ligne de commande
-
-```bash
-# git tag ici
-git diff ex2a..ex2b
-git diff ex2a..bex2
-git reset --hard ex2b
-git merge bex2
-# git reset --hard ici
-# git tag -d ici
-```
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Résoudre un conflit
 
 Lors de la fusion on est avertis qu’il y a eu des conflits :
@@ -96,15 +49,15 @@ Le code contient des marqueurs de conlits :
 >>>>>>> origin/bex2
 ```
 
-Modifier le code pour supprimer les conflits et les marqueurs
+ - Modifier le code pour supprimer les conflits et les marqueurs
+ - Ajouter les fichiers corrigés dans l’index
+ - Commiter une fois que tout est résolu
 
-Ajouter les fichiers corrigés dans l’index
-
-Commiter une fois que tout est résolu
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Conseils et astuces : avant la fusion
 
 Activer les marqueurs pour voir l’ancêtre commun :
@@ -123,7 +76,7 @@ Activer les marqueurs pour voir l’ancêtre commun :
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Conseils et astuces : pendant la fusion
 
 Lister les *commits* concernés par le conflit :
@@ -156,7 +109,7 @@ Voir les parties du code contenant des conflits :
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Conseils et astuces : après la résolution des conflits
 
 Avant *commit*
@@ -178,76 +131,30 @@ Après *commit*
 
 ```
 
-%%%
-
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
-### Exemple complet
-
-Problème :
- - dans une branche `bex3`, on a renommé une classe du modèle
-  - `Employe` &rarr; `Agent`
-  - beaucoup de fichiers sont donc modifiés
- - on aussi supprimé une classe inutile
-  - `DroitsController`
- - et ajouté de la Javadoc
- - dans `master` on renommé une autre classe du modèle
-  - `Personne` &rarr; `Client`
- 
-<div class="center">
-    <img src="images/graph-1.png" class="boxed-img" />
-</div>
-
-On veut fusionner `bex3` dans `master`
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
-### Étapes de la résolution des conflits
 
-```bash
-git reset --hard ex3b
-```
-
-Solution :
- - on fait la fusion dans Eclipse
- - on localise les conflits : `git diff`
- - on résoud le problème de la classe supprimée
- - on résoud les conflits dans les deux contrôleurs
- - on identifie les *commits* concernés : `git log --oneline --left-right --merge`
- - on lance l’application
- - on valide le résultat : `git commit`
- - on vérifie nos modifications : `git log --cc -p -1`
-
-%%%
-
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Ignorer les espaces
 
 Problème :
- - dans une branche `bex4`, on a fait une petite correction
+ - dans une branche `us55`, on a fait une petite correction
  - mais par inadvertance toutes les tabulations ont été remplacées par des espaces
   - `Tab` &rarr; `Espaces` 
  - dans `master`, on renommé une classe du modèle
   - `Agent` &rarr; `Employe`
 
-<div class="center">
-    <img src="images/graph-2.png" class="boxed-img" />
-</div>
-
-```bash
-git reset --hard ex4b
-```
-
 Solution :
- - on fait la fusion : `git merge bex4`
+ - on fait la fusion : `git merge us55`
  - il y a beaucoup de conflits
  - on annule la fusion : `git merge --abort`
- - on refait la fusion en ignorant les espaces : `git merge -Xignore-space-change bex4`
+ - on refait la fusion en ignorant les espaces : `git merge -Xignore-space-change us55`
  - la fusion est automatique
  
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Choisir une version
 
 Résoudre un conflit en utilisant l’une ou l’autre version
@@ -280,7 +187,7 @@ git commit
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Annuler une fusion
 
 Pas encore partagée
@@ -303,7 +210,7 @@ git revert --mainline 1 HEAD
 
 %%%
 
-<!-- .slide: data-background-image="images/merge-logo.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Mieux vaut éviter les conflits que les résoudre
 
 *Commiter* souvent 
@@ -317,4 +224,3 @@ Communiquer avec les autres membres de l’équipe
  - bien prévenir en cas du *refactoring* important
 
 Mettre à jour sa copie locale régulièrement
- - *pull* ou *rebase* 
