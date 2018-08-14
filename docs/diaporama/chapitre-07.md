@@ -124,3 +124,101 @@ La branche <!-- .element: class="icon info" --> *master*
  - a un fonctionnement identique aux autres
  - c’est simplement la branche créée lors d’un `git init`
   - et la branche extraite par défaut après un `git clone`
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" -->
+### Exemple d’utilisation des branches
+
+<div class="fragment fade-in-then-out">
+	<p>Situation initiale</p>
+	<div class="center"><img src="images/basic-branching/basic-branching-1.png" width="700px" /></div>
+</div>
+<div class="fragment fade-in-then-out">
+	<p>Création d’une nouvelle branche pour le développement du ticket 53</p>
+	<ul>
+		<li><code>git checkout -b iss53</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-2.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>Développements du ticket 53 dans la branche <code>iss53</code></p>
+	<ul>
+		<li><code>git commit -m "ajout d’un pied de page [problème 53]"</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p class="icon warn">Un problème urgent est signalé en production</p>
+	<ul>
+		<li>Ne pas déployer les développements en cours du ticket 53 en plus du correctifs</li>
+		<li>Simple retour sur la branche <code>master</code> :
+			<ul><li><code>git checkout master</code></li></ul>
+		</li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>Création d’une branche <code>hotfix</code> pour le correctif urgent à partir de <code>master</code></p>
+	<ul>
+		<li><code>git checkout -b hotfix</code></li>
+	</ul>
+	<p>Correction du problème dans la branche <code>hotfix</code></p>
+	<ul>
+		<li><code>git commit -m "correction de l’adresse email incorrecte"</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-4.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>Teste de la correction et fusionn dans la branche <code>master</code> pour déployer en production</p>
+	<ul>
+		<li><code>git checkout master</code></li>
+		<li><code>git merge hotfix</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>La fusion se fait en avance rapide (<i>fast-forward</i>)</p>
+<pre><code class="lang-bash hljs">Updating f42c576..3a0874c
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)</code></pre>
+	<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>Suppression de la branche <code>hotfix</code></p>
+	<ul>
+		<li><code>git branch -d hotfix</code></li>
+	</ul>
+	<p>Fin des développements du ticket 53 dans la branche <code>iss53</code></p>
+	<ul>
+		<li><code>git checkout iss53</code></li>
+		<li><code>git commit -m "Nouveau pied de page terminé [issue 53]"</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-6.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>Fusion de la branche <code>iss53</code> dans <code>master</code></p>
+	<ul>
+		<li><code>git checkout master</code></li>
+		<li><code>git merge iss53</code></li>
+	</ul>
+	<div class="center"><img src="images/basic-branching/basic-branching-7.png" width="700px" /></div>
+</div>
+
+<div class="fragment fade-in-then-out">
+	<p>La fusion est une fusion à trois sources (<i>three-way merge</i>)</p>
+<pre><code class="lang-bash hljs">Merge made by the 'recursive' strategy.
+README | 1 +
+1 file changed, 1 insertion(+)</code></pre>
+	<div class="center"><img src="images/basic-branching/basic-branching-8.png" width="700px" /></div>
+</div>
