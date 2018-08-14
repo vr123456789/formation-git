@@ -202,6 +202,7 @@ body {
 	content: url('icons/dusk/time.png')
 }
 
+/* Quand les frgments disparaissen (fade-out), la place est libérée */
 .fragment.visible:not(.current-fragment) {
     display: none;
     height:0px;
