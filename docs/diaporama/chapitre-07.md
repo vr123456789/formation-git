@@ -176,7 +176,7 @@ La branche <!-- .element: class="icon info" --> *master*
 </div>
 
 <div class="fragment fade-in-then-out">
-	<p>Teste de la correction et fusionn dans la branche <code>master</code> pour déployer en production</p>
+	<p>Test de la correction et fusion dans la branche <code>master</code></p>
 	<ul>
 		<li><code>git checkout master</code></li>
 		<li><code>git merge hotfix</code></li>
