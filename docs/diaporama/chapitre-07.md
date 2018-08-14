@@ -58,7 +58,7 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 ### Branche : schéma
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout master</code></pre>
-	<img src="images/branches/branch-and-history.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/branch-and-history.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or directory</code></pre>
@@ -66,7 +66,7 @@ cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or dire
 
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git branch testing</code></pre>
-	<img src="images/branches/head-to-master.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/head-to-master.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # f30ab</code></pre>
@@ -74,7 +74,7 @@ cat .git/refs/heads/testing # f30ab</code></pre>
 
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout testing</code></pre>
-	<img src="images/branches/head-to-testing.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/head-to-testing.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # f30ab</code></pre>
@@ -82,7 +82,7 @@ cat .git/refs/heads/testing # f30ab</code></pre>
 
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'testing'"</code></pre>
-	<img src="images/branches/advance-testing.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/advance-testing.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # 87ab2</code></pre>
@@ -90,7 +90,7 @@ cat .git/refs/heads/testing # 87ab2</code></pre>
 
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout master</code></pre>
-	<img src="images/branches/checkout-master.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/checkout-master.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # 87ab2</code></pre>
@@ -98,7 +98,7 @@ cat .git/refs/heads/testing # 87ab2</code></pre>
 
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'master'"</code></pre>
-	<img src="images/branches/advance-master.png" width="700px" />
+	<div class="fixed-height"><img src="images/branches/advance-master.png" width="700px" /></div>
 <pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # c2b9e
 cat .git/refs/heads/testing # 87ab2</code></pre>
