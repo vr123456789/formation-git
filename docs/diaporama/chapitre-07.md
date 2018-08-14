@@ -111,16 +111,20 @@ cat .git/refs/heads/testing # 87ab2</code></pre>
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur les branches
 
-Avec Git, travailler avec des branches est recommandé
- - flexibilité
- - rapidité
-  - de création
-  - de passage d'une branche à l'autre
-  - de fusion
-  - ...
+Avec Git, travailler avec des branches est recommandé <!-- .element: class="icon info" -->
 
- - une branche est un _hash_ de 40 caractères
-  - dans un fichier du dossier `.git/refs/heads/`
-  - par exemple : `.git/refs/heads/master`
+Rendu possible grâce à la rapidité du système
+ - création
+ - passage d'une branche à l'autre
+ - fusion
+ - ...
 
-  - par exemple la contenu du fichier `.git/refs/heads/master` contient le _hash_ du dernier _commit_
+Organisation du travail de l'équipe <!-- .element: class="icon idea" -->
+ - une branche par *user story*
+ - une branche par ticket
+ - une branche par environnement
+ - branche de *dev*, branche de *prod*
+ - branche plus ou moins stable
+ - branche protégée
+ - *merge request*, *pull request*
+  
