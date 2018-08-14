@@ -212,6 +212,7 @@ Fast-forward
 		<li><code>git checkout master</code></li>
 		<li><code>git merge iss53</code></li>
 	</ul>
+	<p><i>Commit</i> de fusion</p>
 	<div class="center"><img src="images/basic-branching/basic-branching-7.png" width="700px" /></div>
 </div>
 
@@ -222,3 +223,20 @@ README | 1 +
 1 file changed, 1 insertion(+)</code></pre>
 	<div class="center"><img src="images/basic-branching/basic-branching-8.png" width="700px" /></div>
 </div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Cas d’utilisation des branches
+
+Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
+ - une branche par *user story*
+ - une branche par ticket
+ - une branche par environnement
+ - branche de *dev*, branche de *prod*
+ - branche plus ou moins stable
+ - branche protégée
+  - *merge request*, *pull request*
+ - ...
