@@ -115,8 +115,9 @@ Avec Git, travailler avec des branches est recommandé <!-- .element: class="ico
 
 Rendu possible grâce à la rapidité du système
  - création
- - passage d’une branche à l'autre
+ - passage d’une branche à l’autre
  - fusion
+  - détermination automatique de l’ancêtre commun
  - ...
 
 Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
@@ -127,4 +128,4 @@ Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
  - branche plus ou moins stable
  - branche protégée
  - *merge request*, *pull request*
-  
+ - ...
