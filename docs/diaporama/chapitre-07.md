@@ -59,26 +59,49 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout master</code></pre>
 	<img src="images/branches/branch-and-history.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or directory</code></pre>
 </div>
+
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git branch testing</code></pre>
 	<img src="images/branches/head-to-master.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # f30ab</code></pre>
 </div>
+
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout testing</code></pre>
 	<img src="images/branches/head-to-testing.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # f30ab</code></pre>
 </div>
+
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'testing'"</code></pre>
 	<img src="images/branches/advance-testing.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # 87ab2</code></pre>
 </div>
+
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git checkout master</code></pre>
 	<img src="images/branches/checkout-master.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # 87ab2</code></pre>
 </div>
+
 <div class="center fragment fade-in-then-out">
 	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'master'"</code></pre>
 	<img src="images/branches/advance-master.png" width="700px" />
+<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+cat .git/refs/heads/master # c2b9e
+cat .git/refs/heads/testing # 87ab2</code></pre>
 </div>
 
 
@@ -86,7 +109,15 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Détails
+### Remarques sur les branches
+
+Avec Git, travailler avec des branches est recommandé
+ - flexibilité
+ - rapidité
+  - de création
+  - de passage d'une branche à l'autre
+  - de fusion
+  - ...
 
  - une branche est un _hash_ de 40 caractères
   - dans un fichier du dossier `.git/refs/heads/`
