@@ -40,11 +40,11 @@ Une branche dans Git est simplement un pointeur léger et déplaçable vers un _
 
 Créer une nouvelle branche :
  - `git branch <branch_name>`
- - on reste dans la branche d'origine
+ - on reste dans la branche d’origine
 
 Basculer dans une autre branche
  - `git checkout <branch_name>`
- - on ne peut basculer dans une branche que il n'y a pas de risque de perdre de changements
+ - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de changements
  - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche 
 
 Pour créer une branche et basculer dans cette branche <!-- .element: class="icon idea" --> :
@@ -115,11 +115,11 @@ Avec Git, travailler avec des branches est recommandé <!-- .element: class="ico
 
 Rendu possible grâce à la rapidité du système
  - création
- - passage d'une branche à l'autre
+ - passage d’une branche à l'autre
  - fusion
  - ...
 
-Organisation du travail de l'équipe <!-- .element: class="icon idea" -->
+Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
  - une branche par *user story*
  - une branche par ticket
  - une branche par environnement
