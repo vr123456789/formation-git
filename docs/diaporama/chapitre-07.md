@@ -111,7 +111,7 @@ cat .git/refs/heads/testing # 87ab2</code></pre>
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur les branches
 
-Avec Git, travailler avec des branches est recommandé <!-- .element: class="icon info" -->
+Avec Git, travailler avec des branches est recommandé <!-- .element: class="icon idea" -->
 
 Rendu possible grâce à la rapidité du système
  - création
@@ -120,12 +120,7 @@ Rendu possible grâce à la rapidité du système
   - détermination automatique de l’ancêtre commun
  - ...
 
-Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
- - une branche par *user story*
- - une branche par ticket
- - une branche par environnement
- - branche de *dev*, branche de *prod*
- - branche plus ou moins stable
- - branche protégée
- - *merge request*, *pull request*
- - ...
+La branche <!-- .element: class="icon info" --> *master*
+ - a un fonctionnement identique aux autres
+ - c’est simplement la branche créée lors d’un `git init`
+  - et la branche extraite par défaut après un `git clone`
