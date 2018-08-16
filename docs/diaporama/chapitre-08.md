@@ -195,7 +195,7 @@ git commit
 
 %%%
 
-<!-- .slide: data-background-color="#7580ba" class="slide" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" -->
 ### Annuler une fusion
 
 Pas encore partagée
