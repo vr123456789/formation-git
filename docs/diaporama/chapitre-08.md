@@ -232,3 +232,13 @@ Communiquer avec les autres membres de l’équipe
  - bien prévenir en cas du *refactoring* important
 
 Mettre à jour sa copie locale régulièrement
+
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP4](https://git.stable.innovation.insee.eu/wehdrc/formation-git#4-branches)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" class="blur" />
+</div>
