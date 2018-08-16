@@ -1,3 +1,10 @@
+drop table if exists cocktails;
+drop table if exists employes;
+drop table if exists roles;
+drop table if exists clients;
+
+drop sequence if exists seq;
+
 create sequence seq as integer start with 100 increment by 1;
 
 create table clients (
