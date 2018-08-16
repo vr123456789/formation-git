@@ -32,8 +32,8 @@ public class NouveauClientController {
 	private EmployeService employeService;
 
 	@GetMapping("/nouveau")
-	public String nouveauClient(Employe salarie, Model model) throws BarDroitException {
-		employeService.verifierResponsable(salarie);
+	public String nouveauClient(Employe employe, Model model) throws BarDroitException {
+		employeService.verifierResponsable(employe);
 		model.addAttribute("client", new Client());
 		return "nouveau-client";
 	}
