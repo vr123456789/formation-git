@@ -72,7 +72,7 @@ cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or dire
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Branche : schéma (2)
 
 ```bash
@@ -90,7 +90,7 @@ cat .git/refs/heads/testing # f30ab</code></pre>
 
 %%%
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Branche : schéma (3)
 
 ```bash
@@ -109,7 +109,7 @@ cat .git/refs/heads/testing # f30ab
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Branche : schéma (4)
 
 ```bash
@@ -128,7 +128,7 @@ cat .git/refs/heads/testing # 87ab2
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Branche : schéma (5)
 
 ```bash
@@ -216,7 +216,7 @@ Situation initiale
 
 %%%
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (2)
 
 Création d’une nouvelle branche pour le développement du ticket 53
@@ -227,7 +227,7 @@ Création d’une nouvelle branche pour le développement du ticket 53
 
 %%%
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (3)
 
 Développements du ticket 53 dans la branche `iss53`
@@ -240,7 +240,7 @@ Développements du ticket 53 dans la branche `iss53`
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (4)
 
 
@@ -255,7 +255,7 @@ Un problème urgent est signalé en production <!-- .element: class="icon warn" 
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (5)
 
 Création d’une branche `hotfix` pour le correctif urgent à partir de `master`
@@ -270,7 +270,7 @@ Correction du problème dans la branche `hotfix`
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (6)
 
 Test de la correction et fusion dans la branche `master`
@@ -283,7 +283,7 @@ Test de la correction et fusion dans la branche `master`
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (7)
 
 La fusion se fait en avance rapide (*fast-forward*)
@@ -301,7 +301,7 @@ Fast-forward
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (8)
 
 Suppression de la branche `hotfix`
@@ -317,7 +317,7 @@ Fin des développements du ticket 53 dans la branche `iss53`
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="fade" -->
 ### Exemple d’utilisation des branches (9)
 
 Fusion de la branche `iss53` dans `master`
