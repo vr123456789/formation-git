@@ -34,8 +34,8 @@ public class ChargementClientsController {
     private ClientService clientService;
 
     @GetMapping("/chargement")
-    public String chargement(Employe salarie) throws BarDroitException {
-	employeService.verifierResponsable(salarie);
+    public String chargement(Employe employe) throws BarDroitException {
+	employeService.verifierResponsable(employe);
 	return "chargement-clients";
     }
 
