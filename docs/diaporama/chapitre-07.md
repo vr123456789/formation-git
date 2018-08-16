@@ -179,7 +179,7 @@ Uniquement les branches fusionnées dans `HEAD`
  - `git branch --no-merged` 
 
 Supprimer une branche `git branch -d <branch_name>`
- - si la branche n'a pas été fusionnée :  `git branch -D <branch_name>`
+ - si la branche n’a pas été fusionnée :  `git branch -D <branch_name>`
   - dans ce cas, perte de données possible <!-- .element: class="icon warn" -->
 
 
