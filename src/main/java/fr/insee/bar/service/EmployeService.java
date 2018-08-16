@@ -13,17 +13,17 @@ public class EmployeService {
 
 	private static final Short RESPONSABLE = Short.valueOf("2");
 
-	public boolean estResponsable(Employe salarie) {
-		Role role = salarie.getRole();
+	public boolean estResponsable(Employe employe) {
+		Role role = employe.getRole();
 		if (role == null) {
 			return false;
 		}
 		return Objects.equal(role.getId(), RESPONSABLE);
 	}
 
-	public void verifierResponsable(Employe salarie) throws BarDroitException {
-		if (!this.estResponsable(salarie)) {
-			throw new BarDroitException(salarie);
+	public void verifierResponsable(Employe employe) throws BarDroitException {
+		if (!this.estResponsable(employe)) {
+			throw new BarDroitException(employe);
 		}
 	}
 }
