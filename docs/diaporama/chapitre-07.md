@@ -167,6 +167,26 @@ cat .git/refs/heads/testing # 87ab2
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Gestion des branches
+
+Lister les branches `git branch -v`
+<div class="center">
+	<img src="images/branch-v.png" />
+</div>
+
+Uniquement les branches fusionnées dans `HEAD`
+ - `git branch --merged` 
+ - `git branch --no-merged` 
+
+Supprimer une branche `git branch -d <branch_name>`
+ - si la branche n'a pas été fusionnée :  `git branch -D <branch_name>`
+  - dans ce cas, perte de données possible <!-- .element: class="icon warn" -->
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur les branches
 
 Avec Git, travailler avec des branches est recommandé <!-- .element: class="icon idea" -->
@@ -187,100 +207,143 @@ La branche <!-- .element: class="icon info" --> *master*
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" -->
-### Exemple d’utilisation des branches
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+### Exemple d’utilisation des branches (1)
 
-<div class="fragment fade-in-then-out">
-	<p>Situation initiale</p>
-	<div class="center"><img src="images/basic-branching/basic-branching-1.png" width="700px" /></div>
-</div>
-<div class="fragment fade-in-then-out">
-	<p>Création d’une nouvelle branche pour le développement du ticket 53</p>
-	<ul>
-		<li><code>git checkout -b iss53</code></li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-2.png" width="700px" /></div>
-</div>
+Situation initiale
+<div class="center"><img src="images/basic-branching/basic-branching-1.png" width="700px" /></div>
 
-<div class="fragment fade-in-then-out">
-	<p>Développements du ticket 53 dans la branche <code>iss53</code></p>
-	<ul>
-		<li><code>git commit -m "ajout d’un pied de page [problème 53]"</code></li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
-</div>
 
-<div class="fragment fade-in-then-out">
-	<p class="icon warn">Un problème urgent est signalé en production</p>
-	<ul>
-		<li>Ne pas déployer les développements en cours du ticket 53 en plus du correctifs</li>
-		<li>Simple retour sur la branche <code>master</code> :
-			<ul><li><code>git checkout master</code></li></ul>
-		</li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
-</div>
+%%%
 
-<div class="fragment fade-in-then-out">
-	<p>Création d’une branche <code>hotfix</code> pour le correctif urgent à partir de <code>master</code></p>
-	<ul>
-		<li><code>git checkout -b hotfix</code></li>
-	</ul>
-	<p>Correction du problème dans la branche <code>hotfix</code></p>
-	<ul>
-		<li><code>git commit -m "correction de l’adresse email incorrecte"</code></li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-4.png" width="700px" /></div>
-</div>
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (2)
 
-<div class="fragment fade-in-then-out">
-	<p>Test de la correction et fusion dans la branche <code>master</code></p>
-	<ul>
-		<li><code>git checkout master</code></li>
-		<li><code>git merge hotfix</code></li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
-</div>
+Création d’une nouvelle branche pour le développement du ticket 53
+ - `git checkout -b iss5`
+<div class="center"><img src="images/basic-branching/basic-branching-2.png" width="700px" /></div>
 
-<div class="fragment fade-in-then-out">
-	<p>La fusion se fait en avance rapide (<i>fast-forward</i>)</p>
-<pre><code class="lang-bash hljs">Updating f42c576..3a0874c
+
+
+%%%
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (3)
+
+Développements du ticket 53 dans la branche `iss53`
+ - `git commit -m "ajout d’un pied de page [problème 53]"`
+
+<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (4)
+
+
+Un problème urgent est signalé en production <!-- .element: class="icon warn" -->
+ - Ne pas déployer les développements en cours du ticket 53 en plus du correctifs
+ - Simple retour sur la branche `master`
+  - `git checkout master`
+
+<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (5)
+
+Création d’une branche `hotfix` pour le correctif urgent à partir de `master`
+ - `git checkout -b hotfix`
+
+Correction du problème dans la branche `hotfix`
+ - `git commit -m "correction de l’adresse email incorrecte"`
+
+<div class="center"><img src="images/basic-branching/basic-branching-4.png" width="700px" /></div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (6)
+
+Test de la correction et fusion dans la branche `master`
+ - `git checkout master`
+ - `git merge hotfix`
+
+<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (7)
+
+La fusion se fait en avance rapide (*fast-forward*)
+
+```bash
+Updating f42c576..3a0874c
 Fast-forward
  index.html | 2 ++
- 1 file changed, 2 insertions(+)</code></pre>
-	<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
-</div>
+ 1 file changed, 2 insertions(+)
+```
 
-<div class="fragment fade-in-then-out">
-	<p>Suppression de la branche <code>hotfix</code></p>
-	<ul>
-		<li><code>git branch -d hotfix</code></li>
-	</ul>
-	<p>Fin des développements du ticket 53 dans la branche <code>iss53</code></p>
-	<ul>
-		<li><code>git checkout iss53</code></li>
-		<li><code>git commit -m "Nouveau pied de page terminé [issue 53]"</code></li>
-	</ul>
-	<div class="center"><img src="images/basic-branching/basic-branching-6.png" width="700px" /></div>
-</div>
+<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
 
-<div class="fragment fade-in-then-out">
-	<p>Fusion de la branche <code>iss53</code> dans <code>master</code></p>
-	<ul>
-		<li><code>git checkout master</code></li>
-		<li><code>git merge iss53</code></li>
-	</ul>
-	<p><i>Commit</i> de fusion</p>
-	<div class="center"><img src="images/basic-branching/basic-branching-7.png" width="700px" /></div>
-</div>
 
-<div class="fragment fade-in-then-out">
-	<p>La fusion est une fusion à trois sources (<i>three-way merge</i>)</p>
-<pre><code class="lang-bash hljs">Merge made by the 'recursive' strategy.
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (8)
+
+Suppression de la branche `hotfix`
+ - `git branch -d hotfix`
+ 
+Fin des développements du ticket 53 dans la branche `iss53`
+ - `git checkout iss53`
+ - `git commit -m "Nouveau pied de page terminé [issue 53]"`
+ 
+<div class="center"><img src="images/basic-branching/basic-branching-6.png" width="700px" /></div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Exemple d’utilisation des branches (9)
+
+Fusion de la branche `iss53` dans `master`
+ - `git checkout master`
+ - `git merge iss53`
+
+*Commit* de fusion
+
+<div class="center"><img src="images/basic-branching/basic-branching-7.png" width="700px" /></div>
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none-in slide-out" -->
+### Exemple d’utilisation des branches (10)
+
+La fusion est une fusion à trois sources (*three-way merge*)
+
+```bash
+Merge made by the 'recursive' strategy.
 README | 1 +
-1 file changed, 1 insertion(+)</code></pre>
-	<div class="center"><img src="images/basic-branching/basic-branching-8.png" width="700px" /></div>
-</div>
+1 file changed, 1 insertion(+)
+```
+
+<div class="center"><img src="images/basic-branching/basic-branching-8.png" width="700px" /></div>
 
 
 %%%
@@ -298,23 +361,3 @@ Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
  - branche protégée
   - *merge request*, *pull request*
  - ...
-
-
-%%%
-
-
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Gestion des branches
-
-Lister les branches `git branch -v`
-<div class="center">
-	<img src="images/branch-v.png" />
-</div>
-
-Uniquement les branches fusionnées dans `HEAD`
- - `git branch --merged` 
- - `git branch --no-merged` 
-
-Supprimer une branche `git branch -d <branch_name>`
- - si la branche n'a pas été fusionnée :  `git branch -D <branch_name>`
-  - dans ce cas, perte de données possible <!-- .element: class="icon warn" -->
