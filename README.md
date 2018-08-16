@@ -329,3 +329,31 @@ Tester ces affichages :
 <br />
 
 ### 4. Branches
+
+git checkout -b salarie
+find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
+find src/main/java -type f -exec unix2dos {} \;
+git commit -am 'Renommage des variables salarie' -> 'employe'
+mvn test
+mvn spring-boot:run
+http://localhost
+
+git merge salarie
+git checkout master
+
+
+Dans la classe AccueilController, changer MOVED_PERMANENTLY en TEMPORARY_REDIRECT
+
+git lg
+
+git checkout -b eol
+find src/main/java -type f -exec unix2dos {} \;
+git commit -am "Remplacement des retours à la ligne"
+
+git checkout master
+Renommer la classe Client en Consommateur
+
+git merge eol
+
+git merge --abort
+git merge eol -Xignore-cr-at-eol
