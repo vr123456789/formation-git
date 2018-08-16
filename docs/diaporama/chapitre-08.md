@@ -19,7 +19,7 @@ Il est toujours préférable d’avoir une copie de travail propre <!-- .element
  - valider : `git commit`
  - ou remiser : `git stash`
 
-Une fusion survient quand la <!-- .element: class="icon warn" --> __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
+Une fusion <!-- .element: class="icon warn" --> survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
 
 
 %%%
@@ -49,9 +49,9 @@ Le code contient des marqueurs de conlits :
 >>>>>>> origin/bex2
 ```
 
- - Modifier le code pour supprimer les conflits et les marqueurs
- - Ajouter les fichiers corrigés dans l’index
- - Commiter une fois que tout est résolu
+ - modifier le code pour supprimer les conflits et les marqueurs
+ - ajouter les fichiers corrigés dans l’index
+ - valider une fois que tout est résolu
 
 
 %%%
@@ -151,6 +151,14 @@ Solution :
  - on annule la fusion : `git merge --abort`
  - on refait la fusion en ignorant les espaces : `git merge -Xignore-space-change us55`
  - la fusion est automatique
+
+
+```bash
+ignore-space-change
+ignore-all-space
+ignore-space-at-eol
+ignore-cr-at-eol 
+```
  
 %%%
 
@@ -187,7 +195,7 @@ git commit
 
 %%%
 
-<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+<!-- .slide: data-background-color="#7580ba" class="slide" -->
 ### Annuler une fusion
 
 Pas encore partagée
@@ -213,7 +221,7 @@ git revert --mainline 1 HEAD
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Mieux vaut éviter les conflits que les résoudre
 
-*Commiter* souvent 
+Valider souvent 
  - des petits lots de modifications homogènes
   
 Avoir des petits fichiers
