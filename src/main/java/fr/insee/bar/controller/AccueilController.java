@@ -14,7 +14,7 @@ public class AccueilController {
 	private String name;
 
 	@GetMapping("/")
-	@ResponseStatus(HttpStatus.MOVED_PERMANENTLY)
+	@ResponseStatus(HttpStatus.TEMPORARY_REDIRECT)
 	public String welcome() {
 		return "redirect:/accueil";
 	}
