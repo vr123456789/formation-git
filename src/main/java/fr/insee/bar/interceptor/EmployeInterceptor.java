@@ -21,10 +21,10 @@ public class EmployeInterceptor extends HandlerInterceptorAdapter implements Han
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		HttpSession session = request.getSession(true);
-		Employe salarie = (Employe) session.getAttribute("employe");
-		if (salarie == null) {
-			salarie = employeProvider.provide();
-			session.setAttribute("employe", salarie);
+		Employe employe = (Employe) session.getAttribute("employe");
+		if (employe == null) {
+			employe = employeProvider.provide();
+			session.setAttribute("employe", employe);
 		}
 		return true;
 	}
