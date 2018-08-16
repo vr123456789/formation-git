@@ -229,7 +229,7 @@ README | 1 +
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Cas d’utilisation des branches
+### Quand utiliser des branches ?
 
 Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
  - une branche par *user story*
@@ -240,3 +240,23 @@ Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
  - branche protégée
   - *merge request*, *pull request*
  - ...
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Gestion des branches
+
+Lister les branches `git branch -v`
+<div class="center">
+	<img src="images/branch-v.png" />
+</div>
+
+Uniquement les branches fusionnées dans `HEAD`
+ - `git branch --merged` 
+ - `git branch --no-merged` 
+
+Supprimer une branche `git branch -d <branch_name>`
+ - si la branche n'a pas été fusionnée :  `git branch -D <branch_name>`
+  - dans ce cas, perte de données possible <!-- .element: class="icon warn" -->
