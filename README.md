@@ -327,3 +327,5 @@ Tester ces affichages :
 	<img src="docs/images/log-lg.png" />
 </details>
 <br />
+
+### 4. Branches
