@@ -54,55 +54,113 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" -->
-### Branche : schéma
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git checkout master</code></pre>
-	<div class="fixed-height"><img src="images/branches/branch-and-history.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
-cat .git/refs/heads/master # f30ab
-cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or directory</code></pre>
-</div>
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+### Branche : schéma (1)
+```bash
+git checkout master
+```
 
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git branch testing</code></pre>
-	<div class="fixed-height"><img src="images/branches/head-to-master.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+<div class="fixed-height"><img src="images/branches/branch-and-history.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/master
+cat .git/refs/heads/master # f30ab
+cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or directory
+```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Branche : schéma (2)
+
+```bash
+git branch testing
+```
+
+<div class="fixed-height"><img src="images/branches/head-to-master.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
 cat .git/refs/heads/testing # f30ab</code></pre>
-</div>
+```
 
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git checkout testing</code></pre>
-	<div class="fixed-height"><img src="images/branches/head-to-testing.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
+
+%%%
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Branche : schéma (3)
+
+```bash
+git checkout testing
+```
+
+<div class="fixed-height"><img src="images/branches/head-to-testing.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/testing
 cat .git/refs/heads/master # f30ab
-cat .git/refs/heads/testing # f30ab</code></pre>
-</div>
+cat .git/refs/heads/testing # f30ab
+```
 
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'testing'"</code></pre>
-	<div class="fixed-height"><img src="images/branches/advance-testing.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/testing
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Branche : schéma (4)
+
+```bash
+git commit -m "Commit dans la branche 'testing'"
+```
+
+<div class="fixed-height"><img src="images/branches/advance-testing.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/testing
 cat .git/refs/heads/master # f30ab
-cat .git/refs/heads/testing # 87ab2</code></pre>
-</div>
+cat .git/refs/heads/testing # 87ab2
+```
 
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git checkout master</code></pre>
-	<div class="fixed-height"><img src="images/branches/checkout-master.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none" -->
+### Branche : schéma (5)
+
+```bash
+git checkout master
+```
+
+<div class="fixed-height"><img src="images/branches/checkout-master.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
-cat .git/refs/heads/testing # 87ab2</code></pre>
-</div>
+cat .git/refs/heads/testing # 87ab2
+```
 
-<div class="center fragment fade-in-then-out">
-	<pre><code class="lang-bash hljs">git commit -m "Commit dans la branche 'master'"</code></pre>
-	<div class="fixed-height"><img src="images/branches/advance-master.png" width="700px" /></div>
-<pre><code class="lang-bash hljs">cat .git/HEAD # ref: refs/heads/master
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="none-in slide-out" -->
+### Branche : schéma (6)
+
+```bash
+git commit -m "Commit dans la branche 'master'"
+```
+
+<div class="fixed-height"><img src="images/branches/advance-master.png" width="700px" /></div>
+
+```bash
+cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # c2b9e
-cat .git/refs/heads/testing # 87ab2</code></pre>
-</div>
+cat .git/refs/heads/testing # 87ab2
+```
 
 
 %%%
