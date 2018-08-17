@@ -44,6 +44,11 @@ Afficher l’ancêtre commun lors d’un conflit
 git config --global merge.conflictstyle diff3
 ```
 
+Ne pas modifier les retours à la ligne
+```bash
+git config --global core.autocrlf input
+```
+
 <details>
 	<summary>Quelle est la valeur de la propriété <code>help.format</code> ?</summary>
 	<code>git config help.format</code>
@@ -330,3 +335,100 @@ Tester ces affichages :
 
 ### 4. Branches
 
+:wrench: Il est recommandé d’utiliser Eclipse pour faire ce TP. Toutes les commandes équivalentes aux actions réalisées dans Eclipse sont données dans l'énoncé.
+
+#### Avance rapide
+
+Dans une branche `salarie`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
+
+```bash
+git checkout -b salarie
+find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
+find src/main/java -type f -exec unix2dos {} \;
+git commit -am 'Renommage des variables salarie' -> 'employe'
+```
+
+Pour vérifier qu’il n'y a pas de régression, lancer les tests unitaires, puis lancer l'application (http://localhost)[http://localhost] pour tester.
+
+```bash
+mvn test
+mvn spring-boot:run
+```
+
+Fusionner la branche `salarie` dans `master`, consulter l’historique et supprimer la branche `salarie`.
+
+```bash
+git checkout master
+git merge salarie
+git lg
+git branch -d salarie
+```
+
+#### Fusion à trois sources
+
+Créer une branche `eol` dans laquelle il faut remplacer tous les retours à la ligne : `find src/main/java -type f -exec dos2unix {} \;`. Valider cette modification.
+
+:information_source: On fait cette action pour simuler un de formatage de code différent entre deux développeurs. Ce cas peut se produire dans le cas où certains travaillent sous Linux et d’autres sous Windows.
+
+```bash
+git checkout -b eol
+find src/main/java -type f -exec dos2unix {} \;
+git commit -am "Remplacement des retours à la ligne"
+```
+
+Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController`. Valider.
+
+```bash
+sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
+git commit -am "redirection temporaire"
+```
+
+Dans la branche `master` renommer le *package* `model` en `beans`.
+
+:information_source: Cette action représente un *refactoring* assez important.
+
+```bash
+git checkout master
+# TODO
+git add .
+git commit -m "Renommer le package 'model' en 'beans'"
+```
+
+Afin de pouvoir plus tard annuler cette modification, créer un *patch* de ce *commit*. Le remiser afin que cette modification n’interfère pas avec les actions suivantes.
+
+```bash
+git format-patch -1 HEAD
+git stash
+```
+
+Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque retours à la ligne. Annuler la fusion.
+
+```bash
+git merge eol
+git status
+git merge --abort
+```
+
+Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-space-at-eol``
+
+Lancer les tests unitaires et supprimer la branche `eol`.
+
+```bash
+mvn test
+git branch -d eol
+```
+
+Récupérer le patch dans la remise et l’appliquer à l'envers afin d'annuler le renommage du *package*. Supprimer le patch.
+
+```bash
+git stash pop
+git apply --reverse --whitespace=fix 0001-Renommer-le-package-model-en-beans.patch
+rm 0001-Renommer-le-package-model-en-beans.patch
+```
+
+Valider le retour arrière.
+
+```bash
+git add '*.java'
+git commit -m "application du patch inverse"
+```
