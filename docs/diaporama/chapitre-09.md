@@ -21,7 +21,7 @@ Nommées `repository-name/branch-name`
  - ...
 
 Le dépôt distant <!-- .element: class="icon info" --> `origin` n’est pas particulier
- - c’est seulement le nom donné par défaut au dépôt que l'on a clôné
+ - c’est seulement le nom donné par défaut au dépôt que l’on a clôné
 
 
 %%%
