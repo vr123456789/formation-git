@@ -27,43 +27,42 @@ import fr.insee.bar.view.ClientsPdfView;
 @RequestMapping("/clients")
 public class ChargementClientsController {
 
-    @Autowired
-    private EmployeService employeService;
+	@Autowired
+	private EmployeService employeService;
 
-    @Autowired
-    private ClientService clientService;
+	@Autowired
+	private ClientService clientService;
 
-    @GetMapping("/chargement")
-    public String chargement(Employe employe) throws BarDroitException {
-	employeService.verifierResponsable(employe);
-	return "chargement-clients";
-    }
+	@GetMapping("/chargement")
+	public String chargement(Employe salarie) throws BarDroitException {
+		employeService.verifierResponsable(salarie);
+		return "chargement-clients";
+	}
 
-    @PostMapping("/chargement")
-    public String chargementPost(MultipartFile file, RedirectAttributes redirectAttributes) {
-	long n = clientService.chargement(file);
-	redirectAttributes.addFlashAttribute("message", String.format(
-			"%d clients ont été ajoutés avec succès partir du fichier %s", n, file.getOriginalFilename()));
-	return "redirect:/clients";
-    }
+	@PostMapping("/chargement")
+	public String chargementPost(MultipartFile file, RedirectAttributes redirectAttributes) {
+		long n = clientService.chargement(file);
+		redirectAttributes.addFlashAttribute("message", String.format("%d clients ont été ajoutés avec succès partir du fichier %s", n, file.getOriginalFilename()));
+		return "redirect:/clients";
+	}
 
 	@GetMapping(value = "/telechargement", params = { "!type", "type=txt" })
-    public ResponseEntity<FileSystemResource> telechargement() {
-	File file = clientService.fichier();
-	return ResponseEntity.ok().contentLength(file.length()).contentType(MediaType.APPLICATION_OCTET_STREAM)
-		.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getName())
-		.body(new FileSystemResource(file));
-    }
+	public ResponseEntity<FileSystemResource> telechargement() {
+		File file = clientService.fichier();
+		return ResponseEntity.ok().contentLength(file.length()).contentType(MediaType.APPLICATION_OCTET_STREAM)
+			.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getName())
+			.body(new FileSystemResource(file));
+	}
 
-    @GetMapping(value = "/telechargement", params = "type=pdf")
-    public View telechargementPdf(Model model) {
-	model.addAttribute("clients", clientService.clients());
-	return new ClientsPdfView();
-    }
+	@GetMapping(value = "/telechargement", params = "type=pdf")
+	public View telechargementPdf(Model model) {
+		model.addAttribute("clients", clientService.clients());
+		return new ClientsPdfView();
+	}
 
-    @GetMapping(value = "/telechargement", params = "type=xls")
-    public View telechargementExcel(Model model) {
-	model.addAttribute("clients", clientService.clients());
-	return new ClientsExcelView();
-    }
+	@GetMapping(value = "/telechargement", params = "type=xls")
+	public View telechargementExcel(Model model) {
+		model.addAttribute("clients", clientService.clients());
+		return new ClientsExcelView();
+	}
 }
