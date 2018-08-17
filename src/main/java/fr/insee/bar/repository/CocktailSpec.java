@@ -2,7 +2,7 @@ package fr.insee.bar.repository;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import fr.insee.bar.model.Cocktail;
+import fr.insee.bar.beans.Cocktail;
 import fr.insee.bar.search.Search;
 
 public abstract class CocktailSpec {

@@ -9,7 +9,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import fr.insee.bar.model.Cocktail;
+import fr.insee.bar.beans.Cocktail;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import fr.insee.bar.beans.Cocktail;
 import fr.insee.bar.exception.BarCommandeException;
-import fr.insee.bar.model.Cocktail;
 
 @Service
 public class CocktailService {

@@ -1,9 +1,11 @@
-package fr.insee.bar.model;
+package fr.insee.bar.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -14,10 +16,10 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 @Entity
-@Table(name = "cocktails")
+@Table(name = "employes")
 @DynamicUpdate
 @DynamicInsert
-public class Cocktail {
+public class Employe {
 
 	@Id
 	@GeneratedValue(generator = "barGenerator")
@@ -28,15 +30,13 @@ public class Cocktail {
 	@Column(name = "nom")
 	private String nom;
 
-	@Column(name = "norm")
-	private String nomNorm;
-
-	@Column(name = "prix")
-	private Double prix;
+	@JoinColumn(name = "idrole")
+	@OneToOne(optional = false)
+	private Role role;
 
 	public Short getId() {
 		return id;
-	}
+	} 
 
 	public void setId(Short id) {
 		this.id = id;
@@ -50,20 +50,12 @@ public class Cocktail {
 		this.nom = nom;
 	}
 
-	public Double getPrix() {
-		return prix;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setPrix(Double prix) {
-		this.prix = prix;
-	}
-
-	public String getNomNorm() {
-		return nomNorm;
-	}
-
-	public void setNomNorm(String nomNorm) {
-		this.nomNorm = nomNorm;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
 	@Override
@@ -73,10 +65,10 @@ public class Cocktail {
 
 	@Override
 	public boolean equals(Object object) {
-		if (object == null || !(object instanceof Cocktail)) {
+		if (object == null || !(object instanceof Employe)) {
 			return false;
 		}
-		Cocktail other = (Cocktail) object;
+		Employe other = (Employe) object;
 		return Objects.equal(this.id, other.id);
 	}
 
@@ -85,8 +77,7 @@ public class Cocktail {
 		return MoreObjects.toStringHelper(this)
 			.add("id", id)
 			.add("nom", nom)
-			.add("prix", prix)
+			.add("role", role)
 			.toString();
 	}
-
 }

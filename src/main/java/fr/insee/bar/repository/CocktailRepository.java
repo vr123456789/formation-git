@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import fr.insee.bar.model.Cocktail;
+import fr.insee.bar.beans.Cocktail;
 
 public interface CocktailRepository extends JpaRepository<Cocktail, Short>, JpaSpecificationExecutor<Cocktail> {
 
