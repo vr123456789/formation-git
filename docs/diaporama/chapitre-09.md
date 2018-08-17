@@ -46,11 +46,10 @@ git checkout --track origin/branch_name
 Créer une branche locale et la pousser vers le dépôt distant :
 ```bash
 git checkout -b branch_name
-git branch -u origin/branch_name
+git push -u origin branch_name
 ```
- - on peut aussi le faire au moment du premier *push* :
-  - `git push -u origin/branch_name`
 
+Par la suite on utilise simplement <!-- .element: class="icon info" --> `git push`
 
 %%%
 
