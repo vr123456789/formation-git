@@ -335,7 +335,7 @@ Tester ces affichages :
 
 ### 4. Branches
 
-:wrench: Il est recommandé d’utiliser Eclipse pour faire ce TP. Toutes les commandes équivalentes aux actions réalisées dans Eclipse sont données dans l'énoncé.
+:wrench: Il est recommandé d’utiliser Eclipse pour faire ce TP. Toutes les commandes équivalentes aux actions réalisées dans Eclipse sont données dans l’énoncé.
 
 #### Avance rapide
 
@@ -348,7 +348,7 @@ find src/main/java -type f -exec unix2dos {} \;
 git commit -am 'Renommage des variables salarie' -> 'employe'
 ```
 
-Pour vérifier qu’il n'y a pas de régression, lancer les tests unitaires, puis lancer l'application [http://localhost](http://localhost) pour tester.
+Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l'application [http://localhost](http://localhost) pour tester.
 
 ```bash
 mvn test
@@ -420,7 +420,7 @@ mvn test
 git branch -d eol
 ```
 
-Récupérer le patch dans la remise et l’appliquer à l'envers afin d'annuler le renommage du *package*. Supprimer le patch.
+Récupérer le patch dans la remise et l’appliquer à l’envers afin d'annuler le renommage du *package*. Supprimer le patch.
 
 ```bash
 git stash pop
@@ -447,18 +447,19 @@ Dans la copie locale, modifier le contenu du fichier `tp4.txt` en y ajoutant le 
 
 ```bash
 echo 'Modification locale' >> tp4.txt
-git commit -am "Insertion d'une ligne dans tp4.txt"
+git commit -am "Insertion d’une ligne dans tp4.txt"
 ```
 
 Dans Gitlab, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification distante"`. Valider cette modification.
 
  - Mettre à jour sa copie locale à partir de la branche distante.
- - Constater la présence d'un conflit.
- -Le résoudre en gardant les modifications distante et locale (le fichier doit compter trois lignes).
+ - Constater la présence d’un conflit.
+ - Le résoudre en gardant les modifications distante et locale (le fichier doit compter trois lignes).
  - Pousser vers la branche distante.
 
 ```bash
 git fetch
+git branch -vv # [origin/tp4: ahead 1, behind 1]
 git merge
 git diff
 vi tp4.txt
