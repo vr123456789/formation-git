@@ -434,3 +434,35 @@ Valider le retour arrière.
 git add '*.java'
 git commit -m "application du patch inverse"
 ```
+
+#### Branches distantes
+
+Créer et basculer sur une branche `tp4` qui suit la branche distante `origin/tp4`.
+
+```bash
+git checkout --track origin/tp4
+```
+
+Dans la copie locale, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification locale"`. Valider cette modification.
+
+```bash
+echo 'Modification locale' >> tp4.txt
+git commit -am "Insertion d'une ligne dans tp4.txt"
+```
+
+Dans Gitlab, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification distante"`. Valider cette modification.
+
+ - Mettre à jour sa copie locale à partir de la branche distante.
+ - Constater la présence d'un conflit.
+ -Le résoudre en gardant les modifications distante et locale (le fichier doit compter trois lignes).
+ - Pousser vers la branche distante.
+
+```bash
+git fetch
+git merge
+git diff
+vi tp4.txt
+git add tp4.txt
+git commit -m "Résolution du conflit tp4.txt"
+git push
+```
