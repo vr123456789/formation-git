@@ -1,4 +1,4 @@
-package fr.insee.bar.model;
+package fr.insee.bar.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

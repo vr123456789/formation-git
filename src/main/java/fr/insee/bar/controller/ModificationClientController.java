@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import fr.insee.bar.beans.Client;
+import fr.insee.bar.beans.Employe;
 import fr.insee.bar.exception.BarDroitException;
-import fr.insee.bar.model.Client;
-import fr.insee.bar.model.Employe;
 import fr.insee.bar.repository.ClientRepository;
 import fr.insee.bar.service.EmployeService;
 import fr.insee.bar.validator.ClientValidator;
