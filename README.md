@@ -379,7 +379,7 @@ git commit -am "Remplacement des retours à la ligne"
 Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController`. Valider.
 
 ```bash
-sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
+find src -type f -exec sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" {} \;
 git commit -am "redirection temporaire"
 ```
 
@@ -389,7 +389,9 @@ Dans la branche `master` renommer le *package* `model` en `beans`.
 
 ```bash
 git checkout master
-# TODO
+find src/main/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+find src/test/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
 git add .
 git commit -m "Renommer le package 'model' en 'beans'"
 ```
