@@ -3,7 +3,7 @@ package fr.insee.bar.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import fr.insee.bar.beans.Client;
+import fr.insee.bar.model.Client;
 
 @Controller
 public class DroitsController {
