@@ -390,7 +390,9 @@ Dans la branche `master` renommer le *package* `model` en `beans`.
 ```bash
 git checkout master
 find src/main/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+find src/main/java -type f -exec unix2dos {} \;
 find src/test/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+find src/test/java -type f -exec unix2dos {} \;
 mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
 git add .
 git commit -m "Renommer le package 'model' en 'beans'"
