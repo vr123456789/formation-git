@@ -348,7 +348,7 @@ find src/main/java -type f -exec unix2dos {} \;
 git commit -am 'Renommage des variables salarie' -> 'employe'
 ```
 
-Pour vérifier qu’il n'y a pas de régression, lancer les tests unitaires, puis lancer l'application (http://localhost)[http://localhost] pour tester.
+Pour vérifier qu’il n'y a pas de régression, lancer les tests unitaires, puis lancer l'application [http://localhost](http://localhost) pour tester.
 
 ```bash
 mvn test
@@ -389,10 +389,8 @@ Dans la branche `master` renommer le *package* `model` en `beans`.
 
 ```bash
 git checkout master
-find src/main/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
-find src/main/java -type f -exec unix2dos {} \;
-find src/test/java -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
-find src/test/java -type f -exec unix2dos {} \;
+find src -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+find src -type f -exec unix2dos {} \;
 mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
 git add .
 git commit -m "Renommer le package 'model' en 'beans'"
@@ -413,7 +411,7 @@ git status
 git merge --abort
 ```
 
-Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-space-at-eol``
+Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-space-at-eol`
 
 Lancer les tests unitaires et supprimer la branche `eol`.
 
