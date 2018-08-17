@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import fr.insee.bar.model.Client;
+import fr.insee.bar.beans.Client;
 import fr.insee.bar.service.ClientService;
 
 @Component

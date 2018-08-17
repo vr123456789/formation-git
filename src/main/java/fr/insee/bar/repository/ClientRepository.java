@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-import fr.insee.bar.model.Client;
+import fr.insee.bar.beans.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Short>, JpaSpecificationExecutor<Client> {
 
