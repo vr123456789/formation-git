@@ -22,9 +22,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.google.common.base.Objects;
 
+import fr.insee.bar.beans.Client;
+import fr.insee.bar.beans.Client.Titre;
 import fr.insee.bar.exception.BarClientException;
-import fr.insee.bar.model.Client;
-import fr.insee.bar.model.Client.Titre;
 import fr.insee.bar.repository.ClientRepository;
 
 

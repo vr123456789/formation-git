@@ -10,7 +10,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
-import fr.insee.bar.model.Employe;
+import fr.insee.bar.beans.Employe;
 
 @Component
 public class EmployeResolver implements HandlerMethodArgumentResolver {

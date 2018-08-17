@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import fr.insee.bar.model.Employe;
+import fr.insee.bar.beans.Employe;
 
 @Controller
 @RequestMapping("/commande")

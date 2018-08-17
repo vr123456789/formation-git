@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.servlet.view.document.AbstractXlsView;
 
-import fr.insee.bar.model.Client;
+import fr.insee.bar.beans.Client;
 
 public class ClientsExcelView extends AbstractXlsView {
 
