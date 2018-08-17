@@ -157,7 +157,6 @@ Solution :
 ignore-space-change
 ignore-all-space
 ignore-space-at-eol
-ignore-cr-at-eol 
 ```
  
 %%%
