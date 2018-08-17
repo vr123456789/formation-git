@@ -1,6 +1,6 @@
 package fr.insee.bar.exception;
 
-import fr.insee.bar.model.Employe;
+import fr.insee.bar.beans.Employe;
 
 @SuppressWarnings("serial")
 public class BarDroitException extends BarHttpException {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import fr.insee.bar.model.Employe;
+import fr.insee.bar.beans.Employe;
 import fr.insee.bar.provider.EmployeProvider;
 
 @Component

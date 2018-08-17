@@ -1,6 +1,6 @@
 package fr.insee.bar.provider;
 
-import fr.insee.bar.model.Employe;
+import fr.insee.bar.beans.Employe;
 
 public interface EmployeProvider {
 
