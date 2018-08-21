@@ -46,7 +46,8 @@ git config --global merge.conflictstyle diff3
 
 Ne pas modifier les retours à la ligne
 ```bash
-git config --global core.autocrlf input
+git config --global core.autocrlf false
+git config --global core.safecrlf false
 ```
 
 <details>
