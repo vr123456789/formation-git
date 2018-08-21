@@ -348,7 +348,7 @@ find src/main/java -type f -exec unix2dos {} \;
 git commit -am 'Renommage des variables salarie' -> 'employe'
 ```
 
-Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l'application [http://localhost](http://localhost) pour tester.
+Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l’application [http://localhost](http://localhost) pour tester.
 
 ```bash
 mvn test
@@ -420,7 +420,7 @@ mvn test
 git branch -d eol
 ```
 
-Récupérer le patch dans la remise et l’appliquer à l’envers afin d'annuler le renommage du *package*. Supprimer le patch.
+Récupérer le patch dans la remise et l’appliquer à l’envers afin d’annuler le renommage du *package*. Supprimer le patch.
 
 ```bash
 git stash pop
@@ -467,3 +467,47 @@ git add tp4.txt
 git commit -m "Résolution du conflit tp4.txt"
 git push
 ```
+
+### 5. Rebasage
+
+Créer un nouveau dossier pour le TP5, directement sous D:\ et se placer dans ce dossier :
+
+```bash
+mkdir /d/tp5
+cd /d/tp5
+```
+
+:information_source: On va simuler le fait que deux développeur travaillent au même moment dans la même branche distante `tp5`.
+
+Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`
+
+```bash
+git clone -b tp5 [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git devA
+git clone -b tp5 [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git devB
+```
+
+Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
+```bash
+cd /d/tp5/devA
+git am --ignore-whitespace patches/devA/*.patch
+```
+
+Cela génère deux nouveaux *commits* dans la copie de travail qui représentent le travail du développeur A.
+
+Pousser ces *commits* vers le dépôt distant :
+
+```bash
+git push
+```
+
+De même, dans le répertoire du développeur B, appliquer les quatre patches situés dans le répertoires `patches/devB/` :
+
+```bash
+cd /d/tp5/devB
+git am --ignore-whitespace patches/devB/*.patch
+```
+
+Cela génère quatre nouveaux *commits* dans la copie de travail qui représentent le travail du développeur B.
+
+:warn: Si on cherche à pousser les nouveaux *commits* vers le dépôt distant, Git refuse en nous informant que la copie locale n’est pas à jour.
+
