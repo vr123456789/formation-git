@@ -9,7 +9,7 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Rebaser
 
-**Rebasage** : autre manière d'intégrer une branche dans une autre
+**Rebasage** : autre manière d’intégrer une branche dans une autre
  - `git rebase`
  - alternative à la fusion
 
@@ -141,6 +141,24 @@ git merge experiment
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Conséquence du rebasage
 
+L’historique devient linéaire
+ - il ne correspond plus à ce qui *réellement* passé
+ - les *commits* de la branche sont réécrits
+
+Il n’y a pas de *commit* de fusion
+ - puisque l’historique est linéaire
+
+Il ne faut <!-- .element: class="icon warn" --> **jamais** rebaser du code déjà poussé sur le dépôt distant
+ - en cas de réécriture de l’historique, `git push --force`
+  - si le dépôt distant le permet
+  - se synchroniser avec le reste de l’équipe
+ - le rebasage se fait dans sa copie de travail
+  - avant d’avoir partager ses modifications
+
+Exemple de la contribution à un projet libre
+ - *pull request*
+ - fusion en avance rapide uniquement
+ - analyse du code soumis plus simple grâce a l’historique linéaire
 
 %%%
 
