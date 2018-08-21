@@ -30,6 +30,49 @@ Interdit si les modifications ont déjà été poussées vers le dépôt distant
 %%%
 
 
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Modifier des modifications plus anciennes
+
+Pas d'outil spécifique mais « rebasage interactif »`
+ - pour modifier les `n` derniers *commits* : `git rebase -i HEAD~n` 
+
+Pour chacun des `n` derniers *commits* on a le choix entre :
+<table>
+	<tr>
+		<td><code>pick</code></td>
+		<td>Garder le commit tel quel</td>
+	</tr>
+	<tr>
+		<td><code>reword</code></td>
+		<td>Changer le message</td>
+	</tr>
+	<tr>
+		<td><code>edit</code></td>
+		<td>S'arrêter pour modifier le commit</td>
+	</tr>
+	<tr>
+		<td><code>squash</code></td>
+		<td>Fusionner ce commit avec le précédent</td>
+	</tr>
+	<tr>
+		<td><code>fixup</code></td>
+		<td>Fusionner ce commit avec le précédent et utiliser le message précédent</td>
+	</tr>
+	<tr>
+		<td><code>exec</code></td>
+		<td>Exécuter une commande</td>
+	</tr>
+</table>
+
+On peut en plus :
+ - réordonner les commits en changeant l'ordre des lignes
+ - supprimer des commits en supprimant la ligne correspondante
+
+
+%%%
+
+
+Annuler le rebasage : `git rebase --abort`
 
 
 %%%
