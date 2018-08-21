@@ -547,10 +547,10 @@ git log --oneline --graph
 	<img src="docs/images/tp5-rebase.png" />
 </details>
 
-> :information_source: Les différences
-> 
-> - __rebasage__ : historique linéaire, *hashs* modifiés ;
-> - __fusion__ : historique non linéaire, existence d’un *commit* de fusion.
+:information_source: Les différences
+
+ - __rebasage__ : historique linéaire, *hashs* modifiés ;
+ - __fusion__ : historique non linéaire, existence d’un *commit* de fusion.
 
 Pour finir, partager ces modifications et mettre à jour la copie du développeur A :
 ```bash
