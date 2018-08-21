@@ -1,0 +1,26 @@
+From c3598c156c89d68684a05f7f305131a9f33365ee Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 17 Aug 2018 14:10:38 +0200
+Subject: [PATCH 1/4] Nouvelle fonction dans EmployeRepository
+
+Recherche par Role
+---
+ src/main/java/fr/insee/bar/repository/EmployeRepository.java | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/main/java/fr/insee/bar/repository/EmployeRepository.java b/src/main/java/fr/insee/bar/repository/EmployeRepository.java
+index d329024..b2db832 100644
+--- a/src/main/java/fr/insee/bar/repository/EmployeRepository.java
++++ b/src/main/java/fr/insee/bar/repository/EmployeRepository.java
+@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
+ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+ 
+ import fr.insee.bar.model.Employe;
++import fr.insee.bar.model.Role;
+ 
+ public interface EmployeRepository extends JpaRepository<Employe, Short>, JpaSpecificationExecutor<Employe> {
++	Employe findFirstByRole(Role role);
+ }
+-- 
+2.13.0.windows.1
+

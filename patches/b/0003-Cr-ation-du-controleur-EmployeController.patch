@@ -1,0 +1,56 @@
+From d9bf28b0a221cad74a62cc499490e23c0d2bd22a Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 17 Aug 2018 14:11:20 +0200
+Subject: [PATCH 3/4] =?UTF-8?q?Cr=C3=A9ation=20du=20controleur=20EmployeCo?=
+ =?UTF-8?q?ntroller?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../fr/insee/bar/controller/EmployeController.java | 33 ++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+ create mode 100644 src/main/java/fr/insee/bar/controller/EmployeController.java
+
+diff --git a/src/main/java/fr/insee/bar/controller/EmployeController.java b/src/main/java/fr/insee/bar/controller/EmployeController.java
+new file mode 100644
+index 0000000..fd85a4c
+--- /dev/null
++++ b/src/main/java/fr/insee/bar/controller/EmployeController.java
+@@ -0,0 +1,33 @@
++package fr.insee.bar.controller;
++
++import javax.servlet.http.HttpSession;
++
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Controller;
++import org.springframework.web.bind.annotation.GetMapping;
++
++import fr.insee.bar.model.Employe;
++import fr.insee.bar.model.Role;
++import fr.insee.bar.repository.EmployeRepository;
++import fr.insee.bar.service.EmployeService;
++
++@Controller
++public class EmployeController {
++
++	@Autowired
++	private EmployeService employeService;
++
++	@Autowired
++	private EmployeRepository employeRepository;
++
++	@GetMapping("/employe")
++	public String changeEmploye(Employe loggedEmploye, HttpSession session) {
++		System.out.println(session.getId());
++		Role role = new Role();
++		short idRole = employeService.estResponsable(loggedEmploye) ? EmployeService.SERVEUR : EmployeService.RESPONSABLE;
++		role.setId(idRole);
++		Employe newEmploye = employeRepository.findFirstByRole(role);
++		session.setAttribute("employe", newEmploye);
++		return "redirect:/accueil";
++	}
++}
+-- 
+2.13.0.windows.1
+

@@ -1,0 +1,25 @@
+From 4d319fd68115dbcf1ea51f2e5246c465810a1382 Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 17 Aug 2018 14:17:31 +0200
+Subject: [PATCH 1/2] Niveau de log Spring
+
+---
+ src/main/resources/application.properties | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+index 106e43b..4884ee3 100644
+--- a/src/main/resources/application.properties
++++ b/src/main/resources/application.properties
+@@ -14,7 +14,7 @@ spring.datasource.driver-class-name=org.hsqldb.jdbc.JDBCDriver
+ 
+ server.servlet.session.tracking-modes=cookie,url
+ 
+-logging.level.org.springframework=WARN
++logging.level.org.springframework=INFO
+ logging.level.org.apache=WARN
+ logging.level.org.hibernate=WARN
+ logging.level.com.zaxxer=WARN
+-- 
+2.13.0.windows.1
+

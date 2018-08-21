@@ -1,0 +1,33 @@
+From 802283b10649aa987c8273b743c3a84f10be847c Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 17 Aug 2018 14:18:06 +0200
+Subject: [PATCH 2/2] =?UTF-8?q?Suppression=20d'une=20m=C3=A9thode=20inutil?=
+ =?UTF-8?q?e?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ src/main/java/fr/insee/bar/controller/AccueilController.java | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/src/main/java/fr/insee/bar/controller/AccueilController.java b/src/main/java/fr/insee/bar/controller/AccueilController.java
+index effab41..0b6ab58 100644
+--- a/src/main/java/fr/insee/bar/controller/AccueilController.java
++++ b/src/main/java/fr/insee/bar/controller/AccueilController.java
+@@ -21,11 +21,7 @@ public class AccueilController {
+ 
+ 	@GetMapping("/accueil")
+ 	public String hello(Model model) {
+-		model.addAttribute("message", this.message());
++		model.addAttribute("message", name);
+ 		return "accueil";
+ 	}
+-
+-	private String message() {
+-		return name;
+-	}
+ }
+-- 
+2.13.0.windows.1
+

@@ -1,0 +1,26 @@
+From ebf3a1ca1e64461caaedae101ea88e33b3e06612 Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 17 Aug 2018 14:11:04 +0200
+Subject: [PATCH 2/4] Ajout de constantes dans EmployeService
+
+---
+ src/main/java/fr/insee/bar/service/EmployeService.java | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/main/java/fr/insee/bar/service/EmployeService.java b/src/main/java/fr/insee/bar/service/EmployeService.java
+index 5859393..b032996 100644
+--- a/src/main/java/fr/insee/bar/service/EmployeService.java
++++ b/src/main/java/fr/insee/bar/service/EmployeService.java
+@@ -11,7 +11,8 @@ import fr.insee.bar.model.Role;
+ @Service
+ public class EmployeService {
+ 
+-	private static final Short RESPONSABLE = Short.valueOf("2");
++	public static final Short SERVEUR = Short.valueOf("1");
++	public static final Short RESPONSABLE = Short.valueOf("2");
+ 
+ 	public boolean estResponsable(Employe employe) {
+ 		Role role = employe.getRole();
+-- 
+2.13.0.windows.1
+
