@@ -492,7 +492,7 @@ cd /d/tp5/devA
 git am --ignore-whitespace patches/devA/*.patch
 ```
 
-Cela génère deux nouveaux *commits* dans la copie de travail qui représentent le travail du développeur A.
+Cela génère deux nouveaux *commits*, qui représentent le travail du développeur A, dans la copie de travail.
 
 Pousser ces *commits* vers le dépôt distant :
 
@@ -507,7 +507,7 @@ cd /d/tp5/devB
 git am --ignore-whitespace patches/devB/*.patch
 ```
 
-Cela génère quatre nouveaux *commits* dans la copie de travail qui représentent le travail du développeur B.
+Cela génère quatre nouveaux *commits*, qui représentent le travail du développeur B, dans la copie de travail.
 
 :warning: Si on cherche à pousser les nouveaux *commits* vers le dépôt distant, Git refuse en nous informant que la copie locale n’est pas à jour.
 
@@ -517,7 +517,7 @@ git fetch origin
 
 #### Fusion
 
-Dans un premier temps, on va fusionner les modifications distantes dans et aboutir à un premier historique :
+Dans un premier temps, on va fusionner les modifications distantes dans la branche de travail et aboutir à un premier historique :
 ```bash
 git merge origin/tp5
 git log --oneline --graph
@@ -547,7 +547,10 @@ git log --oneline --graph
 	<img src="docs/images/tp5-rebase.png" />
 </details>
 
-Dans le cas du rebasage, l’historique est linéaire et le *hash* des *commits* ont changés. Dans le cas de la fusion, l'historique n'est pas linéaire, et il existe un *commit* supplémentaire, c'est le *commit* de fusion.
+> :information_source: Les différences
+> 
+> - __rebasage__ : historique linéaire, *hashs* modifiés ;
+> - __fusion__ : historique non linéaire, existence d’un *commit* de fusion.
 
 Pour finir, partager ces modifications et mettre à jour la copie du développeur A :
 ```bash
