@@ -511,3 +511,47 @@ Cela génère quatre nouveaux *commits* dans la copie de travail qui représente
 
 :warning: Si on cherche à pousser les nouveaux *commits* vers le dépôt distant, Git refuse en nous informant que la copie locale n’est pas à jour.
 
+```bash
+git fetch origin
+```
+
+#### Fusion
+
+Dans un premier temps, on va fusionner les modifications distantes dans et aboutir à un premier historique :
+```bash
+git merge origin/tp5
+git log --oneline --graph
+```
+
+<details>
+	<summary>Résultat avec fusion</summary>
+	<img src="docs/images/tp5-merge.png" />
+</details>
+
+On annule cette fusion en retournant un cran arrière :
+
+```bash
+git reset --hard HEAD~1
+```
+
+#### Rebasage
+
+Cette fois-ci, on va rebaser notre travail (celui du développeur B) sur celui du développeur A.
+```bash
+git rebase origin/tp5
+git log --oneline --graph
+```
+
+<details>
+	<summary>Résultat avec rebasage</summary>
+	<img src="docs/images/tp5-rebase.png" />
+</details>
+
+Dans le cas du rebasage, l’historique est linéaire et le *hash* des *commits* ont changés. Dans le cas de la fusion, l'historique n'est pas linéaire, et il existe un *commit* supplémentaire, c'est le *commit* de fusion.
+
+Pour finir, partager ces modifications et mettre à jour la copie du développeur A :
+```bash
+git push
+cd ../devA
+git pull
+```
