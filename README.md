@@ -560,4 +560,4 @@ cd ../devA
 git pull
 ```
 
-### 6. Réécrire l'historique
+### 6. Réécrire l’historique
