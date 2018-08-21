@@ -60,7 +60,7 @@ Pour créer une branche et basculer dans cette branche <!-- .element: class="ico
 git checkout master
 ```
 
-<div class="fixed-height"><img src="images/branches/branch-and-history.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/branch-and-history.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/master
@@ -79,7 +79,7 @@ cat .git/refs/heads/testing # cat: .git/refs/heads/testing: No such file or dire
 git branch testing
 ```
 
-<div class="fixed-height"><img src="images/branches/head-to-master.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/head-to-master.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/master
@@ -97,7 +97,7 @@ cat .git/refs/heads/testing # f30ab</code></pre>
 git checkout testing
 ```
 
-<div class="fixed-height"><img src="images/branches/head-to-testing.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/head-to-testing.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/testing
@@ -116,7 +116,7 @@ cat .git/refs/heads/testing # f30ab
 git commit -m "Commit dans la branche 'testing'"
 ```
 
-<div class="fixed-height"><img src="images/branches/advance-testing.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/advance-testing.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/testing
@@ -135,7 +135,7 @@ cat .git/refs/heads/testing # 87ab2
 git checkout master
 ```
 
-<div class="fixed-height"><img src="images/branches/checkout-master.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/checkout-master.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/master
@@ -154,7 +154,7 @@ cat .git/refs/heads/testing # 87ab2
 git commit -m "Commit dans la branche 'master'"
 ```
 
-<div class="fixed-height"><img src="images/branches/advance-master.png" width="700px" /></div>
+<div class="fixed-height"><img src="images/advance-master.png" width="700px" /></div>
 
 ```bash
 cat .git/HEAD # ref: refs/heads/master
@@ -211,7 +211,7 @@ La branche <!-- .element: class="icon info" --> *master*
 ### Exemple d’utilisation des branches (1)
 
 Situation initiale
-<div class="center"><img src="images/basic-branching/basic-branching-1.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-1.png" width="700px" /></div>
 
 
 %%%
@@ -221,7 +221,7 @@ Situation initiale
 
 Création d’une nouvelle branche pour le développement du ticket 53
  - `git checkout -b iss5`
-<div class="center"><img src="images/basic-branching/basic-branching-2.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-2.png" width="700px" /></div>
 
 
 
@@ -233,7 +233,7 @@ Création d’une nouvelle branche pour le développement du ticket 53
 Développements du ticket 53 dans la branche `iss53`
  - `git commit -m "ajout d’un pied de page [problème 53]"`
 
-<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-3.png" width="700px" /></div>
 
 
 
@@ -249,7 +249,7 @@ Un problème urgent est signalé en production <!-- .element: class="icon warn" 
  - Simple retour sur la branche `master`
   - `git checkout master`
 
-<div class="center"><img src="images/basic-branching/basic-branching-3.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-3.png" width="700px" /></div>
 
 
 %%%
@@ -264,7 +264,7 @@ Création d’une branche `hotfix` pour le correctif urgent à partir de `master
 Correction du problème dans la branche `hotfix`
  - `git commit -m "correction de l’adresse email incorrecte"`
 
-<div class="center"><img src="images/basic-branching/basic-branching-4.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-4.png" width="700px" /></div>
 
 
 %%%
@@ -277,7 +277,7 @@ Test de la correction et fusion dans la branche `master`
  - `git checkout master`
  - `git merge hotfix`
 
-<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-5.png" width="700px" /></div>
 
 
 %%%
@@ -295,7 +295,7 @@ Fast-forward
  1 file changed, 2 insertions(+)
 ```
 
-<div class="center"><img src="images/basic-branching/basic-branching-5.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-5.png" width="700px" /></div>
 
 
 %%%
@@ -311,7 +311,7 @@ Fin des développements du ticket 53 dans la branche `iss53`
  - `git checkout iss53`
  - `git commit -m "Nouveau pied de page terminé [issue 53]"`
  
-<div class="center"><img src="images/basic-branching/basic-branching-6.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-6.png" width="700px" /></div>
 
 
 %%%
@@ -326,7 +326,7 @@ Fusion de la branche `iss53` dans `master`
 
 *Commit* de fusion
 
-<div class="center"><img src="images/basic-branching/basic-branching-7.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-7.png" width="700px" /></div>
 
 
 %%%
@@ -343,7 +343,7 @@ README | 1 +
 1 file changed, 1 insertion(+)
 ```
 
-<div class="center"><img src="images/basic-branching/basic-branching-8.png" width="700px" /></div>
+<div class="center"><img src="images/basic-branching-8.png" width="700px" /></div>
 
 
 %%%
