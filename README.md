@@ -558,3 +558,5 @@ git push
 cd ../devA
 git pull
 ```
+
+### 6. Réécrire l'historique
