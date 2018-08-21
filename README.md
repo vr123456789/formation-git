@@ -509,5 +509,5 @@ git am --ignore-whitespace patches/devB/*.patch
 
 Cela génère quatre nouveaux *commits* dans la copie de travail qui représentent le travail du développeur B.
 
-:warn: Si on cherche à pousser les nouveaux *commits* vers le dépôt distant, Git refuse en nous informant que la copie locale n’est pas à jour.
+:warning: Si on cherche à pousser les nouveaux *commits* vers le dépôt distant, Git refuse en nous informant que la copie locale n’est pas à jour.
 
