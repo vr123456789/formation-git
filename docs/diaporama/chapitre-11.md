@@ -101,9 +101,59 @@ git rebase -i 7afc44a^
 	<img src="images/rebase-i-todo.png" width="400px" />
 </div>
 
-<!-- .element: class="icon warn" -->L'ordre des *commits* est inversé par rapport à `git log`
- - ordre chronologique &rarr; « on réécrit l'histoire »
+<!-- .element: class="icon warn" -->L’ordre des *commits* est inversé par rapport à `git log`
+ - ordre chronologique &rarr; « on réécrit l’histoire »
 
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Fusionner des *commits*
+
+`fixup`
+ - c’est le message du plus ancien *commit* qui sera utilisé
+  - on peut en profiter pour modifier ce message
+
+<table class="center">
+<tr>
+<td>avant</td>
+<td>programme</td>
+<td>après</td>
+</tr>
+<tr>
+<td><pre><code class="lang-bash hljs">fe0d95c JPA : Role
+090b778 JPA : Employe
+4f99ebc JPA : Cocktail
+7afc44a JPA : Client</code></pre></td>
+<td><pre><code class="lang-bash hljs">reword 7afc44a JPA : Client
+fixup 4f99ebc JPA : Cocktail
+fixup 090b778 JPA : Employe
+fixup fe0d95c JPA : Role</code></pre></td>
+<td><pre><code class="lang-bash hljs">67d60cc Ajout des annotations JPA sur les entités</code></pre></td>
+</tr>
+</table>
+
+`squash`
+ - l’éditeur de texte s’ouvre
+  - il contient les trois messages, on peut en faire ce qu’on veut
+
+<table>
+<tr>
+<td>avant</td>
+<td>programme</td>
+<td>après</td>
+</tr>
+<tr>
+<td><pre><code class="lang-bash hljs">4b5e1b5 Ignorer le dossier docs/
+6e47d26 Ménage : servlet-dispatcher.xml
+0d37c11 Suppression d’un vieux fichier</code></pre></td>
+<td><pre><code class="lang-bash hljs">pick 0d37c11 Suppression d’un vieux fichier
+squash 6e47d26 Ménage : servlet-dispatcher.xml
+squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
+<td><pre><code class="lang-bash hljs">346113b Ménage</code></pre></td>
+</tr>
+</table>
 
 %%%
 
