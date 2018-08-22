@@ -10,11 +10,7 @@
 
 ## Plan
 
- 1. Présentation générale de Git
- 2. Opérations de base
- 3. Branches
- 4. Utilitaires
- 5. Personnalisation
+:warning: À faire 
  
 ## Travaux pratiques
 
