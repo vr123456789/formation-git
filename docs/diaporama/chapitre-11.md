@@ -83,22 +83,27 @@ Annuler le rebasage :
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Réécrire des modifications plus anciennes
+### Programme de rebasage interactif
 
 ```bash
-pick 2e672b9 Correction de la fonction de recherche approximative
-pick 6e47d26 Ménage : servlet-dispatcher.xml
-pick 0d37c11 Suppression d'un vieux fichier
-pick bd37b08 Connexion à la base embarquée
-pick c80645c Suppression des RowMappers devenus inutiles
-pick cfb0daa Tentative de simplification avec les @Query
-pick b5f409e Réécriture complète des DAO avec spring-data
-pick db9f793 Refactor : dao -> repository
-pick fe0d95c JPA : Role
-pick 090b778 JPA : Employe
-pick 4f99ebc JPA : Coctail
-pick 7afc44a JPA : Client
+git log --oneline
 ```
+
+<div class="center">
+	<img src="images/rebase-i-log.png" width="400px" />
+</div>
+
+```bash
+git rebase -i 7afc44a^
+```
+
+<div class="center">
+	<img src="images/rebase-i-todo.png" width="400px" />
+</div>
+
+<!-- .element: class="icon warn" -->L'ordre des *commits* est inversé par rapport à `git log`
+ - ordre chronologique &rarr; « on réécrit l'histoire »
+
 
 %%%
 
