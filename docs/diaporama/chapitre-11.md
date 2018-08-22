@@ -155,7 +155,44 @@ squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
 </tr>
 </table>
 
+
 %%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Fusionner des *commits* automatiquement 
+
+<!-- .element: class="icon idea" -->Option `--autosquash` de `git rebase -i`
+ - activer l’option par défaut : `git config --global rebase.autosquash true`
+
+Oubli dans un *commit* qu’on ne peut plus amender
+
+```bash
+git add a.txt && git commit -m "Modification a.txt"
+git log --oneline -1 # 32f91fd Modification a.txt
+
+git add src/ && git commit -am "Correction problème Y"
+git log --oneline -1 # cba893a Correction problème Y
+
+vi a.txt # Correction d’un oubli dans le fichier a.txt
+git add a.txt
+git commit --fixup 32f91fd # <== option '--fixup'
+git log --oneline -1 # 7fef6a9 fixup! Modification a.txt
+
+git rebase -i master
+```
+
+Le programme de rebasage est déjà bon :
+
+```bash
+pick 32f91fd Modification a.txt
+fixup 7fef6a9 fixup! Modification a.txt
+pick cba893a Correction problème Y
+```
+
+
+%%%
+
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Diviser un *commit* en plusieurs
@@ -167,7 +204,7 @@ squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
   - la copie de travail contient les modifications
  - on indexe puis on valide les fichiers que l’on souhaite
   - possibilité d’indexer des parties de fichier avec `git add --patch`
- - on répète les opérations d’indexation et de validation autant de fois que l'on souhaite
+ - on répète les opérations d’indexation et de validation autant de fois que l’on souhaite
  - on laisse le rebasage se poursuivre : `git rebase --continue`
 
 <table class="medium">
