@@ -81,6 +81,27 @@ Annuler le rebasage :
 
 %%%
 
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Réécrire des modifications plus anciennes
+
+```bash
+pick 2e672b9 Correction de la fonction de recherche approximative
+pick 6e47d26 Ménage : servlet-dispatcher.xml
+pick 0d37c11 Suppression d'un vieux fichier
+pick bd37b08 Connexion à la base embarquée
+pick c80645c Suppression des RowMappers devenus inutiles
+pick cfb0daa Tentative de simplification avec les @Query
+pick b5f409e Réécriture complète des DAO avec spring-data
+pick db9f793 Refactor : dao -> repository
+pick fe0d95c JPA : Role
+pick 090b778 JPA : Employe
+pick 4f99ebc JPA : Coctail
+pick 7afc44a JPA : Client
+```
+
+%%%
+
 <!-- .slide: class="tp" -->
 ## [TP6](https://git.stable.innovation.insee.eu/wehdrc/formation-git#6-r%C3%A9%C3%A9crire-lhistorique)
 <div class="center">
