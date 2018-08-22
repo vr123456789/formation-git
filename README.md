@@ -4,6 +4,10 @@
 
 :bookmark_tabs: Imprimer [Gitlab](http://wehdrc.pages.innovation.insee.eu/formation-git/?print-pdf#/) | [Github](https://romain-warnan.github.io/formation-git/?print-pdf#/) (avec Chrome)
 
+
+## Liens
+[Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
+
 ## Plan
 
  1. Présentation générale de Git
