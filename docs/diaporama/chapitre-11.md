@@ -115,7 +115,7 @@ git rebase -i 7afc44a^
  - c’est le message du plus ancien *commit* qui sera utilisé
   - on peut en profiter pour modifier ce message
 
-<table class="center">
+<table class="medium">
 <tr>
 <td>avant</td>
 <td>programme</td>
@@ -138,7 +138,7 @@ fixup fe0d95c JPA : Role</code></pre></td>
  - l’éditeur de texte s’ouvre
   - il contient les trois messages, on peut en faire ce qu’on veut
 
-<table>
+<table class="medium">
 <tr>
 <td>avant</td>
 <td>programme</td>
@@ -156,6 +156,37 @@ squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
 </table>
 
 %%%
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Diviser un *commit* en plusieurs
+
+`edit`
+ - le programme s’arrête et nous donne la main
+ - on en profite pour revenir un cran en arrière : `git reset HEAD^`
+  - l’index est vide
+  - la copie de travail contient les modifications
+ - on indexe puis on valide les fichiers que l’on souhaite
+  - possibilité d’indexer des parties de fichier avec `git add --patch`
+ - on répète les opérations d’indexation et de validation autant de fois que l'on souhaite
+ - on laisse le rebasage se poursuivre : `git rebase --continue`
+
+<table class="medium">
+<tr>
+<td>avant</td>
+<td>programme</td>
+<td>après</td>
+</tr>
+<tr>
+<td><pre><code class="lang-bash hljs">b5f409e Titre README.md et corrections</code></pre></td>
+<td><pre><code class="lang-bash hljs">edit b5f409e Titre README.md et corrections</code></pre></td>
+<td><pre><code class="lang-bash hljs">6e47d26 Titre dans README.md
+346113b Orthographe</code></pre></td>
+</tr>
+</table>
+
+
+%%%
+
 
 <!-- .slide: class="tp" -->
 ## [TP6](https://git.stable.innovation.insee.eu/wehdrc/formation-git#6-r%C3%A9%C3%A9crire-lhistorique)
