@@ -134,6 +134,10 @@ body {
     font-size: 0.7em;
 }
 
+.reveal .medium {
+    font-size: 0.8em;
+}
+
 .reveal label {
     font-size: medium;
 }
