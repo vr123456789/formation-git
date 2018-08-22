@@ -146,6 +146,10 @@ body {
     text-align: center;
 }
 
+.reveal .slide table.left tr td {
+    text-align: left;
+}
+
 /* Icones : color */
 .reveal .icon:before {
 	vertical-align: sub;
@@ -215,6 +219,6 @@ body {
 	min-height: 450px;
 }
 
-.reveal .left {
+.reveal .slide .left {
 	text-align: left;
 }
