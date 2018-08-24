@@ -569,7 +569,7 @@ git pull
 #### Amender un *commit*
 
 Remplacer l’image de la page d'accueil par le logo Git situé dans `docs/images/logo-git-png` :
-
+ - Créer une branche de suivi pour la branche tp6
  - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
  - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer cocktail.png par `logo-git.png`
  - lancer l’application et observer le résultat 
@@ -583,4 +583,22 @@ Corriger ces erreurs en amendant le dernier *commit*.
 
 On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part.
 
-Amender le dernier *commit* en supprimant en plus ce fichier.
+Amender le dernier *commit* en supprimant ce fichier.
+
+Pousser ces dernières modification vers le dépôt distant.
+
+<details>
+<summary>Correction</summary>
+<pre><code>
+git checkout --track origin/tp6
+cp docs/images/logo-git.png src/main/webapp/static/
+sed -i "s/cocktails/git-logo/g" src/main/webapp/WEB-INF/views/accueil.jsp
+unix2dos src/main/webapp/WEB-INF/views/accueil.jsp
+mvn spring-boot:run
+git commit -am "Remplacement de l’image de la page d'accuiel"
+git add src/main/webapp/static/logo-git.png
+git rm src/main/webapp/static/cocktails.png
+git commit --amend -m "Remplacement de l’image de la page d’accueil"
+git push
+</code></pre>
+</details>
