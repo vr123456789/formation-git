@@ -6,8 +6,8 @@
 
 
 ## Liens
-[Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
-[Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
+ - [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
+ - [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
 
 ## Plan
 
@@ -569,17 +569,17 @@ git pull
 #### Amender un *commit*
 
 Remplacer l’image de la page d'accueil par le logo Git situé dans `docs/images/logo-git-png` :
- - Créer une branche de suivi pour la branche tp6
+ - créer une branche de suivi pour la branche tp6
  - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
- - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer cocktail.png par `logo-git.png`
+ - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png par` `logo-git.png`
  - lancer l’application et observer le résultat 
  - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d'accuiel"`
  
- :x: On vient de commettre deux erreurs :
-  1. une faute de frappe dans le mot __accueil__
+:warning: On vient de commettre deux erreurs :
+  1. une faute de frappe sur le mot __accueil__ dans le message de validation
   2. le fichier __logo-git.png__ n’a pas été validé
 
-Corriger ces erreurs en amendant le dernier *commit*.
+Objectif : corriger ces erreurs en amendant le dernier *commit*.
 
 On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part.
 
@@ -592,7 +592,7 @@ Pousser ces dernières modification vers le dépôt distant.
 <pre><code>
 git checkout --track origin/tp6
 cp docs/images/logo-git.png src/main/webapp/static/
-sed -i "s/cocktails/git-logo/g" src/main/webapp/WEB-INF/views/accueil.jsp
+sed -i "s/cocktails/logo-git/g" src/main/webapp/WEB-INF/views/accueil.jsp
 unix2dos src/main/webapp/WEB-INF/views/accueil.jsp
 mvn spring-boot:run
 git commit -am "Remplacement de l’image de la page d'accuiel"
