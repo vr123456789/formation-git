@@ -589,8 +589,7 @@ Pousser ces dernières modification vers le dépôt distant.
 
 <details>
 <summary>Correction</summary>
-<pre><code>
-git checkout --track origin/tp6
+<pre><code>git checkout --track origin/tp6
 cp docs/images/logo-git.png src/main/webapp/static/
 sed -i "s/cocktails/logo-git/g" src/main/webapp/WEB-INF/views/accueil.jsp
 unix2dos src/main/webapp/WEB-INF/views/accueil.jsp
@@ -599,6 +598,5 @@ git commit -am "Remplacement de l’image de la page d'accuiel"
 git add src/main/webapp/static/logo-git.png
 git rm src/main/webapp/static/cocktails.png
 git commit --amend -m "Remplacement de l’image de la page d’accueil"
-git push
-</code></pre>
+git push</code></pre>
 </details>
