@@ -238,7 +238,7 @@ Exemples de cas classiques :
 		<th>Filtre à utiliser</th>
 	</tr>
 	<tr>
-		<td>modifier l’arborescence dans l'historique</td>
+		<td>modifier l’arborescence dans l’historique</td>
 		<td><code>--index-filter</code></td>
 	</tr>
 	<tr>
@@ -301,7 +301,7 @@ Faire du sous-dossier `frontend/` la nouvelle racine du dépôt :
 git filter-branch -f --subdirectory-filter "frontend/" --prune-empty -- HEAD
 ```
 
-Modifier l’adresse mail d'un développeur :
+Modifier l’adresse mail d’un développeur :
  - `ancien.mail@insee.fr` &rarr; `nouveau.mail@insee.fr`
 
 ```bash
@@ -322,6 +322,21 @@ git filter-branch -f --msg-filter '
 	cat && echo && echo "© Insee" 
 ' -- HEAD
 ```
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Précautions d’usage
+
+<!-- .element: class="icon info" -->`filter-branch` permet de réécrire tout l’historique à partir d'un certain point dans le temps
+
+Pour partager le nouvel historique : `git push --force`
+ - ôter la protection de la branche dans le dépôt distant (Gihub, Gitlab, GForge)
+ 
+<!-- .element: class="icon time" -->Se synchroniser
+ - chaque développeur devra supprimer sa copie locale et cloner le nouvel historique du dépôt
+
 
 %%%
 
