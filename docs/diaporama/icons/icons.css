@@ -1,0 +1,67 @@
+/* Icones : color */
+.reveal .icon:before {
+	vertical-align: sub;
+	padding-right: 15px;
+}
+
+.reveal .icon-color .icon.idea:before {
+	content: url('color/idea.png');
+}
+
+.reveal .icon-color .icon.warn:before {
+	content: url('color/warn.png')
+}
+
+.reveal .icon-color .icon.info:before {
+	content: url('color/info.png')
+}
+
+.reveal .icon-color .icon.time:before {
+	content: url('color/time.png')
+}
+
+.reveal .icon-color .icon.boom:before {
+	content: url('color/boom.png')
+}
+
+/* Icones : ultraviolet */
+.reveal .icon-ultraviolet .icon.idea:before {
+	content: url('ultraviolet/idea.png');
+}
+
+.reveal .icon-ultraviolet .icon.warn:before {
+	content: url('ultraviolet/warn.png');
+}
+
+.reveal .icon-ultraviolet .icon.info:before {
+	content: url('ultraviolet/info.png');
+}
+
+.reveal .icon-ultraviolet .icon.time:before {
+	content: url('ultraviolet/time.png');
+}
+
+.reveal .icon-ultraviolet .icon.boom:before {
+	content: url('ultraviolet/boom.png');
+}
+
+/* Icones : dusk */
+.reveal .icon-dusk .icon.idea:before {
+	content: url('dusk/idea.png')
+}
+
+.reveal .icon-dusk .icon.warn:before {
+	content: url('dusk/warn.png')
+}
+
+.reveal .icon-dusk .icon.info:before {
+	content: url('dusk/info.png')
+}
+
+.reveal .icon-dusk .icon.time:before {
+	content: url('dusk/time.png')
+}
+
+.reveal .icon-dusk .icon.boom:before {
+	content: url('dusk/boom.png')
+}
