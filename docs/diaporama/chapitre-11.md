@@ -329,7 +329,7 @@ git filter-branch -f --msg-filter '
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Précautions d’usage
 
-<!-- .element: class="icon info" -->`filter-branch` permet de réécrire tout l’historique à partir d'un certain point dans le temps
+<!-- .element: class="icon info" -->`filter-branch` permet de réécrire tout l’historique à partir d’un certain point dans le temps
 
 Pour partager le nouvel historique : `git push --force`
  - ôter la protection de la branche dans le dépôt distant (Gihub, Gitlab, GForge)

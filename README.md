@@ -562,3 +562,25 @@ git pull
 ```
 
 ### 6. Réécrire l’historique
+
+:tired_face: On se place dans la peau d’un développeur un peu fatigué qui commet donc des erreurs d'inattention.
+
+
+#### Amender un *commit*
+
+Remplacer l’image de la page d'accueil par le logo Git situé dans `docs/images/logo-git-png` :
+
+ - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
+ - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer cocktail.png par `logo-git.png`
+ - lancer l’application et observer le résultat 
+ - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d'accuiel"`
+ 
+ :x: On vient de commettre deux erreurs :
+  1. une faute de frappe dans le mot __accueil__
+  2. le fichier __logo-git.png__ n’a pas été validé
+
+Corriger ces erreurs en amendant le dernier *commit*.
+
+On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part.
+
+Amender le dernier *commit* en supprimant en plus ce fichier.
