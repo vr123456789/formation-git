@@ -225,6 +225,107 @@ pick cba893a Correction problème Y
 %%%
 
 
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Réécrire complètement l’historique
+
+<!-- .element: class="icon boom" --> L’option nucléaire : `filter-branch`
+
+Exemples de cas classiques :
+
+<table class="left medium">
+	<tr>
+		<th>Objectif</th>
+		<th>Filtre à utiliser</th>
+	</tr>
+	<tr>
+		<td>modifier l’arborescence dans l'historique</td>
+		<td><code>--index-filter</code></td>
+	</tr>
+	<tr>
+		<td>modifier le contenu de fichiers dans l’historique</td>
+		<td><code>--tree-filter</code></td>
+	</tr>
+	<tr>
+		<td>modifier les métadonnées de l’historique</td>
+		<td><code>--env-filter</code></td>
+	</tr>
+	<tr>
+		<td>faire d’un sous-répertoire la nouvelle racine</td>
+		<td><code>--subdirectory-filter</code></td>
+	</tr>
+	<tr>
+		<td>modifier tous les messages de validation</td>
+		<td><code>--msg-filter</code></td>
+	</tr>
+</table>
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Exemples de code (1)
+
+Supprimer le fichier `password.txt` de tout l’historique :
+```bash
+git filter-branch --index-filter '
+	git rm --cached --quiet --force "password.txt"
+' --prune-empty -- HEAD
+```
+
+Supprimer le dossier `target/` de tout l’historique :
+```bash
+git filter-branch --index-filter '
+	git rm --cached --quiet --force -r "target/"
+' --prune-empty -- HEAD
+```
+
+ Remplacer le texte correspondant au motif :
+  - `password_pattern` &rarr; `*****` dans le fichier `parametres.txt` :
+
+```bash
+git filter-branch --tree-filter '
+	sed -i -E "s/password_pattern/*****/g" "fichier.txt"
+' --prune-empty -- HEAD
+```
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Exemples de code (2)
+
+Faire du sous-dossier `frontend/` la nouvelle racine du dépôt :
+```bash
+git filter-branch -f --subdirectory-filter "frontend/" --prune-empty -- HEAD
+```
+
+Modifier l’adresse mail d'un développeur :
+ - `ancien.mail@insee.fr` &rarr; `nouveau.mail@insee.fr`
+
+```bash
+git filter-branch -f --env-filter '
+old_mail="ancien.mail@insee.fr"
+new_mail="nouveau.mail@insee.fr"
+if [ "$GIT_AUTHOR_EMAIL" = "$old_mail" ] || [ "$GIT_COMMITTER_EMAIL" = "$old_mail" ] 
+then
+	export GIT_AUTHOR_EMAIL="$new_mail"
+	export GIT_COMMITTER_EMAIL="$new_mail"
+fi
+' -- HEAD
+```
+
+Ajouter le texte `© Insee` à la fin de chaque message :
+```bash
+git filter-branch -f --msg-filter '
+	cat && echo && echo "© Insee" 
+' -- HEAD
+```
+
+%%%
+
+
 <!-- .slide: class="tp" -->
 ## [TP6](https://git.stable.innovation.insee.eu/wehdrc/formation-git#6-r%C3%A9%C3%A9crire-lhistorique)
 <div class="center">
