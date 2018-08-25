@@ -398,13 +398,6 @@ git add .
 git commit -m "Renommer le package 'model' en 'beans'"
 ```
 
-Afin de pouvoir plus tard annuler cette modification, créer un *patch* de ce *commit*. Le remiser afin que cette modification n’interfère pas avec les actions suivantes.
-
-```bash
-git format-patch -1 HEAD
-git stash
-```
-
 Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque retours à la ligne. Annuler la fusion.
 
 ```bash
@@ -413,7 +406,7 @@ git status
 git merge --abort
 ```
 
-Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-all-space`
+Relancer la fusion en ignorant les espaces : `git merge eol -Xignore-all-space`
 
 Lancer les tests unitaires et supprimer la branche `eol`.
 
@@ -422,19 +415,10 @@ mvn test
 git branch -d eol
 ```
 
-Récupérer le patch dans la remise et l’appliquer à l’envers afin d’annuler le renommage du *package*. Supprimer le patch.
+Annuler le renommage du package.
 
 ```bash
-git stash pop
-git apply --reverse --whitespace=fix 0001-Renommer-le-package-model-en-beans.patch
-rm 0001-Renommer-le-package-model-en-beans.patch
-```
-
-Valider le retour arrière.
-
-```bash
-git add '*.java'
-git commit -m "application du patch inverse"
+git revert HEAD~1
 ```
 
 #### Branches distantes
