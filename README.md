@@ -413,7 +413,7 @@ git status
 git merge --abort
 ```
 
-Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-space-at-eol`
+Relancer la fusion en ignorant les espaces en fin de ligne : `git merge eol -Xignore-all-space`
 
 Lancer les tests unitaires et supprimer la branche `eol`.
 
