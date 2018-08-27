@@ -4,14 +4,21 @@
 
 :bookmark_tabs: Imprimer [Gitlab](http://wehdrc.pages.innovation.insee.eu/formation-git/?print-pdf#/) | [Github](https://romain-warnan.github.io/formation-git/?print-pdf#/) (avec Chrome)
 
-
-## Liens
- - [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
- - [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
-
 ## Plan
 
-:warning: À faire 
+ 1. Présentation générale de Git
+ 2. Fonctionnement de Git
+ 3. Configuration et personnalisation
+ 4. Opérations de base &rarr; *TP1*
+ 5. Dépôts distants &rarr; *TP2*
+ 6. Historique des validations &rarr; *TP3*
+ 7. Branches
+ 8. Fusion
+ 9. Branches distantes &rarr; *TP4*
+ 10. Rebasage &rarr; *TP5*
+ 11. Réécriture de l’historique &rarr; *TP6*
+ 12. Outils Git
+ 13. Git côté serveur &rarr; *TP7*
  
 ## Travaux pratiques
 
@@ -584,3 +591,10 @@ git rm src/main/webapp/static/cocktails.png
 git commit --amend -m "Remplacement de l’image de la page d’accueil"
 git push</code></pre>
 </details>
+
+
+
+## Liens utiles
+
+ - [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
+ - [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
