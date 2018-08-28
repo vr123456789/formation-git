@@ -677,7 +677,7 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 
 #### *Filter branch*
 
-On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que ce token devait rester secret et n'être donc pas commité et encore moins partagé dans le dépôt distant.
+On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que cette information devait rester secret et n'être donc pas validée et encore moins partagée dans le dépôt distant.
 
 À la suite d’une inspection rapide, on constate aussi qu'un fichier `password.txt` a été validé et poussé vers le serveur.
 
@@ -690,12 +690,14 @@ On va faire disparaitre ces informations de l’historique.
 	<code>git log -- password.txt</code>
 </details>
 <br />
+
 <details>
 	<summary>Exécuter un <code>filter-branch</code> de type <code>index-filter</code> pour supprimer ce fichier de l’historique, depuis son apparition.</summary>
 	<pre><code>git filter-branch -f --index-filter '
     git rm --cached --quiet --force "password.txt"
 ' --prune-empty -- b4b712e^..HEAD</code></pre>
 </details>
+<br />
 
 **secret token**
 
