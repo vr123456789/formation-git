@@ -1,6 +1,6 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="chapter" -->
 ## 11
-### Réécrire l’historique
+### Réécriture l’historique
 
 
 %%%
