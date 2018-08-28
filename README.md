@@ -357,7 +357,7 @@ find src/main/java -type f -exec unix2dos {} \;
 git commit -am 'Renommage des variables salarie' -> 'employe'
 ```
 
-Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l’application [http://localhost](http://localhost) pour tester.
+Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l’application [http://localhost:8080](http://localhost:8080) pour tester.
 
 ```bash
 mvn test
