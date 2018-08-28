@@ -620,9 +620,9 @@ Dans la branche `tp6`, effectuer les action suivantes :
  2. Modifier quelques autres emails
  3. 
   - créer une branch email-regex et basculer dessus
-  - dans la classe `Client`, modifier l’expression régulière de l'email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
+  - dans la classe `Client`, modifier l’expression régulière de l’email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
   - retourner dans la branche `tp6`
- 4. Remplacer l’extension d'email `co.uk` par `uk`
+ 4. Remplacer l’extension d’email `co.uk` par `uk`
  5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
  6. 
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
@@ -637,10 +637,10 @@ Finalement l’historique ressemble à celui-ci :
 
 Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent, c’est-à-dire « Script pour modifier le fichier 'application.properties'».
 
-Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu'il fasse les actions suivantes :
- - placer en premier le *commit* de l’expression régulière de validation de l'adresse mail ;
+Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu’il fasse les actions suivantes :
+ - placer en premier le *commit* de l’expression régulière de validation de l’adresse mail ;
  - fusionner les *commits* de modifications d’email en un seul ;
- - ignorer le *commit* concernant l’extension d'email `co.uk` &rarr; `uk` ;
+ - ignorer le *commit* concernant l’extension d’email `co.uk` &rarr; `uk` ;
  - conserver tels quels les *commits* d’ajout des 20 lignes et se suppression du *secret token* ;
  - éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
 
@@ -652,7 +652,7 @@ Lancer le rebasage en cliquant sur la flêche verte.
 
 Modifier éventuellement les messages de *commit* quand cela est proposé.
 
-Le rebasage s’arrête à l'édition du *commit*. L'objectif est de diviser le *commit* en trois *commits* :
+Le rebasage s’arrête à l’édition du *commit*. L'objectif est de diviser le *commit* en trois *commits* :
  1. la modification du nom de l’application
  2. la modification du niveau de log
  3. la modification du message
@@ -674,6 +674,42 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 > Pour tout faire dans la console, il faut au moins connaitre les commandes vi suivantes :
 >  - couper une ligne : `dd`
 >  - coller une ligne au dessus : `P`
+
+#### *Filter branch*
+
+On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que ce token devait rester secret et n'être donc pas commité et encore moins partagé dans le dépôt distant.
+
+À la suite d’une inspection rapide, on constate aussi qu'un fichier `password.txt` a été validé et poussé vers le serveur.
+
+On va faire disparaitre ces informations de l’historique.
+
+**password.txt**
+
+<details>
+	<summary>Déterminer depuis quand le fichier <code>password.txt</code> est présent dans l’historique.</summary>
+	<code>git log -- password.txt</code>
+</details>
+<br />
+<details>
+	<summary>Exécuter un <code>filter-branch</code> de type <code>index-filter</code> pour supprimer ce fichier de l’historique, depuis son apparition.</summary>
+	<pre><code>git filter-branch -f --index-filter '
+    git rm --cached --quiet --force "password.txt"
+' --prune-empty -- b4b712e^..HEAD</code></pre>
+</details>
+
+**secret token**
+
+<details>
+	<summary>Déterminer depuis quand la ligne <code>application.secret.token=...</code> est présente dans l’historique.</summary>
+	<code>git log -S"application.secret.token"</code>
+</details>
+<br />
+<details>
+	<summary>Exécuter un <code>filter-branch</code> de type <code>tree-filter</code> pour supprimer cette ligne de l’historique, depuis son apparition.</summary>
+	<pre><code>git filter-branch -f --tree-filter '
+    sed -i -E "/application\.secret\.token/d" src/main/resources/application.properties
+' --prune-empty -- 092a022^..HEAD</code></pre>
+</details>
 
 ## Liens utiles
 
