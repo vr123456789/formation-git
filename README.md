@@ -652,7 +652,7 @@ Lancer le rebasage en cliquant sur la flêche verte.
 
 Modifier éventuellement les messages de *commit* quand cela est proposé.
 
-Le rebasage s’arrête à l’édition du *commit*. L'objectif est de diviser le *commit* en trois *commits* :
+Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser le *commit* en trois *commits* :
  1. la modification du nom de l’application
  2. la modification du niveau de log
  3. la modification du message
@@ -677,9 +677,11 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 
 #### *Filter branch*
 
-On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que cette information devait rester secret et n'être donc pas validée et encore moins partagée dans le dépôt distant.
+On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que cette information devait rester secret et n’être donc pas validée et encore moins partagée dans le dépôt distant.
 
-À la suite d’une inspection rapide, on constate aussi qu'un fichier `password.txt` a été validé et poussé vers le serveur.
+À la suite d’une inspection rapide, on constate aussi qu’un fichier `password.txt` a été validé et poussé vers le serveur.
+
+Dans Gitlab, vérifier que l’historique de la branche distante `tp6` contient en effet ces informations sensibles.
 
 On va faire disparaitre ces informations de l’historique.
 
@@ -712,6 +714,24 @@ On va faire disparaitre ces informations de l’historique.
     sed -i -E "/application\.secret\.token/d" src/main/resources/application.properties
 ' --prune-empty -- 092a022^..HEAD</code></pre>
 </details>
+
+Vérifier dans l’historique que les informations sensibles ont bien disparu.
+
+```bash
+# Extraire une ancienne version (detached HEAD)
+git checkout HEAD~25
+
+# Constater l’absence du fichier password.txt 
+ls -l
+
+# Constater l’absence du secret token
+cat src/main/resources/application.properties
+
+# Revenir à la dernière version
+git checkout tp6
+```
+
+Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. Dans Gitlab, vérifier que l’historique de la branche distante `tp6` ne contient plus les informations sensibles.
 
 ## Liens utiles
 
