@@ -622,7 +622,7 @@ Dans la branche `tp6`, effectuer les action suivantes :
   - créer une branch email-regex et basculer dessus
   - dans la classe `Client`, modifier l’expression régulière de l'email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
   - retourner dans la branche `tp6`
- 4. Remplacer l’extension d'email 'co.uk' par 'uk'
+ 4. Remplacer l’extension d'email `co.uk` par `uk`
  5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
  6. 
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
@@ -635,12 +635,12 @@ Finalement l’historique ressemble à celui-ci :
 
 <img src="docs/images/ex-rebase-i-1.png" />
 
-Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit su le commit précédent (c'est-à-dire « Script pour modifier le fichier 'application.properties').
+Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent, c’est-à-dire « Script pour modifier le fichier 'application.properties'».
 
 Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu'il fasse les actions suivantes :
  - placer en premier le *commit* de l’expression régulière de validation de l'adresse mail ;
  - fusionner les *commits* de modifications d’email en un seul ;
- - ignorer le *commit* concernant l’extension d'email 'co.uk' &rarr; 'uk' ;
+ - ignorer le *commit* concernant l’extension d'email `co.uk` &rarr; `uk` ;
  - conserver tels quels les *commits* d’ajout des 20 lignes et se suppression du *secret token* ;
  - éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
 
@@ -670,6 +670,7 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 <img src="docs/images/ex-rebase-i-3.png" />
 
 > Pour lancer le rebasage dans la console, il suffit de taper `git rebase -i`
+>
 > Pour tout faire dans la console, il faut au moins connaitre les commandes vi suivantes :
 >  - couper une ligne : `dd`
 >  - coller une ligne au dessus : `P`
