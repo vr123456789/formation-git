@@ -578,7 +578,7 @@ Amender le dernier *commit* en supprimant ce fichier.
 
 Pousser ces dernières modification vers le dépôt distant.
 
-Correction :
+__Correction :__
 
 ```bash
 # Création d’une branche de suivi tp6
