@@ -268,27 +268,33 @@ Exemples de cas classiques :
 
 Supprimer le fichier `password.txt` de tout l’historique :
 ```bash
-git filter-branch --index-filter '
+git filter-branch -f --index-filter '
 	git rm --cached --quiet --force "password.txt"
 ' --prune-empty -- HEAD
 ```
 
 Supprimer le dossier `target/` de tout l’historique :
 ```bash
-git filter-branch --index-filter '
+git filter-branch -f --index-filter '
 	git rm --cached --quiet --force -r "target/"
 ' --prune-empty -- HEAD
 ```
 
- Remplacer le texte correspondant au motif :
+Remplacer le texte correspondant au motif :
   - `password_pattern` &rarr; `*****` dans le fichier `parametres.txt` :
 
 ```bash
-git filter-branch --tree-filter '
+git filter-branch -f --tree-filter '
 	sed -i -E "s/password_pattern/*****/g" "fichier.txt"
 ' --prune-empty -- HEAD
 ```
 
+Supprimer la ligne correspondant au motif :
+```bash
+git filter-branch -f --tree-filter '
+    sed -i -E "/pattern/d" src/main/resources/application.properties
+' --prune-empty -- 092a022^..HEAD
+```
 
 %%%
 
