@@ -578,9 +578,10 @@ Amender le dernier *commit* en supprimant ce fichier.
 
 Pousser ces dernières modification vers le dépôt distant.
 
-<details>
-<summary>Correction</summary>
-<pre><code># Création d’une branche de suivi tp6
+Correction :
+
+```bash
+# Création d’une branche de suivi tp6
 git checkout --track origin/tp6
 
 # Copie de l’image dans le bon répertoire
@@ -606,8 +607,8 @@ git rm src/main/webapp/static/cocktails.png
 git commit --amend -m "Remplacement de l’image de la page d’accueil"
 
 # Envoi vers le serveur distant
-git push</code></pre>
-</details>
+git push
+```
 
 
 
