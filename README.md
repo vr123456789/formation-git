@@ -587,7 +587,7 @@ git checkout --track origin/tp6
 # Copie de l’image dans le bon répertoire
 cp docs/images/logo-git.png src/main/webapp/static/
 
-# Remplacement de l’adresse de l'image dans la jsp
+# Remplacement de l’adresse de l’image dans la jsp
 sed -i "s/cocktails/logo-git/g" src/main/webapp/WEB-INF/views/accueil.jsp
 unix2dos src/main/webapp/WEB-INF/views/accueil.jsp
 
@@ -610,7 +610,69 @@ git commit --amend -m "Remplacement de l’image de la page d’accueil"
 git push
 ```
 
+#### Rebasage interactif
 
+Dans la branche `tp6`, effectuer les action suivantes :
+
+:warning: __Valider à chaque étape sans jamais pousser vers le dépôt distant.__
+
+ 1. Modifier l’email de Richard Cox dans le fichier `clients.txt`
+ 2. Modifier quelques autres emails
+ 3. 
+  - créer une branch email-regex et basculer dessus
+  - dans la classe `Client`, modifier l’expression régulière de l'email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
+  - retourner dans la branche `tp6`
+ 4. Remplacer l’extension d'email 'co.uk' par 'uk'
+ 5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
+ 6. 
+  - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
+  - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
+  - modifier un message dans le fichier dans le fichier `message_fr.properties`
+ 7. Fusionner la branche `email-regex`
+ 8. Supprimer la ligne « secret token » dans `application.properties`
+ 
+Finalement l’historique ressemble à celui-ci :
+
+<img src="docs/images/ex-rebase-i-1.png" />
+
+Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit su le commit précédent (c'est-à-dire « Script pour modifier le fichier 'application.properties').
+
+Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu'il fasse les actions suivantes :
+ - placer en premier le *commit* de l’expression régulière de validation de l'adresse mail ;
+ - fusionner les *commits* de modifications d’email en un seul ;
+ - ignorer le *commit* concernant l’extension d'email 'co.uk' &rarr; 'uk' ;
+ - conserver tels quels les *commits* d’ajout des 20 lignes et se suppression du *secret token* ;
+ - éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
+
+Le programme doit ressembler à celui-ci :
+
+<img src="docs/images/ex-rebase-i-2.png" />
+
+Lancer le rebasage en cliquant sur la flêche verte.
+
+Modifier éventuellement les messages de *commit* quand cela est proposé.
+
+Le rebasage s’arrête à l'édition du *commit*. L'objectif est de diviser le *commit* en trois *commits* :
+ 1. la modification du nom de l’application
+ 2. la modification du niveau de log
+ 3. la modification du message
+ 
+Il faut repasser par la ligne de commande :
+
+Défaire le *commit* en utilisant la commande suivante : `git reset HEAD^`.
+
+ 1. utiliser ensuite la commande `git add -p` pour indexer la première partie du fichier `application.properties` puis valider ;
+ 2. ensuite indexer le reste du fichier `application.properties` et valider ;
+ 3. finalement indexer et valider le reste.
+
+Continuer le rebasage, qui se termine alors, aboutissant à un historique similaire à celui-ci :
+
+<img src="docs/images/ex-rebase-i-3.png" />
+
+> Pour lancer le rebasage dans la console, il suffit de taper `git rebase -i`
+> Pour tout faire dans la console, il faut au moins connaitre les commandes vi suivantes :
+>  - couper une ligne : `dd`
+>  - coller une ligne au dessus : `P`
 
 ## Liens utiles
 
