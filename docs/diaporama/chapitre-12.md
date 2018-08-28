@@ -29,6 +29,7 @@ Exemples
 
 <!-- .element: class="icon idea" -->En général `HEAD` est sous-entendu par défaut
 
+
 %%%
 
 
@@ -51,3 +52,29 @@ Exemples
   - `git rebase -i HEAD~3`
  - rebasage à partir du *commit* `847ef1c` inclus :
   - `git rebase -i 847ef1c^`
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Plages de commits
+
+`refA..refB`
+ - liste des *commits*
+  - accessibles depuis `refB`
+  - et pas accessibles depuis `refA`
+ 
+`7568c4d..1a0384f`
+ - si ordre chronologique et historique linéaire
+  - les *commits* situés entre `7568c4d` et `1a0384f`
+
+Exemples
+ - les commits `tp5` et pas encore été fusionnés dans `master`
+  - `git log master..tp5`
+ - les commits qui seront poussés vers le dépôts distant
+  - `git log origin/master..HEAD`
+ - annuler une plage de *commits*
+  - `git revert 7568c4d^..1a0384f`
+ - réappliquer une plage de *commits*
+  - `git cherry-pick 7568c4d^..1a0384f`
