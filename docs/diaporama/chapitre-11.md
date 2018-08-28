@@ -280,19 +280,26 @@ git filter-branch -f --index-filter '
 ' --prune-empty -- HEAD
 ```
 
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Exemples de code (2)
+
 Remplacer le texte correspondant au motif :
-  - `password_pattern` &rarr; `*****` dans le fichier `parametres.txt` :
+  - `pattern_a_remplacer` &rarr; `*****` dans le fichier `fichier.txt` :
 
 ```bash
 git filter-branch -f --tree-filter '
-	sed -i -E "s/password_pattern/*****/g" "fichier.txt"
+	sed -i -E "s/pattern_a_remplacer/*****/g" "fichier.txt"
 ' --prune-empty -- HEAD
 ```
 
 Supprimer la ligne correspondant au motif :
 ```bash
 git filter-branch -f --tree-filter '
-    sed -i -E "/pattern/d" src/main/resources/application.properties
+	sed -i -E "/pattern_ligne_a_supprimer/d" "fichier.txt"
 ' --prune-empty -- 092a022^..HEAD
 ```
 
@@ -300,7 +307,7 @@ git filter-branch -f --tree-filter '
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Exemples de code (2)
+### Exemples de code (3)
 
 Faire du sous-dossier `frontend/` la nouvelle racine du dépôt :
 ```bash
