@@ -547,17 +547,17 @@ git pull
 
 ### 6. Réécrire l’historique
 
-:tired_face: On se place dans la peau d’un développeur un peu fatigué qui commet donc des erreurs d'inattention.
+:tired_face: On se place dans la peau d’un développeur un peu fatigué qui commet donc des erreurs d’inattention.
 
 
 #### Amender un *commit*
 
-Remplacer l’image de la page d'accueil par le logo Git situé dans `docs/images/logo-git-png` :
+Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/images/logo-git-png` :
  - créer une branche de suivi pour la branche tp6
  - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
  - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png par` `logo-git.png`
  - lancer l’application et observer le résultat 
- - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d'accuiel"`
+ - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d’accuiel"`
  
 :warning: On vient de commettre deux erreurs :
   1. une faute de frappe sur le mot __accueil__ dans le message de validation
@@ -573,14 +573,31 @@ Pousser ces dernières modification vers le dépôt distant.
 
 <details>
 <summary>Correction</summary>
-<pre><code>git checkout --track origin/tp6
+<pre><code># Création d’une branche de suivi tp6
+git checkout --track origin/tp6
+
+# Copie de l’image dans le bon répertoire
 cp docs/images/logo-git.png src/main/webapp/static/
+
+# Remplacement de l’adresse de l'image dans la jsp
 sed -i "s/cocktails/logo-git/g" src/main/webapp/WEB-INF/views/accueil.jsp
 unix2dos src/main/webapp/WEB-INF/views/accueil.jsp
+
+# Lancement de l’application (terminer avec Ctrl + C)
 mvn spring-boot:run
-git commit -am "Remplacement de l’image de la page d'accuiel"
+
+# Commit avec deux erreurs
+git commit -am "Remplacement de l’image de la page d’accuiel"
+
+# Indexation de la nouvelle image
 git add src/main/webapp/static/logo-git.png
+
+# Désindexation de l’ancienne image
 git rm src/main/webapp/static/cocktails.png
+
+# Amendemment du commit
 git commit --amend -m "Remplacement de l’image de la page d’accueil"
+
+# Envoi vers le serveur distant
 git push</code></pre>
 </details>
