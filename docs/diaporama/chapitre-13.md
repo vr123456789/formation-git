@@ -207,7 +207,7 @@ a0f2358 Images des exercices
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### La commande `git checkout`
 
 `git checkout` met à jour la copie de travail avec le contenu de la référence passée en paramètre
@@ -238,7 +238,7 @@ git checkout -b correction v1.0
 %%%
 
 
-<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### La commande `git checkout`
 
 *checkout* avec chemin spécifié
@@ -256,6 +256,29 @@ git checkout v3.0 -- src/main/resource/application.properties
 # Récupérer tous les fichier du dossiers src/main/java/
 git checkout b24a4d0 -- src/main/java/
 
-# Récupérer le fichier README.md tel qu’il étatit lors de l'avant-dernier commit
+# Récupérer le fichier README.md tel qu’il étatit lors de l’avant-dernier commit
 git checkout HEAD^ -- README.md
 ```
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Picorage : `git cherry-pick`
+Appliquer des modifications contenues dans un *commit* ou une plage de *commits*
+ - création d’un nouveau *commit* pour chaque *commit* picoré
+
+<!-- .element: class="icon info" -->Refaire dans une branche ce qui a déjà été fait dans une autre
+ - sans fusionner toutes les modifications apportées par la branche
+
+```bash
+git cherry-pick e43a6
+``` 
+ 
+<table>
+	<tr>
+		<td><img src="images/cherry-pick-1.png" /></td>
+		<td><img src="images/cherry-pick-2.png" /></td>
+	</tr>
+</table>
