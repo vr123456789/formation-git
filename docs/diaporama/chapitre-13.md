@@ -201,4 +201,61 @@ f84c416 Exercices sur les références et les ranges
 b24a4d0 Icone question
 a0f2358 Images des exercices
 6686231 Plages de commits
- ```
+```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+### La commande `git checkout`
+
+`git checkout` met à jour la copie de travail avec le contenu de la référence passée en paramètre
+
+*checkout* sans chemin spécifié
+ - `HEAD` pointe vers la nouvelle branche
+ - la nouvelle branche devient la branche courante
+ - la copie de travail est entièrement remplacée
+
+Exemples :
+
+```bash
+# Extraire une branche existante ou une étiquette 
+git checkout us100
+git checkout v1.0 # En général suivi de git checkout -b correction
+
+# Extraire un commit donné : *detached HEAD*
+git checkout b24a4d0
+
+# Extraire un commit donné et travailler dessus dans une nouvelle branche
+git checkout -b us101 b24a4d0
+
+# Extraire un tag donné et travailler dessus dans une nouvelle branche
+git checkout -b correction v1.0
+```
+
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in none-out" -->
+### La commande `git checkout`
+
+*checkout* avec chemin spécifié
+ - `HEAD` ne bouge pas
+ - la branche courante reste la même
+ - les fichiers passés en paramètres sont extraits dans le copie locale
+  - il sont à l’état modifié
+
+Exemples :
+
+```bash
+# Récupérer le fichier application.properties tel qu’il étatit à la v3.0
+git checkout v3.0 -- src/main/resource/application.properties
+
+# Récupérer tous les fichier du dossiers src/main/java/
+git checkout b24a4d0 -- src/main/java/
+
+# Récupérer le fichier README.md tel qu’il étatit lors de l'avant-dernier commit
+git checkout HEAD^ -- README.md
+```
