@@ -24,6 +24,10 @@
 	content: url('color/boom.png')
 }
 
+.reveal .icon-color .icon.question:before {
+	content: url('color/question.png')
+}
+
 /* Icones : ultraviolet */
 .reveal .icon-ultraviolet .icon.idea:before {
 	content: url('ultraviolet/idea.png');
@@ -45,6 +49,10 @@
 	content: url('ultraviolet/boom.png');
 }
 
+.reveal .icon-ultraviolet .icon.question:before {
+	content: url('ultraviolet/question.png')
+}
+
 /* Icones : dusk */
 .reveal .icon-dusk .icon.idea:before {
 	content: url('dusk/idea.png')
@@ -64,4 +72,8 @@
 
 .reveal .icon-dusk .icon.boom:before {
 	content: url('dusk/boom.png')
+}
+
+.reveal .icon-dusk .icon.question:before {
+	content: url('dusk/question.png')
 }
