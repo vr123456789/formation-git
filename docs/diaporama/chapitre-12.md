@@ -379,3 +379,34 @@ git clean -d -f
 <!-- .element: class="icon warn" -->Perte des modifications non validées
  - certains *commits* deviennent inaccessibles
   - sauf en utilisant `reflog` ou `tag`
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Annuler un rebasage râté
+
+Le rebasage réécrit l’historique
+ - &rarr; si on revient en arrière, on revient dans le « mauvais » passé
+
+La commande `git reflog` affiche l’historique des positions de `HEAD`
+ - historique purement local
+  - vide après un clone
+  - différent pour chaque développeur
+ - pas plus de quelques mois
+
+```bash
+1e3845d (origin/tp6, github/tp6, tp6) HEAD@{1}: checkout: moving from master to tp6
+b306d5b (tp5) HEAD@{2}: commit: Correction dans les exemples de code filter-branch
+a14d9b6 HEAD@{3}: commit: Enoncé tp6 : filter-branch
+327d7e6 HEAD@{4}: rebase -i (finish): returning to refs/heads/master
+327d7e6 HEAD@{5}: rebase -i (squash): Enoncé du TP6, partie rebasage
+34098fe HEAD@{6}: rebase -i (continue): Enoncé du TP6, partie rebasage
+624d244 HEAD@{7}: rebase -i (start): checkout refs/remotes/origin/master
+63c80c4 HEAD@{8}: commit: Enoncé du TP6, partie rebasage
+4794f33 HEAD@{9}: checkout: moving from tp6 to master
+```
+
+<!-- .element: class="icon idea" -->Ici pour revenir avant le rebasage :
+ - `git reset --hard HEAD@{8}`
