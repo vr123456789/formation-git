@@ -301,3 +301,60 @@ $ git stash branch testchanges
 Switched to a new branch "testchanges"
 ```
 <!-- .element: class="icon info" -->La remise est alors supprimée
+
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Étiquetage : `git tag`
+
+Marquer un *commit*
+ - souvent les versions livrées en production
+
+<!-- .element: class="icon warn" -->Les étiquettes font toujours référence au même *commit*
+ - à la différence des branches qui avancent à chaque nouveau *commit*
+
+Créer une étiquette :
+```bash
+# Créer une étiquette légère
+git tag v2.1
+
+# Créer une étiquette annotée
+git tag -a v2.1 -m "Message associé à l’étiquette"
+```
+
+Étiqueter après coup
+```bash
+git tag -a v2.1 9fceb02
+```
+
+%%%
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Étiquetage
+
+
+Lister les étiquettes
+```bash
+git tag
+```
+
+Partager ses étiquettes
+```bash
+# Partager une étiquette
+git push origin v2.1
+
+# Partager toutes ses étiquettes
+git push origin --tags
+```
+
+Supprimer une étiquette
+```bash
+# Du dépôt local
+git tag -d v2.1
+
+# Du dépôt distant
+git push --delete origin v2.1
+```
