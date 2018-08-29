@@ -358,3 +358,24 @@ git tag -d v2.1
 # Du dépôt distant
 git push --delete origin v2.1
 ```
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Revenir en arrière localement
+Modifications non poussées vers le dépôt distant
+```bash
+# Revenir à un commit donné
+git reset --hard 9fceb02
+
+# Annuler les modifications de son espace de travail ~ svn revert
+git reset --hard
+
+# Pour supprimer également les fichiers et les dossiers ajoutés
+git clean -d -f
+```
+<!-- .element: class="icon warn" -->Perte des modifications non validées
+ - certains *commits* deviennent inaccessibles
+  - sauf en utilisant `reflog` ou `tag`
