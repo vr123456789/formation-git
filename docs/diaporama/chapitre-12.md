@@ -56,6 +56,13 @@ Exemples
 
 %%%
 
+  
+<!-- .slide: data-background-image="images/question.png" data-background-size="600px" class="chapter" -->
+## Exercices
+
+
+%%%
+
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" data-transition="slide-in fade-out" -->
 ### `C^`
@@ -169,6 +176,13 @@ Exemples
   - `git revert 7568c4d^..1a0384f`
  - réappliquer une plage de *commits*
   - `git cherry-pick 7568c4d^..1a0384f`
+
+
+%%%
+
+  
+<!-- .slide: data-background-image="images/question.png" data-background-size="600px" class="chapter" -->
+## Exercices
 
 
 %%%
