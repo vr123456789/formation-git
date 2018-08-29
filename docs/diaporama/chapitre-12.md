@@ -410,3 +410,31 @@ a14d9b6 HEAD@{3}: commit: Enoncé tp6 : filter-branch
 
 <!-- .element: class="icon idea" -->Ici pour revenir avant le rebasage :
  - `git reset --hard HEAD@{8}`
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Annuler des modifications distantes
+Modifications déjà poussées vers un dépôt distant
+
+<!-- .element: class="icon warn" -->On ne peut plus réécrire l’historique
+
+Commande `git revert`
+ - annule un *commit* ou une plage de *commits* en appliquant le *patch* inverse
+ - &rarr; création de nouveaux *commits* qui annulent des modifications plus anciennes
+
+```bash
+git revert 6686231..b24a4d0
+```
+
+```bash
+67d6edd (HEAD -> master) Revert "Images des exercices"
+d772e54 Revert "Icone question"
+6327641 (origin/master, origin/HEAD) Diapos exercice !
+f84c416 Exercices sur les références et les ranges
+b24a4d0 Icone question
+a0f2358 Images des exercices
+6686231 Plages de commits
+ ```
