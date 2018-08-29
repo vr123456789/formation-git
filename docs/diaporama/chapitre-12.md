@@ -237,3 +237,67 @@ Exemples
 <div class="center">
 	<img src="images/exercice-range-3.png" />
 </div>
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Remisage : `git stash`
+
+Changer de branche alors que la copie de travail est instable
+ - on est en plein milieu d’un travail
+ - valider ne serait pas une bonne idée
+
+```bash
+# Remiser les fichiers modifiés
+git stash
+
+# Remiser les fichiers modifiés et les fichiers ajoutés
+git stash -u
+```
+
+Récupérer le contenu de la remise
+
+```bash
+# Récupérer la dernière remise
+git stash apply
+
+# Supprimer la dernière remise
+git stash drop
+
+# Recupérer et supprimer la dernière remise
+git stash pop
+```
+
+<!-- .element: class="icon idea" -->En général, `git stash` suivi peu après de `git stash pop` suffisent
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Remisage avancé
+
+Lister les remises
+```bash
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051... Revert "added file_size"
+stash@{2}: WIP on master: 21d80a5... added number to log
+```
+
+Agir sur une remise plus ancienne
+```bash
+$ git stash drop stash@{0}
+Dropped stash@{1} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
+```
+
+Récupérer une remise dans une nouvelle branche
+ - si on a tardé à récupérer la remise, risque de conflits
+
+```bash
+$ git stash branch testchanges
+Switched to a new branch "testchanges"
+```
+<!-- .element: class="icon info" -->La remise est alors supprimée
