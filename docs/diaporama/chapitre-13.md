@@ -82,12 +82,12 @@ Marquer un *commit*
 
 Créer une étiquette :
 ```bash
-# Créer une étiquette légère
-git tag v2.1
-
-# Créer une étiquette annotée
-git tag -a v2.1 -m "Message associé à l’étiquette"
+git tag -a v2.1 -m "Message associé à l’étiquette" # Créer une étiquette annotée
+git tag v2.1 # Créer une étiquette légère
 ```
+
+<!-- .element: class="icon idea" -->Pour les version livrées, utiliser des étiquettes annotées
+ - `git describe` 
 
 Étiqueter après coup
 ```bash
