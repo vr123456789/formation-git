@@ -65,7 +65,7 @@ Exemples
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" data-transition="slide-in fade-out" -->
-### `C^`
+### `D^`
 <div class="center">
 	<img src="images/exercice-0.png" />
 </div>
@@ -73,7 +73,7 @@ Exemples
 %%%
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" data-transition="fade" -->
-### `C^ = B`
+### `D^ = A`
 <div class="center">
 	<img src="images/exercice-1.png" />
 </div>
