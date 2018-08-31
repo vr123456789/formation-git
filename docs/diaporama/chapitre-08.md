@@ -15,11 +15,11 @@ La fusion est toujours locale
 On peut toujours annuler l’opération
  - `git merge --abort`
 
-Il est toujours préférable d’avoir une copie de travail propre <!-- .element: class="icon idea" -->
+<!-- .element: class="icon idea" -->Il est toujours préférable d’avoir une copie de travail propre
  - valider : `git commit`
  - ou remiser : `git stash`
 
-Une fusion <!-- .element: class="icon warn" --> survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
+<!-- .element: class="icon warn" -->Une fusion survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
 
 
 %%%

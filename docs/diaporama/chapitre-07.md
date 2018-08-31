@@ -47,7 +47,7 @@ Basculer dans une autre branche
  - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de changements
  - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche 
 
-Pour créer une branche et basculer dans cette branche <!-- .element: class="icon idea" --> :
+<!-- .element: class="icon idea" -->Pour créer une branche et basculer dans cette branche :
  - `git checkout -b <branch_name>`
 
 
@@ -180,7 +180,7 @@ Uniquement les branches fusionnées dans `HEAD`
 
 Supprimer une branche `git branch -d <branch_name>`
  - si la branche n’a pas été fusionnée :  `git branch -D <branch_name>`
-  - dans ce cas, perte de données possible <!-- .element: class="icon warn" -->
+  - <!-- .element: class="icon warn" -->dans ce cas, perte de données possible
 
 
 %%%
@@ -189,7 +189,7 @@ Supprimer une branche `git branch -d <branch_name>`
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur les branches
 
-Avec Git, travailler avec des branches est recommandé <!-- .element: class="icon idea" -->
+<!-- .element: class="icon idea" -->Avec Git, travailler avec des branches est recommandé
 
 Rendu possible grâce à la rapidité du système
  - création
@@ -198,7 +198,7 @@ Rendu possible grâce à la rapidité du système
   - détermination automatique de l’ancêtre commun
  - ...
 
-La branche <!-- .element: class="icon info" --> *master*
+<!-- .element: class="icon info" -->La branche *master*
  - a un fonctionnement identique aux autres
  - c’est simplement la branche créée lors d’un `git init`
   - et la branche extraite par défaut après un `git clone`
@@ -244,7 +244,7 @@ Développements du ticket 53 dans la branche `iss53`
 ### Exemple d’utilisation des branches (4)
 
 
-Un problème urgent est signalé en production <!-- .element: class="icon warn" -->
+<!-- .element: class="icon warn" -->Un problème urgent est signalé en production
  - Ne pas déployer les développements en cours du ticket 53 en plus du correctifs
  - Simple retour sur la branche `master`
   - `git checkout master`
@@ -352,7 +352,7 @@ README | 1 +
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Quand utiliser des branches ?
 
-Organisation du travail de l’équipe <!-- .element: class="icon idea" -->
+<!-- .element: class="icon idea" -->Organisation du travail de l’équipe
  - une branche par *user story*
  - une branche par ticket
  - une branche par environnement

@@ -193,7 +193,7 @@ M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
-L’interface graphique est ici clairement un atout : <!-- .element: class="icon idea" -->
+<!-- .element: class="icon idea" -->L’interface graphique est ici clairement un atout :
 <div class="center">
 	<img src="images/egit-add.png" /> 
 </div>
@@ -257,7 +257,7 @@ node_modules/
 docs/**/*.scss
 ```
 
-Le fichier <!-- .element: class="icon warn" --> `.gitignore` doit être validé
+<!-- .element: class="icon warn" -->Le fichier `.gitignore` doit être validé
 
 
 %%%
@@ -294,7 +294,7 @@ git commit -am "Message de validation"
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Remarques sur le message de validation
 
-Le message de validation est très important <!-- .element: class="icon info" -->
+<!-- .element: class="icon info" -->Le message de validation est très important
  - décrit brièvement les modifications contenues dans le _commit_
  - importance de l’homogénéité des modifications contenues un _commit_
  - à l’attention des autres développeurs
@@ -311,7 +311,7 @@ Texte détaillé.
 Message vide &rarr;  _commit_ annulé
  - les lignes qui commencent par `#` ne comptent pas
 
-Rappel pour quitter <!-- .element: class="icon idea" --> `vi` :
+<!-- .element: class="icon idea" -->Rappel pour quitter `vi` :
  - sauvegarder et quitter : `Esc` puis `:wq[Enter]` ou `ZZ` 
  - quitter sans sauvegarder : `Esc` puis `:q![Enter]`
 

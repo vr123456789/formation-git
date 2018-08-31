@@ -20,7 +20,7 @@ Nommées `repository-name/branch-name`
  - `github/master`
  - ...
 
-Le dépôt distant <!-- .element: class="icon info" --> `origin` n’est pas particulier
+<!-- .element: class="icon info" -->Le dépôt distant `origin` n’est pas particulier
  - c’est seulement le nom donné par défaut au dépôt que l’on a clôné
 
 
@@ -49,7 +49,7 @@ git checkout -b branch_name
 git push -u origin branch_name
 ```
 
-Par la suite on utilise simplement <!-- .element: class="icon info" --> `git push`
+<!-- .element: class="icon info" -->Par la suite on utilise simplement `git push`
 
 %%%
 
@@ -69,7 +69,7 @@ Une fois le suivi activé, `fetch` et `push` fonctionnent sans précisions suppl
  - rappel : `fetch` met jour `remote/branch_name`
  - il faut ensuite fusionner dans la branche locale : `git merge`
 
-En utilisant <!-- .element: class="icon idea" --> `pull`, on fait les deux opérations d’un coup
+<!-- .element: class="icon idea" -->En utilisant `pull`, on fait les deux opérations d’un coup
 
 
 %%%

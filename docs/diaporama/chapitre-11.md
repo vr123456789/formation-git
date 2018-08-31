@@ -9,7 +9,7 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Modifier la dernière validation
 
-On se rend compte après <!-- .element: class="icon idea" --> *commit* d’une erreur :
+<!-- .element: class="icon idea" -->On se rend compte après *commit* d’une erreur :
  - faute dans le message
  - fichiers oubliés ou en trop
  - ...
@@ -24,7 +24,7 @@ Modifier aussi le contenu
   - `git add` ou `git rm`
  - puis `git commit --amend`
 
-Interdit si les modifications ont déjà été poussées vers le dépôt distant <!-- .element: class="icon warn" -->
+<!-- .element: class="icon warn" -->Interdit si les modifications ont déjà été poussées vers le dépôt distant
 
 
 %%%

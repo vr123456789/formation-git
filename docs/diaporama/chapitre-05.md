@@ -76,7 +76,7 @@ Les modifications sont récupérées localement dans une branche spéciale
 Pour intégrer les modifications distantes dans la copie de travail : `git merge`
   - équivalent à `git merge origin/master`
 
-`git pull` <!-- .element: class="icon idea" -->
+<!-- .element: class="icon idea" -->`git pull`
  - équivalent à `git fetch origin master` puis `git merge origin/master`
 
 

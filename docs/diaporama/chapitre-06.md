@@ -16,7 +16,7 @@ Lister en ordre chronologique inversé les validations réalisées :
 	<img src="images/log.png" width="800px" />
 </div>
 
-L’historique est affiché avec <!-- .element: class="icon idea" --> `less`
+<!-- .element: class="icon idea" -->L’historique est affiché avec `less`
  - Utiliser les flèches « &uarr; » et « &darr; » pour naviguer dans l’historique
  - Taper « q » pour quitter
 
@@ -143,7 +143,7 @@ Avec une expression régulière : `-G"pattern"`
 git log -G"public Cocktail .*\("
 ```
 
-Il est souvent judicieux de combiner ces options avec l’option <!-- .element: class="icon idea" --> `--patch`
+<!-- .element: class="icon idea" -->Il est souvent judicieux de combiner ces options avec l’option `--patch`
 
 %%%
 

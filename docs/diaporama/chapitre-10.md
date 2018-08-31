@@ -148,7 +148,7 @@ L’historique devient linéaire
 Il n’y a pas de *commit* de fusion
  - puisque l’historique est linéaire
 
-Il ne faut <!-- .element: class="icon warn" --> **jamais** rebaser du code déjà poussé sur le dépôt distant
+<!-- .element: class="icon warn" -->Il ne faut **jamais** rebaser du code déjà poussé sur le dépôt distant
  - en cas de réécriture de l’historique, `git push --force`
   - si le dépôt distant le permet
   - se synchroniser avec le reste de l’équipe

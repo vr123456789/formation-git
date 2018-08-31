@@ -165,7 +165,7 @@ Exemples
 `7568c4d..1a0384f`
  - si ordre chronologique et historique linéaire
   - les *commits* situés entre `7568c4d` et `1a0384f`
-  - <!-- .element: class="icon idea" -->`a..b = ]a, b] et donc [a, b] = a^..b`
+  - <!-- .element: class="icon idea" -->`a..b = ]a, b]` et donc `[a, b] = a^..b`
 
 Exemples
  - les commits `tp5` et pas encore été fusionnés dans `master`
