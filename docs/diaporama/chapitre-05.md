@@ -165,5 +165,5 @@ git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-
 <!-- .slide: class="tp" -->
 ## [TP2](https://git.stable.innovation.insee.eu/wehdrc/formation-git#2-dépôts-distants)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

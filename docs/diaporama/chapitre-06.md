@@ -165,5 +165,5 @@ git log --oneline --name-only -- src/main/java/fr/insee/bar/controller
 <!-- .slide: class="tp" -->
 ## [TP3](https://git.stable.innovation.insee.eu/wehdrc/formation-git#3-historique)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

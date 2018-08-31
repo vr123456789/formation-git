@@ -166,5 +166,5 @@ Exemple de la contribution à un projet libre
 <!-- .slide: class="tp" -->
 ## [TP5](https://git.stable.innovation.insee.eu/wehdrc/formation-git#5-rebasage)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

@@ -322,5 +322,5 @@ Rappel pour quitter <!-- .element: class="icon idea" --> `vi` :
 <!-- .slide: class="tp" -->
 ## [TP1](https://git.stable.innovation.insee.eu/wehdrc/formation-git#1-configuration-et-fondamentaux)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

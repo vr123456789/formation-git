@@ -358,5 +358,5 @@ Serveur :
 <!-- .slide: class="tp" -->
 ## [TP7](https://git.stable.innovation.insee.eu/wehdrc/formation-git#7-boite-à-outils-git)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

@@ -357,5 +357,5 @@ Pour partager le nouvel historique : `git push --force`
 <!-- .slide: class="tp" -->
 ## [TP6](https://git.stable.innovation.insee.eu/wehdrc/formation-git#6-r%C3%A9%C3%A9crire-lhistorique)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>

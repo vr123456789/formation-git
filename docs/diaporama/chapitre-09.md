@@ -99,5 +99,5 @@ Source fréquente de <!-- .element class="icon info" --> *commits* de fusion
 <!-- .slide: class="tp" -->
 ## [TP4](https://git.stable.innovation.insee.eu/wehdrc/formation-git#4-branches)
 <div class="center">
-	<img src="images/keyboard.png" width="600px" class="blur" />
+	<img src="images/keyboard.png" width="600px" />
 </div>
