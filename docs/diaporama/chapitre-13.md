@@ -288,6 +288,36 @@ git cherry-pick e43a6
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Création et application de *patchs*
+
+Plusieurs commits dans un seul fichier
+```bash
+# Création d’un patch
+git format-patch 69f709e..4c70fd2 --stdout > un-seul-fichier.patch
+
+# Application du patch
+git apply un-seul-fichier.patch
+```
+ - le *patch* est appliqué dans la copie de travail
+  - il faut indexer et valider
+  - utilisable en dehors d’un dépôt Git
+
+Autant de fichiers que de commits
+```bash
+# Création de plusieurs fichiers de patch
+git format-patch 69f709e..4c70fd2
+
+# Application de chacuns des fichiers de patch
+git am --signoff < *.patch 
+```
+ - les commits sont réappliqués un par un dans la copie de travail puis dans le dépôt
+ - c’est l'identité de la personne qui a créé le *patch* qui est utilisée
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Dépôt nu
 
 Sur le serveur, le dépôt est nu
