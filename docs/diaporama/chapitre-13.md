@@ -302,4 +302,30 @@ Ce dépôt peut alors servir de dépôt central
 <!-- .element: class="icon idea" -->Par convention, un dépôt nu possède l’extension `.git`
  - Exemple : `formation-git.git/`
 
-Le contenu d’un dépôt nu est identique au contenu du répetoire `.git/` d'un dépôt normal
+Le contenu d’un dépôt nu est identique au contenu du répetoire `.git/` d’un dépôt normal
+
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Crochets
+
+Scripts exécutés à un moment précis dans le workflow Git
+
+Exemples dans `.git/hooks/`
+ - retirer l’extension `.sample` pour les activer
+
+Cas d’utilisation :
+ - vérifier que le code validé respecte certaines règles
+  - pas de `TODO`
+  - pas `System.out.print`
+  - pas d’espaces en trop
+  - ...
+ - Ajouter automatiquement des informations dans le message de validation
+ - Notifier des personnes par email apès un *push*
+ - Pousser vers un autre dépôt après un *push*
+ - ...
+
+Crochets côté client ou côté serveur
