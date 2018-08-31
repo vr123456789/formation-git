@@ -17,8 +17,8 @@
  9. Branches distantes &rarr; *TP4*
  10. Rebasage &rarr; *TP5*
  11. Réécriture de l’historique &rarr; *TP6*
- 12. Outils Git
- 13. Git côté serveur &rarr; *TP7*
+ 12. Références à un *commit*
+ 13. Boite à outils Git &rarr; *TP7*
 
 ## Travaux pratiques
 
