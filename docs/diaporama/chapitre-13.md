@@ -282,3 +282,24 @@ git cherry-pick e43a6
 		<td><img src="images/cherry-pick-2.png" /></td>
 	</tr>
 </table>
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Dépôt nu
+
+Sur le serveur, le dépôt est nu
+ - aucune copie de travail n’est extraite
+ - `git init --bare`
+ - `git clone --bare <url>`
+ 
+Ce dépôt peut alors servir de dépôt central
+ - on peut y pousser son travail
+ 
+ 
+<!-- .element: class="icon idea" -->Par convention, un dépôt nu possède l’extension `.git`
+ - Exemple : `formation-git.git/`
+
+Le contenu d’un dépôt nu est identique au contenu du répetoire `.git/` d'un dépôt normal
