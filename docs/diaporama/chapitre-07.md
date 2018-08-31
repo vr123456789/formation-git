@@ -45,7 +45,7 @@ Créer une nouvelle branche :
 Basculer dans une autre branche
  - `git checkout <branch_name>`
  - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de changements
- - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche 
+ - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche
 
 <!-- .element: class="icon idea" -->Pour créer une branche et basculer dans cette branche :
  - `git checkout -b <branch_name>`
@@ -175,8 +175,8 @@ Lister les branches `git branch -v`
 </div>
 
 Uniquement les branches fusionnées dans `HEAD`
- - `git branch --merged` 
- - `git branch --no-merged` 
+ - `git branch --merged`
+ - `git branch --no-merged`
 
 Supprimer une branche `git branch -d <branch_name>`
  - si la branche n’a pas été fusionnée :  `git branch -D <branch_name>`
@@ -306,11 +306,11 @@ Fast-forward
 
 Suppression de la branche `hotfix`
  - `git branch -d hotfix`
- 
+
 Fin des développements du ticket 53 dans la branche `iss53`
  - `git checkout iss53`
  - `git commit -m "Nouveau pied de page terminé [issue 53]"`
- 
+
 <div class="center"><img src="images/basic-branching-6.png" width="700px" /></div>
 
 

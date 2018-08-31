@@ -62,7 +62,7 @@ La plupart des opérations se déroulent localement
   - dans les transports (avion, train)
   - hors du réseau de l’Insee
   - quand GForge est tombé
- 
+
 Exemples
  - afficher l’historique
  - récupérer une ancienne version
@@ -81,7 +81,7 @@ Tout est vérifié par une somme de contrôle (_checksum_)
  - algorithme `SHA-1`
   - `[0-9a-f]{40}`
   - exemple : `0dbfc1be5cb26d6325978929debf753681af7b69`
- 
+
 Les objets sont identifiés par la somme de contrôle de leur contenu
  - il est impossible de modifier le contenu d’un fichier ou d’un dossier sans que Git ne le détecte
  - il ne peut pas y avoir de corruption de donnée sur le réseau
@@ -89,7 +89,7 @@ Les objets sont identifiés par la somme de contrôle de leur contenu
 Sauf exception, Git ne fait qu’ajouter de nouvelles données
  - il est presque impossible de perdre son travail
  - on court peu de risques de faire une grosse bêtise
- 
+
 
 %%%
 

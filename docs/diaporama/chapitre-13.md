@@ -87,7 +87,7 @@ git tag v2.1 # Créer une étiquette légère
 ```
 
 <!-- .element: class="icon idea" -->Pour les version livrées, utiliser des étiquettes annotées
- - `git describe` 
+ - `git describe`
 
 Étiqueter après coup
 ```bash
@@ -220,7 +220,7 @@ a0f2358 Images des exercices
 Exemples :
 
 ```bash
-# Extraire une branche existante ou une étiquette 
+# Extraire une branche existante ou une étiquette
 git checkout us100
 git checkout v1.0 # En général suivi de git checkout -b correction
 
@@ -274,8 +274,8 @@ Appliquer des modifications contenues dans un *commit* ou une plage de *commits*
 
 ```bash
 git cherry-pick e43a6
-``` 
- 
+```
+
 <table>
 	<tr>
 		<td><img src="images/cherry-pick-1.png" /></td>
@@ -308,10 +308,10 @@ Autant de fichiers que de commits
 git format-patch 69f709e..4c70fd2
 
 # Application de chacuns des fichiers de patch
-git am --signoff < *.patch 
+git am --signoff < *.patch
 ```
  - les commits sont réappliqués un par un dans la copie de travail puis dans le dépôt
- - c’est l'identité de la personne qui a créé le *patch* qui est utilisée
+ - c’est l’identité de la personne qui a créé le *patch* qui est utilisée
 
 
 %%%
@@ -324,11 +324,11 @@ Sur le serveur, le dépôt est nu
  - aucune copie de travail n’est extraite
  - `git init --bare`
  - `git clone --bare <url>`
- 
+
 Ce dépôt peut alors servir de dépôt central
  - on peut y pousser son travail
- 
- 
+
+
 <!-- .element: class="icon idea" -->Par convention, un dépôt nu possède l’extension `.git`
  - Exemple : `formation-git.git/`
 
@@ -367,10 +367,10 @@ Crochets côté client ou côté serveur
 ### Liste des crochets
 
 [Liste détaillée des *hooks* &rarr;](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
- 
+
 Client :
  - `applypatch-msg` / `pre-applypatch-msg` / `post-applypatch-msg`
- - `pre-commit` / `post-commit` 
+ - `pre-commit` / `post-commit`
  - `prepare-commit-msg` / `commit-msg`
  - `post-rewrite`
  - `pre-rebase`
@@ -379,7 +379,7 @@ Client :
  - `pre-push`
 
 Serveur :
- - `pre-receive` / `post-receive` 
+ - `pre-receive` / `post-receive`
  - `update` / `post-update`
 
 %%%

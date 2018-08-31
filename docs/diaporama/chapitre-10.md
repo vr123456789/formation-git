@@ -16,7 +16,7 @@
 Les modifications apportées dans une branche sont rejouées dans la branche de destination
  - équivalent à appliquer des *patchs*
   - calculés une branche
-  - appliqués dans une autre 
+  - appliqués dans une autre
 
 
 %%%

@@ -18,7 +18,7 @@ Modifier simplement le message
  - `git commit --amend`
   - l’éditeur de texte s’ouvre, il contient le dernier message de *commit*
  - Aussi possible : `git commit --amend --message "Message de commit"`
- 
+
 Modifier aussi le contenu
  - indexer ou supprimer des modifications au préalable
   - `git add` ou `git rm`
@@ -37,7 +37,7 @@ Pas d’outil spécifique mais « rebasage interactif »
  - pour modifier les `n` derniers *commits* : `git rebase -i HEAD~n`
 
 Pour chacun des `n` derniers *commits* on a le choix entre :
- 
+
 <table class="left small">
 	<tr>
 		<th><code>pick</code></th>
@@ -160,7 +160,7 @@ squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Fusionner des *commits* automatiquement 
+### Fusionner des *commits* automatiquement
 
 <!-- .element: class="icon idea" -->Option `--autosquash` de `git rebase -i`
  - activer l’option par défaut : `git config --global rebase.autosquash true`
@@ -321,7 +321,7 @@ Modifier l’adresse mail d’un développeur :
 git filter-branch -f --env-filter '
 old_mail="ancien.mail@insee.fr"
 new_mail="nouveau.mail@insee.fr"
-if [ "$GIT_AUTHOR_EMAIL" = "$old_mail" ] || [ "$GIT_COMMITTER_EMAIL" = "$old_mail" ] 
+if [ "$GIT_AUTHOR_EMAIL" = "$old_mail" ] || [ "$GIT_COMMITTER_EMAIL" = "$old_mail" ]
 then
 	export GIT_AUTHOR_EMAIL="$new_mail"
 	export GIT_COMMITTER_EMAIL="$new_mail"
@@ -332,7 +332,7 @@ fi
 Ajouter le texte `© Insee` à la fin de chaque message :
 ```bash
 git filter-branch -f --msg-filter '
-	cat && echo && echo "© Insee" 
+	cat && echo && echo "© Insee"
 ' -- HEAD
 ```
 
@@ -346,7 +346,7 @@ git filter-branch -f --msg-filter '
 
 Pour partager le nouvel historique : `git push --force`
  - ôter la protection de la branche dans le dépôt distant (Gihub, Gitlab, GForge)
- 
+
 <!-- .element: class="icon time" -->Se synchroniser
  - chaque développeur devra supprimer sa copie locale et cloner le nouvel historique du dépôt
 

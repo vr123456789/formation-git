@@ -19,7 +19,7 @@ On peut toujours annuler l’opération
  - valider : `git commit`
  - ou remiser : `git stash`
 
-<!-- .element: class="icon warn" -->Une fusion survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches 
+<!-- .element: class="icon warn" -->Une fusion survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches
 
 
 %%%
@@ -87,7 +87,7 @@ Lister les *commits* concernés par le conflit :
 > de1d14b (origin/bex2) Redirection vers OK
 ```
 
-Voir les parties du code contenant des conflits : 
+Voir les parties du code contenant des conflits :
 - `git diff` pendant la fusion
 
 ```patch
@@ -118,7 +118,7 @@ Avant *commit*
  - exécuter les tests
 
 Après *commit*
- - `git log --cc -p -1` permet d’afficher le patch de la résolution 
+ - `git log --cc -p -1` permet d’afficher le patch de la résolution
 
 ```patch
         @GetMapping("/")
@@ -141,7 +141,7 @@ Après *commit*
 Problème :
  - dans une branche `us55`, on a fait une petite correction
  - mais par inadvertance toutes les tabulations ont été remplacées par des espaces
-  - `Tab` &rarr; `Espaces` 
+  - `Tab` &rarr; `Espaces`
  - dans `master`, on renommé une classe du modèle
   - `Agent` &rarr; `Employe`
 
@@ -158,7 +158,7 @@ ignore-space-change
 ignore-all-space
 ignore-space-at-eol
 ```
- 
+
 %%%
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
@@ -175,7 +175,7 @@ git merge --abort
 git merge -Xours <branche> # garder notre version pour toutes les lignes en conflit
 
 git merge -Xtheirs <branche> # garder leurs version pour toutes les lignes en conflit
-``` 
+```
 
  - Au cas par cas :
 
@@ -220,12 +220,12 @@ git revert --mainline 1 HEAD
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Mieux vaut éviter les conflits que les résoudre
 
-Valider souvent 
+Valider souvent
  - des petits lots de modifications homogènes
-  
+
 Avoir des petits fichiers
  - bien découper les classes selon leurs responsabilités
-  
+
 Communiquer avec les autres membres de l’équipe
  - dire sur quoi on travaille
  - bien prévenir en cas du *refactoring* important

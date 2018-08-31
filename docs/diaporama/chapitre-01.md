@@ -9,7 +9,7 @@
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Système de contrôle de version
 
-Un VCS (_Version Control System_) 
+Un VCS (_Version Control System_)
  - enregistre les modifications successives d’un ensemble de fichiers
 
 Cela permet de :
@@ -62,13 +62,13 @@ Gestion de version centralisée :
  - (&ndash;) point unique de panne
   - coupure du serveur : plus personne ne peut collaborer
   - corruption du disque : données définitivement perdues
- 
+
 Gestion de version distribuée :
 
  - (+) sécurité grâce à la redondance des dépôts
  - (+) permet l’organisation de « groupes de travail »
  - (+) rapidité
- 
+
 %%%
 
 

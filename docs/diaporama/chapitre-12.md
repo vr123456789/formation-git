@@ -14,7 +14,7 @@ Références fixes dans le temps :
  - une partie du SHA-1 : `847ef1c`
   - minimum 4 caratères et pas d’ambiguïté
  - le nom d’un *tag* : `v3.0`
- 
+
 Références qui évoluent
  - le nom d’une branche : `tp6`
  - le pointeur `HEAD`
@@ -56,7 +56,7 @@ Exemples
 
 %%%
 
-  
+
 <!-- .slide: data-background-image="images/question.png" data-background-size="600px" class="chapter" -->
 ## Exercices
 
@@ -161,7 +161,7 @@ Exemples
  - liste des *commits*
   - accessibles depuis `refB`
   - et pas accessibles depuis `refA`
- 
+
 `7568c4d..1a0384f`
  - si ordre chronologique et historique linéaire
   - les *commits* situés entre `7568c4d` et `1a0384f`
@@ -180,7 +180,7 @@ Exemples
 
 %%%
 
-  
+
 <!-- .slide: data-background-image="images/question.png" data-background-size="600px" class="chapter" -->
 ## Exercices
 

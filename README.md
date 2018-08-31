@@ -19,7 +19,7 @@
  11. Réécriture de l’historique &rarr; *TP6*
  12. Outils Git
  13. Git côté serveur &rarr; *TP7*
- 
+
 ## Travaux pratiques
 
 ### 1. Configuration et fondamentaux
@@ -47,7 +47,7 @@ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -mul
 git config --global core.editor vim
 ```
 
-Afficher l’ancêtre commun lors d’un conflit 
+Afficher l’ancêtre commun lors d’un conflit
 ```bash
 git config --global merge.conflictstyle diff3
 ```
@@ -124,7 +124,7 @@ git status
 
 Constater que le répertoire `target/` n’est plus pris en compte : il n’a pas été ajouté à l’index et ne sera donc pas dans le prochain _commit_.
 
-Valider. 
+Valider.
 
 ```bash
 git commit -m "Exclusion du répertoire 'target/'"
@@ -209,7 +209,7 @@ En haut à droite de l’interface de Giltab, vérifier que vous ête bien conne
 En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovation.insee.eu/wehdrc/formation-git/forks/new) », puis choisir votre espace personnel.
 
 > :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s’appelle un _fork_.
-> 
+>
 > Vous avez les droits
 >  - en lecture et en écriture sur cette copie,
 >  - en lecture seule sur le dépôt d’origine.
@@ -301,7 +301,7 @@ git log
 </details>
 <br />
 
-Afficher l’historique sous la forme suivante 
+Afficher l’historique sous la forme suivante
 
 ```bash
 * 8d0576c 2018-08-10 | Début du TP2 sur les logs (HEAD -> master) [Romain Warnan]
@@ -541,7 +541,7 @@ git log --oneline --graph
 </details>
 
 > :information_source: Les différences
-> 
+>
 > - __rebasage__ : historique linéaire, *hashs* modifiés ;
 > - __fusion__ : historique non linéaire, existence d’un *commit* de fusion.
 
@@ -563,9 +563,9 @@ Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/ima
  - créer une branche de suivi pour la branche tp6
  - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
  - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png par` `logo-git.png`
- - lancer l’application et observer le résultat 
+ - lancer l’application et observer le résultat
  - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d’accuiel"`
- 
+
 :warning: On vient de commettre deux erreurs :
   1. une faute de frappe sur le mot __accueil__ dans le message de validation
   2. le fichier __logo-git.png__ n’a pas été validé
@@ -618,19 +618,19 @@ Dans la branche `tp6`, effectuer les action suivantes :
 
  1. Modifier l’email de Richard Cox dans le fichier `clients.txt`
  2. Modifier quelques autres emails
- 3. 
+ 3.
   - créer une branch email-regex et basculer dessus
   - dans la classe `Client`, modifier l’expression régulière de l’email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
   - retourner dans la branche `tp6`
  4. Remplacer l’extension d’email `co.uk` par `uk`
  5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
- 6. 
+ 6.
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
   - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
   - modifier un message dans le fichier dans le fichier `message_fr.properties`
  7. Fusionner la branche `email-regex`
  8. Supprimer la ligne « secret token » dans `application.properties`
- 
+
 Finalement l’historique ressemble à celui-ci :
 
 <img src="docs/images/ex-rebase-i-1.png" />
@@ -656,7 +656,7 @@ Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser
  1. la modification du nom de l’application
  2. la modification du niveau de log
  3. la modification du message
- 
+
 Il faut repasser par la ligne de commande :
 
 Défaire le *commit* en utilisant la commande suivante : `git reset HEAD^`.
@@ -721,7 +721,7 @@ Vérifier dans l’historique que les informations sensibles ont bien disparu.
 # Extraire une ancienne version (detached HEAD)
 git checkout HEAD~25
 
-# Constater l’absence du fichier password.txt 
+# Constater l’absence du fichier password.txt
 ls -l
 
 # Constater l’absence du secret token

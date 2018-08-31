@@ -125,7 +125,7 @@ git log --grep="correc" --grep="ortho" --all-match
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Filtrer l’historique sur les modifications 
+### Filtrer l’historique sur les modifications
 
 Dans ces deux cas, Git filtre sur le *patch*:
 
@@ -149,7 +149,7 @@ git log -G"public Cocktail .*\("
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Restreindre l’historique à certains fichiers 
+### Restreindre l’historique à certains fichiers
 
 ```bash
 git log -- src/main/java/fr/insee/bar/dao/CocktailDao.java

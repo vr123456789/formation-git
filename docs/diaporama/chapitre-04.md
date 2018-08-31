@@ -14,7 +14,7 @@ Transformer un dossier en dépôt Git
  - Le répertoire `.git/` est créé dans le dossier
  - Il ne contient aucun commit
  - Les fichiers déjà présents sont considérés comme non suivis par Git (_untracked_)
- 
+
 Clôner un dépôt Git distant
  - `git clone <url>`
  - Le dépôt complet est copié à partir de l’url dans un dossier `.git/` local
@@ -36,7 +36,7 @@ Clôner un dépôt Git distant
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Le cycle de vie du statut des fichiers
 <div class="center">
-	<img src="images/lifecycle.png" /> 
+	<img src="images/lifecycle.png" />
 </div>
 
 
@@ -87,7 +87,7 @@ M	 docs/index.html
 ??	docs/images/basic-rebase-2.png
 ```
 
-Deux colonnes 
+Deux colonnes
  - colonne de gauche = index
  - colonne de droite = copie de travail
 
@@ -195,7 +195,7 @@ M	 docs/index.html
 
 <!-- .element: class="icon idea" -->L’interface graphique est ici clairement un atout :
 <div class="center">
-	<img src="images/egit-add.png" /> 
+	<img src="images/egit-add.png" />
 </div>
 
 
@@ -300,7 +300,7 @@ git commit -am "Message de validation"
  - à l’attention des autres développeurs
 
 Forme d’un message plus détaillé :
- 
+
 ```bash
 Résumé des modifications
 
@@ -312,7 +312,7 @@ Message vide &rarr;  _commit_ annulé
  - les lignes qui commencent par `#` ne comptent pas
 
 <!-- .element: class="icon idea" -->Rappel pour quitter `vi` :
- - sauvegarder et quitter : `Esc` puis `:wq[Enter]` ou `ZZ` 
+ - sauvegarder et quitter : `Esc` puis `:wq[Enter]` ou `ZZ`
  - quitter sans sauvegarder : `Esc` puis `:q![Enter]`
 
 
