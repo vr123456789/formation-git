@@ -305,7 +305,6 @@ Ce dépôt peut alors servir de dépôt central
 Le contenu d’un dépôt nu est identique au contenu du répetoire `.git/` d’un dépôt normal
 
 
-
 %%%
 
 
@@ -329,3 +328,35 @@ Cas d’utilisation :
  - ...
 
 Crochets côté client ou côté serveur
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Liste des crochets
+
+[Liste détaillée des *hooks* &rarr;](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
+ 
+Client :
+ - `applypatch-msg` / `pre-applypatch-msg` / `post-applypatch-msg`
+ - `pre-commit` / `post-commit` 
+ - `prepare-commit-msg` / `commit-msg`
+ - `post-rewrite`
+ - `pre-rebase`
+ - `post-checkout`
+ - `post-merge`
+ - `pre-push`
+
+Serveur :
+ - `pre-receive` / `post-receive` 
+ - `update` / `post-update`
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP7](https://git.stable.innovation.insee.eu/wehdrc/formation-git#7-boite-à-outils-git)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" class="blur" />
+</div>

@@ -733,8 +733,11 @@ git checkout tp6
 
 Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. Dans Gitlab, vérifier que l’historique de la branche distante `tp6` ne contient plus les informations sensibles.
 
+### 7. Boite à outils Git
+
 ## Liens utiles
 
  - [Git avec Eclipse](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien/#/)
  - [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
  - [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
+ - [Liste détaillée des hooks](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
