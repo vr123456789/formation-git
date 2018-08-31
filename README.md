@@ -52,12 +52,6 @@ Afficher l’ancêtre commun lors d’un conflit
 git config --global merge.conflictstyle diff3
 ```
 
-Ne pas modifier les retours à la ligne
-```bash
-git config --global core.autocrlf false
-git config --global core.safecrlf false
-```
-
 <details>
 	<summary>Quelle est la valeur de la propriété <code>help.format</code> ?</summary>
 	<code>git config help.format</code>
@@ -258,7 +252,7 @@ Dans votre _fork_ Gitlab, onglet « Branches », créer une nouvelle branche `tp
 Puis cliquer sur le bouton « Create merge request » qui est apparu.
 Finalement, cliquer sur « Submit merge request ».
 
-:vertical_traffic_light: Attendre que l’intervevnant est accepté toutes les _merge requests_.
+:vertical_traffic_light: Attendre que l’intervenant ait accepté toutes les _merge requests_.
 
 Mettre à jour votre copie locale à partir du dépôt d’origine :
 ```bash
@@ -405,7 +399,7 @@ git add .
 git commit -m "Renommer le package 'model' en 'beans'"
 ```
 
-Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque retours à la ligne. Annuler la fusion.
+Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dûs à la modification de chaque retours à la ligne. Annuler la fusion.
 
 ```bash
 git merge eol
@@ -482,7 +476,7 @@ git clone -b tp5 [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git
 Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
 ```bash
 cd /d/tp5/devA
-git am --ignore-whitespace patches/devA/*.patch
+git am --ignore-whitespace --signoff patches/devA/*.patch
 ```
 
 Cela génère deux nouveaux *commits*, qui représentent le travail du développeur A, dans la copie de travail.
@@ -497,7 +491,7 @@ De même, dans le répertoire du développeur B, appliquer les quatre patches si
 
 ```bash
 cd /d/tp5/devB
-git am --ignore-whitespace patches/devB/*.patch
+git am --ignore-whitespace --signoff patches/devB/*.patch
 ```
 
 Cela génère quatre nouveaux *commits*, qui représentent le travail du développeur B, dans la copie de travail.
@@ -570,11 +564,9 @@ Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/ima
   1. une faute de frappe sur le mot __accueil__ dans le message de validation
   2. le fichier __logo-git.png__ n’a pas été validé
 
-Objectif : corriger ces erreurs en amendant le dernier *commit*.
+Corriger ces erreurs en amendant le dernier *commit*.
 
-On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part.
-
-Amender le dernier *commit* en supprimant ce fichier.
+On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part, donc amender le dernier *commit* en supprimant ce fichier.
 
 Pousser ces dernières modification vers le dépôt distant.
 
@@ -618,13 +610,13 @@ Dans la branche `tp6`, effectuer les action suivantes :
 
  1. Modifier l’email de Richard Cox dans le fichier `clients.txt`
  2. Modifier quelques autres emails
- 3.
+ 3. Effectuer les actions suivantes :
   - créer une branch email-regex et basculer dessus
   - dans la classe `Client`, modifier l’expression régulière de l’email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
   - retourner dans la branche `tp6`
  4. Remplacer l’extension d’email `co.uk` par `uk`
  5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
- 6.
+ 6. Effectuer les actions suivantes :
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
   - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
   - modifier un message dans le fichier dans le fichier `message_fr.properties`
@@ -677,7 +669,7 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 
 #### *Filter branch*
 
-On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que cette information devait rester secret et n’être donc pas validée et encore moins partagée dans le dépôt distant.
+On se rend compte que la ligne *secret token* est présente depuis un moment dans l’historique alors que cette information devait rester secrète et n’être donc pas validée et encore moins partagée dans le dépôt distant.
 
 À la suite d’une inspection rapide, on constate aussi qu’un fichier `password.txt` a été validé et poussé vers le serveur.
 

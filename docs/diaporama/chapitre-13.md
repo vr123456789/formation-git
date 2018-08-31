@@ -308,7 +308,7 @@ Autant de fichiers que de commits
 git format-patch 69f709e..4c70fd2
 
 # Application de chacuns des fichiers de patch
-git am --signoff < *.patch
+git am --signoff *.patch
 ```
  - les commits sont réappliqués un par un dans la copie de travail puis dans le dépôt
  - c’est l’identité de la personne qui a créé le *patch* qui est utilisée
