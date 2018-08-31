@@ -158,7 +158,7 @@ Il n’y a pas de *commit* de fusion
 Exemple de la contribution à un projet libre
  - *pull request*
  - fusion en avance rapide uniquement
- - analyse du code soumis plus simple grâce a l’historique linéaire
+ - analyse du code plus simple grâce a l’historique linéaire
 
 %%%
 

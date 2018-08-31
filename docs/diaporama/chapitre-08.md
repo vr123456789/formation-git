@@ -15,7 +15,7 @@ La fusion est toujours locale
 On peut toujours annuler l’opération
  - `git merge --abort`
 
-<!-- .element: class="icon idea" -->Il est toujours préférable d’avoir une copie de travail propre
+<!-- .element: class="icon idea" -->Il est préférable d’avoir une copie de travail propre
  - valider : `git commit`
  - ou remiser : `git stash`
 
@@ -156,7 +156,6 @@ Solution :
 ```bash
 ignore-space-change
 ignore-all-space
-ignore-space-at-eol
 ```
 
 %%%

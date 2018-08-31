@@ -75,7 +75,7 @@ Gestion de version distribuée :
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Genèse de Git
 
-1991 &ndash; 2002 : Noyau Linux géré via des patchs et des archives
+1991 &ndash; 2002 : Noyau Linux géré via des *patchs* et des archives
 
 2002 &ndash; 2005 : Utilisation du DCVS Bitkeeper
 

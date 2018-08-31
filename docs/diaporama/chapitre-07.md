@@ -42,9 +42,9 @@ Créer une nouvelle branche :
  - `git branch <branch_name>`
  - on reste dans la branche d’origine
 
-Basculer dans une autre branche
+Basculer dans une autre branche = remplacer la copie de travail
  - `git checkout <branch_name>`
- - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de changements
+ - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de modifications
  - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche
 
 <!-- .element: class="icon idea" -->Pour créer une branche et basculer dans cette branche :
@@ -84,7 +84,7 @@ git branch testing
 ```bash
 cat .git/HEAD # ref: refs/heads/master
 cat .git/refs/heads/master # f30ab
-cat .git/refs/heads/testing # f30ab</code></pre>
+cat .git/refs/heads/testing # f30ab
 ```
 
 
@@ -220,7 +220,7 @@ Situation initiale
 ### Exemple d’utilisation des branches (2)
 
 Création d’une nouvelle branche pour le développement du ticket 53
- - `git checkout -b iss5`
+ - `git checkout -b iss53`
 <div class="center"><img src="images/basic-branching-2.png" width="700px" /></div>
 
 
@@ -245,8 +245,8 @@ Développements du ticket 53 dans la branche `iss53`
 
 
 <!-- .element: class="icon warn" -->Un problème urgent est signalé en production
- - Ne pas déployer les développements en cours du ticket 53 en plus du correctifs
- - Simple retour sur la branche `master`
+ - ne pas déployer les développements en cours du ticket 53 en plus du correctifs
+ - simple retour sur la branche `master`
   - `git checkout master`
 
 <div class="center"><img src="images/basic-branching-3.png" width="700px" /></div>

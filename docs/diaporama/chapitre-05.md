@@ -97,17 +97,17 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 	<td>branche distante</td>
 </tr>
 <tr>
-	<td>__traked__</td>
+	<td>_traked_</td>
 	<td>✔</td>
 	<td>✔</td>
 </tr>
 <tr>
-	<td>__new__</td>
+	<td>_new_</td>
 	<td>✘</td>
 	<td>✔</td>
 </tr>
 <tr>
-	<td>__stale__</td>
+	<td>_stale_</td>
 	<td>✔</td>
 	<td>✘</td>
 </tr>

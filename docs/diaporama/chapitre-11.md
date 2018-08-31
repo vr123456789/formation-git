@@ -52,17 +52,17 @@ Pour chacun des `n` derniers *commits* on a le choix entre :
 	<tr>
 		<td><code>edit</code></td>
 		<td><code>e</code></td>
-		<td>S’arrêter pour modifier le commit</td>
+		<td>S’arrêter pour modifier le <i>commit</i></td>
 	</tr>
 	<tr>
 		<td><code>squash</code></td>
 		<td><code>s</code></td>
-		<td>Fusionner ce commit avec le précédent</td>
+		<td>Fusionner ce <i>commit</i> avec le précédent</td>
 	</tr>
 	<tr>
 		<td><code>fixup</code></td>
 		<td><code>f</code></td>
-		<td>Fusionner ce commit avec le précédent et utiliser le message précédent</td>
+		<td>Fusionner ce <i>commit</i> avec le précédent et utiliser le message précédent</td>
 	</tr>
 	<tr>
 		<td><code>exec</code></td>
@@ -229,8 +229,6 @@ pick cba893a Correction problème Y
 ### Réécrire complètement l’historique
 
 <!-- .element: class="icon boom" --> L’option nucléaire : `filter-branch`
-
-Exemples de cas classiques :
 
 <table class="left medium">
 	<tr>

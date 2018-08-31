@@ -89,7 +89,7 @@ Résultat dans les fichiers de configuration, par exemple `~/.gitconfig` :
 	co = commit
 ```
 
-Voir la valeur d’une propriété :
+Afficher la valeur d’une propriété :
 ```bash
 git config user.name
 ```

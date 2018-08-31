@@ -53,7 +53,7 @@ stash@{2}: WIP on master: 21d80a5... added number to log
 
 Agir sur une remise plus ancienne
 ```bash
-$ git stash drop stash@{0}
+$ git stash drop stash@{1}
 Dropped stash@{1} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
 ```
 

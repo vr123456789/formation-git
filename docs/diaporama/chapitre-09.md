@@ -9,7 +9,7 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Généralités
 
-Références locales vers l’état des branches du dépôt distant
+Branche de suivi : référence locale vers l’état d’une branche du dépôt distant
 
 Non modifiables par l’utilisateur
  - uniquement par la communication avec le dépôt distant
@@ -89,9 +89,9 @@ Une fois le suivi activé, `fetch` et `push` fonctionnent sans précisions suppl
 </tr>
 </table>
 
-Source potentielle de conflits <!-- .element class="icon warn" -->
+<!-- .element: class="icon warn" -->Source potentielle de conflits
 
-Source fréquente de <!-- .element class="icon info" --> *commits* de fusion
+<!-- .element: class="icon info" -->Source de *commits* de fusion
 
 %%%
 

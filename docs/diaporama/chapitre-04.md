@@ -12,7 +12,7 @@
 Transformer un dossier en dépôt Git
  - `git init`
  - Le répertoire `.git/` est créé dans le dossier
- - Il ne contient aucun commit
+ - Il ne contient aucun *commit*
  - Les fichiers déjà présents sont considérés comme non suivis par Git (_untracked_)
 
 Clôner un dépôt Git distant
@@ -211,7 +211,7 @@ Certains fichiers ne doivent pas être partagés avec les autres développeurs :
   - `.class`,
   - `.jar`,
   - ...
- - fichiers automatiquement générés
+ - fichiers générés automatiquement
   - `.min.js`,
   - `.min.css`,
   - ...
@@ -280,7 +280,7 @@ git commit -m "Message de validation"
 
 Valider tous les fichiers à l’état modifié : `git commit --all`
  - sans passer par l’index (`git add`)
- - ne comprend pas les fichiers non suivis (_untracked_)
+ - <!-- .element: class="icon warn" -->ne comprend __pas__ les fichiers non suivis (_untracked_)
 
 ```bash
 git commit -am "Message de validation"

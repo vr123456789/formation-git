@@ -84,7 +84,7 @@ Tout est vérifié par une somme de contrôle (_checksum_)
 
 Les objets sont identifiés par la somme de contrôle de leur contenu
  - il est impossible de modifier le contenu d’un fichier ou d’un dossier sans que Git ne le détecte
- - il ne peut pas y avoir de corruption de donnée sur le réseau
+ - il ne peut pas y avoir de corruption de données sur le réseau
 
 Sauf exception, Git ne fait qu’ajouter de nouvelles données
  - il est presque impossible de perdre son travail
