@@ -211,7 +211,7 @@ En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovatio
 Clôner ce dépôt dans votre _workspace_ :
 ```bash
 cd /d/*idep*/Mes\ Documents/eclipse_workspace
-git clone [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git
+git clone ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git
 cd formation-git
 ```
 
@@ -241,7 +241,7 @@ Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt 
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
-git remote add upstream [git@git.stable.innovation.insee.eu:22222]:wehdrc/formation-git.git
+git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/:wehdrc/formation-git.git
 ```
 
 Mettre votre copie locale à jour à partir de ce nouveau dépôt :
@@ -475,8 +475,8 @@ cd /d/tp5
 Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`
 
 ```bash
-git clone -b tp5 [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git devA
-git clone -b tp5 [git@git.stable.innovation.insee.eu:22222]:*idep*/formation-git.git devB
+git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/:*idep*/formation-git.git devA
+git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/:*idep*/formation-git.git devB
 ```
 
 Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
