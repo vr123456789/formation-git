@@ -59,12 +59,12 @@ git config --global merge.conflictstyle diff3
 <br />
 <details>
 	<summary>Dans quel fichier cette propriété est-elle enregistrée ?</summary>
-	<code>git config --list --show-origin | grep "help.format"</code>
+	<code>git config --show-origin help.format</code>
 </details>
 <br />
 <details>
 	<summary>Combien y-a-til de propriétés système dans ce fichier ?</summary>
-	<code>cat /c/ProgramData/Git/config | wc -l</code>
+	<code>git config --list --show-origin | grep "ProgramData/Git/config" | wc -l</code>
 </details>
 
 #### Opérations de base
@@ -216,6 +216,12 @@ cd formation-git
 ```
 
 :warning: Pour tout problème SSH, appeler l’intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
+
+:thumbsup: Éventuellement, copier les fichiers de configuration du *shell* dans le répertoire *home* :  
+```bash
+cp bash/* ~
+source ~/.bash_profile
+```
 
 Dans votre copie locale, effectuer la modification suivante :
 
