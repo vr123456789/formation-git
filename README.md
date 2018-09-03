@@ -112,7 +112,7 @@ git status
 Créer le fichier `.gitignore` pour exclure le répertoire `target/` et l’indexer :
 ```bash
 vim .gitignore
-git add .gitignore
+git add .
 git status
 ```
 
