@@ -170,3 +170,8 @@ body {
 .reveal .slide .left {
 	text-align: left;
 }
+
+.print-pdf .reveal .slide-background-content {
+	height: 0;
+	width: 0;
+}
