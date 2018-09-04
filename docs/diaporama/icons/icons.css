@@ -77,3 +77,28 @@
 .reveal .icon-dusk .icon.question:before {
 	content: url('dusk/question.png')
 }
+
+/* Liens */
+
+.reveal .link:after {
+	vertical-align: sub;
+	padding-right: 15px;
+	margin-left: 10px;
+	background-size: 25px;
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	content: '';
+}
+
+.reveal .icon-color .link.after:after {
+	background-image: url('color/link.png');
+}
+
+.reveal .icon-dusk .link.after:after {
+	background-image: url('dusk/link.png');
+}
+
+.reveal .icon-ultraviolet .link.after:after {
+	background-image: url('ultraviolet/link.png');
+}
