@@ -74,7 +74,8 @@ Liste des fichiers modifiés par chaque *commit* :
 ### Personnaliser l’affichage de l’historique
 
 `git log --pretty=format:"%h - %an, %ar : %s"`
- - [liste des options &rarr;](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Visualiser-l%E2%80%99historique-des-validations#pretty_format)
+ - [liste des options usuelles &rarr;](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Visualiser-l%E2%80%99historique-des-validations#pretty_format)
+ - [liste complète des options &rarr;](https://git-scm.com/docs/pretty-formats)
  - [liste des couleurs &rarr;](https://stackoverflow.com/questions/15458237/git-pretty-format-colors/15458378#15458378)
 
 Exemple :

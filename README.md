@@ -312,7 +312,7 @@ Afficher l’historique sous la forme suivante
 
 <details>
 	<summary>Indice : <code>git log --graph --date=short --pretty="format:???"</code></summary>
-	<code>git log --graph --date=short --pretty="format:%h %ad | %s%dq [%an]"</code>
+	<code>git log --graph --date=short --pretty="format:%h %ad | %s%d [%an]"</code>
 </details>
 <br />
 
@@ -325,7 +325,7 @@ Afficher l’historique sous la forme suivante
 Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un historique coloré :
 
 ```bash
-git config --global alias.ll "log --graph --abbrev-commit --pretty=format:'%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"
+git config --global alias.ll 'log --graph --abbrev-commit --pretty=format:"%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"'
 git config --global alias.lg 'log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"'
 ```
 
@@ -353,8 +353,7 @@ Dans une branche `salarie`, renommer toutes les variables "salarie" en "employe"
 ```bash
 git checkout -b salarie
 find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
-find src/main/java -type f -exec unix2dos {} \;
-git commit -am 'Renommage des variables salarie' -> 'employe'
+git commit -am "Renommage des variables 'salarie' -> 'employe'"
 ```
 
 Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l’application [http://localhost:8080](http://localhost:8080) pour tester.
@@ -375,20 +374,20 @@ git branch -d salarie
 
 #### Fusion à trois sources
 
-Créer une branche `eol` dans laquelle il faut remplacer tous les retours à la ligne : `find src/main/java -type f -exec dos2unix {} \;`. Valider cette modification.
+Créer une branche `spaces` dans laquelle il faut remplacer les tabulations des classes Java par quatre espaces : `find src/main/java -type f -exec sed -i "s/\t/    /g" {} \;`. Valider cette modification.
 
 :information_source: On fait cette action pour simuler un de formatage de code différent entre deux développeurs. Ce cas peut se produire dans le cas où certains travaillent sous Linux et d’autres sous Windows.
 
 ```bash
-git checkout -b eol
-find src/main/java -type f -exec dos2unix {} \;
-git commit -am "Remplacement des retours à la ligne"
+git checkout -b spaces
+find src/main/java -type f -exec sed -i "s/\t/    /g" {} \;
+git commit -am "Remplacement des tabulations par quatre espaces"
 ```
 
 Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController`. Valider.
 
 ```bash
-find src -type f -exec sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" {} \;
+ sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
 git commit -am "redirection temporaire"
 ```
 
