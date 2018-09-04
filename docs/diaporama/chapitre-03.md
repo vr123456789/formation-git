@@ -94,7 +94,7 @@ Afficher la valeur d’une propriété :
 git config user.name
 ```
 
-<!-- .element: class="icon info" -->Lister toute la configuration avec le nom du fichier
+<!-- .element: class="icon info" -->Lister toute la configuration avec le nom du fichier :
 ```bash
 git config --list --show-origin
 ```
@@ -114,7 +114,7 @@ git help <verb>
 Autant aller voir sur internet en français :
  - [Git Book (fr)](https://git-scm.com/book/fr/v2)
 
-Ou en anglais
+Ou en anglais :
  - [Git Book (en)](https://git-scm.com/book/en/v2)
 
 <!-- .element: class="icon info" -->Pour un aide-mémoire rapide :

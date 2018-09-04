@@ -107,14 +107,14 @@ git log --until=2.days # Depuis plus de 2 jours
 ```
 
 L’auteur : `--author`
- - le nom de l’auteur ou son *email* contient la chaîne de caractères
+ - le nom de l’auteur ou son *email* contient la chaîne de caractères spécifiée
 
 ```bash
 git log --author="Jean-Pierre"
 ```
 
 Le message : `--grep`
- - le message de *commit* contient la chaîne de caractères
+ - le message de *commit* contient la chaîne de caractères spécifiée
 
 ```bash
 git log --grep="refacto"
@@ -128,17 +128,17 @@ git log --grep="correc" --grep="ortho" --all-match
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Filtrer l’historique sur les modifications
 
-Dans ces deux cas, Git filtre sur le *patch*:
+Dans ces deux cas, Git filtre sur le *patch* :
 
 Exactement : `-S"string"`
- - les ajouts ou retraits contiennent la chaîne de caractères
+ - les ajouts ou retraits contiennent la chaîne de caractères spécifiée
 
 ```bash
 git log -S"public static void main"
 ```
 
 Avec une expression régulière : `-G"pattern"`
- - les ajouts ou retraits correspondent au motif de l’expression régulière
+ - les ajouts ou retraits correspondent au motif de l’expression régulière spécifiée
 
 ```bash
 git log -G"public Cocktail .*\("

@@ -10,7 +10,7 @@
 ### Généralités
 
 La fusion est toujours locale
- - aucun risque de casser quoique ce soit
+ - aucun risque de casser quoi que ce soit
 
 On peut toujours annuler l’opération
  - `git merge --abort`
@@ -28,7 +28,7 @@ On peut toujours annuler l’opération
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Résoudre un conflit
 
-Lors de la fusion on est avertis qu’il y a eu des conflits :
+Lors de la fusion on est averti qu’il y a eu des conflits :
 ```bash
 Automatic merge failed; fix conflicts and then commit the result.
 ```
@@ -139,17 +139,17 @@ Après *commit*
 ### Ignorer les espaces
 
 Problème :
- - dans une branche `us55`, on a fait une petite correction
+ - dans une branche `us55`, on a apporté une petite correction
  - mais par inadvertance toutes les tabulations ont été remplacées par des espaces
   - `Tab` &rarr; `Espaces`
- - dans `master`, on renommé une classe du modèle
+ - dans `master`, on a renommé une classe du modèle
   - `Agent` &rarr; `Employe`
 
 Solution :
- - on fait la fusion : `git merge us55`
+ - on tente la fusion : `git merge us55`
  - il y a beaucoup de conflits
  - on annule la fusion : `git merge --abort`
- - on refait la fusion en ignorant les espaces : `git merge -Xignore-space-change us55`
+ - on effectue la fusion en ignorant les espaces : `git merge -Xignore-space-change us55`
  - la fusion est automatique
 
 
@@ -203,7 +203,7 @@ Pas encore partagée
 Déjà partagée
  - le résultat de la fusion a déjà été envoyé vers le dépôt distant
  - on ne peut pas réécrire l’historique
- - on va donc faire un `git revert`
+ - on va donc lancer un `git revert`
   - &rarr; *revert* = annuler un *commit* en appliquant le *patch* inverse
 
 ```bash
@@ -222,11 +222,11 @@ git revert --mainline 1 HEAD
 Valider souvent
  - des petits lots de modifications homogènes
 
-Avoir des petits fichiers
+Péférer de petits fichiers
  - bien découper les classes selon leurs responsabilités
 
 Communiquer avec les autres membres de l’équipe
  - dire sur quoi on travaille
- - bien prévenir en cas du *refactoring* important
+ - bien prévenir en cas de *refactoring* important
 
 Mettre à jour sa copie locale régulièrement

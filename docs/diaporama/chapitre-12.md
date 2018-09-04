@@ -12,10 +12,10 @@
 Références fixes dans le temps :
  - le SHA-1 : `847ef1c44c7ad48c86889e03943bb9d0315dfa1a`
  - une partie du SHA-1 : `847ef1c`
-  - minimum 4 caratères et pas d’ambiguïté
+  - minimum 4 caractères et pas d’ambiguïté
  - le nom d’un *tag* : `v3.0`
 
-Références qui évoluent
+Références qui évoluent :
  - le nom d’une branche : `tp6`
  - le pointeur `HEAD`
  - une *reflog* : `HEAD@{5}`
@@ -168,9 +168,9 @@ Exemples
   - <!-- .element: class="icon idea" -->`a..b = ]a, b]` et donc `[a, b] = a^..b`
 
 Exemples
- - les commits `tp5` et pas encore été fusionnés dans `master`
+ - les commits de `tp5` pas encore fusionnés dans `master`
   - `git log master..tp5`
- - les commits qui seront poussés vers le dépôts distant
+ - les commits qui seront poussés vers le dépôt distant
   - `git log origin/master..HEAD`
  - annuler une plage de *commits*
   - `git revert 7568c4d^..1a0384f`

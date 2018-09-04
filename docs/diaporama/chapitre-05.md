@@ -11,11 +11,9 @@
 
 Collaborer au même projet
  - partager son travail
-  - `git push`
-  - « pousser » ses modifications
+  - `git push` = « pousser » ses modifications
  - récupérer le travail des autres développeurs
-  - `git fetch` ou `git pull`
-  - « récupérer » ou « tirer » les modifications des autres
+  - `git fetch` ou `git pull` = « récupérer » ou « tirer » les modifications des autres
 
 Il peut exister plusieurs dépôts distants
  - droits en lecture seule ou en lecture / écriture
@@ -28,11 +26,11 @@ Il peut exister plusieurs dépôts distants
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Connexion à un dépôt distant
 
-Soit automatique lors d’un `git clone`
+Automatiquement lors d’un `git clone`
  - après le clonage, le dépôt local est automatiquement relié au dépôt distant
  - alias du dépôt distant : `origin`
 
-Soit manuellement
+Explicitement
  - exemple 1 : suite à `git init`, aucun dépôt distant n’est configuré
 
 ```bash
@@ -84,7 +82,7 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Inspecter un dépôt distant `git remote show`
+### Inspecter un dépôt distant : `git remote show`
 
 <div class="center">
 	<img src="images/remote-show.png" width="700px" />
@@ -143,7 +141,7 @@ Supprimer :
 git remote rm github
 ```
 
-Modifier l’url
+Modifier l’url :
 ```bash
 git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
 ```
@@ -151,7 +149,7 @@ git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
 
 L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url pour partager (_push_)
  - exemple du miroir vers GForge
- - on peut modifier séparemment la partie _push_  :
+ - on peut modifier séparément la partie _push_  :
 
 ```bash
 git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-git.git

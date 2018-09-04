@@ -9,7 +9,7 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Modifier la dernière validation
 
-<!-- .element: class="icon idea" -->On se rend compte après *commit* d’une erreur :
+<!-- .element: class="icon idea" -->Après avoir valider, on se rend compte d’une erreur :
  - faute dans le message
  - fichiers oubliés ou en trop
  - ...
@@ -17,7 +17,7 @@
 Modifier simplement le message
  - `git commit --amend`
   - l’éditeur de texte s’ouvre, il contient le dernier message de *commit*
- - Aussi possible : `git commit --amend --message "Message de commit"`
+ - Autre possibilité : `git commit --amend --message "Message de commit"`
 
 Modifier aussi le contenu
  - indexer ou supprimer des modifications au préalable
@@ -71,9 +71,9 @@ Pour chacun des `n` derniers *commits* on a le choix entre :
 	</tr>
 </table>
 
-On peut en plus :
+On peut en outre :
  - réordonner les *commits* en changeant l’ordre des lignes
- - supprimer des *commits* en supprimant la ligne correspondante
+ - supprimer des *commits* en supprimant les lignes correspondantes
 
 Annuler le rebasage :
  - `git rebase --abort`
@@ -165,7 +165,7 @@ squash 4b5e1b5 Ignorer le dossier docs/</code></pre></td>
 <!-- .element: class="icon idea" -->Option `--autosquash` de `git rebase -i`
  - activer l’option par défaut : `git config --global rebase.autosquash true`
 
-Oubli dans un *commit* qu’on ne peut plus amender
+Oubli dans un *commit* qu’on ne peut plus amender :
 
 ```bash
 git add a.txt && git commit -m "Modification a.txt"
@@ -285,7 +285,7 @@ git filter-branch -f --index-filter '
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Exemples de code (2)
 
-Remplacer le texte correspondant au motif :
+Remplacer le texte correspondant à un motif donné :
   - `pattern_a_remplacer` &rarr; `*****` dans le fichier `fichier.txt` :
 
 ```bash
@@ -294,7 +294,7 @@ git filter-branch -f --tree-filter '
 ' --prune-empty -- HEAD
 ```
 
-Supprimer la ligne correspondant au motif :
+Supprimer la ligne correspondant à un motif donné :
 ```bash
 git filter-branch -f --tree-filter '
 	sed -i -E "/pattern_ligne_a_supprimer/d" "fichier.txt"

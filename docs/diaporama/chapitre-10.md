@@ -15,7 +15,7 @@
 
 Les modifications apportées dans une branche sont rejouées dans la branche de destination
  - équivalent à appliquer des *patchs*
-  - calculés une branche
+  - calculés dans une branche
   - appliqués dans une autre
 
 
@@ -139,10 +139,10 @@ git merge experiment
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Conséquence du rebasage
+### Conséquences du rebasage
 
 L’historique devient linéaire
- - il ne correspond plus à ce qui *réellement* passé
+ - il ne correspond plus à ce qui s’est *réellement* passé
  - les *commits* de la branche sont réécrits
 
 Il n’y a pas de *commit* de fusion
@@ -152,13 +152,13 @@ Il n’y a pas de *commit* de fusion
  - en cas de réécriture de l’historique, `git push --force`
   - si le dépôt distant le permet
   - se synchroniser avec le reste de l’équipe
- - le rebasage se fait dans sa copie de travail
-  - avant d’avoir partager ses modifications
+ - le rebasage se fait dans la copie de travail
+  - avant d’avoir partagé ses modifications
 
-Exemple de la contribution à un projet libre
+Exemple : contribution à un projet libre
  - *pull request*
  - fusion en avance rapide uniquement
- - analyse du code plus simple grâce a l’historique linéaire
+ - analyse du code plus simple grâce à l’historique linéaire
 
 %%%
 

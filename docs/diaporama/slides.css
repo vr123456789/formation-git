@@ -121,6 +121,11 @@ body {
     margin-right: 7px;
 }
 
+.reveal ul.simple-list li:before {
+    content: '';
+    margin-right: 7px;
+}
+
 .reveal ul li {
     font-size: 80%;
     color: #1a53a1;

@@ -1,6 +1,6 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="chapter" -->
 ## 13
-### Boite à outils Git
+### Boîte à outils Git
 
 
 %%%
@@ -149,10 +149,10 @@ git clean -d -f
 
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Annuler un rebasage râté
+### Annuler un rebasage raté
 
 Le rebasage réécrit l’historique
- - &rarr; si on revient en arrière, on revient dans le « mauvais » passé
+ - si on revient en arrière, on revient dans le « mauvais » passé
 
 La commande `git reflog` affiche l’historique des positions de `HEAD`
  - historique purement local
@@ -244,19 +244,19 @@ git checkout -b correction v1.0
 *checkout* avec chemin spécifié
  - `HEAD` ne bouge pas
  - la branche courante reste la même
- - les fichiers passés en paramètres sont extraits dans le copie locale
+ - les fichiers passés en paramètres sont extraits dans la copie locale
   - il sont à l’état modifié
 
 Exemples :
 
 ```bash
-# Récupérer le fichier application.properties tel qu’il étatit à la v3.0
+# Récupérer le fichier application.properties tel qu’il était à la v3.0
 git checkout v3.0 -- src/main/resource/application.properties
 
-# Récupérer tous les fichier du dossiers src/main/java/
+# Récupérer tous les fichiers du dossier src/main/java/
 git checkout b24a4d0 -- src/main/java/
 
-# Récupérer le fichier README.md tel qu’il étatit lors de l’avant-dernier commit
+# Récupérer le fichier README.md tel qu’il était lors de l’avant-dernier commit
 git checkout HEAD^ -- README.md
 ```
 
@@ -269,7 +269,7 @@ git checkout HEAD^ -- README.md
 Appliquer des modifications contenues dans un *commit* ou une plage de *commits*
  - création d’un nouveau *commit* pour chaque *commit* picoré
 
-<!-- .element: class="icon info" -->Refaire dans une branche ce qui a déjà été fait dans une autre
+<!-- .element: class="icon info" -->Appliquer à une branche ce qui a déjà été fait dans une autre
  - sans fusionner toutes les modifications apportées par la branche
 
 ```bash
@@ -307,7 +307,7 @@ Autant de fichiers que de commits
 # Création de plusieurs fichiers de patch
 git format-patch 69f709e..4c70fd2
 
-# Application de chacuns des fichiers de patch
+# Application de chacun des fichiers de patch
 git am --signoff *.patch
 ```
  - les commits sont réappliqués un par un dans la copie de travail puis dans le dépôt

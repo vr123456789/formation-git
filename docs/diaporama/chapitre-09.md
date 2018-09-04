@@ -11,17 +11,17 @@
 
 Branche de suivi : référence locale vers l’état d’une branche du dépôt distant
 
-Non modifiables par l’utilisateur
+Non modifiable par l’utilisateur
  - uniquement par la communication avec le dépôt distant
 
-Nommées `repository-name/branch-name`
+Nommée `repository_name/branch_name`
  - `origin/master`
  - `origin/dev`
  - `github/master`
  - ...
 
 <!-- .element: class="icon info" -->Le dépôt distant `origin` n’est pas particulier
- - c’est seulement le nom donné par défaut au dépôt que l’on a clôné
+ - c’est seulement le nom donné par défaut au dépôt que l’on a cloné
 
 
 %%%
@@ -65,11 +65,11 @@ git branch -vv
     <img src="images/branch-vv.png" class="boxed-img" width="800px" />
 </div>
 
-Une fois le suivi activé, `fetch` et `push` fonctionnent sans précisions supplémentaires
+Une fois le suivi activé, `fetch` et `push` fonctionnent sans précision supplémentaire
  - rappel : `fetch` met jour `remote/branch_name`
  - il faut ensuite fusionner dans la branche locale : `git merge`
 
-<!-- .element: class="icon idea" -->En utilisant `pull`, on fait les deux opérations d’un coup
+<!-- .element: class="icon idea" -->En utilisant `pull`, on réalise les deux opérations d’un coup
 
 
 %%%

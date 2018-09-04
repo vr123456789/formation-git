@@ -9,14 +9,14 @@
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Mode de stockage
 
-Stockage sous forme d’instantanés (_snapshot_)
- - et non de différences (_deltas_)
+Stockage sous forme d’instantanés (_snapshots_)
+ - et non de différentiels (_deltas_)
 
 Système de références (_cf._ lien symbolique)
- - pour éviter de stocker plusieurs fois un fichier non-modifié
+ - pour éviter de stocker plusieurs fois un fichier non modifié
 
-On peut voir Git comme une sorte de mini système de fichiers
- - possédant en plus une dimension temporelle
+On peut voir Git comme une sorte de mini-système de fichiers
+ - possédant en outre une dimension temporelle
 
 
 %%%
@@ -25,7 +25,7 @@ On peut voir Git comme une sorte de mini système de fichiers
 <!-- .slide: class="slide" data-background-color="#7580ba" -->
 ### Schéma du mode de stockage
 
-Différences (Subversion)
+Différentiels (Subversion)
 <div class="center">
 	<img src="images/deltas.png" width="550px" />
 </div>

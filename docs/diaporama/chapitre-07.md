@@ -42,9 +42,9 @@ Créer une nouvelle branche :
  - `git branch <branch_name>`
  - on reste dans la branche d’origine
 
-Basculer dans une autre branche = remplacer la copie de travail
+Basculer dans une autre branche = remplacer la copie de travail :
  - `git checkout <branch_name>`
- - on ne peut basculer dans une branche que il n’y a pas de risque de perdre de modifications
+ - on ne peut basculer dans une branche que s’il n’y a pas de risque de perdre de modifications
  - sinon : valider (_commit_) ou remiser (_stash_) avant de changer de branche
 
 <!-- .element: class="icon idea" -->Pour créer une branche et basculer dans cette branche :
@@ -245,7 +245,7 @@ Développements du ticket 53 dans la branche `iss53`
 
 
 <!-- .element: class="icon warn" -->Un problème urgent est signalé en production
- - ne pas déployer les développements en cours du ticket 53 en plus du correctifs
+ - déployer le correctif sans déployer les développements en cours du ticket 53
  - simple retour sur la branche `master`
   - `git checkout master`
 

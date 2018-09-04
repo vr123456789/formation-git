@@ -15,7 +15,7 @@ Transformer un dossier en dépôt Git
  - Il ne contient aucun *commit*
  - Les fichiers déjà présents sont considérés comme non suivis par Git (_untracked_)
 
-Clôner un dépôt Git distant
+Cloner un dépôt Git distant
  - `git clone <url>`
  - Le dépôt complet est copié à partir de l’url dans un dossier `.git/` local
   - `git clone ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git`
@@ -44,7 +44,7 @@ Clôner un dépôt Git distant
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Connaitre l’état des fichiers du dépôt : `git status`
+### Connaître l’état des fichiers du dépôt : `git status`
 ```bash
 > git status
 On branch master
@@ -249,11 +249,11 @@ node_modules/
 *.jar
 *.class
 
-# Un type de fichier à l’exeption d’un fichier en particulier
+# Un type de fichier à l’exception d’un fichier en particulier
 *.log
 !install.log
 
-# Dans n’importe quel sous répertoire
+# Dans n’importe quel sous-répertoire
 docs/**/*.scss
 ```
 
@@ -296,7 +296,7 @@ git commit -am "Message de validation"
 
 <!-- .element: class="icon info" -->Le message de validation est très important
  - décrit brièvement les modifications contenues dans le _commit_
- - importance de l’homogénéité des modifications contenues un _commit_
+ - importance de l’homogénéité des modifications contenues dans un _commit_
  - à l’attention des autres développeurs
 
 Forme d’un message plus détaillé :

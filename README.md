@@ -208,7 +208,7 @@ En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovatio
 >  - en lecture et en écriture sur cette copie,
 >  - en lecture seule sur le dépôt d’origine.
 
-Clôner ce dépôt dans votre _workspace_ :
+Cloner ce dépôt dans votre _workspace_ :
 ```bash
 cd /d/*idep*/Mes\ Documents/eclipse_workspace
 git clone ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git

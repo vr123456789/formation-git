@@ -7,7 +7,7 @@
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Système de contrôle de version
+### Système de gestion de versions
 
 Un VCS (_Version Control System_)
  - enregistre les modifications successives d’un ensemble de fichiers
@@ -17,10 +17,10 @@ Cela permet de :
  - revenir à une version antérieure d’un fichier spécifique
  - retrouver la dernière modification qui a pu introduire un problème
 
-En plus, on peut en général :
+De plus, on peut en général :
  - partager ses modifications et de récupérer celles des autres
 
-Surtout utile pour les fichiers textes
+Surtout utile pour les fichiers texte
  - comme le code source !
 
 
@@ -55,19 +55,24 @@ Surtout utile pour les fichiers textes
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Les avantages de la gestion distribuée
 
-Gestion de version centralisée :
+Gestion de versions centralisée :
 
- - (+) chacun peut savoir qui fait quoi
- - (+) on peut partager son travail et récupérer celui des autres
- - (&ndash;) point unique de panne
+ - &oplus; chacun peut savoir qui fait quoi
+ - &oplus; on peut partager son travail et récupérer celui des autres
+ - &ominus; point unique de panne
   - coupure du serveur : plus personne ne peut collaborer
   - corruption du disque : données définitivement perdues
 
+<!-- .element: class="simple-list" -->
+
 Gestion de version distribuée :
 
- - (+) sécurité grâce à la redondance des dépôts
- - (+) permet l’organisation de « groupes de travail »
- - (+) rapidité
+ - &oplus; sécurité grâce à la redondance des dépôts
+ - &oplus; permet l’organisation de « groupes de travail »
+ - &oplus; rapidité
+
+<!-- .element: class="simple-list" -->
+
 
 %%%
 
@@ -84,5 +89,5 @@ Gestion de version distribuée :
 À partir de 2005 : Linus Torvalds développe un successeur, objectifs :
  - vitesse
  - simplicité
- - développements non-linéaires (branches)
+ - développements non linéaires (branches)
  - compacité des données
