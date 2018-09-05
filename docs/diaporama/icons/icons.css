@@ -28,6 +28,11 @@
 	content: url('color/question.png')
 }
 
+
+.reveal .icon-color .icon.print:before {
+	content: url('color/print.png')
+}
+
 /* Icones : ultraviolet */
 .reveal .icon-ultraviolet .icon.idea:before {
 	content: url('ultraviolet/idea.png');
@@ -53,6 +58,10 @@
 	content: url('ultraviolet/question.png')
 }
 
+.reveal .icon-ultraviolet .icon.print:before {
+	content: url('ultraviolet/print.png')
+}
+
 /* Icones : dusk */
 .reveal .icon-dusk .icon.idea:before {
 	content: url('dusk/idea.png')
@@ -76,6 +85,10 @@
 
 .reveal .icon-dusk .icon.question:before {
 	content: url('dusk/question.png')
+}
+
+.reveal .icon-dusk .icon.print:before {
+	content: url('dusk/print.png')
 }
 
 /* Liens */
