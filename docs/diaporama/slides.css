@@ -176,7 +176,10 @@ body {
 	text-align: left;
 }
 
+.print-pdf .reveal .slide-background {
+    background-color: white !important;
+}
+
 .print-pdf .reveal .slide-background-content {
-	height: 0;
-	width: 0;
+	display: none;
 }
