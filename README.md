@@ -384,20 +384,21 @@ git branch -d salarie
 
 #### Fusion à trois sources
 
-Créer une branche `spaces` dans laquelle il faut remplacer les tabulations des classes Java par quatre espaces : `find src/main/java -type f -exec sed -i "s/\t/    /g" {} \;`. Valider cette modification.
+Créer une branche `spaces` dans laquelle il faut remplacer les tabulations des classes Java par deux espaces : `find src/main/java -type f -exec sed -i "s/\t/  /g" {} \;`. Valider cette modification.
 
 :information_source: On exécute cette action pour simuler un de formatage de code différent entre deux développeurs. Cela peut se produire quand certains travaillent sous Linux et d’autres sous Windows, ou bien quand les développeurs n’utilisent pas tous le même IDE.
 
 ```bash
 git checkout -b spaces
-find src/main/java -type f -exec sed -i "s/\t/    /g" {} \;
-git commit -am "Remplacement des tabulations par quatre espaces"
+find src/main/java -type f -exec sed -i "s/\t/  /g" {} \;
+git commit -am "Remplacement des tabulations par des espaces"
 ```
 
-Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController`. Valider.
+Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController` et dans le test associé. Valider.
 
 ```bash
- sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
+sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
+sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/test/java/fr/insee/bar/controller/AccueilControllerTest.java
 git commit -am "redirection temporaire"
 ```
 
@@ -408,33 +409,32 @@ Dans la branche `master` renommer le *package* `model` en `beans`.
 ```bash
 git checkout master
 find src -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
-find src -type f -exec unix2dos {} \;
-mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
+git mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
 git add .
 git commit -m "Renommer le package 'model' en 'beans'"
 ```
 
-Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque tabulation. Interrompre la fusion.
+Fusionner la branche `spaces` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque tabulation. Interrompre la fusion.
 
 ```bash
-git merge eol
+git merge spaces
 git status
 git merge --abort
 ```
 
-Relancer la fusion en ignorant les espaces : `git merge eol -Xignore-all-space`
+Relancer la fusion en ignorant les espaces : `git merge spaces -Xignore-all-space`
 
-Lancer les tests unitaires et supprimer la branche `eol`.
+Lancer les tests unitaires et supprimer la branche `spaces`.
 
 ```bash
 mvn test
-git branch -d eol
+git branch -d spaces
 ```
 
 Annuler le renommage du package.
 
 ```bash
-git revert HEAD~1
+git revert HEAD~1 -Xignore-all-space
 ```
 
 #### Branches distantes
@@ -484,8 +484,8 @@ cd /d/tp5
 Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`.
 
 ```bash
-git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/:*idep*/formation-git.git devA
-git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/:*idep*/formation-git.git devB
+git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git devA
+git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git devB
 ```
 
 Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
