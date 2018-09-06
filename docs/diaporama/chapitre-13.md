@@ -316,6 +316,46 @@ git am --signoff *.patch
 
 %%%
 
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Trouver le coupable : `git blame`
+
+Qui a modifié en dernier une ligne donné dans un fichier donné ?
+ - `git blame -- path/to/file`
+ - quel est le *hash* du *commit* associé à cette modification  ?
+
+<code class="small lang-bash hljs">
+<pre>
+[...]
+a78c2e5e72 (Didier Lefebvre 2014-10-08 22) @Controller
+a78c2e5e72 (Didier Lefebvre 2014-10-08 23) public class AccueilController {
+a78c2e5e72 (Didier Lefebvre 2014-10-08 24)
+c0a8adf307 (Romain Warnan   2015-08-10 25)  @Autowired
+c0a8adf307 (Romain Warnan   2015-08-10 26)  private AccueilService accueilService;
+e96cb12b05 (Julien Seng     2016-10-27 27)
+d1fda3823c (Maxime Beaute   2016-10-07 28)  @Autowired
+d1fda3823c (Maxime Beaute   2016-10-07 29)  private UtilisateurService utilisateurService;
+c0a8adf307 (Romain Warnan   2015-08-10 30)
+74a97baf69 (Bérenger Lodi   2018-07-10 31)  @Autowired
+74a97baf69 (Bérenger Lodi   2018-07-10 32)  private PropertiesService propertiesService;
+[...]
+6f8f48dafe (Romain Warnan   2016-11-21 40)  @RequestMapping({ "/fr/accueil", "/en/accueil" })
+d1fda3823c (Maxime Beaute   2016-10-07 41)  public String accueil(ModelMap model, HttpServletRequest request, Langue langue, Utilisateur utilisateur) {
+e96cb12b05 (Julien Seng     2016-10-27 42)    utilisateurService.verifierDroitPageAccueil(utilisateur);
+366100af54 (Romain Warnan   2016-07-28 43)    Accueil accueil = accueilService.accueil(request.getContextPath(), langue);
+366100af54 (Romain Warnan   2016-07-28 44)    model.addAttribute("accueil", accueil);
+74a97baf69 (Bérenger Lodi   2018-07-10 46)    model.addAttribute("afficherIndicateurs", Properties.AFFICHER_INDICATEUR_ACCUEIL);
+cc2cd70f40 (Romain Warnan   2015-01-26 47)    return "accueil";
+cc2cd70f40 (Romain Warnan   2015-01-26 48)  }
+a78c2e5e72 (Didier Lefebvre 2014-10-08 49) }
+</pre>
+</code>
+
+Puis, pour analyser la modification incriminée :
+ - `git log -p -1 d1fda3823c`
+
+%%%
+
+
 
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Dépôt nu
