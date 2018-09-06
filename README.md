@@ -133,7 +133,7 @@ git status
 
 :warning: Git ne détecte aucun changement car les répertoires sont vides.
 
-Pour que ces dossier vides soient quand même présents dans l’historique, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et a le valider :
+Pour que ces dossiers vides soient quand même présents dans l’historique, utiliser la technique suivante qui consiste à créer dans le dossier un fichier caché vide et à le valider :
 
 ```bash
 touch src/main/resources/.git-empty src/test/resources/.git-empty
@@ -184,7 +184,7 @@ git add .
 git status
 ```
 
-Réinitialiser la copie de travail dans l’état du dernier *commit*
+Réinitialiser la copie de travail dans l’état du dernier *commit* :
 ```bash
 git reset --hard
 ```
@@ -197,7 +197,7 @@ git status
 
 Le résultat est le même : Git parvient à repérer les fichiers par la somme de contrôle de leur contenu.
 
-:warning: Si en plus, le contenu du fichier est modifié, cela ne fonctionne plus.
+:warning: Si par ailleurs, le contenu du fichier est modifié, cela ne fonctionne plus.
 
 ### 2. Dépôts distants
 
@@ -220,7 +220,7 @@ cd formation-git
 
 :warning: Pour tout problème SSH, appeler l’intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
 
-:thumbsup: Éventuellement, copier les fichiers de configuration du *shell* dans le répertoire *home* :  
+:thumbsup: Éventuellement, copier les fichiers de configuration du *shell* dans le répertoire *home* :
 ```bash
 cp bash/* ~
 source ~/.bash_profile
@@ -269,16 +269,14 @@ Mettre à jour votre copie locale à partir du dépôt d’origine :
 git pull upstream master
 ```
 
-Lister le répertoire `students/` et constater que vous avez récupérer les fichiers des autres élèves.
+Lister le répertoire `students/` et constater que vous avez récupéré les fichiers des autres élèves.
 ```bash
 ls -l students/
 ```
 
-Dans Gitlab, dans le [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students), constater la présence de votre fichier parmi celui des autres.
+Dans Gitlab, dans le [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students), constater la présence de votre fichier parmi les autres.
 
 ### 3. Historique
-
-Afficher l’historique du dépôt formation-git :
 
 ```bash
 git log
@@ -297,19 +295,19 @@ git log
 </details>
 <br />
 <details>
-	<summary>Dans quel <i>commits</i> a t-on mis en place un système de <i>logging</i> autre que <code>System.out</code> ?</summary>
+	<summary>Dans quel <i>commit</i> a-t-on mis en place un système de <i>logging</i> autre que <code>System.out</code> ?</summary>
 	<br />
 	<code>df1c990</code>
 </details>
 <br />
 <details>
-	<summary>À quel heure de quel jour a été validé le premier test unitaire du projet ?</summary>
+	<summary>À quelle heure de quel jour a été validé le premier test unitaire du projet ?</summary>
 	<br />
 	<code>2016-09-01 16:53:26</code>
 </details>
 <br />
 
-Afficher l’historique sous la forme suivante
+Afficher l’historique sous la forme suivante :
 
 ```bash
 * 8d0576c 2018-08-10 | Début du TP2 sur les logs (HEAD -> master) [Romain Warnan]
@@ -356,7 +354,7 @@ Tester ces affichages :
 
 ### 4. Branches
 
-:wrench: Il est recommandé d’utiliser Eclipse pour faire ce TP. Toutes les commandes équivalentes aux actions réalisées dans Eclipse sont données dans l’énoncé.
+:wrench: Il est recommandé d’utiliser Eclipse pour cet exercice. Toutes les commandes équivalentes aux actions réalisées dans Eclipse sont données dans l’énoncé.
 
 #### Avance rapide
 
@@ -388,7 +386,7 @@ git branch -d salarie
 
 Créer une branche `spaces` dans laquelle il faut remplacer les tabulations des classes Java par quatre espaces : `find src/main/java -type f -exec sed -i "s/\t/    /g" {} \;`. Valider cette modification.
 
-:information_source: On fait cette action pour simuler un de formatage de code différent entre deux développeurs. Ce cas peut se produire dans le cas où certains travaillent sous Linux et d’autres sous Windows.
+:information_source: On exécute cette action pour simuler un de formatage de code différent entre deux développeurs. Cela peut se produire quand certains travaillent sous Linux et d’autres sous Windows, ou bien quand les développeurs n’utilisent pas tous le même IDE.
 
 ```bash
 git checkout -b spaces
@@ -416,7 +414,7 @@ git add .
 git commit -m "Renommer le package 'model' en 'beans'"
 ```
 
-Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dûs à la modification de chaque retours à la ligne. Annuler la fusion.
+Fusionner la branche `eol` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque tabulation. Interrompre la fusion.
 
 ```bash
 git merge eol
@@ -458,7 +456,7 @@ Dans Gitlab, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"M
 
  - Mettre à jour sa copie locale à partir de la branche distante.
  - Constater la présence d’un conflit.
- - Le résoudre en gardant les modifications distante et locale (le fichier doit compter trois lignes).
+ - Le résoudre en conservant les modifications distante et locale (le fichier doit compter trois lignes).
  - Pousser vers la branche distante.
 
 ```bash
@@ -481,9 +479,9 @@ mkdir /d/tp5
 cd /d/tp5
 ```
 
-:information_source: On va simuler le fait que deux développeur travaillent au même moment dans la même branche distante `tp5`.
+:information_source: On va simuler le fait que deux développeurs travaillent au même moment dans la même branche distante `tp5`.
 
-Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`
+Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`.
 
 ```bash
 git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/:*idep*/formation-git.git devA
@@ -533,7 +531,7 @@ git log --oneline --graph
 	<img src="docs/images/tp5-merge.png" />
 </details>
 
-On annule cette fusion en retournant un cran arrière :
+On annule cette fusion en retournant un cran en arrière :
 
 ```bash
 git reset --hard HEAD~1
@@ -585,9 +583,9 @@ Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/ima
 
 Corriger ces erreurs en amendant le dernier *commit*.
 
-On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nul part, donc amender le dernier *commit* en supprimant ce fichier.
+On se rend compte ensuite que le fichier __cocktails.png__ n’est plus utilisé nulle part. Amender donc le dernier *commit* en supprimant ce fichier.
 
-Pousser ces dernières modification vers le dépôt distant.
+Pousser ces dernières modifications vers le dépôt distant.
 
 __Correction :__
 
@@ -638,7 +636,7 @@ Dans la branche `tp6`, effectuer les action suivantes :
  6. Effectuer les actions suivantes :
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
   - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
-  - modifier un message dans le fichier dans le fichier `message_fr.properties`
+  - modifier un message dans le fichier `message_fr.properties`
  7. Fusionner la branche `email-regex`
  8. Supprimer la ligne « secret token » dans `application.properties`
 
@@ -648,18 +646,18 @@ Finalement l’historique ressemble à celui-ci :
 
 Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent, c’est-à-dire « Script pour modifier le fichier 'application.properties'».
 
-Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu’il fasse les actions suivantes :
+Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu’il effectue les actions suivantes :
  - placer en premier le *commit* de l’expression régulière de validation de l’adresse mail ;
  - fusionner les *commits* de modifications d’email en un seul ;
  - ignorer le *commit* concernant l’extension d’email `co.uk` &rarr; `uk` ;
- - conserver tels quels les *commits* d’ajout des 20 lignes et se suppression du *secret token* ;
+ - conserver tels quels les *commits* d’ajout des 20 lignes et de suppression du *secret token* ;
  - éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
 
 Le programme doit ressembler à celui-ci :
 
 <img src="docs/images/ex-rebase-i-2.png" />
 
-Lancer le rebasage en cliquant sur la flêche verte.
+Lancer le rebasage en cliquant sur la flèche verte.
 
 Modifier éventuellement les messages de *commit* quand cela est proposé.
 
@@ -670,7 +668,7 @@ Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser
 
 Il faut repasser par la ligne de commande :
 
-Défaire le *commit* en utilisant la commande suivante : `git reset HEAD^`.
+« Défaire » le *commit* en utilisant la commande suivante : `git reset HEAD^`.
 
  1. utiliser ensuite la commande `git add -p` pour indexer la première partie du fichier `application.properties` puis valider ;
  2. ensuite indexer le reste du fichier `application.properties` et valider ;
@@ -682,9 +680,9 @@ Continuer le rebasage, qui se termine alors, aboutissant à un historique simila
 
 > Pour lancer le rebasage dans la console, il suffit de taper `git rebase -i`
 >
-> Pour tout faire dans la console, il faut au moins connaitre les commandes vi suivantes :
->  - couper une ligne : `dd`
->  - coller une ligne au dessus : `P`
+> Pour rebaser entièrement dans la console, il faut au moins connaître les commandes vi suivantes :
+>  - couper une ligne : `dd` (deux fois « d »)
+>  - coller une ligne au dessus : `P` (« p » majuscule)
 
 #### *Filter branch*
 
