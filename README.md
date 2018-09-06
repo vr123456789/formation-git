@@ -565,6 +565,8 @@ git pull
 
 ### 6. Réécrire l’historique
 
+:information_source: Penser à revenir dans le *workspace* Eclipse.
+
 :tired_face: On se place dans la peau d’un développeur un peu fatigué qui commet donc des erreurs d’inattention.
 
 
@@ -630,10 +632,11 @@ Dans la branche `tp6`, effectuer les action suivantes :
  3. Effectuer les actions suivantes :
   - créer une branch email-regex et basculer dessus
   - dans la classe `Client`, modifier l’expression régulière de l’email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
+  - valider
   - retourner dans la branche `tp6`
- 4. Remplacer l’extension d’email `co.uk` par `uk`
+ 4. Dans le fichier `clients.txt` remplacer l’extension d’email `co.uk` par `uk`
  5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
- 6. Effectuer les actions suivantes :
+ 6. Effectuer les diverses actions suivantes :
   - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
   - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
   - modifier un message dans le fichier `message_fr.properties`
