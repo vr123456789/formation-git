@@ -505,7 +505,7 @@ git push
 De même, dans le répertoire du développeur B, appliquer les quatre patches situés dans le répertoires `patches/devB/` :
 
 ```bash
-cd /d/tp5/devB
+cd ../devB
 git am --ignore-whitespace --signoff patches/devB/*.patch
 ```
 
