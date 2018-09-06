@@ -142,7 +142,7 @@ git add .
 git commit -m "Création des répertoires 'src/main/resources/' et 'src/test/resources/'"
 ```
 
-Créer un fichier <code>README.txt</code> contenant un court texte.</summary>
+Créer un fichier <code>README.txt</code> contenant un court texte.
 
 Modifier le programme `fr.insee.git.App.java` pour qu’il puisse prendre un paramètre :
  - si le paramètre est renseigné, le programme affiche `"Hello {param} !"`,
@@ -159,11 +159,13 @@ Indexer le fichier `README.txt`.
 
 <details>
 	<summary>Afficher les modifications qui seront validées dans le prochain <i>commit</i> :</summary>
+	<br />
 	<code>git diff --staged</code>
 </details>
 <br />
 <details>
 	<summary>Afficher les modifications de la copie de travail par rapport à l’index :</summary>
+	<br />
 	<code>git diff</code>
 </details>
 <br />
@@ -228,6 +230,7 @@ Dans votre copie locale, effectuer la modification suivante :
 
 <details>
 	<summary>Dans le dossier <code>students/</code>, créer un fichier <code>*idep*.txt</code> contenant votre <code>*Prénom Nom*</code>.</summary>
+	<br />
 	<code>echo '*Prénom Nom*' > students/*idep*.txt</code>
 </details>
 
@@ -283,21 +286,25 @@ git log
 
 <details>
 	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 ce dépôt contient-il ?</summary>
+	<br />
 	<code>518</code>
 </details>
 <br />
 <details>
 	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 concernent les services ?</summary>
+	<br />
 	<code>30</code>
 </details>
 <br />
 <details>
 	<summary>Dans quel <i>commits</i> a t-on mis en place un système de <i>logging</i> autre que <code>System.out</code> ?</summary>
+	<br />
 	<code>df1c990</code>
 </details>
 <br />
 <details>
 	<summary>À quel heure de quel jour a été validé le premier test unitaire du projet ?</summary>
+	<br />
 	<code>2016-09-01 16:53:26</code>
 </details>
 <br />
@@ -313,12 +320,14 @@ Afficher l’historique sous la forme suivante
 
 <details>
 	<summary>Indice : <code>git log --graph --date=short --pretty="format:???"</code></summary>
+	<br />
 	<code>git log --graph --date=short --pretty="format:%h %ad | %s%d [%an]"</code>
 </details>
 <br />
 
 <details>
 	<summary>Modifier la commande précédente pour que le <i>hash</i> soit couleur cyan</summary>
+	<br />
 	<code>git log --graph --date=short --pretty="format:%C(cyan)%h%Creset %ad | %s%dq [%an]"</code>
 </details>
 <br />
@@ -334,11 +343,13 @@ Tester ces affichages :
 
 <details>
 	<summary><code>git ll</code></summary>
+	<br />
 	<img src="docs/images/log-ll.png" />
 </details>
 <br />
 <details>
 	<summary><code>git lg</code></summary>
+	<br />
 	<img src="docs/images/log-lg.png" />
 </details>
 <br />
@@ -518,6 +529,7 @@ git log --oneline --graph
 
 <details>
 	<summary>Résultat avec fusion</summary>
+	<br />
 	<img src="docs/images/tp5-merge.png" />
 </details>
 
@@ -537,6 +549,7 @@ git log --oneline --graph
 
 <details>
 	<summary>Résultat avec rebasage</summary>
+	<br />
 	<img src="docs/images/tp5-rebase.png" />
 </details>
 
@@ -687,12 +700,14 @@ On va faire disparaitre ces informations de l’historique.
 
 <details>
 	<summary>Déterminer depuis quand le fichier <code>password.txt</code> est présent dans l’historique.</summary>
+	<br />
 	<code>git log -- password.txt</code>
 </details>
 <br />
 
 <details>
 	<summary>Exécuter un <code>filter-branch</code> de type <code>index-filter</code> pour supprimer ce fichier de l’historique, depuis son apparition.</summary>
+	<br />
 	<pre><code>git filter-branch -f --index-filter '
     git rm --cached --quiet --force "password.txt"
 ' --prune-empty -- b4b712e^..HEAD</code></pre>
@@ -703,11 +718,13 @@ On va faire disparaitre ces informations de l’historique.
 
 <details>
 	<summary>Déterminer depuis quand la ligne <code>application.secret.token=...</code> est présente dans l’historique.</summary>
+	<br />
 	<code>git log -S"application.secret.token"</code>
 </details>
 <br />
 <details>
 	<summary>Exécuter un <code>filter-branch</code> de type <code>tree-filter</code> pour supprimer cette ligne de l’historique, depuis son apparition.</summary>
+	<br />
 	<pre><code>git filter-branch -f --tree-filter '
     sed -i -E "/application\.secret\.token/d" src/main/resources/application.properties
 ' --prune-empty -- 092a022^..HEAD</code></pre>
