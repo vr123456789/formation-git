@@ -751,6 +751,104 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 ### 7. Boite à outils Git
 
+Créer deux branches locale de suivi pour les branches distantes tp7 et tp7-dev.
+
+> git branch tp7 --track origin/tp7
+> git branch tp7-dev --track origin/tp7-dev
+
+__On va récupérer dans tp7 une partie des commits contenus dans tp7-dev.__
+
+Identifier les commits de tp7-dev non-présents dans tp7.
+
+> git log --oneline tp7..tp7-dev
+
+Utiliser la fonction cherry-pick pour récupérer les commits de tp7-dev dans la branche tp7, à l'exception du dernier commit « Remplacement des tabulation par des espaces ».
+
+:warn: l'un des commits sera vide, utiliser git reset suivi de git cherry-pick --continue pour passer outre.
+
+> git cherry-pick e99f045^..9a22faa
+> git reset
+> git cherry-pick --continue
+
+__On va re faire la même opération mais en utilisant le système des patchs.__
+
+Créer une branch tp7-prod à partir du commit « Suppression d'une méthode inutile »
+
+> git log --oneline 
+git branch tp7-prod 2ebbd76
+
+Créer les patchs correspondant aux commits précédents.
+
+> git format-patch e99f045^..9a22faa
+
+Remiser les fichiers de patch.
+
+> git stash -u
+
+Passer sur la branche tp7-prod, récupérer les patchs dans la remise et les appliquer tous.
+
+> git checkout tp7-prod
+> git stash pop
+> git am --signoff --ignore-whitespace *.patch
+> git am --skip
+
+Nettoyer la copie locale :
+
+> git clean -f
+
+Vérifier que a des des retours à la ligne près, les branches tp7 et tp7-prod sont identiques, c'est-à-dire que le cherry-pick et les patchs ont finalement produit le même résultat.
+
+> git diff -w tp7-prod tp7
+
+Supprimer la branche tp7-prod
+
+> git branch -D tp7-prod
+
+Dans la branche tp7, lancer un rebasage interactif sur les 5 derniers commits
+
+> git rebase -i HEAD~5
+
+Fusionner tous les commits en un seul : « Affichage de la date en français sur la page d'accueil » 
+
+On a des regrets, revenir dans l'état avant le rebasage :
+
+> git reflog
+> git reset --hard HEAD@{8} (ou un autre numéro, à vérifier)
+
+Relancer le rebasage interacif et accepter simplement le programme proposé par Git à partir des !fixup.
+
+> git rebase -i
+
+Créer un nouveau dépôt nu dans /d/tp7.git
+
+> mkdir /d/tp7.git
+> cd /d/tp7.git
+> git init --bare
+
+Dans ce dépôt, créer un hook post-receive qui envoie le contenu de la branche tp7 vers la branche tp7 du fork dans Gitlab
+
+> echo '#!/bin/bash
+> echo "Coucou : post-receive hook"
+> git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git tp7:tp7
+> ' > hooks/post-receive
+
+Ajouter ce nouveau dépôt distant à notre dépôt local :
+
+> git remote add d /d/tp7.git
+
+Pousser tout vers le dépôt distant d.
+
+Constater qu'il contient en effet toutes les banches en le clonant 
+> cd /d
+> git clone /d/tp7.git
+> cd tp7
+> git log --oneline --graph --all
+
+Constater que la branch d a bien été mise à jour dans Gitlab
+
+> git push
+Everything up-to-date
+
 ## Liens utiles
 
  - [Git avec Eclipse](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien/#/)
