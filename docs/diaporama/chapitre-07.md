@@ -367,7 +367,7 @@ README | 1 +
 
 
 <!-- .slide: class="slide" data-background-color="#b4b2A9" -->
-### Exemple : l’organisation d'api-sirene
+### Exemple : l’organisation d’api-sirene
 <div class="center">
 	<img src="images/api-sirene.gif" width="900px" />
 </div>
