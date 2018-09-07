@@ -406,7 +406,7 @@ Crochets côté client ou côté serveur
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Liste des crochets
 
-[Liste détaillée des *hooks* &rarr;](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
+<!-- .element: class="after link" -->[Liste détaillée des *hooks*](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
 
 Client :
  - `applypatch-msg` / `pre-applypatch-msg` / `post-applypatch-msg`

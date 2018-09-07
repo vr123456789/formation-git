@@ -112,10 +112,10 @@ git help <verb>
 ```
 
 Autant aller voir sur internet en français :
- - [Git Book (fr)](https://git-scm.com/book/fr/v2)
+ - <!-- .element: class="after link" -->[Git Book (fr)](https://git-scm.com/book/fr/v2)
 
 Ou en anglais :
- - [Git Book (en)](https://git-scm.com/book/en/v2)
+ - <!-- .element: class="after link" -->[Git Book (en)](https://git-scm.com/book/en/v2)
 
 <!-- .element: class="icon info" -->Pour un aide-mémoire rapide :
 ```bash
