@@ -61,10 +61,12 @@ git config --global merge.conflictstyle diff3
 
 # Paraméter le proxy de l’Insee
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
-git config --global https.proxy http://proxy-rie.http.insee.fr:8080
 
 # Alias pour commit : git co
-git config --global alias.co=commit
+git config --global alias.co commit
+
+# Alias composé de plusieurs commandes : utiliser « ! »
+git config alias.pp '!git push origin ; git push github'
 ```
 
 
