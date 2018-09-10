@@ -919,7 +919,7 @@ Pousser tout vers le dépôt distant `d`.
 <br />
 
 <details>
-	<summary>Ajouter une étiquette `v4.0` annotée « Fin de la formation Git » qui pointe là où est la branche <code>master</code>.</summary>
+	<summary>Ajouter une étiquette <code>v4.0</code> annotée « Fin de la formation Git » qui pointe là où est la branche <code>master</code>.</summary>
 	<br />
 	<code>git tag -a v4.0 -m "Fin de la formation Git !"</code>
 </details>
