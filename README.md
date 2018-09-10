@@ -751,13 +751,13 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 ### 7. Boite à outils Git
 
-Créer deux branches locale de suivi pour les branches distantes tp7 et tp7-dev.
-
 <details>
-	<summary>Quelle est la valeur de la propriété <code>help.format</code> ?</summary>
+	<summary>Créer deux branches locale de suivi pour les branches distantes <code>tp7</code> et <code>tp7-dev</code>.</summary>
 	<br />
 	<code>git branch tp7 --track origin/tp7</code>
+	<br />
 	<code>git branch tp7-dev --track origin/tp7-dev</code>
+	<br />
 </details>
 
 __On va récupérer dans tp7 une partie des commits contenus dans tp7-dev.__
