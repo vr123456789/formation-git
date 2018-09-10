@@ -781,11 +781,11 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 __On va re faire la même opération mais en utilisant le système des *patchs*.__
 
 <details>
-	<summary>Créer une branch <code>tp7-prod</code> à partir du commit « Suppression d’une méthode inutile »</summary>
+	<summary>Créer une branch <code>tp7-patchs</code> à partir du commit « Suppression d’une méthode inutile »</summary>
 	<br />
 	<code>git log --oneline </code>
 	<br />
-	<code>git branch tp7-prod 2ebbd76</code>
+	<code>git branch tp7-patchs 2ebbd76</code>
 </details>
 <br />
 
@@ -804,12 +804,12 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 <br />
 
 <details>
-	<summary>Passer sur la branche <code>tp7-prod</code>, récupérer les <i>patchs</i> dans la remise et les appliquer tous.</summary>
+	<summary>Passer sur la branche <code>tp7-patchs</code>, récupérer les <i>patchs</i> dans la remise et les appliquer tous.</summary>
 	<br />
-	<code>git checkout tp7-prod</code>
+	<code>git checkout tp7-patchs</code>
 	<br />
 	<code>git stash pop</code>
-	<code>git checkout tp7-prod</code>
+	<code>git checkout tp7-patchs</code>
 <br />
 	<br />
 	<code>git am --signoff --ignore-whitespace *.patch</code>
@@ -824,16 +824,16 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 <br />
 
 <details>
-	<summary>Vérifier que a des des retours à la ligne près, les branches <code>tp7</code> et <code>tp7-prod</code> sont identiques, c’est-à-dire que le <code>cherry-pick</code> et les patchs ont finalement produit le même résultat.</summary>
+	<summary>Vérifier que a des des retours à la ligne près, les branches <code>tp7</code> et <code>tp7-patchs</code> sont identiques, c’est-à-dire que le <code>cherry-pick</code> et les patchs ont finalement produit le même résultat.</summary>
 	<br />
-	<code>git diff -w tp7-prod tp7</code>
+	<code>git diff -w tp7-patchs tp7</code>
 </details>
 <br />
 
 <details>
-	<summary>Supprimer la branche <code>tp7-prod</code></summary>
+	<summary>Supprimer la branche <code>tp7-patchs</code></summary>
 	<br />
-	<code>git branch -D tp7-prod</code>
+	<code>git branch -D tp7-patchs</code>
 </details>
 <br />
 
