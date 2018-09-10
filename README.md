@@ -753,8 +753,12 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 Créer deux branches locale de suivi pour les branches distantes tp7 et tp7-dev.
 
-> git branch tp7 --track origin/tp7
-> git branch tp7-dev --track origin/tp7-dev
+<details>
+	<summary>Quelle est la valeur de la propriété <code>help.format</code> ?</summary>
+	<br />
+	<code>git branch tp7 --track origin/tp7</code>
+	<code>git branch tp7-dev --track origin/tp7-dev</code>
+</details>
 
 __On va récupérer dans tp7 une partie des commits contenus dans tp7-dev.__
 
@@ -764,7 +768,7 @@ Identifier les commits de tp7-dev non-présents dans tp7.
 
 Utiliser la fonction cherry-pick pour récupérer les commits de tp7-dev dans la branche tp7, à l'exception du dernier commit « Remplacement des tabulation par des espaces ».
 
-:warn: l'un des commits sera vide, utiliser git reset suivi de git cherry-pick --continue pour passer outre.
+:warning: l'un des commits sera vide, utiliser git reset suivi de git cherry-pick --continue pour passer outre.
 
 > git cherry-pick e99f045^..9a22faa
 > git reset
