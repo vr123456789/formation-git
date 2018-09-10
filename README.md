@@ -765,6 +765,8 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 <details>
 	<summary>Identifier les <i>commits</i> de <code>tp7-dev</code> non présents dans <code>tp7</code>.</summary>
 	<br />
+	<code>git checkout tp7</code>
+	<br />
 	<code>git log --oneline tp7..tp7-dev</code>
 </details>
 <br />
