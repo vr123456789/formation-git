@@ -757,8 +757,8 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 	<code>git branch tp7 --track origin/tp7</code>
 	<br />
 	<code>git branch tp7-dev --track origin/tp7-dev</code>
-	<br />
 </details>
+<br />
 
 __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <code>tp7-dev</code>.__
 
@@ -766,47 +766,45 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 	<summary>Identifier les <i>commits</i> de <code>tp7-dev</code> non présents dans <code>tp7</code>.</summary>
 	<br />
 	<code>git log --oneline tp7..tp7-dev</code>
-	<br />
 </details>
+<br />
 
 <details>
-	<summary>
-		<p>Utiliser la fonction <code>cherry-pick</code> pour récupérer les <i>commits</i> de <code>tp7-dev</code> dans la branche <code>tp7</code>, à l'exception du dernier <i>commit</i> « Remplacement des tabulations par des espaces ».</p>
-		<p>:warning: l'un des commits sera vide, utiliser <code>git reset</code> suivi de <code>git cherry-pick --continue</code> pour passer outre.</p>
-	</summary>
+	<summary>Utiliser la fonction <code>cherry-pick</code> pour récupérer les <i>commits</i> de <code>tp7-dev</code> dans la branche <code>tp7</code>, à l’exception du dernier <i>commit</i> « Remplacement des tabulations par des espaces ».</summary>
 	<br />
 	<code>git cherry-pick e99f045^..9a22faa</code>
 	<br />
 	<code>git reset</code>
 	<br />
 	<code>git cherry-pick --continue</code>
-	<br />
 </details>
+:warning: l’un des commits sera vide, utiliser <code>git reset</code> suivi de <code>git cherry-pick --continue</code> pour passer outre.
+<br />
 
 __On va re faire la même opération mais en utilisant le système des *patchs*.__
 
 <details>
-	<summary>Créer une branch <code>tp7-prod</code> à partir du commit « Suppression d'une méthode inutile »</summary>
+	<summary>Créer une branch <code>tp7-prod</code> à partir du commit « Suppression d’une méthode inutile »</summary>
 	<br />
 	<code>git log --oneline </code>
 	<br />
 	<code>git branch tp7-prod 2ebbd76</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Créer les <i>patchs</i> correspondant aux <i>commits</i> précédents.</summary>
 	<br />
 	<code>git format-patch e99f045^..9a22faa</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Remiser les fichiers <i>patchs</i>.</summary>
 	<br />
 	<code>git stash -u</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Passer sur la branche <code>tp7-prod</code>, récupérer les <i>patchs</i> dans la remise et les appliquer tous.</summary>
@@ -814,60 +812,60 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 	<code>git checkout tp7-prod</code>
 	<br />
 	<code>git stash pop</code>
-	<br />
 	<code>git checkout tp7-prod</code>
+<br />
 	<br />
 	<code>git am --signoff --ignore-whitespace *.patch</code>
 	<br />
 	<code>git am --skip</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Nettoyer la copie locale.</summary>
 	<br />
 	<code>git clean -f</code>
-	<br />
 </details>
+<br />
 
 <details>
-	<summary>Vérifier que a des des retours à la ligne près, les branches <code>tp7</code> et <code>tp7-prod</code> sont identiques, c'est-à-dire que le <code>cherry-pick</code> et les patchs ont finalement produit le même résultat.</summary>
+	<summary>Vérifier que a des des retours à la ligne près, les branches <code>tp7</code> et <code>tp7-prod</code> sont identiques, c’est-à-dire que le <code>cherry-pick</code> et les patchs ont finalement produit le même résultat.</summary>
 	<br />
 	<code>git diff -w tp7-prod tp7</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Supprimer la branche <code>tp7-prod</code></summary>
 	<br />
 	<code>git branch -D tp7-prod</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 5 derniers <i>commits</i></summary>
 	<br />
 	<code>git rebase -i HEAD~5</code>
-	<br />
 </details>
+<br />
 
-Fusionner tous les *commits* en un seul : « Affichage de la date en français sur la page d'accueil » 
+Fusionner tous les *commits* en un seul : « Affichage de la date en français sur la page d’accueil »
 
 <details>
-	<summary>On a des regrets, revenir dans l'état avant le rebasage :</summary>
+	<summary>On a des regrets, revenir dans l’état avant le rebasage :</summary>
 	<br />
 	<code>git reflog</code>
 	<br />
 	<code>git reset --hard HEAD@{8}</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Relancer le rebasage interacif et accepter simplement le programme proposé par Git à partir des <code>!fixup</code>.</summary>
 	<br />
 	<code>git rebase -i</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Créer un nouveau dépôt nu dans <code>/d/tp7.git</code>.</summary>
@@ -877,30 +875,31 @@ Fusionner tous les *commits* en un seul : « Affichage de la date en français s
 	<code>cd /d/tp7.git</code>
 	<br />
 	<code>git init --bare</code>
-	<br />
 </details>
+<br />
 
-Dans ce dépôt, créer un <i>hook</i> « post-receive » qui envoie le contenu de la branche <code>tp7</code> vers la branche <code>tp7</code> du <i>fork</i> dans Gitlab :
+Dans ce dépôt, créer un <i>hook</i> « post-receive » qui envoie toutes les étiquettes et le contenu de la branche <code>tp7</code> vers la branche <code>tp7</code> du <i>fork</i> dans Gitlab :
 
-> hooks/post-receive
+`hooks/post-receive`
 
 ```bash
 #!/bin/bash
 echo 'Formation Git : post-receive hook'
 git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git tp7:tp7
+git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git --tags
 ```
 
 <details>
 	<summary>Ajouter ce nouveau dépôt distant à notre dépôt local :</summary>
 	<br />
 	<code>git remote add d /d/tp7.git</code>
-	<br />
 </details>
+<br />
 
 Pousser tout vers le dépôt distant `d`.
 
 <details>
-	<summary>En le clonant, constater qu'il contient en effet toutes les banches.</summary>
+	<summary>En le clonant, constater qu’il contient en effet toutes les banches.</summary>
 	<br />
 	<code>cd /d</code>
 	<br />
@@ -909,15 +908,31 @@ Pousser tout vers le dépôt distant `d`.
 	<code>cd tp7</code>
 	<br />
 	<code>git log --oneline --graph --all</code>
-	<br />
 </details>
+<br />
 
 <details>
 	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab</summary>
 	<br />
 	<code>git push</code>
-	<br />
 </details>
+<br />
+
+<details>
+	<summary>Ajouter une étiquette `v4.0` annotée « Fin de la formation Git » qui pointe là où est la branche <code>master</code>.</summary>
+	<br />
+	<code>git tag -a v4.0 -m "Fin de la formation Git !"</code>
+</details>
+<br />
+
+<details>
+	<summary>Envoyer toutes les étiquettes vers le dépôt <code>d</code>.</summary>
+	<br />
+	<code>git push d --tags</code>
+</details>
+<br />
+
+Dans Gitlab, constater la présence de l’étiquette `v4.0`.
 
 ## Liens utiles
 
