@@ -775,12 +775,7 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 	<summary>Utiliser la fonction <code>cherry-pick</code> pour récupérer les <i>commits</i> de <code>tp7-dev</code> dans la branche <code>tp7</code>, à l’exception du dernier <i>commit</i> « Remplacement des tabulations par des espaces ».</summary>
 	<br />
 	<code>git cherry-pick e99f045^..9a22faa</code>
-	<br />
-	<code>git reset</code>
-	<br />
-	<code>git cherry-pick --continue</code>
 </details>
-:warning: l’un des commits sera vide, utiliser <code>git reset</code> suivi de <code>git cherry-pick --continue</code> pour passer outre.
 <br />
 
 __On va re faire la même opération mais en utilisant le système des *patchs*.__
@@ -818,8 +813,6 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 <br />
 	<br />
 	<code>git am --signoff --ignore-whitespace *.patch</code>
-	<br />
-	<code>git am --skip</code>
 </details>
 <br />
 
