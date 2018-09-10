@@ -778,10 +778,10 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 </details>
 <br />
 
-__On va re faire la même opération mais en utilisant le système des *patchs*.__
+__On va tenter la même opération mais en utilisant le système des *patchs*.__
 
 <details>
-	<summary>Créer une branch <code>tp7-patchs</code> à partir du commit « Suppression d’une méthode inutile »</summary>
+	<summary>Créer une branch <code>tp7-patchs</code> à partir du <i>commit</i> «  Revert "Suppression d'une méthode inutile" »</summary>
 	<br />
 	<code>git log --oneline </code>
 	<br />
@@ -809,8 +809,6 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 	<code>git checkout tp7-patchs</code>
 	<br />
 	<code>git stash pop</code>
-	<code>git checkout tp7-patchs</code>
-<br />
 	<br />
 	<code>git am --signoff --ignore-whitespace *.patch</code>
 </details>
@@ -838,9 +836,9 @@ __On va re faire la même opération mais en utilisant le système des *patchs*.
 <br />
 
 <details>
-	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 5 derniers <i>commits</i></summary>
+	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 6 derniers <i>commits</i></summary>
 	<br />
-	<code>git rebase -i HEAD~5</code>
+	<code>git rebase -i HEAD~6</code>
 </details>
 <br />
 
@@ -851,7 +849,7 @@ Fusionner tous les *commits* en un seul : « Affichage de la date en français s
 	<br />
 	<code>git reflog</code>
 	<br />
-	<code>git reset --hard HEAD@{8}</code>
+	<code>git reset --hard HEAD@{9}</code>
 </details>
 <br />
 
