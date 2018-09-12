@@ -78,7 +78,7 @@ vim ~/.bashrc
 
 # Ajouter les lignes suivantes et quitter vim
 export JAVA_HOME='/c/Program Files (x86)/INSEE/atelier-dev-2/applications/jdk18_64/jdk-1.8.0_40'
-
+export GIT_SSH="/usr/bin/ssh.exe"
 alias mvn='"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat"'
 
 # Recharger le fichier .bashrc
