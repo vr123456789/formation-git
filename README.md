@@ -78,7 +78,7 @@ vim ~/.bashrc
 
 # Ajouter les lignes suivantes et quitter vim
 export JAVA_HOME='/c/Program Files (x86)/INSEE/atelier-dev-2/applications/jdk18_64/jdk-1.8.0_40'
-
+export GIT_SSH="/usr/bin/ssh.exe"
 alias mvn='"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat"'
 
 # Recharger le fichier .bashrc
@@ -247,7 +247,7 @@ Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt 
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
-git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/:wehdrc/formation-git.git
+git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
 ```
 
 Mettre votre copie locale à jour à partir de ce nouveau dépôt :
