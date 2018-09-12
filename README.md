@@ -247,7 +247,7 @@ Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt 
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
-git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/:wehdrc/formation-git.git
+git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
 ```
 
 Mettre votre copie locale à jour à partir de ce nouveau dépôt :
