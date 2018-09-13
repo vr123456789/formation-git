@@ -20,6 +20,14 @@
 
 ## Travaux pratiques
 
+### 0. Installation
+
+Dans Windows, créer une nouvelle variable d'environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
+
+Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`. 
+
+Lancer *git-bash*.
+
 ### 1. Configuration et fondamentaux
 
 #### Configuration
@@ -75,17 +83,6 @@ git config --global merge.conflictstyle diff3
 </details>
 
 #### Opérations de base
-
-Dans Windows, créer une nouvelle variable d'environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
-
-Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`. 
-
-Ajouter un alias vers Maven :
-
-```bash
-# Recharger la configuration
-source ~/.bash_profile
-```
 
 Créer un nouveau projet Maven :
 ```bash
