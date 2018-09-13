@@ -40,9 +40,13 @@ Choisir son éditeur de texte favori
 ```bash
 # notepad++
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
 
 # vim
 git config --global core.editor vim
+
+# nano
+git config --global core.editor nano
 ```
 
 Afficher l’ancêtre commun lors d’un conflit
