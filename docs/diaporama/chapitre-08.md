@@ -19,7 +19,7 @@ On peut toujours annuler l’opération
  - valider : `git commit`
  - ou remiser : `git stash`
 
-<!-- .element: class="icon warn" -->Une fusion survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches
+<!-- .element: class="icon warn" -->Un conflit survient quand la __même ligne__ du __même fichier__ a été modifée différemment dans deux branches
 
 
 %%%
