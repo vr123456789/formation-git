@@ -331,11 +331,13 @@ Afficher l’historique sous la forme suivante :
 </details>
 <br />
 
-Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un historique coloré :
+Créer les deux alias `git ll` et `git lg` qui permettent d’afficher un historique coloré, ainsi que deux alias particulièrement utiles :
 
 ```bash
 git config --global alias.ll 'log --graph --abbrev-commit --pretty=format:"%C(bold magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset"'
 git config --global alias.lg 'log --graph --date=format:"%d %b %Y" --pretty="format:%C(bold #f442b6)%h%Creset %C(#fff291)%ad%Creset | %s %C(#66bc5e)§%Creset %C(#848484)(%ar)%Creset %C(#5493ce)%an%Creset%C(#f93131)%d%Creset"'
+git config --global alias.l 'git log --oneline -10'
+git config --global alias.lol 'git log --oneline --graph --all'
 ```
 
 Tester ces affichages :
