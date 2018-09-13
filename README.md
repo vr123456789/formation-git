@@ -38,8 +38,10 @@ git config --global https.proxy http://proxy-rie.http.insee.fr:8080
 
 Choisir son éditeur de texte favori
 ```bash
-# notepad++
+# notepad++ 64b
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+# notepad++ 32b
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
 
 # vim
