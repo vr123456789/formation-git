@@ -76,19 +76,15 @@ git config --global merge.conflictstyle diff3
 
 #### Opérations de base
 
+Dans Windows, créer une nouvelle variable d'environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
+
+Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`. 
+
 Ajouter un alias vers Maven :
 
 ```bash
-# Éditer le fichier .bashrc
-vim ~/.bashrc
-
-# Ajouter les lignes suivantes et quitter vim
-export JAVA_HOME='/c/Program Files (x86)/INSEE/atelier-dev-2/applications/jdk18_64/jdk-1.8.0_40'
-export GIT_SSH="/usr/bin/ssh.exe"
-alias mvn='"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat"'
-
-# Recharger le fichier .bashrc
-source ~/.bashrc
+# Recharger la configuration
+source ~/.bash_profile
 ```
 
 Créer un nouveau projet Maven :
