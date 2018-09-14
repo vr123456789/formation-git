@@ -894,7 +894,7 @@ git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git
 </details>
 <br />
 
-Pousser tout vers le dépôt distant `d`.
+Pousser tout vers le dépôt distant `d` : `git push --all`.
 
 <details>
 	<summary>En le clonant, constater qu’il contient en effet toutes les banches.</summary>
@@ -909,10 +909,12 @@ Pousser tout vers le dépôt distant `d`.
 </details>
 <br />
 
+Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
+ 
 <details>
 	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab</summary>
 	<br />
-	<code>git push</code>
+	<code>git push # Already up-to-date</code>
 </details>
 <br />
 
