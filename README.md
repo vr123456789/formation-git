@@ -646,6 +646,8 @@ Dans la branche `tp6`, effectuer les action suivantes :
  7. Fusionner la branche `email-regex`
  8. Supprimer la ligne « secret token » dans `application.properties`
 
+:bulb: Toutes ces étapes peuvent être réalisées automatiquement en exécutant le script `tp6.sh`.
+
 Finalement l’historique ressemble à celui-ci :
 
 <img src="docs/images/ex-rebase-i-1.png" />
