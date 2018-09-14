@@ -2,7 +2,7 @@
 
 echo "Réinitialisation"
 git checkout tp6
-git reset --hard f36fad9
+git reset --hard debut-tp6
 
 echo "2 commits dans 'tp6'"
 git am --signoff patches/0001-*.patch
