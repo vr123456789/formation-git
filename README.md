@@ -914,7 +914,7 @@ Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
 <details>
 	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab</summary>
 	<br />
-	<code>git push # Already up-to-date</code>
+	<code>git push origin tp7 # Already up-to-date</code>
 </details>
 <br />
 
