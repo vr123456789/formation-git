@@ -1,0 +1,22 @@
+From d7eca6521e9cd85a13a12018d3e09e9f997598b2 Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 14 Sep 2018 11:02:13 +0200
+Subject: [PATCH 4/7] Correction 'co.uk' -> 'uk'
+
+---
+ clients.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clients.txt b/clients.txt
+index a9c830e..ebbdc3e 100644
+--- a/clients.txt
++++ b/clients.txt
+@@ -1,4 +1,4 @@
+-2;Wanda Gray;wanda.gray@ebay.co.uk;26/07/1988
++2;Wanda Gray;wanda.gray@ebay.uk;26/07/1988
+ 2;Lisa Mcdonald;lisa.mcdonald@de.vu;04/06/1952
+ 2;Barbara Kim;barbarra.kim@deviantart.com;31/07/1958
+ 1;Kevin Sims;kevin.sims@usatoday.com;03/06/1986
+-- 
+2.13.0.windows.1
+
