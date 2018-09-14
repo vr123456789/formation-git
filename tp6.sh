@@ -20,7 +20,7 @@ git am --signoff patches/0005-*.patch
 git am --signoff patches/0006-*.patch
 
 echo "Fusion de 'regex-email' dans 'tp6'"
-git merge tp6
+git merge -m "Fusion de 'regex-email' dans 'tp6'" regex-email
 
 echo "1 commit dans 'tp6'"
 git am --signoff patches/0007-*.patch
