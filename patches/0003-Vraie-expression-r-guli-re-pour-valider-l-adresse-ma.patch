@@ -1,0 +1,29 @@
+From 3727007d94188bc6d782fce4d7e24e2c0142b3f7 Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 14 Sep 2018 11:00:46 +0200
+Subject: [PATCH 3/7] =?UTF-8?q?Vraie=20expression=20r=C3=A9guli=C3=A8re=20?=
+ =?UTF-8?q?pour=20valider=20l'adresse=20mail?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ src/main/java/fr/insee/bar/model/Client.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/java/fr/insee/bar/model/Client.java b/src/main/java/fr/insee/bar/model/Client.java
+index 61a0ff4..bef9275 100644
+--- a/src/main/java/fr/insee/bar/model/Client.java
++++ b/src/main/java/fr/insee/bar/model/Client.java
+@@ -51,7 +51,7 @@ public class Client {
+ 	@Column(name = "nom")
+ 	private String nom;
+ 
+-	@Pattern(regexp = "[-_a-z0-9.]+@[-_a-z0-9]+\\.[a-z]{2,4}")
++	@Pattern(regexp = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])")
+ 	@Column(name = "email")
+ 	private String email;
+ 
+-- 
+2.13.0.windows.1
+

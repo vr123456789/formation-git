@@ -1,0 +1,23 @@
+From 095307413a8a6e55448c486da5d594b711b9d761 Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 14 Sep 2018 10:57:50 +0200
+Subject: [PATCH 1/7] Correction de l'email de Richard Cox
+
+---
+ clients.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clients.txt b/clients.txt
+index 76a02c8..f5e2dc6 100644
+--- a/clients.txt
++++ b/clients.txt
+@@ -6,5 +6,5 @@
+ 2;Annie Gutierrez;agutierrez5@msu.edu;02/02/1954
+ 1;William Day;wday6@squarespace.com;15/05/1960
+ 2;Cheryl Woods;cwoods7@storify.com;08/04/1981
+-1;Richard Cox;rcox8@dailymotion.com;25/04/1996
++1;Richard Cox;richard.cox@dailymotion.com;25/04/1996
+ 1;Bobby Morris;bmorris9@intel.com;30/03/1990
+-- 
+2.13.0.windows.1
+

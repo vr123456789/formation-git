@@ -1,0 +1,49 @@
+From 9245656127547a011b3f6a9e19c021f7ca3d5a7c Mon Sep 17 00:00:00 2001
+From: Romain Warnan <romain.warnan@insee.fr>
+Date: Fri, 14 Sep 2018 11:04:52 +0200
+Subject: [PATCH 6/7] =?UTF-8?q?Modification=20de=20propri=C3=A9t=C3=A9s=20?=
+ =?UTF-8?q?diverses?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ src/main/resources/application.properties | 4 ++--
+ src/main/resources/message_fr.properties  | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+index d4924c1..6ddbb28 100644
+--- a/src/main/resources/application.properties
++++ b/src/main/resources/application.properties
+@@ -1,4 +1,4 @@
+-application.name=Spring MVC
++application.name=Formation Git
+ application.secret.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRldXIiOiJSb21haW4gV2FybmFuIiwiZGVzY3JpcHRpb24iOiJCaWVuIGpvdcOpIHBldGl0IG1hbGluICEiLCJzbWlsZXkiOiLwn5iGIiwiZXhjdXNlcyI6IkTDqXNvbMOpLCBvbiBz4oCZYW11c2UgY29tbWUgb24gcGV1dOKApiJ9.1qbKErZhbxR8u-9QJV3OjAXDyQcn7VVR1LQKiENH4mo
+ 
+ spring.profiles.active=responsable
+@@ -15,7 +15,7 @@ spring.datasource.driver-class-name=org.hsqldb.jdbc.JDBCDriver
+ 
+ server.servlet.session.tracking-modes=cookie,url
+ 
+-logging.level.org.springframework=WARN
++logging.level.org.springframework=INFO
+ logging.level.org.apache=WARN
+ logging.level.org.hibernate=WARN
+ logging.level.com.zaxxer=WARN
+diff --git a/src/main/resources/message_fr.properties b/src/main/resources/message_fr.properties
+index f45e050..f910d77 100644
+--- a/src/main/resources/message_fr.properties
++++ b/src/main/resources/message_fr.properties
+@@ -1,6 +1,6 @@
+-Min.client.id=L’identifiant doit être positif
++Min.client.id=L’identifiant doit être un nombre positif
+ Size.client.nom=Le nom doit contenir entre {1} et {2} caractères.
+-Pattern.client.email=Saisir un email valide
++Pattern.client.email=Saisir une adresse email valide
+ NotNull.client.titre=Choisir un titre
+ typeMismatch.client.dateNaissance=Saisir une date au format jj/mm/aaaa
+ NotNull.client.dateNaissance=Saisir une date de naissance
+-- 
+2.13.0.windows.1
+
