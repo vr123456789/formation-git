@@ -22,9 +22,9 @@
 
 ### 0. Installation
 
-Dans Windows, créer une nouvelle variable d'environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
+Dans Windows, créer une nouvelle variable d’environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
 
-Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`. 
+Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`.
 
 Lancer *git-bash*.
 
@@ -757,7 +757,7 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 ### 7. Boite à outils Git
 
 <details>
-	<summary>Créer deux branches locale de suivi pour les branches distantes <code>tp7</code> et <code>tp7-dev</code>.</summary>
+	<summary>Créer deux branches locales de suivi pour les branches distantes <code>tp7</code> et <code>tp7-dev</code>.</summary>
 	<br />
 	<code>git branch tp7 --track origin/tp7</code>
 	<br />
@@ -765,7 +765,7 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 </details>
 <br />
 
-__On va récupérer dans <code>tp7</code> une partie des commits contenus dans <code>tp7-dev</code>.__
+__On va récupérer dans `tp7` une partie des *commits* contenus dans `tp7-dev`.__
 
 <details>
 	<summary>Identifier les <i>commits</i> de <code>tp7-dev</code> non présents dans <code>tp7</code>.</summary>
@@ -786,7 +786,7 @@ __On va récupérer dans <code>tp7</code> une partie des commits contenus dans <
 __On va tenter la même opération mais en utilisant le système des *patchs*.__
 
 <details>
-	<summary>Créer une branch <code>tp7-patchs</code> à partir du <i>commit</i> «  Revert "Suppression d'une méthode inutile" »</summary>
+	<summary>Créer une branch <code>tp7-patchs</code> à partir du <i>commit</i> «  Revert "Suppression d’une méthode inutile" »</summary>
 	<br />
 	<code>git log --oneline </code>
 	<br />
@@ -827,21 +827,21 @@ __On va tenter la même opération mais en utilisant le système des *patchs*.__
 <br />
 
 <details>
-	<summary>Vérifier que a des des retours à la ligne près, les branches <code>tp7</code> et <code>tp7-patchs</code> sont identiques, c’est-à-dire que le <code>cherry-pick</code> et les patchs ont finalement produit le même résultat.</summary>
+	<summary>Vérifier qu’aux retours à la ligne près, les branches <code>tp7</code> et <code>tp7-patchs</code> sont identiques, c’est-à-dire que le <code>cherry-pick</code> et les <i>patchs</i> ont finalement produit le même résultat.</summary>
 	<br />
 	<code>git diff -w tp7-patchs tp7</code>
 </details>
 <br />
 
 <details>
-	<summary>Supprimer la branche <code>tp7-patchs</code></summary>
+	<summary>Supprimer la branche <code>tp7-patchs</code>.</summary>
 	<br />
 	<code>git branch -D tp7-patchs</code>
 </details>
 <br />
 
 <details>
-	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 6 derniers <i>commits</i></summary>
+	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 6 derniers <i>commits</i>.</summary>
 	<br />
 	<code>git rebase -i HEAD~6</code>
 </details>
@@ -850,7 +850,7 @@ __On va tenter la même opération mais en utilisant le système des *patchs*.__
 Fusionner tous les *commits* en un seul : « Affichage de la date en français sur la page d’accueil »
 
 <details>
-	<summary>On a des regrets, revenir dans l’état avant le rebasage :</summary>
+	<summary>On a des regrets, revenir dans l’état avant le rebasage.</summary>
 	<br />
 	<code>git reflog</code>
 	<br />
@@ -859,7 +859,7 @@ Fusionner tous les *commits* en un seul : « Affichage de la date en français s
 <br />
 
 <details>
-	<summary>Relancer le rebasage interacif et accepter simplement le programme proposé par Git à partir des <code>!fixup</code>.</summary>
+	<summary>Relancer le rebasage interactif et accepter simplement le programme proposé par Git à partir des <code>!fixup</code>.</summary>
 	<br />
 	<code>git rebase -i</code>
 </details>
@@ -888,7 +888,7 @@ git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git
 ```
 
 <details>
-	<summary>Ajouter ce nouveau dépôt distant à notre dépôt local :</summary>
+	<summary>Ajouter ce nouveau dépôt distant à notre dépôt local.</summary>
 	<br />
 	<code>git remote add d /d/tp7.git</code>
 </details>
@@ -910,9 +910,9 @@ Pousser tout vers le dépôt distant `d` : `git push --all`.
 <br />
 
 Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
- 
+
 <details>
-	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab</summary>
+	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab.</summary>
 	<br />
 	<code>git push origin tp7 # Already up-to-date</code>
 </details>
