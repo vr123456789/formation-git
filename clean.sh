@@ -6,5 +6,5 @@ sed -i -E "s/([a-zA-Z])'([a-zA-ZàâäéèêëïîôöùûüÿæœÀÂÄÇÉÈÊ
 echo 'Suppression des espaces en fin de ligne'
 sed -i 's/[[:space:]]*$//' README.md docs/diaporama/chapitre-*.md
 
-echo 'Conversion des fin de ligne'
+echo 'Conversion des retours à la ligne'
 unix2dos -q README.md docs/diaporama/chapitre-*.md
