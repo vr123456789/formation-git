@@ -757,15 +757,11 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 ### 7. Boite à outils Git
 
 
+#### Recherche dichotomique
 
-<details>
-	<summary>Créer une branche locale de suivi pour la branche distante <code>bisect</code>.</summary>
-	<br />
-	<code>git checkout bisect</code>
-</details>
-<br />
+Créer une branche locale de suivi pour la branche distante `bisect` : `git checkout bisect`
 
-Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu'on recherche un cocktail, les résultats retournées ne sont pas les bons.
+Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu’on recherche un cocktail, les résultats retournées ne sont pas les bons.
 
 On sait que lors de la dernière mise en production (`v3.1`), cela fonctionnait correctemment. On va donc lancer `git bisect` pour identifier le *commit* fautif.
 
@@ -793,6 +789,8 @@ git bisect reset
 Corriger le problème et lancer les tests puis l’application pour vérifier que la correction.
 
 Valider la correction.
+
+#### Picorage, application de *patches*, remisage et nettoyage
 
 __On va récupérer dans `tp7` une partie des *commits* contenus dans `tp7-dev`.__
 
@@ -869,6 +867,8 @@ __On va tenter la même opération mais en utilisant le système des *patchs*.__
 </details>
 <br />
 
+#### Rebasage interactif
+
 <details>
 	<summary>Dans la branche <code>tp7</code>, lancer un rebasage interactif sur les 6 derniers <i>commits</i>.</summary>
 	<br />
@@ -893,6 +893,8 @@ Fusionner tous les *commits* en un seul : « Affichage de la date en français s
 	<code>git rebase -i</code>
 </details>
 <br />
+
+#### Dépôt nu et crochets
 
 <details>
 	<summary>Créer un nouveau dépôt nu dans <code>/d/tp7.git</code>.</summary>
@@ -946,6 +948,8 @@ Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
 	<code>git push origin tp7 # Already up-to-date</code>
 </details>
 <br />
+
+#### Étiquetage
 
 <details>
 	<summary>Ajouter une étiquette <code>v4.0</code> annotée « Fin de la formation Git » qui pointe là où est la branche <code>master</code>.</summary>
