@@ -756,14 +756,43 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 ### 7. Boite à outils Git
 
+
+
 <details>
-	<summary>Créer deux branches locales de suivi pour les branches distantes <code>tp7</code> et <code>tp7-dev</code>.</summary>
+	<summary>Créer une branche locale de suivi pour la branche distante <code>bisect</code>.</summary>
 	<br />
-	<code>git branch tp7 --track origin/tp7</code>
-	<br />
-	<code>git branch tp7-dev --track origin/tp7-dev</code>
+	<code>git checkout bisect</code>
 </details>
 <br />
+
+Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu'on recherche un cocktail, les résultats retournées ne sont pas les bons.
+
+On sait que lors de la dernière mise en production (`v3.1`), cela fonctionnait correctemment. On va donc lancer `git bisect` pour identifier le *commit* fautif.
+
+```bash
+git bisect start HEAD v3.1
+```
+
+À chaque étape, lancer l’application et vérifier si la fonction marche ou pas :
+ - si elle marche, taper `git bisect good`
+ - sinon, taper `git bisect bad`
+
+Finalement le *commit* à l’origine de la régression est identifié, afficher son contenu avec la commande `git log -1 -p`.
+
+Analyser le problème, puis terminer la commande en tapant `git bisect reset`.
+
+En fait il existait un test unitaire qui couvrait ce cas, et qui échoue donc depuis l’introduction de la régression dans le code. Relancer la recherche dichotomique en automatique avec la commande :
+
+```bash
+git bisect start HEAD v3.1
+git bisect run "mvn test"
+git log -1 -p
+git bisect reset
+```
+
+Corriger le problème et lancer les tests puis l’application pour vérifier que la correction.
+
+Valider la correction.
 
 __On va récupérer dans `tp7` une partie des *commits* contenus dans `tp7-dev`.__
 
