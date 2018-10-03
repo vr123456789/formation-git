@@ -777,11 +777,22 @@ Finalement le *commit* à l’origine de la régression est identifié, afficher
 
 Analyser le problème, puis terminer la commande en tapant `git bisect reset`.
 
-En fait il existait un test unitaire qui couvrait ce cas, et qui échoue donc depuis l’introduction de la régression dans le code. Relancer la recherche dichotomique en automatique avec la commande :
+En fait il existait un test unitaire qui couvrait ce cas, et qui échoue donc depuis l’introduction de la régression dans le code.
+
+Créer un petit scipt qui lance les tests unitaires avec Maven :
+
+> `mvn_bisect.sh`
+
+```bash
+#!/usr/bin/bash
+"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat" test
+```
+
+Puis relancer la recherche dichotomique en automatique avec la commande :
 
 ```bash
 git bisect start HEAD v3.1
-git bisect run "mvn test"
+git bisect run ./mvn_bisect.sh
 git log -1 -p
 git bisect reset
 ```
