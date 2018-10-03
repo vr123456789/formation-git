@@ -759,7 +759,7 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 #### Recherche dichotomique
 
-Créer une branche locale de suivi pour la branche distante `bisect` : `git checkout bisect`
+Créer une branche locale de suivi pour la branche distante `bisect` : `git checkout --track origin/bisect`
 
 Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu’on recherche un cocktail, les résultats retournées ne sont pas les bons.
 
@@ -791,6 +791,16 @@ Corriger le problème et lancer les tests puis l’application pour vérifier qu
 Valider la correction.
 
 #### Picorage, application de *patches*, remisage et nettoyage
+
+<details>
+	<summary>Créer deux branches locales de suivi pour les branches distantes <code>tp7</code> et <code>tp7-dev</code>.</summary>
+	<br />
+	<code>git branch tp7 --track origin/tp7</code>
+	<br />
+	<code>git branch tp7-dev --track origin/tp7-dev</code>
+</details>
+<br />
+
 
 __On va récupérer dans `tp7` une partie des *commits* contenus dans `tp7-dev`.__
 
