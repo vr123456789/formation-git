@@ -4,7 +4,7 @@
 
 ## Plan
 
- 1. Présentation générale de Git
+ [1. Présentation générale de Git](#1.-présentation-générale-de-git)
  2. Fonctionnement de Git
  3. Configuration et personnalisation
  4. Opérations de base &rarr; *TP1*
