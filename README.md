@@ -4,19 +4,14 @@
 
 ## Plan
 
- 1. Présentation générale de Git
- 2. Fonctionnement de Git
- 3. Configuration et personnalisation
- 4. Opérations de base &rarr; *TP1*
- 5. Dépôts distants &rarr; *TP2*
- 6. Historique des validations &rarr; *TP3*
- 7. Branches
- 8. Fusion
- 9. Branches distantes &rarr; *TP4*
- 10. Rebasage &rarr; *TP5*
- 11. Réécriture de l’historique &rarr; *TP6*
- 12. Références à un *commit*
- 13. Boite à outils Git &rarr; *TP7*
+ 0. [Installation](#0-installation)
+ 1. [Configuration et fondamentaux  &rarr; *TP1*](#1-configuration-et-fondamentaux)
+ 2. [Dépôts distants  &rarr; *TP2*](#2-dépôts-distants)
+ 3. [Historique &rarr; *TP3*](#3-historique)
+ 4. [Branches  &rarr; *TP4*](#4-branches)
+ 5. [Rebasage  &rarr; *TP5*](#5-rebasage)
+ 6. [Réécrire l’historique  &rarr; *TP6*](#6-réécrire-lhistorique)
+ 7. [Boite à outils Git  &rarr; *TP7*](#7-boite-à-outils-git)
 
 ## Travaux pratiques
 
