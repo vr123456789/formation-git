@@ -4,14 +4,14 @@
 
 ## Plan
 
- 0. [Installation](#0.-installation)
- 1. [Configuration et fondamentaux](#1.-configuration-et-fondamentaux)
- 2. [2. Dépôts distants](#2.-dépôts-distants)
- 3. [3. Historique](#3--historique)
- 4. [4. Branches](#4.-branches)
- 5. [5. Rebasage](#5.-rebasage)
- 6. [6. Réécrire l’historique](#6.-réécrire-l’historique)
- 7. [7. Boite à outils Git](#7.-boite-à-outils-git)
+ 0. [Installation](#0-installation)
+ 1. [Configuration et fondamentaux  &rarr; *TP1*](#1-configuration-et-fondamentaux)
+ 2. [Dépôts distants  &rarr; *TP2*](#2-dépôts-distants)
+ 3. [Historique &rarr; *TP3*](#3-historique)
+ 4. [Branches  &rarr; *TP4*](#4-branches)
+ 5. [Rebasage  &rarr; *TP5*](#5-rebasage)
+ 6. [Réécrire l’historique  &rarr; *TP6*](#6-réécrire-lhistorique)
+ 7. [Boite à outils Git  &rarr; *TP7*](#7-boite-à-outils-git)
 
 ## Travaux pratiques
 
