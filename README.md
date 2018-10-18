@@ -85,7 +85,7 @@ git config --global merge.conflictstyle diff3
 
 Créer un nouveau projet Maven :
 ```bash
-cd /d
+cd /d/*idep*
 mvn -B archetype:generate -DgroupId=fr.insee.git -DartifactId=git-base
 ```
 
