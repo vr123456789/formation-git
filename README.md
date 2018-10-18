@@ -211,6 +211,17 @@ En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovatio
 >  - en lecture et en écriture sur cette copie,
 >  - en lecture seule sur le dépôt d’origine.
 
+Générer une paire de clé et déposer la partie publique dans Gitlab
+```bash
+ssh-keygen -t rsa -b 2048 # Puis « Entrée » à chaque question
+cat ~/.ssh/id_rsa.pub  # Puis coller dans Gitlab / Settings / SSH Keys
+```
+Se connecter à Gitlab via Putty :
+ - Host : `git@git.stable.innovation.insee.eu`
+ - Port : `22222`
+
+Cliquer sur « Yes », la connexion échoue mais c’est normal.
+
 Cloner ce dépôt dans votre _workspace_ :
 ```bash
 cd /d/*idep*/Mes\ Documents/eclipse_workspace
@@ -219,12 +230,6 @@ cd formation-git
 ```
 
 :warning: Pour tout problème SSH, appeler l’intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
-
-:thumbsup: Éventuellement, copier les fichiers de configuration du *shell* dans le répertoire *home* :
-```bash
-cp bash/* ~
-source ~/.bash_profile
-```
 
 Dans votre copie locale, effectuer la modification suivante :
 
