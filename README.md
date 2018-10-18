@@ -41,7 +41,6 @@ git config --global user.email "prenom.nom@insee.fr"
 Paramétrer le proxy Insee
 ```bash
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080
-git config --global https.proxy http://proxy-rie.http.insee.fr:8080
 ```
 
 Choisir son éditeur de texte favori
