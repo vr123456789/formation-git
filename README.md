@@ -578,7 +578,7 @@ Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/ima
  - créer une branche de suivi pour la branche tp6
  - copier le fichier `docs/images/logo-git-png` dans `src/main/webapp/static/`
  - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png par` `logo-git.png`
- - lancer l’application (http://localhost:80) et observer le résultat
+ - lancer l’application (http://localhost:8080) et observer le résultat
  - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d’accuiel"`
 
 :warning: On vient de commettre deux erreurs :
