@@ -9,7 +9,7 @@
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Modifier la dernière validation
 
-<!-- .element: class="icon idea" -->Après avoir valider, on se rend compte d’une erreur :
+<!-- .element: class="icon idea" -->Après avoir validé, on se rend compte d’une erreur :
  - faute dans le message
  - fichiers oubliés ou en trop
  - ...
