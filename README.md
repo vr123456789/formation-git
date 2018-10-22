@@ -760,7 +760,11 @@ Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. D
 
 Créer une branche locale de suivi pour la branche distante `bisect` : `git checkout --track origin/bisect`
 
-Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu’on recherche un cocktail, les résultats retournées ne sont pas les bons.
+Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu’on recherche un cocktail, les résultats retournées ne sont pas les bons :
+
+ - à partir de la page d’accueil, cliquer sur « [Passer une commande](http://localhost:8080/commande) »
+ - dans le champ de recherche, taper « L »
+ - constater qu’il n'y a que deux échos alors qu'il devrait en avoir plus (les premiers étant « Pina Colada » et « Cosmopolitan »)
 
 On sait que lors de la dernière mise en production (`v3.1`), cela fonctionnait correctemment. On va donc lancer `git bisect` pour identifier le *commit* fautif.
 
