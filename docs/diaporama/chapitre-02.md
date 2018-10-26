@@ -100,3 +100,13 @@ Sauf exception, Git ne fait qu’ajouter de nouvelles données
 <div class="center">
 	<img src="images/three-states.png" />
 </div>
+
+
+%%%
+
+
+<!-- .slide: class="tp" -->
+## [TP0](https://git.stable.innovation.insee.eu/wehdrc/formation-git#0-installation)
+<div class="center">
+	<img src="images/keyboard.png" width="600px" />
+</div>
