@@ -9,7 +9,7 @@ alias c='clear'
 alias h='history'
 alias j='jobs -l'
 alias cd..='cd ..'
-alias ..='cd ..'
+alias vi='vim'
 
 alias root='sudo su'
 
