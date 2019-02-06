@@ -651,7 +651,7 @@ Finalement l’historique ressemble à celui-ci :
 
 <img src="docs/images/ex-rebase-i-1.png" />
 
-Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent, c’est-à-dire « Script pour modifier le fichier 'application.properties'».
+Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent.
 
 Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu’il effectue les actions suivantes :
  - placer en premier le *commit* de l’expression régulière de validation de l’adresse mail ;
