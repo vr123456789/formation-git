@@ -285,7 +285,7 @@ git log
 <details>
 	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 ce dépôt contient-il ?</summary>
 	<br />
-	<code>518</code>
+	<code>523</code>
 </details>
 <br />
 <details>
