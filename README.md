@@ -780,6 +780,8 @@ Finalement le *commit* à l’origine de la régression est identifié, afficher
 
 Analyser le problème, puis terminer la commande en tapant `git bisect reset`.
 
+Avec `git blame`, déterminer qui est l'auteur de la régression.
+
 En fait il existait un test unitaire qui couvrait ce cas, et qui échoue donc depuis l’introduction de la régression dans le code.
 
 Créer un petit scipt qui lance les tests unitaires avec Maven :
