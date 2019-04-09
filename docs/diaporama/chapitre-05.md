@@ -95,7 +95,7 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 	<td>branche distante</td>
 </tr>
 <tr>
-	<td>_traked_</td>
+	<td>_tracked_</td>
 	<td>✔</td>
 	<td>✔</td>
 </tr>
