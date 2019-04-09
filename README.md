@@ -69,12 +69,6 @@ git config --global merge.conflictstyle diff3
 	<br />
 	<code>git config --show-origin help.format</code>
 </details>
-<br />
-<details>
-	<summary>Combien y a-t-il de propriétés système dans ce fichier ?</summary>
-	<br />
-	<code>git config --list --show-origin | grep "ProgramData/Git/config" | wc -l</code>
-</details>
 
 #### Opérations de base
 
