@@ -222,7 +222,7 @@ git revert --mainline 1 HEAD
 Valider souvent
  - des petits lots de modifications homogènes
 
-Péférer de petits fichiers
+Préférer de petits fichiers
  - bien découper les classes selon leurs responsabilités
 
 Communiquer avec les autres membres de l’équipe
