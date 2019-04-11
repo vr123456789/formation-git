@@ -13,7 +13,7 @@ Collaborer au même projet
  - partager son travail
   - `git push` = « pousser » ses modifications
  - récupérer le travail des autres développeurs
-  - `git fetch` ou `git pull` = « récupérer » ou « tirer » les modifications des autres
+  - `git fetch` « récupérer » les modifications des autres
 
 Il peut exister plusieurs dépôts distants
  - droits en lecture seule ou en lecture / écriture
@@ -145,16 +145,6 @@ Modifier l’url :
 ```bash
 git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
 ```
-
-
-L’url pour récupérer (_fetch_) n’est pas forcément la même que l’url pour partager (_push_)
- - exemple du miroir vers GForge
- - on peut modifier séparément la partie _push_  :
-
-```bash
-git remote set-url --push origin git+ssh://wehdrc@gforge.insee.fr/.../formation-git.git
-```
-
 
 
 %%%

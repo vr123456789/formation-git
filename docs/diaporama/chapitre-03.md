@@ -10,6 +10,7 @@
 ### Le système de configuration
 
 Système de surcharge à trois niveaux
+ - quatre en comptant `git -c section.key=value`
 
 `--system` : pour tous les utilisateurs
  - `/c/ProgramData/Git/config`
@@ -53,11 +54,8 @@ git config --global user.email "prenom.nom@insee.fr"
 # Éditeur de texte pour les messages de commit, etc.
 git config --global core.editor vim
 
-# Pour utiliser notepad++
-git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
-
-# Afficher l’ancêtre commun dans les conflits
-git config --global merge.conflictstyle diff3
+# Pour utiliser nano
+git config --global core.editor nano
 
 # Paraméter le proxy de l’Insee
 git config --global http.proxy http://proxy-rie.http.insee.fr:8080

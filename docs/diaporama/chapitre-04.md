@@ -151,6 +151,27 @@ git reset "*.java" # tous les fichiers se terminant par « .java »
 git reset . # tous les fichiers du répertoire courant
 ```
 
+
+%%%
+
+
+<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
+### Indexer avec EGit dans Eclipse
+
+Résultat de la commande `git status -s` :
+```bash
+ M	docs/diaporama/03-configuration.md
+MM	docs/diaporama/slides.css
+A	 docs/images/basic-rebase-1.png
+M	 docs/index.html
+??	docs/images/basic-rebase-2.png
+```
+
+<!-- .element: class="icon idea" -->L’interface graphique est ici clairement un atout :
+<div class="center">
+	<img src="images/egit-add.png" />
+</div>
+
 %%%
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
@@ -176,27 +197,6 @@ index 3034cd5..e398133 100644
  spring.mvc.view.prefix=/WEB-INF/views/
  spring.mvc.view.suffix=.jsp
 ```
-
-
-%%%
-
-
-<!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Indexer avec EGit dans Eclipse
-
-Résultat de la commande `git status -s` :
-```bash
- M	docs/diaporama/03-configuration.md
-MM	docs/diaporama/slides.css
-A	 docs/images/basic-rebase-1.png
-M	 docs/index.html
-??	docs/images/basic-rebase-2.png
-```
-
-<!-- .element: class="icon idea" -->L’interface graphique est ici clairement un atout :
-<div class="center">
-	<img src="images/egit-add.png" />
-</div>
 
 
 %%%

@@ -40,17 +40,18 @@ git config --global http.proxy http://proxy-rie.http.insee.fr:8080
 
 Choisir son éditeur de texte favori
 ```bash
+# nano
+git config --global core.editor nano
+
+# vim
+git config --global core.editor vim
+
 # notepad++ 64b
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
 
 # notepad++ 32b
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
 
-# vim
-git config --global core.editor vim
-
-# nano
-git config --global core.editor nano
 ```
 
 Afficher l’ancêtre commun lors d’un conflit
@@ -283,7 +284,7 @@ git log
 </details>
 <br />
 <details>
-	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 concernent les services ?</summary>
+	<summary>Combien de <i>commits</i> datés d’avant le 31 juillet 2018 concernent les services (répertoire <code>src/main/java/fr/insee/bar/service</code>) ?</summary>
 	<br />
 	<code>30</code>
 </details>
@@ -295,25 +296,9 @@ git log
 </details>
 <br />
 <details>
-	<summary>À quelle heure de quel jour a été validé le premier test unitaire du projet ?</summary>
+	<summary>À quelle heure de quel jour a été validé le premier test unitaire du projet (répertoire <code>src/test/java</code>) ?</summary>
 	<br />
 	<code>2016-09-01 16:53:26</code>
-</details>
-<br />
-
-Afficher l’historique sous la forme suivante :
-
-```bash
-* 8d0576c 2018-08-10 | Début du TP2 sur les logs (HEAD -> master) [Romain Warnan]
-* 97909af 2018-08-10 | Simplification d’écriture de la lambda [Romain Warnan]
-* dbf14df 2018-08-10 | Ajout d’icones dans le diaporama (origin/master, origin/HEAD) [Romain Warnan]
-* 042c58b 2018-08-10 | Suppression de lignes en trop [Romain Warnan]
-```
-
-<details>
-	<summary>Indice : <code>git log --graph --date=short --pretty="format:???"</code></summary>
-	<br />
-	<code>git log --graph --date=short --pretty="format:%h %ad | %s%d [%an]"</code>
 </details>
 <br />
 
@@ -619,27 +604,7 @@ git push
 
 #### Rebasage interactif
 
-Dans la branche `tp6`, effectuer les action suivantes :
-
-:warning: __Valider à chaque étape sans jamais pousser vers le dépôt distant.__
-
- 1. Modifier l’email de Richard Cox dans le fichier `clients.txt`
- 2. Modifier quelques autres emails
- 3. Effectuer les actions suivantes :
-  - créer une branch email-regex et basculer dessus
-  - dans la classe `Client`, modifier l’expression régulière de l’email par [celle-ci](https://stackoverflow.com/a/742654/2110284)
-  - valider
-  - retourner dans la branche `tp6`
- 4. Dans le fichier `clients.txt` remplacer l’extension d’email `co.uk` par `uk`
- 5. Ajouter 20 nouvelles lignes dans le fichier &ndash; utiliser par exemple le site [mockaroo](https://www.mockaroo.com/)
- 6. Effectuer les diverses actions suivantes :
-  - modifier le titre de l’application : Spring MVC &rarr; Formation Git dans le fichier `application.properties`
-  - modifier le niveau de log Spring : WARN &rarr; INFO dans le fichier `application.properties`
-  - modifier un message dans le fichier `message_fr.properties`
- 7. Fusionner la branche `email-regex`
- 8. Supprimer la ligne « secret token » dans `application.properties`
-
-:bulb: Toutes ces étapes peuvent être réalisées automatiquement en exécutant le script `tp6.sh`.
+Dans la branche `tp6`, exécuter le script `./tp6.sh`.
 
 Finalement l’historique ressemble à celui-ci :
 
@@ -662,20 +627,16 @@ Lancer le rebasage en cliquant sur la flèche verte.
 
 Modifier éventuellement les messages de *commit* quand cela est proposé.
 
-Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser le *commit* en trois *commits* :
- 1. la modification du nom de l’application
- 2. la modification du niveau de log
- 3. la modification du message
+Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser le *commit* en deux *commits* :
+ 1. les modifications contenues dans `applications.properties`
+ 2. les autres modifications contenues dans `message.properties`
 
-Il faut repasser par la ligne de commande :
+« Défaire » le *commit* en utilisant soit la commande suivante : `git reset HEAD^`, soit la vue *History* d’Eclipse
 
-« Défaire » le *commit* en utilisant la commande suivante : `git reset HEAD^`.
+ 1. indexer le fichier `application.properties` puis valider ;
+ 2. ensuite indexer l’autre fichier et valider.
 
- 1. utiliser ensuite la commande `git add -p` pour indexer la première partie du fichier `application.properties` puis valider ;
- 2. ensuite indexer le reste du fichier `application.properties` et valider ;
- 3. finalement indexer et valider le reste.
-
-Continuer le rebasage, qui se termine alors, aboutissant à un historique similaire à celui-ci :
+Continuer le rebasage, qui se termine alors, aboutissant à un historique semblable à celui-ci :
 
 <img src="docs/images/ex-rebase-i-3.png" />
 

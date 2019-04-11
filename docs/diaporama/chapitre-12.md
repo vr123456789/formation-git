@@ -237,3 +237,23 @@ Exemples
 <div class="center">
 	<img src="images/exercice-range-3.png" />
 </div>
+
+
+%%%
+
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" data-transition="slide-in fade-out" -->
+### `Q..K`
+<div class="center">
+	<img src="images/exercice-0.png" />
+</div>
+
+%%%
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" data-transition="fade" -->
+### `Q..K = {K, F, E, J, L, M, I, H, D}`
+<div class="center">
+	<img src="images/exercice-0.png" />
+</div>
+
+{K, F, E, J, L, M, I, H, G, A, D} - {Q, P, O, N, G, A}

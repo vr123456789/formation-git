@@ -79,14 +79,6 @@ Activer les marqueurs pour voir l’ancêtre commun :
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Conseils et astuces : pendant la fusion
 
-Lister les *commits* concernés par le conflit :
- - `git log --oneline --left-right --merge`
-
-```bash
-< 5b9d46d (HEAD -> master, tag: ex2b) Redirection temporaire vers permanente
-> de1d14b (origin/bex2) Redirection vers OK
-```
-
 Voir les parties du code contenant des conflits :
 - `git diff` pendant la fusion
 
@@ -138,12 +130,11 @@ Après *commit*
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Ignorer les espaces
 
-Problème :
- - dans une branche `us55`, on a apporté une petite correction
- - mais par inadvertance toutes les tabulations ont été remplacées par des espaces
-  - `Tab` &rarr; `Espaces`
- - dans `master`, on a renommé une classe du modèle
-  - `Agent` &rarr; `Employe`
+Origine de ce type de problèmes :
+ - retours à la ligne : Windows &rarr; `CR/LF` ou Linux &rarr; `LF`
+ - tabulations ou espaces
+ - formatage du code
+ - *trailing whitespaces*
 
 Solution :
  - on tente la fusion : `git merge us55`
@@ -157,6 +148,7 @@ Solution :
 ignore-space-change
 ignore-all-space
 ```
+
 
 %%%
 

@@ -22,42 +22,6 @@ Les modifications apportées dans une branche sont rejouées dans la branche de 
 %%%
 
 
-<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
-### Exemple de *patch*
-
-
-```patch
-diff --git a/src/.../controller/ClientsController.java b/src/.../ClientsController.java
-index 4bc826f..54cf87a 100644
---- a/src/main/java/fr/insee/bar/controller/ClientsController.java
-+++ b/src/main/java/fr/insee/bar/controller/ClientsController.java
-@@ -7,18 +7,18 @@ import org.springframework.stereotype.Controller;
- import org.springframework.ui.Model;
- import org.springframework.web.bind.annotation.GetMapping;
-
--import fr.insee.bar.dao.ClientDao;
- import fr.insee.bar.model.Client;
-+import fr.insee.bar.repository.ClientRepository;
-
-@Controller
-public class ClientsController {
-
-	@Autowired
--	private ClientDao clientDao;
-+	private ClientRepository clientRepository;
-
-@GetMapping("/clients")
-public String clients(Model model) {
--	List<Client> clients = clientDao.findAll();
-+	List<Client> clients = clientRepository.findAll();
- 	model.addAttribute("clients", clients);
- 	return "clients";
-}
-```
-
-%%%
-
-
 <!-- .slide: class="slide" data-background-color="#7580ba" data-transition="slide-in fade-out" -->
 ### Schéma : situation initiale
 
