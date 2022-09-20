@@ -1,6 +1,6 @@
 # Introduction à l’utilisation de Git à l’Insee
 
-:arrow_forward: Diaporama [Gitlab](http://wehdrc.pages.innovation.insee.eu/formation-git) | [Github](https://romain-warnan.github.io/formation-git)
+:arrow_forward: [Diaporama](https://romain-warnan.github.io/formation-git)
 
 ## Plan
 
