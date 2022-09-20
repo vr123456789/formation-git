@@ -1,5 +1,5 @@
 alias ll='ls -l'
-alias la='ls -al'
+alias la='ls -Al'
 alias ..='cd ..'
 alias md='mkdir -p'
 alias rd='rm -rf'
@@ -10,7 +10,4 @@ alias h='history'
 alias j='jobs -l'
 alias cd..='cd ..'
 alias vi='vim'
-
 alias root='sudo su'
-
-alias mvn='"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat"'

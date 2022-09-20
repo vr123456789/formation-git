@@ -15,7 +15,7 @@
 
 ## Travaux pratiques
 
-### 0. Installation
+### 0.  Installation (facultatif)
 
 Dans Windows, créer une nouvelle variable d’environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
 
@@ -83,7 +83,7 @@ Initialiser un dépôt Git et constater la création du dépôt Git local :
 ```bash
 cd git-base
 git init
-ls -al
+ls -Al
 ```
 
 Ajouter tous les fichiers dans l’index et valider dans un premier _commit_.
@@ -96,7 +96,7 @@ git commit -m "Initialisation du projet 'git-base'"
 Packager l’application, l’exécuter puis inspecter la copie de travail :
 ```bash
 mvn package
-java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App
+java -cp "target/*" fr.insee.git.App
 git status
 ```
 
@@ -142,7 +142,7 @@ Compiler puis exécuter le programme en passant en paramètre votre prénom :
 
 ```bash
 mvn package
-java -cp target/git-base-1.0-SNAPSHOT.jar fr.insee.git.App "Prénom"
+java -cp "target/*" fr.insee.git.App "Prénom"
 ```
 
 Indexer le fichier `README.txt`.
@@ -151,12 +151,6 @@ Indexer le fichier `README.txt`.
 	<summary>Afficher les modifications qui seront validées dans le prochain <i>commit</i> :</summary>
 	<br />
 	<code>git diff --staged</code>
-</details>
-<br />
-<details>
-	<summary>Afficher les modifications de la copie de travail par rapport au dernier *commit* :</summary>
-	<br />
-	<code>git diff</code>
 </details>
 <br />
 

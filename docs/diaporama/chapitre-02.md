@@ -95,7 +95,7 @@ La plupart des opérations se déroulent localement
  - et possibilité de travailler hors connexion
   - dans les transports (avion, train)
   - hors du réseau de l’Insee
-  - quand GForge est tombé
+  - si Gitlab est inaccessible ;)
 
 Exemples
  - afficher l’historique
