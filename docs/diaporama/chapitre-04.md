@@ -299,14 +299,7 @@ git commit -am "Message de validation"
  - importance de l’homogénéité des modifications contenues dans un _commit_
  - à l’attention des autres développeurs
 
-Forme d’un message plus détaillé :
-
-```bash
-Résumé des modifications
-
-Texte détaillé.
-Éventuellement sur plusieurs lignes.
-```
+<!-- .element: class="after link" -->[7 règles pour écrire de bons messages](https://cbea.ms/git-commit/) 
 
 Message vide &rarr;  _commit_ annulé
  - les lignes qui commencent par `#` ne comptent pas
