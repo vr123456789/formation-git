@@ -185,35 +185,30 @@ Le résultat est le même : Git parvient à repérer les fichiers par la somme d
 
 ### 2. Dépôts distants
 
-En haut à droite de l’interface de Giltab, vérifier que vous ête bien connecté à Gitlab.
+Se connecter à [Github](https://github.com/), créer un compte si nécessaire.
 
-En haut de cette page, cliquer sur bouton « [Fork](https://github.com/romain-warnan/formation-git/fork) », puis choisir votre espace personnel.
+Se rendre sur le dépôt de la [formation-git](https://github.com/romain-warnan/formation-git). 
 
-> :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s’appelle un _fork_.
+En haut à droite de la page, cliquer sur le bouton « [Fork](https://github.com/romain-warnan/formation-git/fork) », puis choisir votre espace personnel.
+
+> :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Github. Cette opération s’appelle un _fork_.
 >
 > Vous avez les droits
 >  - en lecture et en écriture sur cette copie,
 >  - en lecture seule sur le dépôt d’origine.
 
-Générer une paire de clé et déposer la partie publique dans Gitlab
-```bash
-ssh-keygen -t rsa -b 2048 # Puis « Entrée » à chaque question
-cat ~/.ssh/id_rsa.pub  # Puis coller dans Gitlab / Settings / SSH Keys
-```
-Se connecter à Gitlab via Putty :
- - Host : `git@git.stable.innovation.insee.eu`
- - Port : `22222`
-
-Cliquer sur « Yes », la connexion échoue mais c’est normal.
-
 Cloner ce dépôt dans votre _workspace_ :
 ```bash
-cd /d/*idep*/Mes\ Documents/eclipse_workspace
-git clone ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git
+git clone https://github.com/*username*/formation-git.git
 cd formation-git
 ```
 
-:warning: Pour tout problème SSH, appeler l’intervenant et se référer à cette [aide](https://git.stable.innovation.insee.eu/outils-transverses/migration-svn-git#-ajouter-une-clef-ssh-dans-gitlab).
+Paramétrer Git afin de ne pas avoir à saisir les identifiants à chaque interraction avec le dépôt distant :
+
+```bash
+git config --global credential.helper 'store --file ~/.git.store'
+vi ~/.git.store # https://username:password@gihub.com
+```
 
 Dans votre copie locale, effectuer la modification suivante :
 
