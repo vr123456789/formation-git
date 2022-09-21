@@ -34,7 +34,7 @@ Explicitement
  - exemple 1 : suite à `git init`, aucun dépôt distant n’est configuré
 
 ```bash
-git remote add origin https://git.stable.innovation.insee.eu/wehdrc/formation-git.git
+git remote add origin https://github.com/romain-warnan/formation-git.git
 ```
 
  - exemple 2 : si on contribue à un projet libre
@@ -118,7 +118,7 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
 ### Inspecter un dépôt distant avec Gitlab
 
-Onglets « Branches » : [Gitlab](https://git.stable.innovation.insee.eu/wehdrc/formation-git/branches) | [Github](https://github.com/romain-warnan/formation-git/branches)
+Onglets « Branches » : [Gitlab](https://gitlab.insee.fr/formations-informatiques/cursus-nouveaux-arrivants-sndin/formation-git/-/branches) | [Github](https://github.com/romain-warnan/formation-git/branches)
 
 <div class="center">
 	<img src="images/remote-show-gitlab.png" width="700px" />
@@ -151,7 +151,7 @@ git remote set-url origin ssh://gforge.insee.fr/.../formation-git.git
 
 
 <!-- .slide: class="tp" -->
-## [TP2](https://git.stable.innovation.insee.eu/wehdrc/formation-git#2-dépôts-distants)
+## [TP2](https://github.com/romain-warnan/formation-git#2-dépôts-distants)
 <div class="center">
 	<img src="images/keyboard.png" width="600px" />
 </div>

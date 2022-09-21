@@ -97,7 +97,7 @@ Une fois le suivi activé, `fetch` et `push` fonctionnent sans précision suppl�
 
 
 <!-- .slide: class="tp" -->
-## [TP4](https://git.stable.innovation.insee.eu/wehdrc/formation-git#4-branches)
+## [TP4](https://github.com/romain-warnan/formation-git#4-branches)
 <div class="center">
 	<img src="images/keyboard.png" width="600px" />
 </div>

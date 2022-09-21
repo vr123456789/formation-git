@@ -32,7 +32,7 @@ user.email=prenom.nom@insee.fr
  - `./.git/config`
 
 ```ini
-remote.origin.url=ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
+remote.origin.url=https://github.com/romain-warnan/formation-git.git
 branch.master.remote=origin
 ```
 

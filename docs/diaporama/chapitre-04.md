@@ -18,7 +18,7 @@ Transformer un dossier en dépôt Git
 Cloner un dépôt Git distant
  - `git clone <url>`
  - Le dépôt complet est copié à partir de l’url dans un dossier `.git/` local
-  - `git clone ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git`
+  - `git clone https://github.com/romain-warnan/formation-git.git`
   - &rarr; `formation-git/.git/`
  - La dernière version de la branche `master` est extraite
  - Le dépôt local reste connecté au dépôt distant
@@ -26,7 +26,7 @@ Cloner un dépôt Git distant
 
 ```bash
 [remote "origin"]
-	url = ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
+	url = https://github.com/romain-warnan/formation-git.git
 ```
 
 
@@ -313,7 +313,7 @@ Message vide &rarr;  _commit_ annulé
 
 
 <!-- .slide: class="tp" -->
-## [TP1](https://git.stable.innovation.insee.eu/wehdrc/formation-git#1-configuration-et-fondamentaux)
+## [TP1](https://github.com/romain-warnan/formation-git#1-configuration-et-fondamentaux)
 <div class="center">
 	<img src="images/keyboard.png" width="600px" />
 </div>

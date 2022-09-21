@@ -187,7 +187,7 @@ Le résultat est le même : Git parvient à repérer les fichiers par la somme d
 
 En haut à droite de l’interface de Giltab, vérifier que vous ête bien connecté à Gitlab.
 
-En haut de cette page, cliquer sur bouton « [Fork](https://git.stable.innovation.insee.eu/wehdrc/formation-git/forks/new) », puis choisir votre espace personnel.
+En haut de cette page, cliquer sur bouton « [Fork](https://github.com/romain-warnan/formation-git/fork) », puis choisir votre espace personnel.
 
 > :information_source: Vous venez de copier le dépôt de la formation dans votre espace personnel Gitlab. Cette opération s’appelle un _fork_.
 >
@@ -230,11 +230,11 @@ git commit -m "Ajout d’un fichier idep.txt"
 git push
 ```
 
-Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu’il est absent du [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students).
+Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu’il est absent du [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students).
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
-git remote add upstream ssh://git@git.stable.innovation.insee.eu:22222/wehdrc/formation-git.git
+git remote add upstream https://github.com/romain-warnan/formation-git.git
 ```
 
 Mettre votre copie locale à jour à partir de ce nouveau dépôt :
@@ -263,7 +263,7 @@ Lister le répertoire `students/` et constater que vous avez récupéré les fic
 ls -l students/
 ```
 
-Dans Gitlab, dans le [dépôt original](https://git.stable.innovation.insee.eu/wehdrc/formation-git/tree/master/students), constater la présence de votre fichier parmi les autres.
+Dans Gitlab, dans le [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students), constater la présence de votre fichier parmi les autres.
 
 ### 3. Historique
 
@@ -459,8 +459,8 @@ cd /d/tp5
 Cloner la branche distante `tp5` deux fois, une fois dans le répertoire `devA/`, une fois dans le répertoire `devB/`.
 
 ```bash
-git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git devA
-git clone -b tp5 ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git devB
+git clone -b tp5 https://github.com/*username*/formation-git.git devA
+git clone -b tp5 https://github.com/*username*/formation-git.git devB
 ```
 
 Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
@@ -889,8 +889,8 @@ Dans ce dépôt, créer un <i>hook</i> « post-receive » qui envoie toutes les 
 ```bash
 #!/bin/bash
 echo 'Formation Git : post-receive hook'
-git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git tp7:tp7
-git push ssh://git@git.stable.innovation.insee.eu:22222/*idep*/formation-git.git --tags
+git push https://github.com/*username*/formation-git.git tp7:tp7
+git push https://github.com/*username*/formation-git.git --tags
 ```
 
 <details>
