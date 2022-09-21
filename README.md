@@ -4,14 +4,14 @@
 
 ## Plan
 
- 0. [Installation](#0-installation)
- 1. [Configuration et fondamentaux  &rarr; *TP1*](#1-configuration-et-fondamentaux)
- 2. [Dépôts distants  &rarr; *TP2*](#2-dépôts-distants)
- 3. [Historique &rarr; *TP3*](#3-historique)
- 4. [Branches  &rarr; *TP4*](#4-branches)
- 5. [Rebasage  &rarr; *TP5*](#5-rebasage)
- 6. [Réécrire l’historique  &rarr; *TP6*](#6-réécrire-lhistorique)
- 7. [Boite à outils Git  &rarr; *TP7*](#7-boite-à-outils-git)
+0. [Installation](#0-installation)
+1. [Configuration et fondamentaux  &rarr; *TP1*](#1-configuration-et-fondamentaux)
+2. [Dépôts distants  &rarr; *TP2*](#2-dépôts-distants)
+3. [Historique &rarr; *TP3*](#3-historique)
+4. [Branches  &rarr; *TP4*](#4-branches)
+5. [Rebasage  &rarr; *TP5*](#5-rebasage)
+6. [Réécrire l’historique  &rarr; *TP6*](#6-réécrire-lhistorique)
+7. [Boite à outils Git  &rarr; *TP7*](#7-boite-à-outils-git)
 
 ## Travaux pratiques
 
@@ -135,8 +135,8 @@ git commit -m "Création des répertoires 'src/main/resources/' et 'src/test/res
 Créer un fichier <code>README.txt</code> contenant un court texte.
 
 Modifier le programme `fr.insee.git.App.java` pour qu’il puisse prendre un paramètre :
- - si le paramètre est renseigné, le programme affiche `"Hello {param} !"`,
- - sinon le programme affiche `"Hello World !"`
+- si le paramètre est renseigné, le programme affiche `"Hello {param} !"`,
+- sinon le programme affiche `"Hello World !"`
 
 Compiler puis exécuter le programme en passant en paramètre votre prénom :
 
@@ -187,7 +187,7 @@ Le résultat est le même : Git parvient à repérer les fichiers par la somme d
 
 Se connecter à [Github](https://github.com/), créer un compte si nécessaire.
 
-Se rendre sur le dépôt de la [formation-git](https://github.com/romain-warnan/formation-git). 
+Se rendre sur le dépôt de la [formation-git](https://github.com/romain-warnan/formation-git).
 
 En haut à droite de la page, cliquer sur le bouton « [Fork](https://github.com/romain-warnan/formation-git/fork) », puis choisir votre espace personnel.
 
@@ -315,12 +315,14 @@ Tester :
 
 #### Avance rapide
 
-Dans une branche `salarie`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
+Dans une branche `beans`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
 
 ```bash
-git checkout -b salarie
-find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
-git commit -am "Renommage des variables 'salarie' -> 'employe'"
+git checkout -b beans
+find src -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
+git mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
+git add .
+git commit -m "Renommer le package 'model' en 'beans'"
 ```
 
 Pour vérifier qu’il n’y a pas de régression, lancer les tests unitaires, puis lancer l’application [http://localhost:8080](http://localhost:8080) pour tester.
@@ -330,13 +332,13 @@ mvn test
 mvn spring-boot:run
 ```
 
-Fusionner la branche `salarie` dans `master`, consulter l’historique et supprimer la branche `salarie`.
+Fusionner la branche `beans` dans `master`, consulter l’historique et supprimer la branche `beans`.
 
 ```bash
 git checkout master
-git merge salarie
+git merge beans
 git lg
-git branch -d salarie
+git branch -d beans
 ```
 
 #### Fusion à trois sources
@@ -351,24 +353,15 @@ find src/main/java -type f -exec sed -i "s/\t/  /g" {} \;
 git commit -am "Remplacement des tabulations par des espaces"
 ```
 
-Remplacer également le type de redirection par `TEMPORARY_REDIRECT` dans la classe `AccueilController` et dans le test associé. Valider.
-
-```bash
-sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/main/java/fr/insee/bar/controller/AccueilController.java
-sed -i -e "s/MOVED_PERMANENTLY/TEMPORARY_REDIRECT/g" src/test/java/fr/insee/bar/controller/AccueilControllerTest.java
-git commit -am "redirection temporaire"
-```
-
-Dans la branche `master` renommer le *package* `model` en `beans`.
+Dans la branche `master`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
 
 :information_source: Cette action représente un *refactoring* assez important.
 
 ```bash
 git checkout master
-find src -type f -exec sed -i -e "s/fr.insee.bar.model/fr.insee.bar.beans/g" {} \;
-git mv src/main/java/fr/insee/bar/model/ src/main/java/fr/insee/bar/beans
+find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
 git add .
-git commit -m "Renommer le package 'model' en 'beans'"
+git commit -am "Renommage des variables 'salarie' -> 'employe'"
 ```
 
 Fusionner la branche `spaces` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque tabulation. Interrompre la fusion.
@@ -411,10 +404,10 @@ git commit -am "Insertion d’une ligne dans tp4.txt"
 
 Dans Github, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification distante"`. Valider cette modification.
 
- - Mettre à jour sa copie locale à partir de la branche distante.
- - Constater la présence d’un conflit.
- - Le résoudre en conservant les modifications distante et locale (le fichier doit compter trois lignes).
- - Pousser vers la branche distante.
+- Mettre à jour sa copie locale à partir de la branche distante.
+- Constater la présence d’un conflit.
+- Le résoudre en conservant les modifications distante et locale (le fichier doit compter trois lignes).
+- Pousser vers la branche distante.
 
 ```bash
 git fetch
@@ -530,15 +523,15 @@ git pull
 #### Amender un *commit*
 
 Remplacer l’image de la page d’accueil par le logo Git situé dans `docs/images/logo-git.png` :
- - créer une branche de suivi pour la branche tp6
- - copier le fichier `docs/images/logo-git.png` dans `src/main/webapp/static/`
- - dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png` par `logo-git.png`
- - lancer l’application (http://localhost:8080) et observer le résultat
- - valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d’accuiel"`
+- créer une branche de suivi pour la branche tp6
+- copier le fichier `docs/images/logo-git.png` dans `src/main/webapp/static/`
+- dans `src/main/webapp/WEB-INF/views/accueil.jsp` remplacer `cocktail.png` par `logo-git.png`
+- lancer l’application (http://localhost:8080) et observer le résultat
+- valider la modification en utilisant la commande `git commit -am "Remplacement de l’image de la page d’accuiel"`
 
 :warning: On vient de commettre deux erreurs :
-  1. une faute de frappe sur le mot __accueil__ dans le message de validation
-  2. le fichier __logo-git.png__ n’a pas été validé
+1. une faute de frappe sur le mot __accueil__ dans le message de validation
+2. le fichier __logo-git.png__ n’a pas été validé
 
 Corriger ces erreurs en amendant le dernier *commit*.
 
@@ -589,11 +582,11 @@ Finalement l’historique ressemble à celui-ci :
 Lancer un rebasage interactif sur ces *commits* dans Eclipse. Pour ce faire, il faut se rendre dans l’onglet « History » et faire un clic droit sur le *commit* précédent.
 
 Dans l’onglet « Rebase Interactive », modifier le programme de rebasage pour qu’il effectue les actions suivantes :
- - placer en premier le *commit* de l’expression régulière de validation de l’adresse mail ;
- - fusionner les *commits* de modifications d’email en un seul ;
- - ignorer le *commit* concernant l’extension d’email `co.uk` &rarr; `uk` ;
- - conserver tels quels les *commits* d’ajout des 20 lignes et de suppression du *secret token* ;
- - éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
+- placer en premier le *commit* de l’expression régulière de validation de l’adresse mail ;
+- fusionner les *commits* de modifications d’email en un seul ;
+- ignorer le *commit* concernant l’extension d’email `co.uk` &rarr; `uk` ;
+- conserver tels quels les *commits* d’ajout des 20 lignes et de suppression du *secret token* ;
+- éditer le *commit* concernant les fichiers de propriétés `message_fr.properties` et `application.properties`.
 
 Le programme doit ressembler à celui-ci :
 
@@ -604,13 +597,13 @@ Lancer le rebasage en cliquant sur la flèche verte.
 Modifier éventuellement les messages de *commit* quand cela est proposé.
 
 Le rebasage s’arrête à l’édition du *commit*. L’objectif est de diviser le *commit* en deux *commits* :
- 1. les modifications contenues dans `applications.properties`
- 2. les autres modifications contenues dans `message.properties`
+1. les modifications contenues dans `applications.properties`
+2. les autres modifications contenues dans `message.properties`
 
 « Défaire » le *commit* en utilisant soit la commande suivante : `git reset HEAD^`, soit la vue *History* d’Eclipse
 
- 1. indexer le fichier `application.properties` puis valider ;
- 2. ensuite indexer l’autre fichier et valider.
+1. indexer le fichier `application.properties` puis valider ;
+2. ensuite indexer l’autre fichier et valider.
 
 Continuer le rebasage, qui se termine alors, aboutissant à un historique semblable à celui-ci :
 
@@ -693,9 +686,9 @@ Créer une branche locale de suivi pour la branche distante `bisect` : `git chec
 
 Lancer l’application (`mvn spring-boot:run`) et constater que lorsqu’on recherche un cocktail, les résultats retournées ne sont pas les bons :
 
- - à partir de la page d’accueil, cliquer sur « [Passer une commande](http://localhost:8080/commande) »
- - dans le champ de recherche, taper « L »
- - constater qu’il n'y a que deux échos alors qu'il devrait en avoir plus (les premiers étant « Pina Colada » et « Cosmopolitan »)
+- à partir de la page d’accueil, cliquer sur « [Passer une commande](http://localhost:8080/commande) »
+- dans le champ de recherche, taper « L »
+- constater qu’il n'y a que deux échos alors qu'il devrait en avoir plus (les premiers étant « Pina Colada » et « Cosmopolitan »)
 
 On sait que lors de la dernière mise en production (`v3.1`), cela fonctionnait correctemment. On va donc lancer `git bisect` pour identifier le *commit* fautif.
 
@@ -704,8 +697,8 @@ git bisect start HEAD v3.1
 ```
 
 À chaque étape, lancer l’application et vérifier si la fonction marche ou pas :
- - si elle marche, taper `git bisect good`
- - sinon, taper `git bisect bad`
+- si elle marche, taper `git bisect good`
+- sinon, taper `git bisect bad`
 
 Finalement le *commit* à l’origine de la régression est identifié, afficher son contenu avec la commande `git log -1 -p`.
 
@@ -926,7 +919,7 @@ Dans Github, constater la présence de l’étiquette `v4.0`.
 
 ## Liens utiles
 
- - [Git avec Eclipse](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien/#/)
- - [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
- - [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
- - [Liste détaillée des hooks](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
+- [Git avec Eclipse](http://wehdrc.pages.innovation.insee.eu/git-au-quotidien/#/)
+- [Options rebasage](http://kamalmarhubi.com/blog/2016/03/08/git-rebase-exec-make-sure-your-tests-pass-at-each-commit-and-other-rebase-goodies/)
+- [Options de filter-branch](https://devsector.wordpress.com/2014/10/05/advanced-git-branch-filtering/comment-page-1/)
+- [Liste détaillée des hooks](https://www.digitalocean.com/community/tutorials/how-to-use-git-hooks-to-automate-development-and-deployment-tasks)
