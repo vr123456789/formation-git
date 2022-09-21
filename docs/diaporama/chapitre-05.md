@@ -116,7 +116,7 @@ Pour intégrer les modifications distantes dans la copie de travail : `git merge
 
 
 <!-- .slide: class="slide" data-background-image="images/logo-git.png" data-background-size="600px" -->
-### Inspecter un dépôt distant avec Gitlab
+### Inspecter un dépôt distant avec Github
 
 Onglets « Branches » : [Gitlab](https://gitlab.insee.fr/formations-informatiques/cursus-nouveaux-arrivants-sndin/formation-git/-/branches) | [Github](https://github.com/romain-warnan/formation-git/branches)
 

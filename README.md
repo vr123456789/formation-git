@@ -19,7 +19,7 @@
 
 Dans Windows, créer une nouvelle variable d’environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
 
-Depuis Gitlab, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`.
+Depuis Github, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`.
 
 Lancer *git-bash*.
 
@@ -225,7 +225,7 @@ git commit -m "Ajout d’un fichier idep.txt"
 git push
 ```
 
-Dans votre _fork_ du dépôt sur Gitlab, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu’il est absent du [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students).
+Dans votre _fork_ du dépôt sur Github, vérifier que votre fichier *idep*.txt est bien présent. Au contraire, vérifier qu’il est absent du [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students).
 
 Ajouter un autre dépôt distant, nommé `upstream`, qui pointe vers le dépôt d’origine :
 ```bash
@@ -242,7 +242,7 @@ Puis partager les éventuelles modifications dans votre dépôt :
 git push origin
 ```
 
-Dans votre _fork_ Gitlab, onglet « Branches », créer une nouvelle branche `tp2` à partir de master.
+Dans votre _fork_ Github, onglet « Branches », créer une nouvelle branche `tp2` à partir de master.
 Puis cliquer sur le bouton « Create merge request » qui est apparu.
 Finalement, cliquer sur « Submit merge request ».
 
@@ -258,7 +258,7 @@ Lister le répertoire `students/` et constater que vous avez récupéré les fic
 ls -l students/
 ```
 
-Dans Gitlab, dans le [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students), constater la présence de votre fichier parmi les autres.
+Dans Github, dans le [dépôt original](https://github.com/romain-warnan/formation-git/tree/master/students), constater la présence de votre fichier parmi les autres.
 
 ### 3. Historique
 
@@ -422,7 +422,7 @@ echo 'Modification locale' >> tp4.txt
 git commit -am "Insertion d’une ligne dans tp4.txt"
 ```
 
-Dans Gitlab, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification distante"`. Valider cette modification.
+Dans Github, modifier le contenu du fichier `tp4.txt` en y ajoutant le texte `"Modification distante"`. Valider cette modification.
 
  - Mettre à jour sa copie locale à partir de la branche distante.
  - Constater la présence d’un conflit.
@@ -641,7 +641,7 @@ On se rend compte que la ligne *secret token* est présente depuis un moment dan
 
 À la suite d’une inspection rapide, on constate aussi qu’un fichier `password.txt` a été validé et poussé vers le serveur.
 
-Dans Gitlab, vérifier que l’historique de la branche distante `tp6` contient en effet ces informations sensibles.
+Dans Github, vérifier que l’historique de la branche distante `tp6` contient en effet ces informations sensibles.
 
 On va faire disparaitre ces informations de l’historique.
 
@@ -695,7 +695,7 @@ cat src/main/resources/application.properties
 git checkout tp6
 ```
 
-Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. Dans Gitlab, vérifier que l’historique de la branche distante `tp6` ne contient plus les informations sensibles.
+Essayer de pousser vers le dépôt distant. Réessayer en utilisant `--force`. Dans Github, vérifier que l’historique de la branche distante `tp6` ne contient plus les informations sensibles.
 
 ### 7. Boite à outils Git
 
@@ -877,7 +877,7 @@ Fusionner tous les *commits* en un seul : « Affichage de la date en français s
 </details>
 <br />
 
-Dans ce dépôt, créer un <i>hook</i> « post-receive » qui envoie toutes les étiquettes et le contenu de la branche <code>tp7</code> vers la branche <code>tp7</code> du <i>fork</i> dans Gitlab :
+Dans ce dépôt, créer un <i>hook</i> « post-receive » qui envoie toutes les étiquettes et le contenu de la branche <code>tp7</code> vers la branche <code>tp7</code> du <i>fork</i> dans Github :
 
 `hooks/post-receive`
 
@@ -913,7 +913,7 @@ Pousser tout vers le dépôt distant `d` : `git push --all`.
 Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
 
 <details>
-	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Gitlab.</summary>
+	<summary>Constater que la branche <code>tp7</code> a bien été mise à jour dans Github.</summary>
 	<br />
 	<code>git push origin tp7 # Already up-to-date</code>
 </details>
@@ -935,7 +935,7 @@ Supprimer le dépôt local `tp7` et retourner dans le dépôt `formation-git/`.
 </details>
 <br />
 
-Dans Gitlab, constater la présence de l’étiquette `v4.0`.
+Dans Github, constater la présence de l’étiquette `v4.0`.
 
 ## Liens utiles
 
