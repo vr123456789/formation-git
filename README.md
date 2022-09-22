@@ -17,9 +17,9 @@
 
 ### 0.  Installation (facultatif)
 
-Dans Windows, créer une nouvelle variable d’environnement utilisateur : `HOME` dont la valeur est `D:\*idep*`.
+Dans Windows, créer une nouvelle variable d’environnement utilisateur : `HOME` dont la valeur est `C:\Users\*idep*`.
 
-Depuis Github, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `D:\*idep*`.
+Depuis Github, télécharger les trois fichiers contenus dans le répertoire `bash/` et les enregistrer dans `C:\Users\*idep*`.
 
 Lancer *git-bash*.
 
@@ -422,11 +422,11 @@ git push
 
 ### 5. Rebasage
 
-Créer un nouveau dossier pour le TP5, directement sous D:\ et se placer dans ce dossier :
+Créer un nouveau dossier pour le TP5, directement sous C:\ et se placer dans ce dossier :
 
 ```bash
-mkdir /d/tp5
-cd /d/tp5
+mkdir /c/tp5
+cd /c/tp5
 ```
 
 :information_source: On va simuler le fait que deux développeurs travaillent au même moment dans la même branche distante `tp5`.
@@ -440,7 +440,7 @@ git clone -b tp5 https://github.com/*username*/formation-git.git devB
 
 Se placer dans le répertoire du développeur A, et appliquer les deux patches situés dans le répertoires `patches/devA/` :
 ```bash
-cd /d/tp5/devA
+cd /c/tp5/devA
 git am --ignore-whitespace --signoff patches/devA/*.patch
 ```
 
