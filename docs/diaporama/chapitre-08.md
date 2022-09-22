@@ -211,6 +211,13 @@ git revert --mainline 1 HEAD
 <!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
 ### Mieux vaut éviter les conflits que les résoudre
 
+
+<!-- .element: class="icon warn" -->Utiliser un formateur de code
+ - identique entre tous les développeurs du groupe
+ - exécuté automatiquement
+   - lors de l’enregistrement des fichiers source
+   - ou avant le *commit*
+
 Valider souvent
  - des petits lots de modifications homogènes
 
