@@ -112,10 +112,10 @@ L’historique devient linéaire
 Il n’y a pas de *commit* de fusion
  - puisque l’historique est linéaire
 
-<!-- .element: class="icon warn" -->Il ne faut **jamais** rebaser du code déjà poussé sur le dépôt distant
- - en cas de réécriture de l’historique, `git push --force`
+<!-- .element: class="icon warn" -->Il faut éviter de rebaser du code déjà poussé dans le dépôt distant
+ - en cas de réécriture de l’historique, `git push --force` ou mieux, `git push --force-with-lease`
   - si le dépôt distant le permet
-  - se synchroniser avec le reste de l’équipe
+  - se synchroniser si nécessaire avec les collègues : `git pull --rebase`
  - le rebasage se fait dans la copie de travail
   - avant d’avoir partagé ses modifications
 
@@ -123,6 +123,29 @@ Exemple : contribution à un projet libre
  - *pull request*
  - fusion en avance rapide uniquement
  - analyse du code plus simple grâce à l’historique linéaire
+
+%%%
+
+<!-- .slide: data-background-image="images/logo-git.png" data-background-size="600px" class="slide" -->
+### Utiliser uniquement le rebasage
+
+Il est possible de ne jamais faire de fusion à trois sources
+ - mais uniquement des rebasages
+
+Dans ce cas il faut :
+ - systématiser le `git pull --rebase` : `git config --global pull.rebase true`
+ - préférer `git push --force-with-lease`
+ - *squasher* les *commits* pour éviter les conflits inutiles lors des rebasages
+ - maîtriser le `rebase --onto`
+
+%%%
+
+<!-- .slide: data-background-color="#7580ba" class="slide" -->
+### Rebaser des branches dépendantes : `rebase --onto`
+<div class="center">
+	<img src="images/rebase-onto.jpg" width="800px" />
+</div>
+[Rebaser des branches dépendantes (en)](https://coderwall.com/p/xzsr9g/rebasing-dependent-branches-with-git)<!-- .element: class="after link" -->
 
 %%%
 
