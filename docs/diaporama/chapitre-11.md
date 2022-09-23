@@ -348,6 +348,10 @@ Pour partager le nouvel historique : `git push --force`
 <!-- .element: class="icon time" -->Se synchroniser
  - chaque développeur devra supprimer sa copie locale et cloner le nouvel historique du dépôt
 
+<!-- .element: class="icon warn" -->Limites de `filter-branch`
+ - extrêmement lent, même dans des cas simples
+ - peut corrompre les données
+ - envisager [`filter-repo`](https://github.com/newren/git-filter-repo) ou [`bfg`](https://rtyley.github.io/bfg-repo-cleaner/) 
 
 %%%
 
