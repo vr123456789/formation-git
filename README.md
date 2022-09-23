@@ -714,7 +714,7 @@ Créer un petit scipt qui lance les tests unitaires avec Maven :
 
 ```bash
 #!/usr/bin/bash
-"/c/Program Files (x86)/insee/atelier-dev-2/applications/maven/bin/mvn.bat" test
+mvn test
 ```
 
 Puis relancer la recherche dichotomique en automatique avec la commande :
