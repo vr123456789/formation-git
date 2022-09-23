@@ -24,7 +24,7 @@ Modifier aussi le contenu
   - `git add` ou `git rm`
  - puis `git commit --amend`
 
-<!-- .element: class="icon warn" -->Interdit si les modifications ont déjà été poussées vers le dépôt distant
+<!-- .element: class="icon warn" -->Attention si les modifications ont déjà été poussées vers le dépôt distant
 
 
 %%%
