@@ -75,7 +75,7 @@ Switched to a new branch "testchanges"
 ### Étiquetage : `git tag`
 
 Marquer un *commit*
- - souvent les versions livrées en production
+ - souvent utilisé pour les versions livrées en production
 
 <!-- .element: class="icon warn" -->Les étiquettes font toujours référence au même *commit*
  - à la différence des branches qui avancent à chaque nouveau *commit*
@@ -183,7 +183,7 @@ a14d9b6 HEAD@{3}: commit: Enoncé tp6 : filter-branch
 ### Annuler des modifications distantes
 Modifications déjà poussées vers un dépôt distant
 
-<!-- .element: class="icon warn" -->On ne peut plus réécrire l’historique
+<!-- .element: class="icon warn" -->Il faut éviter de réécrire l’historique
 
 Commande `git revert`
  - annule un *commit* ou une plage de *commits* en appliquant le *patch* inverse
@@ -391,6 +391,7 @@ Cas d’utilisation :
   - pas de `TODO`
   - pas `System.out.print`
   - pas d’espaces en trop
+  - formatage du code
   - ...
  - Ajouter automatiquement des informations dans le message de validation
  - Notifier des personnes par email apès un *push*
