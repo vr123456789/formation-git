@@ -113,7 +113,8 @@ Il n’y a pas de *commit* de fusion
  - puisque l’historique est linéaire
 
 <!-- .element: class="icon warn" -->Il faut éviter de rebaser du code déjà poussé dans le dépôt distant
- - en cas de réécriture de l’historique, `git push --force` ou mieux, `git push --force-with-lease`
+ - en cas de réécriture de l’historique, `git push --force`
+  - ou mieux, `git push --force-with-lease`
   - si le dépôt distant le permet
   - se synchroniser si nécessaire avec les collègues : `git pull --rebase`
  - le rebasage se fait dans la copie de travail
@@ -133,7 +134,8 @@ Il est possible de ne jamais faire de fusion à trois sources
  - mais uniquement des rebasages
 
 Dans ce cas il faut :
- - systématiser le `git pull --rebase` : `git config --global pull.rebase true`
+ - systématiser le `git pull --rebase`
+   - `git config --global pull.rebase true`
  - préférer `git push --force-with-lease`
  - *squasher* les *commits* pour éviter les conflits inutiles lors des rebasages
  - maîtriser le `rebase --onto`
