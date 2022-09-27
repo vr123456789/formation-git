@@ -1,7 +1,7 @@
 pages:
   stage: deploy
   tags:
-  - shell
+  - maven-jdk8
   script:
   - mkdir .public
   - cp -r docs/* .public
